@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="google-site-verification"
+			content="taBIZt-Tj7PL2mKZqc_5bAqPAAtMjKKzhY7ZjHvNMh8" />
+		<meta name="robots" content="index, follow" />
+		<title>Infinite Pixels | Web Development Agency</title>
+		<meta
+			name="description"
+			content="Infinite Pixels is a front-end web development agency creating beautiful, responsive, and conversion-focused websites." />
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" /></noscript>
+	<!-- jQuery removed: not used, reduces critical request chain -->
+		<!-- Favicon Setup -->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./img/favicon/apple-touch-icon.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./img/favicon/favicon-32x32.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./img/favicon/favicon-16x16.png" />
+		<link rel="manifest" href="./img/favicon/site.webmanifest" />
+		<link rel="shortcut icon" href="./img/favicon/favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+	 href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
+	 rel="stylesheet"
+	 media="all" />
+	<!-- font-display=swap is set in the URL for best FCP/LCP -->
+		<link rel="stylesheet" href="style.css?v=1.1" />
+	<link rel="preload" href="nebula-input.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="nebula-input-textarea.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="nebula-input.css" /></noscript>
+	<noscript><link rel="stylesheet" href="nebula-input-textarea.css" /></noscript>
+		<!-- Preload critical resources -->
+		<link rel="preload" href="./img/no bg logos/logomark2nobg.png" as="image" />
+	<!-- Preload for Google Fonts is not needed if loaded as stylesheet above -->
+	
+	<!-- Loader Styles -->
+	<style>
+		#loader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #6a30d0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 9999;
+			overflow: hidden;
+			transition: background 0.8s ease, opacity 1s ease;
+		}
+
+		#loader-canvas {
+			width: 100%;
+			height: 100%;
+			transition: transform 1.8s ease;
+			display: block;
+		}
+
+		.main-content {
+			opacity: 0;
+			transition: opacity 1s ease;
+		}
+
+		.main-content.loaded {
+			opacity: 1;
+		}
+	</style>
+	</head>
+	<body>
+		<!-- Loader -->
+		<div id="loader">
+			<canvas id="loader-canvas"></canvas>
+		</div>
+
+		<!-- Main Website Content -->
+		<div class="main-content">
+		<header class="header" style="display: flex; align-items: center; justify-content: space-between; padding: 0 2rem;">
+			<div style="flex:1 1 0;"></div>
+			<div class="logo" style="flex:0 0 auto; display: flex; justify-content: center; align-items: center; min-width: 120px;">
+				<a href="home.html" aria-label="Infinite Pixels Home" style="display: flex; align-items: center; justify-content: center; width: 100%;">
+					<img
+					 src="./img/no bg logos/logomark2nobg.png"
+					 alt="Infinite Pixels logo"
+					 width="140" height="80"
+					 loading="lazy" decoding="async"
+					 style="max-width: 140px; min-width: 80px; width: 100%; height: auto; display: block;" />
+				</a>
+			</div>
+			<div style="flex:1 1 0; display: flex; justify-content: flex-end;">
+				<label
+					class="ui-switch"
+					style="margin-left: 2rem; vertical-align: middle;">
+					<input type="checkbox" id="themeToggle" />
+					<div class="slider">
+						<div class="circle"></div>
+					</div>
+				</label>
+			</div>
+		</header>
+		<div class="bookmark-nav">
+			<a href="home.html" class="bookmark active" data-section="home">
+				<span>Home</span>
+			</a>
+			<a href="about.html" class="bookmark">
+				<span>About</span>
+			</a>
+			<a href="services.html" class="bookmark" data-section="services">
+				<span>Services</span>
+			</a>
+			<a href="portfolio.html" class="bookmark" data-section="portfolio">
+				<span>Portfolio</span>
+			</a>
+			<a href="contact.html" class="bookmark" data-section="contact">
+				<span>Contact</span>
+			</a>
+		</div>
+		<!-- Radial menu wrapper only visible on small screens -->
+		<div class="radialmenu-wrapper">
+			<div class="radial-blur-overlay" id="radialBlurOverlay"></div>
+			<div class="radialmenu" id="radialMenu">
+						<a href="home.html" class="menuitem" title="Home">
+							<i class="fas fa-home"></i>
+						</a>
+						<a href="about.html" class="menuitem" title="About">
+							<i class="fas fa-address-card"></i>
+						</a>
+						<a href="services.html" class="menuitem" title="Services">
+							<i class="fas fa-cogs"></i>
+						</a>
+						<a href="portfolio.html" class="menuitem" title="Portfolio">
+							<i class="fas fa-th-large"></i>
+						</a>
+						<a href="contact.html" class="menuitem" title="Contact">
+							<i class="fas fa-phone"></i>
+						</a>
+				<button class="menubutton" id="toggleMenu" aria-label="Open main menu">
+					<i class="fas fa-bars"></i>
+				</button>
+			</div>
+		</div>
+		<div id="bg3d"></div>
+
+		<div class="hero" id="home">
+			<!-- Hero Content -->
+			<div class="hero-wrapper">
+				<div class="hero-content hero-content-responsive">
+					<!-- Main Title -->
+					<h1 class="hero-main-title">
+						We Create
+						<span class="gradient-text">Exceptional</span>
+						Digital Experiences
+					</h1>
+
+					<!-- Subtitle -->
+					<p class="hero-subtitle">
+						Transforming ideas into powerful, beautiful websites that drive
+						results and inspire action.
+					</p>
+
+					<!-- Action Buttons -->
+					<div class="hero-actions">
+						<a class="primary-button" href="#contact">
+							<span>Let's Build Together</span>
+							<div class="button-glow"></div>
+						</a>
+						<a class="secondary-button" href="#portfolio">
+							<span>Explore Our Work</span>
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+								<path
+									d="M6 12L10 8L6 4"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+				</div>
+
+				<!-- Hero Visual -->
+				<div class="hero-visual hero-visual-responsive">
+					<div class="visual-container">
+						<!-- Central Logo with Animation -->
+						<div class="logo-showcase">
+							<div class="logo-ring ring-1"></div>
+							<div class="logo-ring ring-2"></div>
+							<div class="logo-ring ring-3"></div>
+							<div class="logo-center">
+								<img
+								 src="./img/no bg logos/logomark2nobg.png"
+								 alt="Infinite Pixels"
+								 width="140" height="80"
+								 loading="lazy" />
+							</div>
+						</div>
+
+						<!-- Floating Tech Icons -->
+						<div class="tech-orbit">
+							<div class="tech-item tech-1">
+								<div class="tech-icon">
+									<i class="fab fa-react"></i>
+								</div>
+							</div>
+							<div class="tech-item tech-2">
+								<div class="tech-icon">
+									<i class="fab fa-js-square"></i>
+								</div>
+							</div>
+							<div class="tech-item tech-3">
+								<div class="tech-icon">
+									<i class="fab fa-html5"></i>
+								</div>
+							</div>
+							<div class="tech-item tech-4">
+								<div class="tech-icon">
+									<i class="fab fa-css3-alt"></i>
+								</div>
+							</div>
+							<div class="tech-item tech-5">
+								<div class="tech-icon">
+									<i class="fab fa-node-js"></i>
+								</div>
+							</div>
+							<div class="tech-item tech-6">
+								<div class="tech-icon">
+									<i class="fab fa-figma"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="aboutsection" id="about">
+
+			<!-- Agency Info -->
+			<div class="agencyinfo reveal glass-section">
+				<h3 class="catchy-title">Collaboration, Process, and What to Expect</h3>
+				<div class="title-decoration2"></div>
+				<p class="agency-punchline">
+					We’re not just a web agency—we’re your creative partners. We believe
+					every brand has a story, and our job is to help you tell it in a way
+					that feels real, memorable, and uniquely you.
+				</p>
+				<ul class="agency-bullets">
+					<li>
+						We mix creativity and tech to build websites that feel alive and
+						connect with real people.
+					</li>
+					<li>
+						You’ll always be in the loop—think of us as an extension of your
+						team, not just a service.
+					</li>
+					<li>
+						We sweat the small stuff, so you don’t have to. Every detail
+						matters, from the first sketch to the final launch.
+					</li>
+					<li>
+						No jargon, no ego—just honest collaboration and results you can see.
+					</li>
+				</ul>
+				<p class="agency-cta">
+					<strong>Let’s create something you’ll be proud to share.</strong>
+				</p>
+			</div>
+			<div class="skillsshowcase reveal">
+				<h3>Our Expertise</h3>
+				<div class="title-decoration3"></div>
+				<div class="skillsgrid">
+					<div class="skillitem"><i class="fab fa-html5"></i> HTML5</div>
+					<div class="skillitem"><i class="fab fa-css3-alt"></i> CSS3</div>
+					<div class="skillitem"><i class="fab fa-js"></i> JavaScript</div>
+					<div class="skillitem">
+						<i class="fab fa-bootstrap"></i> Bootstrap
+					</div>
+					<div class="skillitem"><i class="fas fa-hashtag"></i> C#</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="services" id="services">
+			<div class="container">
+				<div class="section-title">
+					<h2>Our Digital Services</h2>
+					<div class="title-decoration4"></div>
+					<p class="section-subtitle">
+						Precision-engineered solutions for your digital success
+					</p>
+				</div>
+				<div class="services-grid">
+					<div class="service-card" id="service1">
+						<div class="card-inner">
+							<div class="icon-container">
+								<i class="fa fa-code"></i>
+							</div>
+							<h3>Custom Web Development</h3>
+							<div class="service-subtext">
+								Fully bespoke websites, built from scratch for your brand and
+								goals.
+							</div>
+							<ul>
+								<li>Tailored solutions to meet your unique business needs</li>
+								<li>Responsive designs that look great on any device</li>
+								<li>Optimized for performance and speed</li>
+								<li>Seamless integration with existing systems</li>
+							</ul>
+						</div>
+					</div>
+					<div class="service-card" id="service2">
+						<div class="card-inner">
+							<div class="icon-container">
+								<i class="fa fa-columns"></i>
+							</div>
+							<h3>Landing Pages & One-Pagers</h3>
+							<div class="service-subtext">
+								Conversion-focused single-page sites for launches, promos, and
+								campaigns.
+							</div>
+							<ul>
+								<li>High-converting designs tailored for your audience</li>
+								<li>Fast loading times for optimal user experience</li>
+								<li>Clear calls-to-action to drive engagement</li>
+								<li>Mobile-friendly layouts that look great on any device</li>
+							</ul>
+						</div>
+					</div>
+					<div class="service-card" id="service3">
+						<div class="card-inner">
+							<div class="icon-container">
+								<i class="fas fa-network-wired"></i>
+							</div>
+							<h3>Systems Integration</h3>
+							<div class="service-subtext">
+								Connect, automate, and streamline your business with custom
+								integrations.
+							</div>
+							<ul>
+								<li>Custom solutions for seamless data flow</li>
+								<li>API integrations with third-party services</li>
+								<li>Automated workflows to enhance productivity</li>
+								<li>Ongoing support and maintenance</li>
+							</ul>
+						</div>
+					</div>
+					<div class="service-card" id="service4">
+						<div class="card-inner">
+							<div class="icon-container">
+								<i class="fa fa-wrench"></i>
+							</div>
+							<h3>Website Redesign & Revamp</h3>
+							<div class="service-subtext">
+								Modernize your site for better performance, design, and user
+								experience.
+							</div>
+							<ul>
+								<li>Comprehensive audits to identify areas for improvement</li>
+								<li>Modern design trends to enhance visual appeal</li>
+								<li>Improved user experience through intuitive navigation</li>
+								<li>Performance optimization for faster load times</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="usp" id="why-choose-us">
+			<div class="container">
+				<div class="section-title">
+					<h2 class="catchy-title">Why Partner With Us?</h2>
+					<div class="title-decoration5"></div>
+					<span class="section-subtitle">What sets us apart</span>
+				</div>
+				<div class="usp-cards">
+					<div class="usp-card">
+						<i class="fas fa-bolt"></i>
+						<h3>Lightning Fast</h3>
+						<p>
+							Launch your project in record time—without sacrificing quality or
+							detail.
+						</p>
+					</div>
+					<div class="usp-card">
+						<i class="fas fa-magic"></i>
+						<h3>Design That Pops</h3>
+						<p>
+							Modern, minimal, and memorable—your brand will stand out for all
+							the right reasons.
+						</p>
+					</div>
+					<div class="usp-card">
+						<i class="fas fa-code"></i>
+						<h3>Code You Can Trust</h3>
+						<p>
+							Clean, scalable, and future-proof code that’s easy to maintain and
+							ready to grow.
+						</p>
+					</div>
+					<div class="usp-card">
+						<i class="fas fa-handshake"></i>
+						<h3>Real Partnership</h3>
+						<p>
+							We’re with you every step—advice, support, and a genuine
+							investment in your success.
+						</p>
+					</div>
+				</div>
+				<div class="usp-cta">
+					<span
+						>Let’s build something
+						<span class="gradient-text">exceptional</span> together.</span
+					>
+				</div>
+			</div>
+		</section>
+
+		<section class="portfolio" id="portfolio">
+			<div class="container">
+				<div class="section-title">
+					<h2>Our Work</h2>
+					<div class="title-decoration6"></div>
+				</div>
+				<div class="portfolio-grid">
+				<div class="portfolio-item">
+					<div class="portfolio-image">
+						<img
+							src="img/projects/667e53f0-a493-494d-9f2d-fb07449387c5.png"
+							alt="Dr. Naglaa Clinic Website"
+							width="400" height="250"
+							loading="lazy" decoding="async" />
+					</div>
+					<div class="portfolio-info">
+						<h3>Dr. Naglaa Clinic Website</h3>
+						<p>Premium care clinic website for Dr. Naglaa Abd El Aziz, featuring elegant design and professional branding.</p>
+					</div>
+					<div class="preview-container">
+						<a
+							class="preview"
+							href="https://drnaglaaclinic.netlify.app/"
+							target="_blank"
+						>Preview</a>
+					</div>
+				</div>
+					<div class="portfolio-item">
+						<div class="portfolio-image">
+							<img
+							 src="./img/projects/xhale.png"
+							 alt="Project 2"
+							 width="400" height="250"
+							 loading="lazy" decoding="async" />
+						</div>
+						<div class="portfolio-info">
+							<h3>Gym Website</h3>
+							<p>
+								Modern Gym website with interactive elements and unique styling.
+							</p>
+						</div>
+						<div class="preview-container">
+							<a
+								class="preview"
+								href="https://xhale-gym.netlify.app/"
+								target="_blank"
+								>Preview</a
+							>
+						</div>
+					</div>
+					<div class="portfolio-item">
+						<div class="portfolio-image">
+							<img
+							 src="./img/projects/velaro.png"
+							 alt="Project 3"
+							 width="400" height="250"
+							 loading="lazy" decoding="async" />
+						</div>
+						<div class="portfolio-info">
+							<h3>Digital Marekting Agency Website</h3>
+							<p>Modern website with modern styling and responsiveness</p>
+						</div>
+						<div class="preview-container">
+							<a
+								class="preview"
+								href="https://velaro-smma.netlify.app/"
+								target="_blank"
+								>Preview</a
+							>
+						</div>
+					</div>
+					<div class="portfolio-item">
+						<div class="portfolio-image">
+							<img
+							 src="./img/projects/eclat.png"
+							 alt="Project 3"
+							 width="400" height="250"
+							 loading="lazy" decoding="async" />
+						</div>
+						<div class="portfolio-info">
+							<h3>Eclat Restaurant Website</h3>
+							<p> website with professional minimalistic styling and responsiveness</p>
+						</div>
+						<div class="preview-container">
+							<a
+								class="preview"
+								href="https://eclat-resto.netlify.app/"
+								target="_blank"
+								>Preview</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pricing" id="pricing">
+			<div style="text-align: center">
+				<h2 class="sectiontitlee">Pricing & Packages</h2>
+				<div class="title-decoration7"></div>
+				<p class="sectionsubtitle">Choose a service to explore packages</p>
+
+				<div class="tabs">
+					<button
+						class="tabbtn active"
+						data-tab="custom"
+						style="
+							transition: background-color 0.3s ease-in-out,
+								color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+						">
+				<label
+					class="ui-switch"
+					style="margin-left: 2rem; vertical-align: middle">
+						Custom Web Development
+					</button>
+					<button class="tabbtn" data-tab="landing">Landing Pages</button>
+					<!-- <button
+						class="tabbtn"
+						data-tab="cms"
+						style="
+							transition: background-color 0.3s ease-in-out,
+								color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+						">
+						CMS Integration
+					</button> -->
+					<button
+						class="tabbtn"
+						data-tab="redesign"
+						style="
+							transition: background-color 0.3s ease-in-out,
+								color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+						">
+						Redesign & Revamp
+					</button>
+				</div>
+
+				<!-- Custom Web Development -->
+				<div class="tabcontent" id="custom">
+					<div class="pricingrow">
+						<div class="pricingcard">
+							<h4>Starter</h4>
+							<ul>
+								<li>-Up to 4 pages</li>
+								<li>-Responsive design</li>
+								<li>-Basic design and layout</li>
+								<li>-Contact form</li>
+								<li>-Delivery: 4-5 days</li>
+							</ul>
+						</div>
+						<div class="pricingcard highlight">
+							<h4>Pro</h4>
+							<ul>
+								<li>-Up to 8 pages</li>
+								<li>-Advanced animations</li>
+								<li>-Responsive design</li>
+								<li>-SEO-friendly</li>
+								<li>-Delivery: 7-9 days</li>
+							</ul>
+						</div>
+						<div class="pricingcard">
+							<h4>Custom</h4>
+							<ul>
+								<li>-Unlimited pages</li>
+								<li>-Fully tailored design</li>
+								<li>-Special components</li>
+								<li>-API integration</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Landing Pages -->
+				<div class="tabcontent" id="landing">
+					<div class="pricingrow">
+						<div class="pricingcard">
+							<h4>Starter</h4>
+							<ul>
+								<li>- Single-page layout</li>
+								<li>- Basic structure</li>
+								<li>- Responsive design</li>
+								<li>- Basic contact form</li>
+							</ul>
+						</div>
+						<div class="pricingcard highlight">
+							<h4>Pro</h4>
+							<ul>
+								<li>- Up to 5 sections</li>
+								<li>- Scroll effects</li>
+								<li>- Conversion-oriented design</li>
+								<li>- Light SEO</li>
+							</ul>
+						</div>
+						<div class="pricingcard">
+							<h4>Custom</h4>
+							<ul>
+								<li>- Fully custom structure</li>
+								<li>- Funnel-oriented layout</li>
+								<li>- Advanced interactivity</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- CMS Integration -->
+				<!-- <div
+					class="tabcontent"
+					id="cms">
+					<div class="pricingrow">
+						<div class="pricingcard">
+							<h4>Starter</h4>
+							<ul>
+								<li>Basic CMS setup</li>
+								<li>Editable text/images</li>
+								<li>Up to 2 pages</li>
+							</ul>
+						</div>
+						<div
+							class="pricingcard highlight">
+							<h4>Pro</h4>
+							<ul>
+								<li>Full CMS setup</li>
+								<li>Blog or service pages</li>
+								<li>Training session</li>
+							</ul>
+						</div>
+						<div class="pricingcard">
+							<h4>Custom</h4>
+							<ul>
+								<li>Custom CMS themes</li>
+								<li>Advanced editing features</li>
+								<li>Plugin setup</li>
+							</ul>
+						</div>
+					</div>
+				</div> -->
+
+				<!-- Redesign & Revamp -->
+				<div class="tabcontent" id="redesign">
+					<div class="pricingrow">
+						<div class="pricingcard">
+							<h4>Starter</h4>
+							<ul>
+								<li>- Up to 4 pages</li>
+								<li>- Modern refresh</li>
+								<li>- Mobile responsiveness</li>
+								<li>- Keep structure</li>
+								<li>- Speed/layout improvement</li>
+							</ul>
+						</div>
+						<div class="pricingcard highlight">
+							<h4>Pro</h4>
+							<ul>
+								<li>- Up to 8 pages</li>
+								<li>- UX/UI improvements</li>
+								<li>- Animation enhancements</li>
+								<li>- Performance upgrade</li>
+								<li>- SEO structure optimization</li>
+							</ul>
+						</div>
+						<div class="pricingcard">
+							<h4>Custom</h4>
+							<ul>
+								<li>- Complete redesign from scratch</li>
+								<li>- Based on site audit & client goals</li>
+								<li>- Content restructuring</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer id="footer">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-about">
+						<div class="footer-logo-row">
+							<img
+								src="img/no bg logos/logomarknobg.png"
+								alt="Infinite Pixels Logo" />
+							<h2 class="footer-logo">Infinite Pixels</h2>
+						</div>
+						<p>
+							We build websites that help businesses succeed in the digital
+							world.
+						</p>
+					</div>
+					<div class="footer-links">
+						<h3>Quick Links</h3>
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#services">Services</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+					<div class="footer-contact">
+						<h3>Contact Us</h3>
+						<p class="email">
+							Email:
+							<a href="mailto:infinitepixels2025@gmail.com"
+								>infinitepixels2025@gmail.com</a
+							>
+						</p>
+						<p>
+							Phone:<br />
+							<a class="phone" href="tel:+201205022292">+20 120 502 2292</a
+							><br />
+							<a class="phone" href="tel:+201271126999">+20 127 112 6999</a>
+						</p>
+						<div class="social-icons">
+						 <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+						 <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+						 <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+						 <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="copyright">
+					<div class="copyright__track">
+						<div class="copyright__content">
+							<p>
+								&copy; 2025 Infinite Pixels Web Dev Agency. All Rights Reserved.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+				<script defer src="./logic.js"></script>
+				<script>
+				// Dynamically load contact.js and firebase.js only if contact form is present
+				document.addEventListener('DOMContentLoaded', function() {
+					if (document.getElementById('contactForm')) {
+						var script = document.createElement('script');
+						script.type = 'module';
+						script.src = 'contact.js';
+						document.body.appendChild(script);
+						// Optionally, dynamically load firebase.js if needed by contact.js
+						var firebaseScript = document.createElement('script');
+						firebaseScript.src = 'firebase.js';
+						firebaseScript.defer = true;
+						document.body.appendChild(firebaseScript);
+					}
+				});
+				</script>
+		</div> <!-- End main-content -->
+
+		<!-- Loader JavaScript -->
+		<script>
+			const canvas = document.getElementById("loader-canvas");
+			const ctx = canvas.getContext("2d");
+			let W, H;
+
+			function resizeCanvas() {
+				W = canvas.width = window.innerWidth;
+				H = canvas.height = window.innerHeight;
+			}
+			resizeCanvas();
+			window.addEventListener("resize", resizeCanvas);
+
+			class Particle {
+				constructor(x, y, color) {
+					this.x = Math.random() * W;
+					this.y = Math.random() * H;
+					this.tx = x;
+					this.ty = y;
+					this.size = 1;
+					this.speed = 0.045 + Math.random() * 0.045;
+					this.color = color;
+				}
+				update() {
+					this.x += (this.tx - this.x) * this.speed;
+					this.y += (this.ty - this.y) * this.speed;
+				}
+				draw() {
+					ctx.fillStyle = this.color;
+					ctx.fillRect(this.x, this.y, this.size, this.size);
+				}
+			}
+
+			let particles = [];
+
+			function createParticles() {
+				ctx.clearRect(0, 0, W, H);
+
+				// Responsive font size relative to screen
+				let fontSize = Math.min(W, H) * 0.45;
+				ctx.font = `bold ${fontSize}px sans-serif`;
+				ctx.textAlign = "center";
+				ctx.textBaseline = "middle";
+
+				// Draw "I" in black
+				ctx.fillStyle = "#000";
+				ctx.fillText("I", W / 2 - fontSize * 0.22, H / 2);
+
+				// Draw "P" in white
+				ctx.fillStyle = "#fff";
+				ctx.fillText("P", W / 2 + fontSize * 0.22, H / 2);
+
+				// Capture pixels
+				const imageData = ctx.getImageData(0, 0, W, H).data;
+				ctx.clearRect(0, 0, W, H);
+
+				particles = [];
+				for (let y = 0; y < H; y += 1) {
+					for (let x = 0; x < W; x += 1) {
+						const index = (y * W + x) * 4;
+						const a = imageData[index + 3];
+						if (a > 128) {
+							const r = imageData[index];
+							const g = imageData[index + 1];
+							const b = imageData[index + 2];
+							const color = `rgb(${r},${g},${b})`;
+							particles.push(new Particle(x, y, color));
+						}
+					}
+				}
+			}
+
+			function animate() {
+				ctx.clearRect(0, 0, W, H);
+				particles.forEach((p) => {
+					p.update();
+					p.draw();
+				});
+				requestAnimationFrame(animate);
+			}
+
+			// Init loader animation
+			createParticles();
+			animate();
+
+			// Loader sequence
+			window.addEventListener("load", () => {
+				setTimeout(() => {
+					canvas.style.transform = "scale(20)";
+					const loader = document.getElementById("loader");
+					loader.style.background = "#fff";
+				}, 4500);
+
+				setTimeout(() => {
+					const loader = document.getElementById("loader");
+					const mainContent = document.querySelector(".main-content");
+					loader.style.opacity = "0";
+					setTimeout(() => {
+						loader.style.visibility = "hidden";
+						loader.style.display = "none";
+						mainContent.classList.add("loaded");
+						document.body.style.overflow = "auto";
+					}, 1000);
+				}, 6000);
+			});
+		</script>
+	</body>
+</html>

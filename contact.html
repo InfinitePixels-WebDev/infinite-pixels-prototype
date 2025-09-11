@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="google-site-verification"
+			content="taBIZt-Tj7PL2mKZqc_5bAqPAAtMjKKzhY7ZjHvNMh8" />
+		<meta name="robots" content="index, follow" />
+		<title>Infinite Pixels | Web Development Agency</title>
+		<meta
+			name="description"
+			content="Infinite Pixels is a front-end web development agency creating beautiful, responsive, and conversion-focused websites." />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<!-- Favicon Setup -->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./img/favicon/apple-touch-icon.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./img/favicon/favicon-32x32.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./img/favicon/favicon-16x16.png" />
+		<link rel="manifest" href="./img/favicon/site.webmanifest" />
+		<link rel="shortcut icon" href="./img/favicon/favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="style.css?v=1.1" />
+		<!-- Preload critical resources -->
+		<link rel="preload" href="./img/no bg logos/logomark2nobg.png" as="image" />
+		<link
+			rel="preload"
+			href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
+			as="style" />
+	</head>
+	<body>
+		<header
+			class="header"
+			style="
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 0 2rem;
+			">
+			<div style="flex: 1 1 0"></div>
+			<div
+				class="logo"
+				style="
+					flex: 0 0 auto;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					min-width: 120px;
+				">
+				<a
+					href="home.html"
+					aria-label="Infinite Pixels Home"
+					style="
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 100%;
+					">
+					<img
+						src="./img/no bg logos/logomark2nobg.png"
+						alt="Infinite Pixels logo"
+						width="140"
+						height="80"
+						loading="lazy"
+						decoding="async"
+						style="
+							max-width: 140px;
+							min-width: 80px;
+							width: 100%;
+							height: auto;
+							display: block;
+						" />
+				</a>
+			</div>
+			<div style="flex: 1 1 0; display: flex; justify-content: flex-end">
+				<label
+					class="ui-switch"
+					style="margin-left: 2rem; vertical-align: middle">
+					<input type="checkbox" id="themeToggle" />
+					<div class="slider">
+						<div class="circle"></div>
+					</div>
+				</label>
+			</div>
+		</header>
+		<div class="bookmark-nav">
+			<a href="home.html" class="bookmark" data-section="home">
+				<span>Home</span>
+			</a>
+			<a href="about.html" class="bookmark" data-section="about">
+				<span>About</span>
+			</a>
+			<a href="services.html" class="bookmark" data-section="services">
+				<span>Services</span>
+			</a>
+			<a href="portfolio.html" class="bookmark" data-section="portfolio">
+				<span>Portfolio</span>
+			</a>
+			<a href="contact.html" class="bookmark active" data-section="contact">
+				<span>Contact</span>
+			</a>
+		</div>
+		<!-- Radial menu wrapper only visible on small screens -->
+		<div class="radialmenu-wrapper">
+			<div class="radialmenu" id="radialMenu">
+				<a href="home.html" class="menuitem" title="Home"
+					><i class="fas fa-home"></i
+				></a>
+				<a href="about.html" class="menuitem" title="About"
+					><i class="fas fa-address-card"></i
+				></a>
+				<a href="services.html" class="menuitem" title="Services"
+					><i class="fas fa-cogs"></i
+				></a>
+				<a href="portfolio.html" class="menuitem" title="Portfolio"
+					><i class="fas fa-th-large"></i
+				></a>
+				<a href="contact.html" class="menuitem" title="Contact"
+					><i class="fas fa-phone"></i
+				></a>
+				<button class="menubutton" id="toggleMenu">
+					<i class="fas fa-bars"></i>
+				</button>
+			</div>
+		</div>
+		<div id="bg3d"></div>
+
+		<!-- Contact Hero Section -->
+		<section class="contact-hero">
+			<div class="container">
+				<div
+					class="contact-hero-content"
+					data-aos="fade-up"
+					data-aos-delay="200">
+					<h1>Let's Create Something Amazing Together</h1>
+					<p>
+						Ready to transform your digital presence? Get in touch and let's
+						discuss how we can bring your vision to life with cutting-edge web
+						solutions.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Main Section -->
+		<section class="contact-main">
+			<div class="container">
+				<div class="contact-grid">
+					<!-- Contact Form -->
+					<div
+						class="contact-form-container"
+						data-aos="fade-right"
+						data-aos-delay="300">
+						<div class="glassmorphic-card">
+							<h2>Send Us a Message</h2>
+							<form id="contactForm" class="contact-form">
+								<div class="form-row">
+									<div class="form-group">
+										<label for="firstName">First Name *</label>
+										<input
+											type="text"
+											id="firstName"
+											name="firstName"
+											required />
+									</div>
+									<div class="form-group">
+										<label for="lastName">Last Name *</label>
+										<input type="text" id="lastName" name="lastName" required />
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="email">Email Address *</label>
+									<input type="email" id="email" name="email" required />
+								</div>
+								<div class="form-group">
+									<label for="phone">Phone Number</label>
+									<input type="tel" id="phone" name="phone" />
+								</div>
+								<div class="form-group">
+									<label for="company">Company</label>
+									<input type="text" id="company" name="company" />
+								</div>
+								<div class="form-group">
+									<label for="projectType">Project Type *</label>
+									<select id="projectType" name="projectType" required>
+										<option value="">Select a service</option>
+										<option value="website-design">Website Design</option>
+										<option value="web-development">Web Development</option>
+										<option value="e-commerce">E-commerce Solutions</option>
+										<option value="mobile-app">Mobile App Development</option>
+										<option value="branding">Branding & Identity</option>
+										<option value="seo">SEO & Digital Marketing</option>
+										<option value="consultation">Consultation</option>
+										<option value="other">Other</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="budget">Budget Range</label>
+									<select id="budget" name="budget">
+										<option value="">Select budget range</option>
+										<option value="under-5k">Under $5,000</option>
+										<option value="5k-10k">$5,000 - $10,000</option>
+										<option value="10k-25k">$10,000 - $25,000</option>
+										<option value="25k-50k">$25,000 - $50,000</option>
+										<option value="50k-plus">$50,000+</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="timeline">Project Timeline</label>
+									<select id="timeline" name="timeline">
+										<option value="">Select timeline</option>
+										<option value="asap">As soon as possible</option>
+										<option value="1-month">Within 1 month</option>
+										<option value="2-3-months">2-3 months</option>
+										<option value="3-6-months">3-6 months</option>
+										<option value="6-months-plus">6+ months</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="message">Project Description *</label>
+									<textarea
+										id="message"
+										name="message"
+										rows="5"
+										placeholder="Tell us about your project, goals, and any specific requirements..."
+										required></textarea>
+								</div>
+								<button type="submit" class="submit-btn">
+									<span>Send Message</span>
+									<i class="fas fa-paper-plane"></i>
+								</button>
+							</form>
+						</div>
+					</div>
+
+					<!-- Contact Information -->
+					<div class="contact-info" data-aos="fade-left" data-aos-delay="400">
+						<!-- Contact Details Card -->
+						<div class="glassmorphic-card contact-details">
+							<h3>Get In Touch</h3>
+							<div class="contact-item">
+								<div class="contact-icon">
+									<i class="fas fa-envelope"></i>
+								</div>
+								<div class="contact-text">
+									<h4>Email Us</h4>
+									<a href="mailto:infinitepixels2025@gmail.com"
+										>infinitepixels2025@gmail.com</a
+									>
+								</div>
+							</div>
+							<div class="contact-item">
+								<div class="contact-icon">
+									<i class="fas fa-phone"></i>
+								</div>
+								<div class="contact-text">
+									<h4>Call Us</h4>
+									<a href="tel:+201205022292">+20 120 502 2292</a>
+									<a href="tel:+201271126999">+20 127 112 6999</a>
+								</div>
+							</div>
+							<div class="contact-item">
+								<div class="contact-icon">
+									<i class="fas fa-map-marker-alt"></i>
+								</div>
+								<div class="contact-text">
+									<h4>Location</h4>
+									<p>Cairo, Egypt<br />Remote Services Worldwide</p>
+								</div>
+							</div>
+							<div class="contact-item">
+								<div class="contact-icon">
+									<i class="fas fa-clock"></i>
+								</div>
+								<div class="contact-text">
+									<h4>Business Hours</h4>
+									<p>
+										Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM<br />Sun:
+										Closed
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Social Media Card -->
+						<div class="glassmorphic-card social-card">
+							<h3>Follow Us</h3>
+							<p>Stay connected and follow our journey</p>
+							<div class="social-links">
+								<a href="#" class="social-link">
+									<i class="fab fa-facebook-f"></i>
+									<span>Facebook</span>
+								</a>
+								<a href="#" class="social-link">
+									<i class="fab fa-twitter"></i>
+									<span>Twitter</span>
+								</a>
+								<a href="#" class="social-link">
+									<i class="fab fa-linkedin-in"></i>
+									<span>LinkedIn</span>
+								</a>
+								<a href="#" class="social-link">
+									<i class="fab fa-instagram"></i>
+									<span>Instagram</span>
+								</a>
+								<a href="#" class="social-link">
+									<i class="fab fa-github"></i>
+									<span>GitHub</span>
+								</a>
+								<a href="#" class="social-link">
+									<i class="fab fa-behance"></i>
+									<span>Behance</span>
+								</a>
+							</div>
+						</div>
+
+						<!-- Quick Stats Card -->
+						<div class="glassmorphic-card stats-card">
+							<h3>Why Choose Us</h3>
+							<div class="stat-item">
+								<div class="stat-number">50+</div>
+								<div class="stat-label">Projects Completed</div>
+							</div>
+							<div class="stat-item">
+								<div class="stat-number">24/7</div>
+								<div class="stat-label">Support Available</div>
+							</div>
+							<div class="stat-item">
+								<div class="stat-number">48h</div>
+								<div class="stat-label">Response Time</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ Section -->
+		<section class="contact-faq">
+			<div class="container">
+				<div class="section-header" data-aos="fade-up" data-aos-delay="200">
+					<h2>Frequently Asked Questions</h2>
+					<p>Quick answers to questions you may have</p>
+				</div>
+				<div class="faq-container" data-aos="fade-up" data-aos-delay="300">
+					<div class="glassmorphic-card faq-grid">
+						<div class="faq-item">
+							<h4>How long does a typical project take?</h4>
+							<p>
+								Project timelines vary based on complexity. A simple website
+								takes 2-4 weeks, while complex web applications can take 2-6
+								months.
+							</p>
+						</div>
+						<div class="faq-item">
+							<h4>Do you offer ongoing maintenance?</h4>
+							<p>
+								Yes! We provide comprehensive maintenance packages including
+								updates, security monitoring, and technical support.
+							</p>
+						</div>
+						<div class="faq-item">
+							<h4>Can you work with existing designs?</h4>
+							<p>
+								Absolutely! We can work with your existing designs, improve
+								them, or create entirely new ones based on your needs.
+							</p>
+						</div>
+						<div class="faq-item">
+							<h4>What technologies do you use?</h4>
+							<p>
+								We use modern technologies including React, Next.js, Vue.js,
+								Node.js, and various CMS platforms like WordPress and Shopify.
+							</p>
+						</div>
+						<div class="faq-item">
+							<h4>Do you provide hosting services?</h4>
+							<p>
+								While we don't provide hosting directly, we can recommend
+								reliable hosting providers and help with deployment and setup.
+							</p>
+						</div>
+						<div class="faq-item">
+							<h4>How do you handle project communication?</h4>
+							<p>
+								We maintain regular communication through email, video calls,
+								and project management tools to keep you updated throughout the
+								process.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="contact-cta">
+			<div class="container">
+				<div
+					class="glassmorphic-card cta-card"
+					data-aos="zoom-in"
+					data-aos-delay="200">
+					<h2>Ready to Start Your Project?</h2>
+					<p>
+						Let's discuss your ideas and bring them to life. Get a free
+						consultation today!
+					</p>
+					<div class="cta-buttons">
+						<a href="mailto:infinitepixels2025@gmail.com" class="btn-primary">
+							<i class="fas fa-envelope"></i>
+							Email Us Now
+						</a>
+						<a href="tel:+201205022292" class="btn-secondary">
+							<i class="fas fa-phone"></i>
+							Call Us Today
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer id="footer" data-aos="fade-up" data-aos-delay="50">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-about">
+						<div class="footer-logo-row">
+							<img
+								src="img/no bg logos/logomarknobg.png"
+								alt="Infinite Pixels Logo" />
+							<h3 class="footer-logo">Infinite Pixels</h3>
+						</div>
+						<p>
+							We build websites that help businesses succeed in the digital
+							world.
+						</p>
+					</div>
+					<div class="footer-links">
+						<h3>Quick Links</h3>
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#services">Services</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+					<div class="footer-contact">
+						<h3>Contact Us</h3>
+						<p class="email">
+							Email:
+							<a href="mailto:infinitepixels2025@gmail.com"
+								>infinitepixels2025@gmail.com</a
+							>
+						</p>
+						<p>
+							Phone:<br />
+							<a class="phone" href="tel:+201205022292">+20 120 502 2292</a
+							><br />
+							<a class="phone" href="tel:+201271126999">+20 127 112 6999</a>
+						</p>
+						<div class="social-icons">
+							<a href="#"><i class="fab fa-facebook-f"></i></a>
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#"><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="copyright">
+					<div class="copyright__track">
+						<div class="copyright__content">
+							<p>
+								&copy; 2025 Infinite Pixels Web Dev Agency. All Rights Reserved.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script defer src="./logic.js"></script>
+		<script type="module" src="contact.js"></script>
+	</body>
+</html>

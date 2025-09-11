@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Infinite Pixels Loader</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				overflow: hidden;
+				background: #6a30d0;
+			}
+
+			#loader {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: #6a30d0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				z-index: 9999;
+				overflow: hidden;
+				transition: background 0.8s ease, opacity 1s ease;
+			}
+
+			#canvas {
+				width: 100%;
+				height: 100%;
+				transition: transform 1.8s ease;
+				display: block;
+			}
+
+			#content {
+				display: none;
+				text-align: center;
+				padding: 50px 20px;
+				color: #333;
+				font-family: sans-serif;
+				opacity: 0;
+				transition: opacity 1s ease;
+			}
+
+			/* Responsive adjustments */
+			@media (max-width: 768px) {
+				#content h1 {
+					font-size: 1.8rem;
+				}
+				#content p {
+					font-size: 1rem;
+				}
+			}
+			@media (max-width: 480px) {
+				#content h1 {
+					font-size: 1.5rem;
+				}
+				#content p {
+					font-size: 0.9rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Loader -->
+		<div id="loader">
+			<canvas id="canvas"></canvas>
+		</div>
+
+		<!-- Website Content -->
+		<div id="content">
+			<h1>Welcome to Infinite Pixels</h1>
+			<p>Your website has loaded 🎉</p>
+		</div>
+
+		<script>
+			const canvas = document.getElementById("canvas");
+			const ctx = canvas.getContext("2d");
+			let W, H;
+
+			function resizeCanvas() {
+				W = canvas.width = window.innerWidth;
+				H = canvas.height = window.innerHeight;
+			}
+			resizeCanvas();
+			window.addEventListener("resize", resizeCanvas);
+
+			class Particle {
+				constructor(x, y, color) {
+					this.x = Math.random() * W;
+					this.y = Math.random() * H;
+					this.tx = x;
+					this.ty = y;
+					this.size = 1;
+					this.speed = 0.045 + Math.random() * 0.045;
+					this.color = color;
+				}
+				update() {
+					this.x += (this.tx - this.x) * this.speed;
+					this.y += (this.ty - this.y) * this.speed;
+				}
+				draw() {
+					ctx.fillStyle = this.color;
+					ctx.fillRect(this.x, this.y, this.size, this.size);
+				}
+			}
+
+			let particles = [];
+
+			function createParticles() {
+				ctx.clearRect(0, 0, W, H);
+
+				// Responsive font size relative to screen
+				let fontSize = Math.min(W, H) * 0.45;
+				ctx.font = `bold ${fontSize}px sans-serif`;
+				ctx.textAlign = "center";
+				ctx.textBaseline = "middle";
+
+				// Draw "I" in black
+				ctx.fillStyle = "#000";
+				ctx.fillText("I", W / 2 - fontSize * 0.22, H / 2);
+
+				// Draw "P" in white
+				ctx.fillStyle = "#fff";
+				ctx.fillText("P", W / 2 + fontSize * 0.22, H / 2);
+
+				// Capture pixels
+				const imageData = ctx.getImageData(0, 0, W, H).data;
+				ctx.clearRect(0, 0, W, H);
+
+				particles = [];
+				for (let y = 0; y < H; y += 1) {
+					for (let x = 0; x < W; x += 1) {
+						const index = (y * W + x) * 4;
+						const a = imageData[index + 3];
+						if (a > 128) {
+							const r = imageData[index];
+							const g = imageData[index + 1];
+							const b = imageData[index + 2];
+							const color = `rgb(${r},${g},${b})`;
+							particles.push(new Particle(x, y, color));
+						}
+					}
+				}
+			}
+
+			function animate() {
+				ctx.clearRect(0, 0, W, H);
+				particles.forEach((p) => {
+					p.update();
+					p.draw();
+				});
+				requestAnimationFrame(animate);
+			}
+
+			// Init
+			createParticles();
+			animate();
+
+			// Sequence
+			window.addEventListener("load", () => {
+				setTimeout(() => {
+					canvas.style.transform = "scale(20)";
+					const loader = document.getElementById("loader");
+					loader.style.background = "#fff";
+				}, 4500);
+
+				setTimeout(() => {
+					const loader = document.getElementById("loader");
+					const content = document.getElementById("content");
+					loader.style.opacity = "0";
+					setTimeout(() => {
+						loader.style.visibility = "hidden";
+						content.style.display = "block";
+						setTimeout(() => (content.style.opacity = "1"), 300);
+						document.body.style.overflow = "auto";
+					}, 1000);
+				}, 6000);
+			});
+		</script>
+	</body>
+</html>
