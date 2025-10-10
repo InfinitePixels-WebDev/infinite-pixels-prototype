@@ -1,890 +1,846 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta
-			name="google-site-verification"
-			content="taBIZt-Tj7PL2mKZqc_5bAqPAAtMjKKzhY7ZjHvNMh8" />
-		<meta name="robots" content="index, follow" />
-		<title>Infinite Pixels | Web Development Agency</title>
-		<meta
-			name="description"
-			content="Infinite Pixels is a front-end web development agency creating beautiful, responsive, and conversion-focused websites." />
-		<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'" />
-		<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" /></noscript>
-	<!-- jQuery removed: not used, reduces critical request chain -->
-		<!-- Favicon Setup -->
-		<link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="./img/favicon/apple-touch-icon.png" />
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./img/favicon/favicon-32x32.png" />
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="./img/favicon/favicon-16x16.png" />
-		<link rel="manifest" href="./img/favicon/site.webmanifest" />
-		<link rel="shortcut icon" href="./img/favicon/favicon.ico" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Infinite Pixels — Digital Experiences That Scale</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-	 href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
-	 rel="stylesheet"
-	 media="all" />
-	<!-- font-display=swap is set in the URL for best FCP/LCP -->
-		<link rel="stylesheet" href="style.css?v=1.1" />
-	<link rel="preload" href="nebula-input.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<link rel="preload" href="nebula-input-textarea.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="nebula-input.css" /></noscript>
-	<noscript><link rel="stylesheet" href="nebula-input-textarea.css" /></noscript>
-		<!-- Preload critical resources -->
-		<link rel="preload" href="./img/no bg logos/logomark2nobg.png" as="image" />
-	<!-- Preload for Google Fonts is not needed if loaded as stylesheet above -->
-	
-	<!-- Loader Styles -->
-	<style>
-		#loader {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: #6a30d0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			z-index: 9999;
-			overflow: hidden;
-			transition: background 0.8s ease, opacity 1s ease;
-		}
-
-		#loader-canvas {
-			width: 100%;
-			height: 100%;
-			transition: transform 1.8s ease;
-			display: block;
-		}
-
-		.main-content {
-			opacity: 0;
-			transition: opacity 1s ease;
-		}
-
-		.main-content.loaded {
-			opacity: 1;
-		}
-	</style>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<!-- Loader -->
-		<div id="loader">
-			<canvas id="loader-canvas"></canvas>
-		</div>
-
-		<!-- Main Website Content -->
-		<div class="main-content">
-		<header class="header" style="display: flex; align-items: center; justify-content: space-between; padding: 0 2rem;">
-			<div style="flex:1 1 0;"></div>
-			<div class="logo" style="flex:0 0 auto; display: flex; justify-content: center; align-items: center; min-width: 120px;">
-				<a href="home.html" aria-label="Infinite Pixels Home" style="display: flex; align-items: center; justify-content: center; width: 100%;">
-					<img
-					 src="./img/no bg logos/logomark2nobg.png"
-					 alt="Infinite Pixels logo"
-					 width="140" height="80"
-					 loading="lazy" decoding="async"
-					 style="max-width: 140px; min-width: 80px; width: 100%; height: auto; display: block;" />
-				</a>
-			</div>
-			<div style="flex:1 1 0; display: flex; justify-content: flex-end;">
-				<label
-					class="ui-switch"
-					style="margin-left: 2rem; vertical-align: middle;">
-					<input type="checkbox" id="themeToggle" />
-					<div class="slider">
-						<div class="circle"></div>
-					</div>
-				</label>
-			</div>
-		</header>
-		<div class="bookmark-nav">
-			<a href="home.html" class="bookmark active" data-section="home">
-				<span>Home</span>
-			</a>
-			<a href="about.html" class="bookmark">
-				<span>About</span>
-			</a>
-			<a href="services.html" class="bookmark" data-section="services">
-				<span>Services</span>
-			</a>
-			<a href="portfolio.html" class="bookmark" data-section="portfolio">
-				<span>Portfolio</span>
-			</a>
-			<a href="contact.html" class="bookmark" data-section="contact">
-				<span>Contact</span>
-			</a>
-		</div>
-		<!-- Radial menu wrapper only visible on small screens -->
-		<div class="radialmenu-wrapper">
-			<div class="radial-blur-overlay" id="radialBlurOverlay"></div>
-			<div class="radialmenu" id="radialMenu">
-						<a href="home.html" class="menuitem" title="Home">
-							<i class="fas fa-home"></i>
-						</a>
-						<a href="about.html" class="menuitem" title="About">
-							<i class="fas fa-address-card"></i>
-						</a>
-						<a href="services.html" class="menuitem" title="Services">
-							<i class="fas fa-cogs"></i>
-						</a>
-						<a href="portfolio.html" class="menuitem" title="Portfolio">
-							<i class="fas fa-th-large"></i>
-						</a>
-						<a href="contact.html" class="menuitem" title="Contact">
-							<i class="fas fa-phone"></i>
-						</a>
-				<button class="menubutton" id="toggleMenu" aria-label="Open main menu">
-					<i class="fas fa-bars"></i>
-				</button>
-			</div>
-		</div>
-		<div id="bg3d"></div>
-
-		<div class="hero" id="home">
-			<!-- Hero Content -->
-			<div class="hero-wrapper">
-				<div class="hero-content hero-content-responsive">
-					<!-- Main Title -->
-					<h1 class="hero-main-title">
-						We Create
-						<span class="gradient-text">Exceptional</span>
-						Digital Experiences
-					</h1>
-
-					<!-- Subtitle -->
-					<p class="hero-subtitle">
-						Transforming ideas into powerful, beautiful websites that drive
-						results and inspire action.
-					</p>
-
-					<!-- Action Buttons -->
-					<div class="hero-actions">
-						<a class="primary-button" href="#contact">
-							<span>Let's Build Together</span>
-							<div class="button-glow"></div>
-						</a>
-						<a class="secondary-button" href="#portfolio">
-							<span>Explore Our Work</span>
-							<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-								<path
-									d="M6 12L10 8L6 4"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round" />
-							</svg>
-						</a>
-					</div>
-				</div>
-
-				<!-- Hero Visual -->
-				<div class="hero-visual hero-visual-responsive">
-					<div class="visual-container">
-						<!-- Central Logo with Animation -->
-						<div class="logo-showcase">
-							<div class="logo-ring ring-1"></div>
-							<div class="logo-ring ring-2"></div>
-							<div class="logo-ring ring-3"></div>
-							<div class="logo-center">
-								<img
-								 src="./img/no bg logos/logomark2nobg.png"
-								 alt="Infinite Pixels"
-								 width="140" height="80"
-								 loading="lazy" />
-							</div>
-						</div>
-
-						<!-- Floating Tech Icons -->
-						<div class="tech-orbit">
-							<div class="tech-item tech-1">
-								<div class="tech-icon">
-									<i class="fab fa-react"></i>
-								</div>
-							</div>
-							<div class="tech-item tech-2">
-								<div class="tech-icon">
-									<i class="fab fa-js-square"></i>
-								</div>
-							</div>
-							<div class="tech-item tech-3">
-								<div class="tech-icon">
-									<i class="fab fa-html5"></i>
-								</div>
-							</div>
-							<div class="tech-item tech-4">
-								<div class="tech-icon">
-									<i class="fab fa-css3-alt"></i>
-								</div>
-							</div>
-							<div class="tech-item tech-5">
-								<div class="tech-icon">
-									<i class="fab fa-node-js"></i>
-								</div>
-							</div>
-							<div class="tech-item tech-6">
-								<div class="tech-icon">
-									<i class="fab fa-figma"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<section class="aboutsection" id="about">
-
-			<!-- Agency Info -->
-			<div class="agencyinfo reveal glass-section">
-				<h3 class="catchy-title">Collaboration, Process, and What to Expect</h3>
-				<div class="title-decoration2"></div>
-				<p class="agency-punchline">
-					We’re not just a web agency—we’re your creative partners. We believe
-					every brand has a story, and our job is to help you tell it in a way
-					that feels real, memorable, and uniquely you.
-				</p>
-				<ul class="agency-bullets">
-					<li>
-						We mix creativity and tech to build websites that feel alive and
-						connect with real people.
-					</li>
-					<li>
-						You’ll always be in the loop—think of us as an extension of your
-						team, not just a service.
-					</li>
-					<li>
-						We sweat the small stuff, so you don’t have to. Every detail
-						matters, from the first sketch to the final launch.
-					</li>
-					<li>
-						No jargon, no ego—just honest collaboration and results you can see.
-					</li>
-				</ul>
-				<p class="agency-cta">
-					<strong>Let’s create something you’ll be proud to share.</strong>
-				</p>
-			</div>
-			<div class="skillsshowcase reveal">
-				<h3>Our Expertise</h3>
-				<div class="title-decoration3"></div>
-				<div class="skillsgrid">
-					<div class="skillitem"><i class="fab fa-html5"></i> HTML5</div>
-					<div class="skillitem"><i class="fab fa-css3-alt"></i> CSS3</div>
-					<div class="skillitem"><i class="fab fa-js"></i> JavaScript</div>
-					<div class="skillitem">
-						<i class="fab fa-bootstrap"></i> Bootstrap
-					</div>
-					<div class="skillitem"><i class="fas fa-hashtag"></i> C#</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="services" id="services">
-			<div class="container">
-				<div class="section-title">
-					<h2>Our Digital Services</h2>
-					<div class="title-decoration4"></div>
-					<p class="section-subtitle">
-						Precision-engineered solutions for your digital success
-					</p>
-				</div>
-				<div class="services-grid">
-					<div class="service-card" id="service1">
-						<div class="card-inner">
-							<div class="icon-container">
-								<i class="fa fa-code"></i>
-							</div>
-							<h3>Custom Web Development</h3>
-							<div class="service-subtext">
-								Fully bespoke websites, built from scratch for your brand and
-								goals.
-							</div>
-							<ul>
-								<li>Tailored solutions to meet your unique business needs</li>
-								<li>Responsive designs that look great on any device</li>
-								<li>Optimized for performance and speed</li>
-								<li>Seamless integration with existing systems</li>
-							</ul>
-						</div>
-					</div>
-					<div class="service-card" id="service2">
-						<div class="card-inner">
-							<div class="icon-container">
-								<i class="fa fa-columns"></i>
-							</div>
-							<h3>Landing Pages & One-Pagers</h3>
-							<div class="service-subtext">
-								Conversion-focused single-page sites for launches, promos, and
-								campaigns.
-							</div>
-							<ul>
-								<li>High-converting designs tailored for your audience</li>
-								<li>Fast loading times for optimal user experience</li>
-								<li>Clear calls-to-action to drive engagement</li>
-								<li>Mobile-friendly layouts that look great on any device</li>
-							</ul>
-						</div>
-					</div>
-					<div class="service-card" id="service3">
-						<div class="card-inner">
-							<div class="icon-container">
-								<i class="fas fa-network-wired"></i>
-							</div>
-							<h3>Systems Integration</h3>
-							<div class="service-subtext">
-								Connect, automate, and streamline your business with custom
-								integrations.
-							</div>
-							<ul>
-								<li>Custom solutions for seamless data flow</li>
-								<li>API integrations with third-party services</li>
-								<li>Automated workflows to enhance productivity</li>
-								<li>Ongoing support and maintenance</li>
-							</ul>
-						</div>
-					</div>
-					<div class="service-card" id="service4">
-						<div class="card-inner">
-							<div class="icon-container">
-								<i class="fa fa-wrench"></i>
-							</div>
-							<h3>Website Redesign & Revamp</h3>
-							<div class="service-subtext">
-								Modernize your site for better performance, design, and user
-								experience.
-							</div>
-							<ul>
-								<li>Comprehensive audits to identify areas for improvement</li>
-								<li>Modern design trends to enhance visual appeal</li>
-								<li>Improved user experience through intuitive navigation</li>
-								<li>Performance optimization for faster load times</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="usp" id="why-choose-us">
-			<div class="container">
-				<div class="section-title">
-					<h2 class="catchy-title">Why Partner With Us?</h2>
-					<div class="title-decoration5"></div>
-					<span class="section-subtitle">What sets us apart</span>
-				</div>
-				<div class="usp-cards">
-					<div class="usp-card">
-						<i class="fas fa-bolt"></i>
-						<h3>Lightning Fast</h3>
-						<p>
-							Launch your project in record time—without sacrificing quality or
-							detail.
-						</p>
-					</div>
-					<div class="usp-card">
-						<i class="fas fa-magic"></i>
-						<h3>Design That Pops</h3>
-						<p>
-							Modern, minimal, and memorable—your brand will stand out for all
-							the right reasons.
-						</p>
-					</div>
-					<div class="usp-card">
-						<i class="fas fa-code"></i>
-						<h3>Code You Can Trust</h3>
-						<p>
-							Clean, scalable, and future-proof code that’s easy to maintain and
-							ready to grow.
-						</p>
-					</div>
-					<div class="usp-card">
-						<i class="fas fa-handshake"></i>
-						<h3>Real Partnership</h3>
-						<p>
-							We’re with you every step—advice, support, and a genuine
-							investment in your success.
-						</p>
-					</div>
-				</div>
-				<div class="usp-cta">
-					<span
-						>Let’s build something
-						<span class="gradient-text">exceptional</span> together.</span
+		<!-- Floating Navigation -->
+		<nav id="site-header" class="floating-nav">
+			<div class="nav-container">
+				<a href="home.html" class="brand" data-animate="slide-right">
+					<span class="brand-logo"
+						><span class="logo-i">I</span><span class="logo-p">P</span></span
 					>
+				</a>
+				<div class="nav-menu" id="navMenu">
+					<a href="home.html" class="nav-link active">Home</a>
+					<a href="about.html" class="nav-link">About</a>
+					<a href="services.html" class="nav-link">Services</a>
+					<a href="work.html" class="nav-link">Work</a>
+					<a href="process.html" class="nav-link">Process</a>
+				</div>
+				<div class="nav-actions">
+					<button
+						class="theme-toggle"
+						id="themeToggle"
+						type="button"
+						aria-label="Toggle theme">
+						<span id="themeToggleIcon" aria-hidden="true">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+							</svg>
+						</span>
+					</button>
+					<button
+						class="menu-toggle"
+						id="menuToggle"
+						type="button"
+						aria-label="Toggle navigation"
+						aria-expanded="false"
+						aria-controls="navMenu">
+						<span class="menu-line"></span>
+						<span class="menu-line"></span>
+						<span class="menu-line"></span>
+					</button>
 				</div>
 			</div>
-		</section>
+		</nav>
 
-		<section class="portfolio" id="portfolio">
-			<div class="container">
-				<div class="section-title">
-					<h2>Our Work</h2>
-					<div class="title-decoration6"></div>
+		<!-- Mobile Navigation Overlay -->
+		<div class="mobile-nav-overlay" aria-hidden="true">
+			<div class="mobile-nav-panel">
+				<div class="mobile-nav-handle" aria-hidden="true"></div>
+				<div class="mobile-nav-header">
+					<h3 class="mobile-nav-title">Explore</h3>
 				</div>
-				<div class="portfolio-grid">
-				<div class="portfolio-item">
-					<div class="portfolio-image">
-						<img
-							src="img/projects/667e53f0-a493-494d-9f2d-fb07449387c5.png"
-							alt="Dr. Naglaa Clinic Website"
-							width="400" height="250"
-							loading="lazy" decoding="async" />
-					</div>
-					<div class="portfolio-info">
-						<h3>Dr. Naglaa Clinic Website</h3>
-						<p>Premium care clinic website for Dr. Naglaa Abd El Aziz, featuring elegant design and professional branding.</p>
-					</div>
-					<div class="preview-container">
-						<a
-							class="preview"
-							href="https://drnaglaaclinic.netlify.app/"
-							target="_blank"
-						>Preview</a>
-					</div>
-				</div>
-					<div class="portfolio-item">
-						<div class="portfolio-image">
-							<img
-							 src="./img/projects/xhale.png"
-							 alt="Project 2"
-							 width="400" height="250"
-							 loading="lazy" decoding="async" />
+				<div class="mobile-nav-featured">
+					<a class="mobile-feature-card services" href="services.html">
+						<div class="feat-icon">
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path
+									d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z" />
+								<path
+									d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z" />
+							</svg>
 						</div>
-						<div class="portfolio-info">
-							<h3>Gym Website</h3>
+						<div class="feat-title">Services</div>
+						<div class="feat-sub">Branding, web design, digital solutions</div>
+					</a>
+					<a class="mobile-feature-card work" href="work.html">
+						<div class="feat-icon">
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+								<path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+								<path d="M4 22h16" />
+								<path
+									d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+								<path
+									d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+								<path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+							</svg>
+						</div>
+						<div class="feat-title">Work</div>
+						<div class="feat-sub">Results and case studies</div>
+					</a>
+				</div>
+				<nav class="mobile-nav-list" aria-label="Mobile">
+					<a class="mobile-nav-item" href="home.html">
+						<span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+								<polyline points="9 22 9 12 15 12 15 22" />
+							</svg>
+						</span>
+						<span class="item-label">Home</span>
+						<span class="item-arrow">›</span>
+					</a>
+					<a class="mobile-nav-item" href="about.html">
+						<span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path
+									d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+							</svg>
+						</span>
+						<span class="item-label">About</span>
+						<span class="item-arrow">›</span>
+					</a>
+					<a class="mobile-nav-item" href="services.html">
+						<span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<rect x="3" y="3" width="7" height="7" />
+								<rect x="14" y="3" width="7" height="7" />
+								<rect x="14" y="14" width="7" height="7" />
+								<rect x="3" y="14" width="7" height="7" />
+							</svg>
+						</span>
+						<span class="item-label">Services</span>
+						<span class="item-arrow">›</span>
+					</a>
+					<a class="mobile-nav-item" href="work.html">
+						<span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<circle cx="12" cy="12" r="10" />
+								<path d="m9 12 2 2 4-4" />
+							</svg>
+						</span>
+						<span class="item-label">Work</span>
+						<span class="item-arrow">›</span>
+					</a>
+					<a class="mobile-nav-item" href="process.html">
+						<span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path
+									d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2" />
+							</svg>
+						</span>
+						<span class="item-label">Process</span>
+						<span class="item-arrow">›</span>
+					</a>
+				</nav>
+			</div>
+		</div>
+
+		<main class="main-content">
+			<!-- Hero Section -->
+			<section class="hero-reimagined" id="hero">
+				<div class="container">
+					<div class="hero-content-center">
+						<div class="hero-badge" data-animate="fade-up">
+							<span class="badge-dot"></span>
+							<span>Digital Excellence & Brand Innovation</span>
+						</div>
+
+						<h1
+							class="hero-title-large"
+							data-animate="fade-up"
+							data-delay=".1s">
+							Build the Future.<br />
+							<span class="gradient-text">One Pixel at a Time.</span>
+						</h1>
+
+						<p class="hero-subtitle" data-animate="fade-up" data-delay=".2s">
+							We transform bold ideas into high-performance digital
+							experiences.<br />
+							Branding. Web development. Digital solutions that scale.
+						</p>
+
+						<div class="hero-cta" data-animate="fade-up" data-delay=".3s">
+							<a href="services.html" class="btn-primary">Get Started</a>
+							<a href="work.html" class="btn-secondary">View Our Work</a>
+						</div>
+
+						<div
+							class="hero-stats-inline"
+							data-animate="fade-up"
+							data-delay=".4s">
+							<div class="stat-inline">
+								<span class="stat-num">150+</span>
+								<span class="stat-text">Projects</span>
+							</div>
+							<div class="stat-divider"></div>
+							<div class="stat-inline">
+								<span class="stat-num">98%</span>
+								<span class="stat-text">Satisfaction</span>
+							</div>
+							<div class="stat-divider"></div>
+							<div class="stat-inline">
+								<span class="stat-num">2 Weeks</span>
+								<span class="stat-text">Launch Time</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- About Section with Side-by-Side Layout -->
+			<section class="about-section" id="about">
+				<div class="container">
+					<div class="about-grid">
+						<div class="about-content" data-animate="fade-up">
+							<h2 class="section-title">
+								Building Tomorrow's Digital Landscape
+							</h2>
+							<p class="section-subtitle">
+								We're not just another digital agency. We're your strategic
+								partner in crafting exceptional digital experiences that drive
+								real business results.
+							</p>
+							<div class="value-props">
+								<div class="value-item">
+									<div class="value-icon">
+										<svg
+											width="32"
+											height="32"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2">
+											<path
+												d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+										</svg>
+									</div>
+									<div class="value-content">
+										<h4>Strategic Innovation</h4>
+										<p>
+											We combine creative vision with technical excellence to
+											deliver solutions that set you apart from the competition.
+										</p>
+									</div>
+								</div>
+								<div class="value-item">
+									<div class="value-icon">
+										<svg
+											width="32"
+											height="32"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2">
+											<polygon
+												points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+										</svg>
+									</div>
+									<div class="value-content">
+										<h4>Rapid Execution</h4>
+										<p>
+											Our streamlined process gets you from concept to launch
+											faster without compromising on quality.
+										</p>
+									</div>
+								</div>
+								<div class="value-item">
+									<div class="value-icon">📊</div>
+									<div class="value-content">
+										<h4>Data-Driven Results</h4>
+										<p>
+											Every decision is backed by data and focused on measurable
+											outcomes that matter to your business.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="about-visual" data-animate="fade-left" data-delay=".2s">
+							<div class="tech-stack-showcase">
+								<div class="tech-category">
+									<h4>Frontend</h4>
+									<div class="tech-items">
+										<span class="tech-item">React</span>
+										<span class="tech-item">Next.js</span>
+										<span class="tech-item">TypeScript</span>
+										<span class="tech-item">GSAP</span>
+									</div>
+								</div>
+								<div class="tech-category">
+									<h4>Backend</h4>
+									<div class="tech-items">
+										<span class="tech-item">Node.js</span>
+										<span class="tech-item">Firebase</span>
+										<span class="tech-item">PostgreSQL</span>
+										<span class="tech-item">Supabase</span>
+									</div>
+								</div>
+								<div class="tech-category">
+									<h4>Design</h4>
+									<div class="tech-items">
+										<span class="tech-item">Figma</span>
+										<span class="tech-item">Framer</span>
+										<span class="tech-item">After Effects</span>
+										<span class="tech-item">Principle</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Services in Masonry Layout -->
+			<section class="services-section" id="services">
+				<div class="container">
+					<div class="section-header" data-animate="fade-up">
+						<h2 class="section-title">What We Do Best</h2>
+						<p class="section-subtitle">
+							Comprehensive digital solutions tailored to your unique challenges
+						</p>
+					</div>
+					<div class="services-masonry">
+						<div class="service-card large" data-animate="fade-up">
+							<div class="service-icon">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+									<polyline points="16 18 22 12 16 6"></polyline>
+									<polyline points="8 6 2 12 8 18"></polyline>
+								</svg>
+							</div>
+							<h3>Full-Stack Development</h3>
 							<p>
-								Modern Gym website with interactive elements and unique styling.
+								End-to-end web applications built with modern technologies and
+								best practices. From API design to user interfaces, we handle
+								every layer of your digital product.
+							</p>
+							<ul class="service-features">
+								<li>Modern JavaScript frameworks</li>
+								<li>Scalable backend architecture</li>
+								<li>Cloud deployment & DevOps</li>
+								<li>Performance optimization</li>
+							</ul>
+						</div>
+						<div class="service-card" data-animate="fade-up" data-delay=".1s">
+							<div class="service-icon">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+									<path
+										d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+								</svg>
+							</div>
+							<h3>UI/UX Design</h3>
+							<p>
+								User-centered design that converts visitors into customers
+								through intuitive interfaces and compelling experiences.
 							</p>
 						</div>
-						<div class="preview-container">
-							<a
-								class="preview"
-								href="https://xhale-gym.netlify.app/"
-								target="_blank"
-								>Preview</a
-							>
+						<div class="service-card" data-animate="fade-up" data-delay=".2s">
+							<div class="service-icon">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+									<circle cx="12" cy="12" r="3"></circle>
+									<path
+										d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"></path>
+								</svg>
+							</div>
+							<h3>Brand Strategy</h3>
+							<p>
+								Strategic positioning and visual identity that sets you apart in
+								competitive markets.
+							</p>
 						</div>
-					</div>
-					<div class="portfolio-item">
-						<div class="portfolio-image">
-							<img
-							 src="./img/projects/velaro.png"
-							 alt="Project 3"
-							 width="400" height="250"
-							 loading="lazy" decoding="async" />
-						</div>
-						<div class="portfolio-info">
-							<h3>Digital Marekting Agency Website</h3>
-							<p>Modern website with modern styling and responsiveness</p>
-						</div>
-						<div class="preview-container">
-							<a
-								class="preview"
-								href="https://velaro-smma.netlify.app/"
-								target="_blank"
-								>Preview</a
-							>
-						</div>
-					</div>
-					<div class="portfolio-item">
-						<div class="portfolio-image">
-							<img
-							 src="./img/projects/eclat.png"
-							 alt="Project 3"
-							 width="400" height="250"
-							 loading="lazy" decoding="async" />
-						</div>
-						<div class="portfolio-info">
-							<h3>Eclat Restaurant Website</h3>
-							<p> website with professional minimalistic styling and responsiveness</p>
-						</div>
-						<div class="preview-container">
-							<a
-								class="preview"
-								href="https://eclat-resto.netlify.app/"
-								target="_blank"
-								>Preview</a
-							>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="pricing" id="pricing">
-			<div style="text-align: center">
-				<h2 class="sectiontitlee">Pricing & Packages</h2>
-				<div class="title-decoration7"></div>
-				<p class="sectionsubtitle">Choose a service to explore packages</p>
-
-				<div class="tabs">
-					<button
-						class="tabbtn active"
-						data-tab="custom"
-						style="
-							transition: background-color 0.3s ease-in-out,
-								color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-						">
-				<label
-					class="ui-switch"
-					style="margin-left: 2rem; vertical-align: middle">
-						Custom Web Development
-					</button>
-					<button class="tabbtn" data-tab="landing">Landing Pages</button>
-					<!-- <button
-						class="tabbtn"
-						data-tab="cms"
-						style="
-							transition: background-color 0.3s ease-in-out,
-								color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-						">
-						CMS Integration
-					</button> -->
-					<button
-						class="tabbtn"
-						data-tab="redesign"
-						style="
-							transition: background-color 0.3s ease-in-out,
-								color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-						">
-						Redesign & Revamp
-					</button>
-				</div>
-
-				<!-- Custom Web Development -->
-				<div class="tabcontent" id="custom">
-					<div class="pricingrow">
-						<div class="pricingcard">
-							<h4>Starter</h4>
-							<ul>
-								<li>-Up to 4 pages</li>
-								<li>-Responsive design</li>
-								<li>-Basic design and layout</li>
-								<li>-Contact form</li>
-								<li>-Delivery: 4-5 days</li>
-							</ul>
-						</div>
-						<div class="pricingcard highlight">
-							<h4>Pro</h4>
-							<ul>
-								<li>-Up to 8 pages</li>
-								<li>-Advanced animations</li>
-								<li>-Responsive design</li>
-								<li>-SEO-friendly</li>
-								<li>-Delivery: 7-9 days</li>
-							</ul>
-						</div>
-						<div class="pricingcard">
-							<h4>Custom</h4>
-							<ul>
-								<li>-Unlimited pages</li>
-								<li>-Fully tailored design</li>
-								<li>-Special components</li>
-								<li>-API integration</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<!-- Landing Pages -->
-				<div class="tabcontent" id="landing">
-					<div class="pricingrow">
-						<div class="pricingcard">
-							<h4>Starter</h4>
-							<ul>
-								<li>- Single-page layout</li>
-								<li>- Basic structure</li>
-								<li>- Responsive design</li>
-								<li>- Basic contact form</li>
-							</ul>
-						</div>
-						<div class="pricingcard highlight">
-							<h4>Pro</h4>
-							<ul>
-								<li>- Up to 5 sections</li>
-								<li>- Scroll effects</li>
-								<li>- Conversion-oriented design</li>
-								<li>- Light SEO</li>
-							</ul>
-						</div>
-						<div class="pricingcard">
-							<h4>Custom</h4>
-							<ul>
-								<li>- Fully custom structure</li>
-								<li>- Funnel-oriented layout</li>
-								<li>- Advanced interactivity</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<!-- CMS Integration -->
-				<!-- <div
-					class="tabcontent"
-					id="cms">
-					<div class="pricingrow">
-						<div class="pricingcard">
-							<h4>Starter</h4>
-							<ul>
-								<li>Basic CMS setup</li>
-								<li>Editable text/images</li>
-								<li>Up to 2 pages</li>
-							</ul>
+						<div class="service-card" data-animate="fade-up" data-delay=".3s">
+							<div class="service-icon">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+									<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+								</svg>
+							</div>
+							<h3>Performance Optimization</h3>
+							<p>
+								Lightning-fast loading times and smooth interactions that keep
+								users engaged and search engines happy.
+							</p>
 						</div>
 						<div
-							class="pricingcard highlight">
-							<h4>Pro</h4>
-							<ul>
-								<li>Full CMS setup</li>
-								<li>Blog or service pages</li>
-								<li>Training session</li>
-							</ul>
-						</div>
-						<div class="pricingcard">
-							<h4>Custom</h4>
-							<ul>
-								<li>Custom CMS themes</li>
-								<li>Advanced editing features</li>
-								<li>Plugin setup</li>
-							</ul>
-						</div>
-					</div>
-				</div> -->
-
-				<!-- Redesign & Revamp -->
-				<div class="tabcontent" id="redesign">
-					<div class="pricingrow">
-						<div class="pricingcard">
-							<h4>Starter</h4>
-							<ul>
-								<li>- Up to 4 pages</li>
-								<li>- Modern refresh</li>
-								<li>- Mobile responsiveness</li>
-								<li>- Keep structure</li>
-								<li>- Speed/layout improvement</li>
-							</ul>
-						</div>
-						<div class="pricingcard highlight">
-							<h4>Pro</h4>
-							<ul>
-								<li>- Up to 8 pages</li>
-								<li>- UX/UI improvements</li>
-								<li>- Animation enhancements</li>
-								<li>- Performance upgrade</li>
-								<li>- SEO structure optimization</li>
-							</ul>
-						</div>
-						<div class="pricingcard">
-							<h4>Custom</h4>
-							<ul>
-								<li>- Complete redesign from scratch</li>
-								<li>- Based on site audit & client goals</li>
-								<li>- Content restructuring</li>
-							</ul>
+							class="service-card wide"
+							data-animate="fade-up"
+							data-delay=".4s">
+							<div class="service-icon">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+									<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+								</svg>
+							</div>
+							<h3>Analytics & Growth</h3>
+							<p>
+								Data-driven insights and growth strategies that turn your
+								digital presence into a revenue-generating machine.
+							</p>
+							<div class="growth-metrics">
+								<div class="metric">
+									<span class="metric-value">3x</span>
+									<span class="metric-label">Avg. Traffic Boost</span>
+								</div>
+								<div class="metric">
+									<span class="metric-value">45%</span>
+									<span class="metric-label">Conversion Lift</span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<footer id="footer">
+			<!-- Portfolio with Horizontal Scroll -->
+			<section class="portfolio-section" id="work">
+				<div class="container">
+					<div class="section-header" data-animate="fade-up">
+						<h2 class="section-title">Featured Work</h2>
+						<p class="section-subtitle">
+							Real projects, real results, real impact
+						</p>
+					</div>
+					<div class="portfolio-scroll" data-animate="fade-up" data-delay=".2s">
+						<div class="portfolio-track">
+							<div class="portfolio-item">
+								<div class="portfolio-image">
+									<img
+										src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+										alt="E-commerce Platform" />
+									<div class="portfolio-overlay">
+										<div class="portfolio-info">
+											<h4>E-commerce Revolution</h4>
+											<p>
+												Complete platform rebuild that increased conversions by
+												185%
+											</p>
+											<div class="portfolio-tags">
+												<span>React</span>
+												<span>Node.js</span>
+												<span>Stripe</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="portfolio-item">
+								<div class="portfolio-image">
+									<img
+										src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+										alt="SaaS Dashboard" />
+									<div class="portfolio-overlay">
+										<div class="portfolio-info">
+											<h4>SaaS Analytics Platform</h4>
+											<p>
+												Real-time dashboard with advanced data visualization
+											</p>
+											<div class="portfolio-tags">
+												<span>Vue.js</span>
+												<span>D3.js</span>
+												<span>Python</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="portfolio-item">
+								<div class="portfolio-image">
+									<img
+										src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=800&q=80"
+										alt="Mobile App" />
+									<div class="portfolio-overlay">
+										<div class="portfolio-info">
+											<h4>Fintech Mobile App</h4>
+											<p>
+												Award-winning mobile experience for financial planning
+											</p>
+											<div class="portfolio-tags">
+												<span>React Native</span>
+												<span>Firebase</span>
+												<span>AI/ML</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="portfolio-item">
+								<div class="portfolio-image">
+									<img
+										src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+										alt="Corporate Website" />
+									<div class="portfolio-overlay">
+										<div class="portfolio-info">
+											<h4>Corporate Rebrand</h4>
+											<p>
+												Complete digital transformation for Fortune 500 company
+											</p>
+											<div class="portfolio-tags">
+												<span>Next.js</span>
+												<span>GSAP</span>
+												<span>CMS</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Process Timeline -->
+			<section class="process-section" id="process">
+				<div class="container">
+					<div class="section-header" data-animate="fade-up">
+						<h2 class="section-title">Our Proven Process</h2>
+						<p class="section-subtitle">
+							From idea to launch, we've got you covered
+						</p>
+					</div>
+					<div class="process-timeline">
+						<div class="timeline-item" data-animate="fade-up">
+							<div class="timeline-marker">
+								<span class="step-number">1</span>
+							</div>
+							<div class="timeline-content">
+								<h3>Discovery & Strategy</h3>
+								<p>
+									We dive deep into your business goals, target audience, and
+									competitive landscape to create a solid foundation for
+									success.
+								</p>
+								<ul>
+									<li>Stakeholder interviews</li>
+									<li>User research & personas</li>
+									<li>Technical architecture planning</li>
+									<li>Project roadmap & timeline</li>
+								</ul>
+							</div>
+						</div>
+						<div class="timeline-item" data-animate="fade-up" data-delay=".1s">
+							<div class="timeline-marker">
+								<span class="step-number">2</span>
+							</div>
+							<div class="timeline-content">
+								<h3>Design & Prototyping</h3>
+								<p>
+									We create stunning designs and interactive prototypes that
+									bring your vision to life before a single line of code is
+									written.
+								</p>
+								<ul>
+									<li>Wireframing & information architecture</li>
+									<li>Visual design & branding</li>
+									<li>Interactive prototypes</li>
+									<li>User testing & iteration</li>
+								</ul>
+							</div>
+						</div>
+						<div class="timeline-item" data-animate="fade-up" data-delay=".2s">
+							<div class="timeline-marker">
+								<span class="step-number">3</span>
+							</div>
+							<div class="timeline-content">
+								<h3>Development & Integration</h3>
+								<p>
+									Our expert developers build robust, scalable solutions using
+									the latest technologies and best practices.
+								</p>
+								<ul>
+									<li>Frontend & backend development</li>
+									<li>Third-party integrations</li>
+									<li>Performance optimization</li>
+									<li>Quality assurance testing</li>
+								</ul>
+							</div>
+						</div>
+						<div class="timeline-item" data-animate="fade-up" data-delay=".3s">
+							<div class="timeline-marker">
+								<span class="step-number">4</span>
+							</div>
+							<div class="timeline-content">
+								<h3>Launch & Optimization</h3>
+								<p>
+									We ensure a smooth launch and provide ongoing support to
+									maximize your success in the market.
+								</p>
+								<ul>
+									<li>Deployment & go-live</li>
+									<li>Performance monitoring</li>
+									<li>User behavior analysis</li>
+									<li>Continuous optimization</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Contact Section - CTA Cards Layout -->
+			<section class="contact-section" id="contact">
+				<div class="container">
+					<div class="section-header" data-animate="fade-up">
+						<h2 class="section-title">Let's Work Together</h2>
+						<p class="section-subtitle">
+							Choose the best way to connect with us
+						</p>
+					</div>
+
+					<div
+						class="contact-cards-grid"
+						data-animate="fade-up"
+						data-delay=".1s">
+						<!-- Email Card -->
+						<a
+							href="mailto:hello@infinitepixels.dev"
+							class="contact-card primary-card">
+							<div class="contact-card-icon">
+								<svg
+									width="32"
+									height="32"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2">
+									<path
+										d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+									<polyline points="22,6 12,13 2,6" />
+								</svg>
+							</div>
+							<h3 class="contact-card-title">Send us an Email</h3>
+							<p class="contact-card-desc">Get a response within 24 hours</p>
+							<span class="contact-card-value">hello@infinitepixels.dev</span>
+							<div class="contact-card-arrow">→</div>
+						</a>
+
+						<!-- Phone Card -->
+						<a href="tel:+1234567890" class="contact-card">
+							<div class="contact-card-icon">
+								<svg
+									width="32"
+									height="32"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2">
+									<path
+										d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+								</svg>
+							</div>
+							<h3 class="contact-card-title">Give us a Call</h3>
+							<p class="contact-card-desc">Mon-Fri, 9AM-6PM EST</p>
+							<span class="contact-card-value">+1 (234) 567-890</span>
+							<div class="contact-card-arrow">→</div>
+						</a>
+
+						<!-- Online Availability Card -->
+						<a href="services.html" class="contact-card">
+							<div class="contact-card-icon">
+								<svg
+									width="32"
+									height="32"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2">
+									<circle cx="12" cy="12" r="10" />
+									<polyline points="12 6 12 12 16 14" />
+								</svg>
+							</div>
+							<h3 class="contact-card-title">We're Online</h3>
+							<p class="contact-card-desc">Remote-first, globally available</p>
+							<span class="contact-card-value">All Timezones Covered</span>
+							<div class="contact-card-badge">24/7 Online</div>
+						</a>
+					</div>
+
+					<!-- Quick Info Bar -->
+					<div class="contact-info-bar" data-animate="fade-up" data-delay=".2s">
+						<div class="info-bar-item">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<circle cx="12" cy="12" r="10" />
+								<polyline points="12 6 12 12 16 14" />
+							</svg>
+							<span>Response within 24h</span>
+						</div>
+						<div class="info-bar-item">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path
+									d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+							</svg>
+							<span>Free consultation</span>
+						</div>
+						<div class="info-bar-item">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path d="M12 2L2 7l10 5 10-5-10-5z" />
+								<path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+							</svg>
+							<span>Flexible engagement models</span>
+						</div>
+						<div class="info-bar-item">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+							</svg>
+							<span>Proven track record</span>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer class="footer">
 			<div class="container">
 				<div class="footer-content">
-					<div class="footer-about">
-						<div class="footer-logo-row">
-							<img
-								src="img/no bg logos/logomarknobg.png"
-								alt="Infinite Pixels Logo" />
-							<h2 class="footer-logo">Infinite Pixels</h2>
+					<div class="footer-brand">
+						<div class="brand">
+							<span class="brand-logo"
+								><span class="logo-i">I</span
+								><span class="logo-p">P</span></span
+							>
 						</div>
-						<p>
-							We build websites that help businesses succeed in the digital
-							world.
+						<p class="footer-tagline">
+							Crafting digital experiences that scale beyond imagination.
 						</p>
+						<div class="footer-social">
+							<a href="#" aria-label="Twitter">
+								<svg viewBox="0 0 24 24" fill="currentColor">
+									<path
+										d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+								</svg>
+							</a>
+							<a href="#" aria-label="LinkedIn">
+								<svg viewBox="0 0 24 24" fill="currentColor">
+									<path
+										d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+								</svg>
+							</a>
+							<a href="#" aria-label="GitHub">
+								<svg viewBox="0 0 24 24" fill="currentColor">
+									<path
+										d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+								</svg>
+							</a>
+						</div>
 					</div>
 					<div class="footer-links">
-						<h3>Quick Links</h3>
-						<ul>
-							<li><a href="#">Home</a></li>
-							<li><a href="#services">Services</a></li>
-							<li><a href="#portfolio">Portfolio</a></li>
-							<li><a href="#about">About</a></li>
-							<li><a href="#contact">Contact</a></li>
-						</ul>
-					</div>
-					<div class="footer-contact">
-						<h3>Contact Us</h3>
-						<p class="email">
-							Email:
-							<a href="mailto:infinitepixels2025@gmail.com"
-								>infinitepixels2025@gmail.com</a
-							>
-						</p>
-						<p>
-							Phone:<br />
-							<a class="phone" href="tel:+201205022292">+20 120 502 2292</a
-							><br />
-							<a class="phone" href="tel:+201271126999">+20 127 112 6999</a>
-						</p>
-						<div class="social-icons">
-						 <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-						 <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-						 <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-						 <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+						<div class="footer-column">
+							<h4>Services</h4>
+							<a href="services.html">Brand Strategy</a>
+							<a href="services.html">Web Development</a>
+							<a href="services.html">Digital Marketing</a>
+							<a href="services.html">Creative Design</a>
+						</div>
+						<div class="footer-column">
+							<h4>Company</h4>
+							<a href="about.html">About Us</a>
+							<a href="work.html">Our Work</a>
+							<a href="process.html">Process</a>
+							<a href="services.html">Services</a>
+						</div>
+						<div class="footer-column">
+							<h4>Resources</h4>
+							<a href="#">Case Studies</a>
+							<a href="#">AI Insights</a>
+							<a href="#">Performance Reports</a>
 						</div>
 					</div>
 				</div>
-				<div class="copyright">
-					<div class="copyright__track">
-						<div class="copyright__content">
-							<p>
-								&copy; 2025 Infinite Pixels Web Dev Agency. All Rights Reserved.
-							</p>
-						</div>
+				<div class="footer-bottom">
+					<p>
+						&copy; <span id="copyrightYear"></span> Infinite Pixels. All rights
+						reserved.
+					</p>
+					<div class="footer-bottom-links">
+						<a href="/privacy">Privacy Policy</a>
+						<a href="/terms">Terms of Service</a>
 					</div>
 				</div>
 			</div>
 		</footer>
 
-				<script defer src="./logic.js"></script>
-				<script>
-				// Dynamically load contact.js and firebase.js only if contact form is present
-				document.addEventListener('DOMContentLoaded', function() {
-					if (document.getElementById('contactForm')) {
-						var script = document.createElement('script');
-						script.type = 'module';
-						script.src = 'contact.js';
-						document.body.appendChild(script);
-						// Optionally, dynamically load firebase.js if needed by contact.js
-						var firebaseScript = document.createElement('script');
-						firebaseScript.src = 'firebase.js';
-						firebaseScript.defer = true;
-						document.body.appendChild(firebaseScript);
-					}
-				});
-				</script>
-		</div> <!-- End main-content -->
-
-		<!-- Loader JavaScript -->
-		<script>
-			const canvas = document.getElementById("loader-canvas");
-			const ctx = canvas.getContext("2d");
-			let W, H;
-
-			function resizeCanvas() {
-				W = canvas.width = window.innerWidth;
-				H = canvas.height = window.innerHeight;
-			}
-			resizeCanvas();
-			window.addEventListener("resize", resizeCanvas);
-
-			class Particle {
-				constructor(x, y, color) {
-					this.x = Math.random() * W;
-					this.y = Math.random() * H;
-					this.tx = x;
-					this.ty = y;
-					this.size = 1;
-					this.speed = 0.045 + Math.random() * 0.045;
-					this.color = color;
-				}
-				update() {
-					this.x += (this.tx - this.x) * this.speed;
-					this.y += (this.ty - this.y) * this.speed;
-				}
-				draw() {
-					ctx.fillStyle = this.color;
-					ctx.fillRect(this.x, this.y, this.size, this.size);
-				}
-			}
-
-			let particles = [];
-
-			function createParticles() {
-				ctx.clearRect(0, 0, W, H);
-
-				// Responsive font size relative to screen
-				let fontSize = Math.min(W, H) * 0.45;
-				ctx.font = `bold ${fontSize}px sans-serif`;
-				ctx.textAlign = "center";
-				ctx.textBaseline = "middle";
-
-				// Draw "I" in black
-				ctx.fillStyle = "#000";
-				ctx.fillText("I", W / 2 - fontSize * 0.22, H / 2);
-
-				// Draw "P" in white
-				ctx.fillStyle = "#fff";
-				ctx.fillText("P", W / 2 + fontSize * 0.22, H / 2);
-
-				// Capture pixels
-				const imageData = ctx.getImageData(0, 0, W, H).data;
-				ctx.clearRect(0, 0, W, H);
-
-				particles = [];
-				for (let y = 0; y < H; y += 1) {
-					for (let x = 0; x < W; x += 1) {
-						const index = (y * W + x) * 4;
-						const a = imageData[index + 3];
-						if (a > 128) {
-							const r = imageData[index];
-							const g = imageData[index + 1];
-							const b = imageData[index + 2];
-							const color = `rgb(${r},${g},${b})`;
-							particles.push(new Particle(x, y, color));
-						}
-					}
-				}
-			}
-
-			function animate() {
-				ctx.clearRect(0, 0, W, H);
-				particles.forEach((p) => {
-					p.update();
-					p.draw();
-				});
-				requestAnimationFrame(animate);
-			}
-
-			// Init loader animation
-			createParticles();
-			animate();
-
-			// Loader sequence
-			window.addEventListener("load", () => {
-				setTimeout(() => {
-					canvas.style.transform = "scale(20)";
-					const loader = document.getElementById("loader");
-					loader.style.background = "#fff";
-				}, 4500);
-
-				setTimeout(() => {
-					const loader = document.getElementById("loader");
-					const mainContent = document.querySelector(".main-content");
-					loader.style.opacity = "0";
-					setTimeout(() => {
-						loader.style.visibility = "hidden";
-						loader.style.display = "none";
-						mainContent.classList.add("loaded");
-						document.body.style.overflow = "auto";
-					}, 1000);
-				}, 6000);
-			});
-		</script>
+		<script src="logic.js" defer></script>
 	</body>
 </html>
