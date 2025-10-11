@@ -4,6 +4,17 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Infinite Pixels — Digital Experiences That Scale</title>
+		<link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="img/favicon/favicon-32x32.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="img/favicon/favicon-16x16.png" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -16,18 +27,44 @@
 		<nav id="site-header" class="floating-nav">
 			<div class="nav-container">
 				<a href="home.html" class="brand" data-animate="slide-right">
-					<span class="brand-logo"
-						><span class="logo-i">I</span><span class="logo-p">P</span></span
-					>
+					<img
+						src="img/no bg logos/logomarknobg.png"
+						alt="Infinite Pixels Logo"
+						class="brand-logo-img" />
+					<span class="brand-divider"></span>
+					<span class="brand-tagline">Digital Solutions</span>
 				</a>
 				<div class="nav-menu" id="navMenu">
-					<a href="home.html" class="nav-link active">Home</a>
-					<a href="about.html" class="nav-link">About</a>
-					<a href="services.html" class="nav-link">Services</a>
-					<a href="work.html" class="nav-link">Work</a>
-					<a href="process.html" class="nav-link">Process</a>
+					<a href="home.html" class="nav-link active">
+						<span class="link-text">Home</span>
+					</a>
+					<a href="about.html" class="nav-link">
+						<span class="link-text">About</span>
+					</a>
+					<a href="services.html" class="nav-link">
+						<span class="link-text">Services</span>
+					</a>
+					<a href="work.html" class="nav-link">
+						<span class="link-text">Work</span>
+					</a>
+					<a href="process.html" class="nav-link">
+						<span class="link-text">Process</span>
+					</a>
 				</div>
 				<div class="nav-actions">
+					<a href="#contact" class="nav-cta">
+						<span>Get Started</span>
+						<svg
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2">
+							<line x1="5" y1="12" x2="19" y2="12" />
+							<polyline points="12 5 19 12 12 19" />
+						</svg>
+					</a>
 					<button
 						class="theme-toggle"
 						id="themeToggle"
@@ -197,54 +234,116 @@
 		</div>
 
 		<main class="main-content">
-			<!-- Hero Section -->
-			<section class="hero-reimagined" id="hero">
+			<!-- Hero Section - Modern Professional Design -->
+			<section class="hero-section" id="hero">
 				<div class="container">
-					<div class="hero-content-center">
-						<div class="hero-badge" data-animate="fade-up">
-							<span class="badge-dot"></span>
-							<span>Digital Excellence & Brand Innovation</span>
+					<div class="hero-container">
+						<!-- Main Content -->
+						<div class="hero-content">
+							<div class="hero-label" data-animate="fade-up">
+								<span class="label-dot"></span>
+								<span class="label-text"
+									>Digital Innovation & Creative Excellence</span
+								>
+							</div>
+
+							<h1 class="hero-title" data-animate="fade-up" data-delay=".1s">
+								Transform Your Business With
+								<span class="hero-gradient-text"
+									>Cutting-Edge Digital Solutions</span
+								>
+							</h1>
+
+							<p class="hero-subtitle" data-animate="fade-up" data-delay=".2s">
+								From stunning websites and intelligent automation to compelling
+								design and strategic marketing—we bring your vision to life with
+								precision and creativity.
+							</p>
+
+							<div class="hero-ctas" data-animate="fade-up" data-delay=".3s">
+								<a href="services.html" class="hero-btn hero-btn-primary">
+									<span>Explore Services</span>
+									<svg
+										width="18"
+										height="18"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2">
+										<path d="M5 12h14M12 5l7 7-7 7" />
+									</svg>
+								</a>
+								<a href="work.html" class="hero-btn hero-btn-outline">
+									<span>View Our Work</span>
+								</a>
+							</div>
 						</div>
 
-						<h1
-							class="hero-title-large"
-							data-animate="fade-up"
-							data-delay=".1s">
-							Build the Future.<br />
-							<span class="gradient-text">One Pixel at a Time.</span>
-						</h1>
+						<!-- Visual Side -->
+						<div class="hero-visual" data-animate="fade-up" data-delay=".2s">
+							<div class="visual-grid">
+								<!-- Card 1 - Featured Service -->
+								<div class="visual-card card-featured">
+									<div class="card-badge">Featured</div>
+									<div class="card-icon-large">
+										<svg
+											width="32"
+											height="32"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="1.5">
+											<path d="M12 2L2 7l10 5 10-5-10-5z" />
+											<path d="M2 17l10 5 10-5" />
+											<path d="M2 12l10 5 10-5" />
+										</svg>
+									</div>
+									<h3>AI Automation</h3>
+									<p>Intelligent solutions that work for you</p>
+									<div class="card-stat">
+										<span class="stat-label">Efficiency Boost</span>
+										<span class="stat-value">+85%</span>
+									</div>
+								</div>
 
-						<p class="hero-subtitle" data-animate="fade-up" data-delay=".2s">
-							We transform bold ideas into high-performance digital
-							experiences.<br />
-							Branding. Web development. Digital solutions that scale.
-						</p>
+								<!-- Card 2 - Services Grid -->
+								<div class="visual-card card-services">
+									<div class="service-tag">Web Dev</div>
+									<div class="service-tag">Design</div>
+									<div class="service-tag">Marketing</div>
+									<div class="service-tag">Media</div>
+								</div>
 
-						<div class="hero-cta" data-animate="fade-up" data-delay=".3s">
-							<a href="services.html" class="btn-primary">Get Started</a>
-							<a href="work.html" class="btn-secondary">View Our Work</a>
-						</div>
+								<!-- Card 3 - Stats -->
+								<div class="visual-card card-stats">
+									<div class="mini-stat">
+										<span class="mini-number">7</span>
+										<span class="mini-label">Services</span>
+									</div>
+									<div class="mini-stat">
+										<span class="mini-number">5+</span>
+										<span class="mini-label">Years</span>
+									</div>
+								</div>
 
-						<div
-							class="hero-stats-inline"
-							data-animate="fade-up"
-							data-delay=".4s">
-							<div class="stat-inline">
-								<span class="stat-num">150+</span>
-								<span class="stat-text">Projects</span>
-							</div>
-							<div class="stat-divider"></div>
-							<div class="stat-inline">
-								<span class="stat-num">98%</span>
-								<span class="stat-text">Satisfaction</span>
-							</div>
-							<div class="stat-divider"></div>
-							<div class="stat-inline">
-								<span class="stat-num">2 Weeks</span>
-								<span class="stat-text">Launch Time</span>
+								<!-- Card 4 - Live Indicator -->
+								<div class="visual-card card-live">
+									<div class="live-indicator">
+										<span class="pulse-dot"></span>
+										<span>Currently Available</span>
+									</div>
+									<p>Ready to start your project</p>
+								</div>
 							</div>
 						</div>
 					</div>
+				</div>
+
+				<!-- Background Elements -->
+				<div class="hero-bg-wrapper">
+					<div class="hero-bg-blur hero-bg-blur-1"></div>
+					<div class="hero-bg-blur hero-bg-blur-2"></div>
+					<div class="hero-grid-pattern"></div>
 				</div>
 			</section>
 
@@ -449,99 +548,205 @@
 				</div>
 			</section>
 
-			<!-- Portfolio with Horizontal Scroll -->
+			<!-- Featured Work Section -->
 			<section class="portfolio-section" id="work">
 				<div class="container">
 					<div class="section-header" data-animate="fade-up">
+						<span class="section-badge">Portfolio</span>
 						<h2 class="section-title">Featured Work</h2>
 						<p class="section-subtitle">
-							Real projects, real results, real impact
+							Transforming visions into award-winning digital experiences
 						</p>
 					</div>
-					<div class="portfolio-scroll" data-animate="fade-up" data-delay=".2s">
-						<div class="portfolio-track">
-							<div class="portfolio-item">
-								<div class="portfolio-image">
-									<img
-										src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
-										alt="E-commerce Platform" />
-									<div class="portfolio-overlay">
-										<div class="portfolio-info">
-											<h4>E-commerce Revolution</h4>
-											<p>
-												Complete platform rebuild that increased conversions by
-												185%
-											</p>
-											<div class="portfolio-tags">
-												<span>React</span>
-												<span>Node.js</span>
-												<span>Stripe</span>
-											</div>
-										</div>
+
+					<div class="featured-work-grid">
+						<!-- Featured Project - Large -->
+						<div class="work-card featured" data-animate="fade-up">
+							<div class="work-image">
+								<img
+									src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
+									alt="E-commerce Platform" />
+								<div class="work-gradient"></div>
+							</div>
+							<div class="work-content">
+								<div class="work-meta">
+									<span class="work-category">E-commerce</span>
+									<span class="work-year">2024</span>
+								</div>
+								<h3 class="work-title">E-commerce Revolution</h3>
+								<p class="work-description">
+									Complete platform rebuild that increased conversions by 185%
+									and improved user experience across mobile and desktop.
+								</p>
+								<div class="work-stats">
+									<div class="stat-item">
+										<div class="stat-value">+185%</div>
+										<div class="stat-label">Conversions</div>
+									</div>
+									<div class="stat-item">
+										<div class="stat-value">$2.4M</div>
+										<div class="stat-label">Revenue Boost</div>
+									</div>
+									<div class="stat-item">
+										<div class="stat-value">42%</div>
+										<div class="stat-label">Faster Load</div>
 									</div>
 								</div>
+								<div class="work-tags">
+									<span>React</span>
+									<span>Node.js</span>
+									<span>Stripe</span>
+									<span>AWS</span>
+								</div>
+								<a href="work.html" class="work-link">
+									<span>View Case Study</span>
+									<svg
+										width="20"
+										height="20"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2">
+										<line x1="5" y1="12" x2="19" y2="12" />
+										<polyline points="12 5 19 12 12 19" />
+									</svg>
+								</a>
 							</div>
-							<div class="portfolio-item">
-								<div class="portfolio-image">
-									<img
-										src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
-										alt="SaaS Dashboard" />
-									<div class="portfolio-overlay">
-										<div class="portfolio-info">
-											<h4>SaaS Analytics Platform</h4>
-											<p>
-												Real-time dashboard with advanced data visualization
-											</p>
-											<div class="portfolio-tags">
-												<span>Vue.js</span>
-												<span>D3.js</span>
-												<span>Python</span>
-											</div>
-										</div>
-									</div>
+						</div>
+
+						<!-- Regular Projects Grid -->
+						<div class="work-card" data-animate="fade-up" data-delay=".1s">
+							<div class="work-image">
+								<img
+									src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+									alt="SaaS Dashboard" />
+								<div class="work-gradient"></div>
+								<div class="work-overlay">
+									<a href="work.html" class="overlay-link">
+										<svg
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2">
+											<line x1="5" y1="12" x2="19" y2="12" />
+											<polyline points="12 5 19 12 12 19" />
+										</svg>
+									</a>
 								</div>
 							</div>
-							<div class="portfolio-item">
-								<div class="portfolio-image">
-									<img
-										src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=800&q=80"
-										alt="Mobile App" />
-									<div class="portfolio-overlay">
-										<div class="portfolio-info">
-											<h4>Fintech Mobile App</h4>
-											<p>
-												Award-winning mobile experience for financial planning
-											</p>
-											<div class="portfolio-tags">
-												<span>React Native</span>
-												<span>Firebase</span>
-												<span>AI/ML</span>
-											</div>
-										</div>
-									</div>
+							<div class="work-content">
+								<div class="work-meta">
+									<span class="work-category">SaaS</span>
+									<span class="work-year">2024</span>
 								</div>
-							</div>
-							<div class="portfolio-item">
-								<div class="portfolio-image">
-									<img
-										src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
-										alt="Corporate Website" />
-									<div class="portfolio-overlay">
-										<div class="portfolio-info">
-											<h4>Corporate Rebrand</h4>
-											<p>
-												Complete digital transformation for Fortune 500 company
-											</p>
-											<div class="portfolio-tags">
-												<span>Next.js</span>
-												<span>GSAP</span>
-												<span>CMS</span>
-											</div>
-										</div>
-									</div>
+								<h3 class="work-title">Analytics Platform</h3>
+								<p class="work-description">
+									Real-time dashboard with advanced data visualization and
+									AI-powered insights.
+								</p>
+								<div class="work-tags">
+									<span>Vue.js</span>
+									<span>D3.js</span>
+									<span>Python</span>
 								</div>
 							</div>
 						</div>
+
+						<div class="work-card" data-animate="fade-up" data-delay=".2s">
+							<div class="work-image">
+								<img
+									src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=800&q=80"
+									alt="Mobile App" />
+								<div class="work-gradient"></div>
+								<div class="work-overlay">
+									<a href="work.html" class="overlay-link">
+										<svg
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2">
+											<line x1="5" y1="12" x2="19" y2="12" />
+											<polyline points="12 5 19 12 12 19" />
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="work-content">
+								<div class="work-meta">
+									<span class="work-category">Mobile</span>
+									<span class="work-year">2023</span>
+								</div>
+								<h3 class="work-title">Fintech Mobile App</h3>
+								<p class="work-description">
+									Award-winning mobile experience for financial planning and
+									investment tracking.
+								</p>
+								<div class="work-tags">
+									<span>React Native</span>
+									<span>Firebase</span>
+									<span>AI/ML</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="work-card" data-animate="fade-up" data-delay=".3s">
+							<div class="work-image">
+								<img
+									src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+									alt="Corporate Website" />
+								<div class="work-gradient"></div>
+								<div class="work-overlay">
+									<a href="work.html" class="overlay-link">
+										<svg
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2">
+											<line x1="5" y1="12" x2="19" y2="12" />
+											<polyline points="12 5 19 12 12 19" />
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="work-content">
+								<div class="work-meta">
+									<span class="work-category">Branding</span>
+									<span class="work-year">2023</span>
+								</div>
+								<h3 class="work-title">Corporate Rebrand</h3>
+								<p class="work-description">
+									Complete digital transformation for Fortune 500 company with
+									global reach.
+								</p>
+								<div class="work-tags">
+									<span>Next.js</span>
+									<span>GSAP</span>
+									<span>CMS</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="section-cta" data-animate="fade-up" data-delay=".4s">
+						<a href="work.html" class="btn-secondary">
+							<span>View All Projects</span>
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<line x1="5" y1="12" x2="19" y2="12" />
+								<polyline points="12 5 19 12 12 19" />
+							</svg>
+						</a>
 					</div>
 				</div>
 			</section>
@@ -776,42 +981,85 @@
 				<div class="footer-content">
 					<div class="footer-brand">
 						<div class="brand">
-							<span class="brand-logo"
-								><span class="logo-i">I</span
-								><span class="logo-p">P</span></span
-							>
+							<img
+								src="img/no bg logos/logomark2nobg.png"
+								alt="Infinite Pixels Logo"
+								class="footer-logo-img" />
 						</div>
 						<p class="footer-tagline">
 							Crafting digital experiences that scale beyond imagination.
 						</p>
 						<div class="footer-social">
-							<a href="#" aria-label="Twitter">
-								<svg viewBox="0 0 24 24" fill="currentColor">
-									<path
-										d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
-								</svg>
-							</a>
-							<a href="#" aria-label="LinkedIn">
-								<svg viewBox="0 0 24 24" fill="currentColor">
-									<path
-										d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-								</svg>
-							</a>
-							<a href="#" aria-label="GitHub">
-								<svg viewBox="0 0 24 24" fill="currentColor">
-									<path
-										d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-								</svg>
+							<a
+								href="https://instagram.com/infinitepixels"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="instagram-link"
+								aria-label="Follow us on Instagram">
+								<div class="instagram-icon">
+									<svg
+										viewBox="0 0 24 24"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<rect
+											x="2"
+											y="2"
+											width="20"
+											height="20"
+											rx="5"
+											stroke="url(#instagram-gradient)"
+											stroke-width="2" />
+										<circle
+											cx="12"
+											cy="12"
+											r="4"
+											stroke="url(#instagram-gradient)"
+											stroke-width="2" />
+										<circle
+											cx="18"
+											cy="6"
+											r="1.5"
+											fill="url(#instagram-gradient)" />
+										<defs>
+											<linearGradient
+												id="instagram-gradient"
+												x1="0%"
+												y1="0%"
+												x2="100%"
+												y2="100%">
+												<stop
+													offset="0%"
+													style="stop-color: #f09433; stop-opacity: 1" />
+												<stop
+													offset="25%"
+													style="stop-color: #e6683c; stop-opacity: 1" />
+												<stop
+													offset="50%"
+													style="stop-color: #dc2743; stop-opacity: 1" />
+												<stop
+													offset="75%"
+													style="stop-color: #cc2366; stop-opacity: 1" />
+												<stop
+													offset="100%"
+													style="stop-color: #bc1888; stop-opacity: 1" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+								<span class="instagram-text">@infinitepixels</span>
 							</a>
 						</div>
 					</div>
 					<div class="footer-links">
 						<div class="footer-column">
 							<h4>Services</h4>
-							<a href="services.html">Brand Strategy</a>
-							<a href="services.html">Web Development</a>
+							<a href="services.html">Website Development</a>
+							<a href="services.html">System Integration</a>
+							<a href="services.html">Graphic Design</a>
+							<a href="services.html">Media Production</a>
+							<a href="services.html">Social Media Management</a>
 							<a href="services.html">Digital Marketing</a>
-							<a href="services.html">Creative Design</a>
+							<a href="services.html">AI Automation</a>
 						</div>
 						<div class="footer-column">
 							<h4>Company</h4>
@@ -821,10 +1069,13 @@
 							<a href="services.html">Services</a>
 						</div>
 						<div class="footer-column">
-							<h4>Resources</h4>
-							<a href="#">Case Studies</a>
-							<a href="#">AI Insights</a>
-							<a href="#">Performance Reports</a>
+							<h4>Contact</h4>
+							<p style="color: var(--text-secondary); font-size: 0.9375rem">
+								Email: info@infinitepixels.com
+							</p>
+							<p style="color: var(--text-secondary); font-size: 0.9375rem">
+								Phone: +1 (555) 123-4567
+							</p>
 						</div>
 					</div>
 				</div>
@@ -842,5 +1093,6 @@
 		</footer>
 
 		<script src="logic.js" defer></script>
+		<script src="js/Aurora.js"></script>
 	</body>
 </html>
