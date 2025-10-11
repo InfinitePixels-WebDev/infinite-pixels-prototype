@@ -2429,7 +2429,7 @@ h6 {
 }
 
 .page-hero::before {
-	content: '';
+	content: "";
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -2582,7 +2582,11 @@ h6 {
 
 .category-badge {
 	padding: 0.625rem 1.25rem;
-	background: linear-gradient(135deg, var(--surface) 0%, var(--background) 100%);
+	background: linear-gradient(
+		135deg,
+		var(--surface) 0%,
+		var(--background) 100%
+	);
 	border: 1px solid var(--border);
 	border-radius: 2rem;
 	font-size: 0.875rem;
@@ -2630,7 +2634,11 @@ h6 {
 .process-step-mini:hover {
 	transform: translateY(-5px);
 	border-color: var(--primary);
-	background: linear-gradient(135deg, var(--surface) 0%, rgba(var(--primary-rgb), 0.05) 100%);
+	background: linear-gradient(
+		135deg,
+		var(--surface) 0%,
+		rgba(var(--primary-rgb), 0.05) 100%
+	);
 }
 
 .step-number {
@@ -2652,13 +2660,18 @@ h6 {
 .process-connector {
 	width: 40px;
 	height: 2px;
-	background: linear-gradient(90deg, var(--border) 0%, var(--primary) 50%, var(--border) 100%);
+	background: linear-gradient(
+		90deg,
+		var(--border) 0%,
+		var(--primary) 50%,
+		var(--border) 100%
+	);
 	position: relative;
 	margin: 0 -1px;
 }
 
 .process-connector::after {
-	content: '';
+	content: "";
 	position: absolute;
 	right: 0;
 	top: 50%;
@@ -2711,7 +2724,7 @@ h6 {
 }
 
 .expertise-card::before {
-	content: '';
+	content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -2830,7 +2843,7 @@ h6 {
 }
 
 .expertise-list li::before {
-	content: '✓';
+	content: "✓";
 	position: absolute;
 	left: 0;
 	color: var(--primary);
