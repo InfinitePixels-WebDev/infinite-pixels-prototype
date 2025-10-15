@@ -1,756 +1,810 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Our Work — Infinite Pixels</title>
-		<link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico" />
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="img/favicon/favicon-32x32.png" />
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="img/favicon/favicon-16x16.png" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
-			rel="stylesheet" />
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<!-- Floating Navigation -->
-		<nav id="site-header" class="floating-nav">
-			<div class="nav-container">
-				<a href="home.html" class="brand" data-animate="slide-right">
-					<img
-						src="img/no bg logos/logomarknobg.png"
-						alt="Infinite Pixels Logo"
-						class="brand-logo-img" />
-					<span class="brand-divider"></span>
-					<span class="brand-tagline">Digital Solutions</span>
-				</a>
-				<div class="nav-menu" id="navMenu">
-					<a href="home.html" class="nav-link">
-						<span class="link-text">Home</span>
-					</a>
-					<a href="about.html" class="nav-link">
-						<span class="link-text">About</span>
-					</a>
-					<a href="services.html" class="nav-link">
-						<span class="link-text">Services</span>
-					</a>
-					<a href="work.html" class="nav-link active">
-						<span class="link-text">Work</span>
-					</a>
-					<a href="process.html" class="nav-link">
-						<span class="link-text">Process</span>
-					</a>
-				</div>
-				<div class="nav-actions">
-					<a href="home.html#contact" class="nav-cta">
-						<span>Get Started</span>
-						<svg
-							width="16"
-							height="16"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2">
-							<line x1="5" y1="12" x2="19" y2="12" />
-							<polyline points="12 5 19 12 12 19" />
-						</svg>
-					</a>
-					<button
-						class="theme-toggle"
-						id="themeToggle"
-						type="button"
-						aria-label="Toggle theme">
-						<span id="themeToggleIcon" aria-hidden="true">
-							<svg
-								width="20"
-								height="20"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2">
-								<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-							</svg>
-						</span>
-					</button>
-					<button
-						class="menu-toggle"
-						id="menuToggle"
-						type="button"
-						aria-label="Toggle navigation"
-						aria-expanded="false"
-						aria-controls="navMenu">
-						<span class="menu-line"></span>
-						<span class="menu-line"></span>
-						<span class="menu-line"></span>
-					</button>
-				</div>
-			</div>
-		</nav>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Work — Infinite Pixels</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Michroma:wght@400&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Floating Navigation -->
+    <nav id="site-header" class="floating-nav">
+      <div class="nav-container">
+        <a href="home.html" class="brand" data-animate="slide-right">
+          <img
+            src="img/no bg logos/logomarknobg.png"
+            alt="Infinite Pixels Logo"
+            class="brand-logo-img"
+          />
+          <span class="brand-divider"></span>
+          <span class="brand-tagline">Digital Solutions</span>
+        </a>
+        <div class="nav-menu" id="navMenu">
+          <a href="home.html" class="nav-link">
+            <span class="link-text">Home</span>
+          </a>
+          <a href="about.html" class="nav-link">
+            <span class="link-text">About</span>
+          </a>
+          <a href="services.html" class="nav-link">
+            <span class="link-text">Services</span>
+          </a>
+          <a href="work.html" class="nav-link active">
+            <span class="link-text">Work</span>
+          </a>
+          <a href="process.html" class="nav-link">
+            <span class="link-text">Process</span>
+          </a>
+        </div>
+        <div class="nav-actions">
+          <a href="home.html#contact" class="nav-cta">
+            <span>Get Started</span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Toggle theme"
+          >
+            <span id="themeToggleIcon" aria-hidden="true">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+            </span>
+          </button>
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            aria-controls="navMenu"
+          >
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
 
-		<!-- Mobile Navigation Overlay -->
-		<div class="mobile-nav-overlay" aria-hidden="true">
-			<div class="mobile-nav-panel">
-				<div class="mobile-nav-handle" aria-hidden="true"></div>
-				<div class="mobile-nav-header">
-					<h3 class="mobile-nav-title">Explore</h3>
-				</div>
-				<div class="mobile-nav-featured">
-					<a class="mobile-feature-card services" href="services.html">
-						<div class="feat-icon">🧠</div>
-						<div class="feat-title">Services</div>
-						<div class="feat-sub">Branding, web design, digital solutions</div>
-					</a>
-					<a class="mobile-feature-card work" href="work.html">
-						<div class="feat-icon">🏆</div>
-						<div class="feat-title">Work</div>
-						<div class="feat-sub">Results and case studies</div>
-					</a>
-				</div>
-				<nav class="mobile-nav-list" aria-label="Mobile">
-					<a class="mobile-nav-item" href="home.html"
-						><span class="item-icon">🏠</span
-						><span class="item-label">Home</span
-						><span class="item-arrow">›</span></a
-					>
-					<a class="mobile-nav-item" href="about.html"
-						><span class="item-icon">✨</span
-						><span class="item-label">About</span
-						><span class="item-arrow">›</span></a
-					>
-					<a class="mobile-nav-item" href="services.html"
-						><span class="item-icon">🧩</span
-						><span class="item-label">Services</span
-						><span class="item-arrow">›</span></a
-					>
-					<a class="mobile-nav-item" href="work.html"
-						><span class="item-icon">🚀</span
-						><span class="item-label">Work</span
-						><span class="item-arrow">›</span></a
-					>
-					<a class="mobile-nav-item" href="process.html"
-						><span class="item-icon">🔁</span
-						><span class="item-label">Process</span
-						><span class="item-arrow">›</span></a
-					>
-				</nav>
-			</div>
-		</div>
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" aria-hidden="true">
+      <div class="mobile-nav-panel">
+        <div class="mobile-nav-handle" aria-hidden="true"></div>
+        <div class="mobile-nav-header">
+          <h3 class="mobile-nav-title">Explore</h3>
+        </div>
+        <div class="mobile-nav-featured">
+          <a class="mobile-feature-card services" href="services.html">
+            <div class="feat-icon">🧠</div>
+            <div class="feat-title">Services</div>
+            <div class="feat-sub">Branding, web design, digital solutions</div>
+          </a>
+          <a class="mobile-feature-card work" href="work.html">
+            <div class="feat-icon">🏆</div>
+            <div class="feat-title">Work</div>
+            <div class="feat-sub">Results and case studies</div>
+          </a>
+        </div>
+        <nav class="mobile-nav-list" aria-label="Mobile">
+          <a class="mobile-nav-item" href="home.html"
+            ><span class="item-icon">🏠</span
+            ><span class="item-label">Home</span
+            ><span class="item-arrow">›</span></a
+          >
+          <a class="mobile-nav-item" href="about.html"
+            ><span class="item-icon">✨</span
+            ><span class="item-label">About</span
+            ><span class="item-arrow">›</span></a
+          >
+          <a class="mobile-nav-item" href="services.html"
+            ><span class="item-icon">🧩</span
+            ><span class="item-label">Services</span
+            ><span class="item-arrow">›</span></a
+          >
+          <a class="mobile-nav-item" href="work.html"
+            ><span class="item-icon">🚀</span
+            ><span class="item-label">Work</span
+            ><span class="item-arrow">›</span></a
+          >
+          <a class="mobile-nav-item" href="process.html"
+            ><span class="item-icon">🔁</span
+            ><span class="item-label">Process</span
+            ><span class="item-arrow">›</span></a
+          >
+        </nav>
+      </div>
+    </div>
 
-		<main class="main-content">
-			<!-- Work Hero Section -->
-			<section class="page-hero work-hero" id="hero">
-				<div class="container">
-					<div class="hero-badge" data-animate="fade-up">
-						<svg
-							width="16"
-							height="16"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2">
-							<path
-								d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-							<polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-							<line x1="12" y1="22.08" x2="12" y2="12" />
-						</svg>
-						<span>Creative Portfolio</span>
-					</div>
-					<div class="hero-content" data-animate="fade-up" data-delay=".1s">
-						<h1 class="page-title">Delivering Results Across All Services</h1>
-						<p class="page-subtitle">
-							Explore our diverse portfolio of website development, system
-							integration, graphic design, media production, social media
-							management, digital marketing, and AI automation projects that
-							have transformed businesses.
-						</p>
-					</div>
-					<div class="hero-categories" data-animate="fade-up" data-delay=".2s">
-						<div class="category-badge">Website Development</div>
-						<div class="category-badge">System Integration</div>
-						<div class="category-badge">Graphic Design</div>
-						<div class="category-badge">Media Production</div>
-						<div class="category-badge">Social Media</div>
-						<div class="category-badge">Digital Marketing</div>
-						<div class="category-badge">AI Automation</div>
-					</div>
-				</div>
-			</section>
+    <main class="main-content">
+      <!-- Work Hero Section -->
+      <section class="page-hero work-hero" id="hero">
+        <div class="container">
+          <div class="hero-badge" data-animate="fade-up">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+              />
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+              <line x1="12" y1="22.08" x2="12" y2="12" />
+            </svg>
+            <span>Creative Portfolio</span>
+          </div>
+          <div class="hero-content" data-animate="fade-up" data-delay=".1s">
+            <h1 class="page-title">Delivering Results Across All Services</h1>
+            <p class="page-subtitle">
+              Explore our diverse portfolio of website development, system
+              integration, graphic design, media production, social media
+              management, digital marketing, and AI automation projects that
+              have transformed businesses.
+            </p>
+          </div>
+          <div class="hero-categories" data-animate="fade-up" data-delay=".2s">
+            <div class="category-badge">Website Development</div>
+            <div class="category-badge">System Integration</div>
+            <div class="category-badge">Graphic Design</div>
+            <div class="category-badge">Media Production</div>
+            <div class="category-badge">Social Media</div>
+            <div class="category-badge">Digital Marketing</div>
+            <div class="category-badge">AI Automation</div>
+          </div>
+        </div>
+      </section>
 
-			<!-- Portfolio Filter -->
-			<section class="content-section">
-				<div class="container">
-					<div class="portfolio-filters" data-animate="fade-up">
-						<button class="filter-btn active" data-filter="all">
-							All Projects
-						</button>
-						<button class="filter-btn" data-filter="ai">AI Automation</button>
-						<button class="filter-btn" data-filter="web">
-							Web Development
-						</button>
-						<button class="filter-btn" data-filter="marketing">
-							Digital Marketing
-						</button>
-						<button class="filter-btn" data-filter="design">
-							Design & Branding
-						</button>
-						<button class="filter-btn" data-filter="media">
-							Media Production
-						</button>
-					</div>
-				</div>
-			</section>
+      <!-- Portfolio Filter -->
+      <section class="content-section">
+        <div class="container">
+          <div class="portfolio-filters" data-animate="fade-up">
+            <button class="filter-btn active" data-filter="all">
+              All Projects
+            </button>
+            <button class="filter-btn" data-filter="ai">AI Automation</button>
+            <button class="filter-btn" data-filter="web">
+              Web Development
+            </button>
+            <button class="filter-btn" data-filter="marketing">
+              Digital Marketing
+            </button>
+            <button class="filter-btn" data-filter="design">
+              Design & Branding
+            </button>
+            <button class="filter-btn" data-filter="media">
+              Media Production
+            </button>
+          </div>
+        </div>
+      </section>
 
-			<!-- Portfolio Grid -->
-			<section class="content-section">
-				<div class="container">
-					<div class="portfolio-grid">
-						<!-- Project 1 - AI Automation -->
-						<div
-							class="portfolio-item"
-							data-category="ai automation"
-							data-animate="fade-up">
-							<div class="portfolio-image">
-								<img
-									src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
-									alt="AI Customer Service Bot" />
-								<div class="portfolio-overlay">
-									<div class="portfolio-info">
-										<h3>AI Customer Service Bot</h3>
-										<p>E-commerce Automation Solution</p>
-										<div class="portfolio-tags">
-											<span>OpenAI API</span>
-											<span>Chatbot</span>
-											<span>Automation</span>
-										</div>
-									</div>
-									<div class="portfolio-actions">
-										<a
-											href="#"
-											class="portfolio-link"
-											aria-label="View project">
-											<svg viewBox="0 0 24 24" fill="currentColor">
-												<path
-													d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-											</svg>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="portfolio-details">
-								<div class="portfolio-meta">
-									<span class="category">AI Automation</span>
-									<span class="year">2024</span>
-								</div>
-								<h3>AI Customer Service Bot</h3>
-								<p>
-									Intelligent chatbot that reduced customer service workload by
-									75% and improved response times by 400% for a major e-commerce
-									client.
-								</p>
-							</div>
-						</div>
+      <!-- Portfolio Grid -->
+      <section class="content-section">
+        <div class="container">
+          <div class="portfolio-grid">
+            <!-- Project 1 - AI Automation -->
+            <div
+              class="portfolio-item"
+              data-category="ai automation"
+              data-animate="fade-up"
+            >
+              <div class="portfolio-image">
+                <img
+                  src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
+                  alt="AI Customer Service Bot"
+                />
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h3>AI Customer Service Bot</h3>
+                    <p>E-commerce Automation Solution</p>
+                    <div class="portfolio-tags">
+                      <span>OpenAI API</span>
+                      <span>Chatbot</span>
+                      <span>Automation</span>
+                    </div>
+                  </div>
+                  <div class="portfolio-actions">
+                    <a
+                      href="#"
+                      class="portfolio-link"
+                      aria-label="View project"
+                    >
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-details">
+                <div class="portfolio-meta">
+                  <span class="category">AI Automation</span>
+                  <span class="year">2024</span>
+                </div>
+                <h3>AI Customer Service Bot</h3>
+                <p>
+                  Intelligent chatbot that reduced customer service workload by
+                  75% and improved response times by 400% for a major e-commerce
+                  client.
+                </p>
+              </div>
+            </div>
 
-						<!-- Project 2 - Web Development -->
-						<div
-							class="portfolio-item"
-							data-category="web development"
-							data-animate="fade-up"
-							data-delay=".1s">
-							<div class="portfolio-image">
-								<img
-									src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
-									alt="SaaS Platform" />
-								<div class="portfolio-overlay">
-									<div class="portfolio-info">
-										<h3>SaaS Analytics Platform</h3>
-										<p>Business Intelligence Dashboard</p>
-										<div class="portfolio-tags">
-											<span>React</span>
-											<span>Node.js</span>
-											<span>PostgreSQL</span>
-										</div>
-									</div>
-									<div class="portfolio-actions">
-										<a
-											href="#"
-											class="portfolio-link"
-											aria-label="View project">
-											<svg viewBox="0 0 24 24" fill="currentColor">
-												<path
-													d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-											</svg>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="portfolio-details">
-								<div class="portfolio-meta">
-									<span class="category">Web Development</span>
-									<span class="year">2024</span>
-								</div>
-								<h3>SaaS Analytics Platform</h3>
-								<p>
-									Comprehensive business intelligence platform that processes
-									10M+ data points daily and serves 50K+ active users worldwide.
-								</p>
-							</div>
-						</div>
+            <!-- Project 2 - Web Development -->
+            <div
+              class="portfolio-item"
+              data-category="web development"
+              data-animate="fade-up"
+              data-delay=".1s"
+            >
+              <div class="portfolio-image">
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+                  alt="SaaS Platform"
+                />
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h3>SaaS Analytics Platform</h3>
+                    <p>Business Intelligence Dashboard</p>
+                    <div class="portfolio-tags">
+                      <span>React</span>
+                      <span>Node.js</span>
+                      <span>PostgreSQL</span>
+                    </div>
+                  </div>
+                  <div class="portfolio-actions">
+                    <a
+                      href="#"
+                      class="portfolio-link"
+                      aria-label="View project"
+                    >
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-details">
+                <div class="portfolio-meta">
+                  <span class="category">Web Development</span>
+                  <span class="year">2024</span>
+                </div>
+                <h3>SaaS Analytics Platform</h3>
+                <p>
+                  Comprehensive business intelligence platform that processes
+                  10M+ data points daily and serves 50K+ active users worldwide.
+                </p>
+              </div>
+            </div>
 
-						<!-- Project 3 - Digital Marketing -->
-						<div
-							class="portfolio-item"
-							data-category="marketing design"
-							data-animate="fade-up"
-							data-delay=".2s">
-							<div class="portfolio-image">
-								<img
-									src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=800&q=80"
-									alt="Digital Marketing Campaign" />
-								<div class="portfolio-overlay">
-									<div class="portfolio-info">
-										<h3>360° Marketing Campaign</h3>
-										<p>Fitness Brand Transformation</p>
-										<div class="portfolio-tags">
-											<span>SEO</span>
-											<span>Google Ads</span>
-											<span>Social Media</span>
-										</div>
-									</div>
-									<div class="portfolio-actions">
-										<a
-											href="#"
-											class="portfolio-link"
-											aria-label="View project">
-											<svg viewBox="0 0 24 24" fill="currentColor">
-												<path
-													d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-											</svg>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="portfolio-details">
-								<div class="portfolio-meta">
-									<span class="category">Digital Marketing</span>
-									<span class="year">2024</span>
-								</div>
-								<h3>360° Marketing Campaign</h3>
-								<p>
-									Complete digital transformation that increased online revenue
-									by 350% and built a community of 100K+ engaged followers.
-								</p>
-							</div>
-						</div>
+            <!-- Project 3 - Digital Marketing -->
+            <div
+              class="portfolio-item"
+              data-category="marketing design"
+              data-animate="fade-up"
+              data-delay=".2s"
+            >
+              <div class="portfolio-image">
+                <img
+                  src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=800&q=80"
+                  alt="Digital Marketing Campaign"
+                />
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h3>360° Marketing Campaign</h3>
+                    <p>Fitness Brand Transformation</p>
+                    <div class="portfolio-tags">
+                      <span>SEO</span>
+                      <span>Google Ads</span>
+                      <span>Social Media</span>
+                    </div>
+                  </div>
+                  <div class="portfolio-actions">
+                    <a
+                      href="#"
+                      class="portfolio-link"
+                      aria-label="View project"
+                    >
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-details">
+                <div class="portfolio-meta">
+                  <span class="category">Digital Marketing</span>
+                  <span class="year">2024</span>
+                </div>
+                <h3>360° Marketing Campaign</h3>
+                <p>
+                  Complete digital transformation that increased online revenue
+                  by 350% and built a community of 100K+ engaged followers.
+                </p>
+              </div>
+            </div>
 
-						<!-- Project 4 - Media Production -->
-						<div
-							class="portfolio-item"
-							data-category="media design"
-							data-animate="fade-up"
-							data-delay=".3s">
-							<div class="portfolio-image">
-								<img
-									src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80"
-									alt="Brand Video Campaign" />
-								<div class="portfolio-overlay">
-									<div class="portfolio-info">
-										<h3>Brand Video Campaign</h3>
-										<p>Tech Startup Launch Series</p>
-										<div class="portfolio-tags">
-											<span>Video Production</span>
-											<span>Motion Graphics</span>
-											<span>Branding</span>
-										</div>
-									</div>
-									<div class="portfolio-actions">
-										<a
-											href="#"
-											class="portfolio-link"
-											aria-label="View project">
-											<svg viewBox="0 0 24 24" fill="currentColor">
-												<path
-													d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-											</svg>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="portfolio-details">
-								<div class="portfolio-meta">
-									<span class="category">Media Production</span>
-									<span class="year">2024</span>
-								</div>
-								<h3>Brand Video Campaign</h3>
-								<p>
-									Compelling video series that generated 5M+ views and helped
-									secure $2M in Series A funding for an innovative tech startup.
-								</p>
-							</div>
-						</div>
+            <!-- Project 4 - Media Production -->
+            <div
+              class="portfolio-item"
+              data-category="media design"
+              data-animate="fade-up"
+              data-delay=".3s"
+            >
+              <div class="portfolio-image">
+                <img
+                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80"
+                  alt="Brand Video Campaign"
+                />
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h3>Brand Video Campaign</h3>
+                    <p>Tech Startup Launch Series</p>
+                    <div class="portfolio-tags">
+                      <span>Video Production</span>
+                      <span>Motion Graphics</span>
+                      <span>Branding</span>
+                    </div>
+                  </div>
+                  <div class="portfolio-actions">
+                    <a
+                      href="#"
+                      class="portfolio-link"
+                      aria-label="View project"
+                    >
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-details">
+                <div class="portfolio-meta">
+                  <span class="category">Media Production</span>
+                  <span class="year">2024</span>
+                </div>
+                <h3>Brand Video Campaign</h3>
+                <p>
+                  Compelling video series that generated 5M+ views and helped
+                  secure $2M in Series A funding for an innovative tech startup.
+                </p>
+              </div>
+            </div>
 
-						<!-- Project 5 - AI Automation -->
-						<div
-							class="portfolio-item"
-							data-category="ai web"
-							data-animate="fade-up"
-							data-delay=".4s">
-							<div class="portfolio-image">
-								<img
-									src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80"
-									alt="AI Process Automation" />
-								<div class="portfolio-overlay">
-									<div class="portfolio-info">
-										<h3>AI Process Automation</h3>
-										<p>Manufacturing Optimization System</p>
-										<div class="portfolio-tags">
-											<span>Machine Learning</span>
-											<span>IoT Integration</span>
-											<span>Automation</span>
-										</div>
-									</div>
-									<div class="portfolio-actions">
-										<a
-											href="#"
-											class="portfolio-link"
-											aria-label="View project">
-											<svg viewBox="0 0 24 24" fill="currentColor">
-												<path
-													d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-											</svg>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="portfolio-details">
-								<div class="portfolio-meta">
-									<span class="category">AI Automation</span>
-									<span class="year">2023</span>
-								</div>
-								<h3>AI Process Automation</h3>
-								<p>
-									Smart manufacturing system that reduced production errors by
-									85% and increased efficiency by 200% through predictive
-									analytics.
-								</p>
-							</div>
-						</div>
+            <!-- Project 5 - AI Automation -->
+            <div
+              class="portfolio-item"
+              data-category="ai web"
+              data-animate="fade-up"
+              data-delay=".4s"
+            >
+              <div class="portfolio-image">
+                <img
+                  src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80"
+                  alt="AI Process Automation"
+                />
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h3>AI Process Automation</h3>
+                    <p>Manufacturing Optimization System</p>
+                    <div class="portfolio-tags">
+                      <span>Machine Learning</span>
+                      <span>IoT Integration</span>
+                      <span>Automation</span>
+                    </div>
+                  </div>
+                  <div class="portfolio-actions">
+                    <a
+                      href="#"
+                      class="portfolio-link"
+                      aria-label="View project"
+                    >
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-details">
+                <div class="portfolio-meta">
+                  <span class="category">AI Automation</span>
+                  <span class="year">2023</span>
+                </div>
+                <h3>AI Process Automation</h3>
+                <p>
+                  Smart manufacturing system that reduced production errors by
+                  85% and increased efficiency by 200% through predictive
+                  analytics.
+                </p>
+              </div>
+            </div>
 
-						<!-- Project 6 - Graphic Design -->
-						<div
-							class="portfolio-item"
-							data-category="design marketing"
-							data-animate="fade-up"
-							data-delay=".5s">
-							<div class="portfolio-image">
-								<img
-									src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=800&q=80"
-									alt="Complete Brand Identity" />
-								<div class="portfolio-overlay">
-									<div class="portfolio-info">
-										<h3>Complete Brand Identity</h3>
-										<p>Luxury Hospitality Brand</p>
-										<div class="portfolio-tags">
-											<span>Logo Design</span>
-											<span>Visual Identity</span>
-											<span>Marketing Materials</span>
-										</div>
-									</div>
-									<div class="portfolio-actions">
-										<a
-											href="#"
-											class="portfolio-link"
-											aria-label="View project">
-											<svg viewBox="0 0 24 24" fill="currentColor">
-												<path
-													d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-											</svg>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="portfolio-details">
-								<div class="portfolio-meta">
-									<span class="category">Graphic Design</span>
-									<span class="year">2023</span>
-								</div>
-								<h3>Complete Brand Identity</h3>
-								<p>
-									Comprehensive graphic design package including logo, brand
-									guidelines, and marketing materials that positioned client as
-									premium market leader with 300% booking increase.
-								</p>
-							</div>
-						</div>
+            <!-- Project 6 - Graphic Design -->
+            <div
+              class="portfolio-item"
+              data-category="design marketing"
+              data-animate="fade-up"
+              data-delay=".5s"
+            >
+              <div class="portfolio-image">
+                <img
+                  src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=800&q=80"
+                  alt="Complete Brand Identity"
+                />
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h3>Complete Brand Identity</h3>
+                    <p>Luxury Hospitality Brand</p>
+                    <div class="portfolio-tags">
+                      <span>Logo Design</span>
+                      <span>Visual Identity</span>
+                      <span>Marketing Materials</span>
+                    </div>
+                  </div>
+                  <div class="portfolio-actions">
+                    <a
+                      href="#"
+                      class="portfolio-link"
+                      aria-label="View project"
+                    >
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-details">
+                <div class="portfolio-meta">
+                  <span class="category">Graphic Design</span>
+                  <span class="year">2023</span>
+                </div>
+                <h3>Complete Brand Identity</h3>
+                <p>
+                  Comprehensive graphic design package including logo, brand
+                  guidelines, and marketing materials that positioned client as
+                  premium market leader with 300% booking increase.
+                </p>
+              </div>
+            </div>
 
-						<!-- Project 7 - System Integration -->
-						<div
-							class="portfolio-item"
-							data-category="web automation"
-							data-animate="fade-up"
-							data-delay=".6s">
-							<div class="portfolio-image">
-								<img
-									src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
-									alt="System Integration Project" />
-								<div class="portfolio-overlay">
-									<div class="portfolio-info">
-										<h3>Multi-Platform Integration</h3>
-										<p>Retail Management System</p>
-										<div class="portfolio-tags">
-											<span>API Integration</span>
-											<span>CRM Sync</span>
-											<span>Payment Gateway</span>
-										</div>
-									</div>
-									<div class="portfolio-actions">
-										<a
-											href="#"
-											class="portfolio-link"
-											aria-label="View project">
-											<svg viewBox="0 0 24 24" fill="currentColor">
-												<path
-													d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-											</svg>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="portfolio-details">
-								<div class="portfolio-meta">
-									<span class="category">System Integration</span>
-									<span class="year">2024</span>
-								</div>
-								<h3>Multi-Platform Integration</h3>
-								<p>
-									Seamlessly connected e-commerce platform, CRM, inventory
-									management, and payment systems, reducing manual data entry by
-									95% and errors by 80%.
-								</p>
-							</div>
-						</div>
+            <!-- Project 7 - System Integration -->
+            <div
+              class="portfolio-item"
+              data-category="web automation"
+              data-animate="fade-up"
+              data-delay=".6s"
+            >
+              <div class="portfolio-image">
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+                  alt="System Integration Project"
+                />
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h3>Multi-Platform Integration</h3>
+                    <p>Retail Management System</p>
+                    <div class="portfolio-tags">
+                      <span>API Integration</span>
+                      <span>CRM Sync</span>
+                      <span>Payment Gateway</span>
+                    </div>
+                  </div>
+                  <div class="portfolio-actions">
+                    <a
+                      href="#"
+                      class="portfolio-link"
+                      aria-label="View project"
+                    >
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-details">
+                <div class="portfolio-meta">
+                  <span class="category">System Integration</span>
+                  <span class="year">2024</span>
+                </div>
+                <h3>Multi-Platform Integration</h3>
+                <p>
+                  Seamlessly connected e-commerce platform, CRM, inventory
+                  management, and payment systems, reducing manual data entry by
+                  95% and errors by 80%.
+                </p>
+              </div>
+            </div>
 
-						<!-- Project 8 - Social Media -->
-						<div
-							class="portfolio-item"
-							data-category="marketing media"
-							data-animate="fade-up"
-							data-delay=".7s">
-							<div class="portfolio-image">
-								<img
-									src="https://images.unsplash.com/photo-1611262588024-d12430b98920?auto=format&fit=crop&w=800&q=80"
-									alt="Social Media Campaign" />
-								<div class="portfolio-overlay">
-									<div class="portfolio-info">
-										<h3>Viral Social Media Campaign</h3>
-										<p>Fashion Brand Launch</p>
-										<div class="portfolio-tags">
-											<span>Content Strategy</span>
-											<span>Influencer Marketing</span>
-											<span>Community Building</span>
-										</div>
-									</div>
-									<div class="portfolio-actions">
-										<a
-											href="#"
-											class="portfolio-link"
-											aria-label="View project">
-											<svg viewBox="0 0 24 24" fill="currentColor">
-												<path
-													d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-											</svg>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="portfolio-details">
-								<div class="portfolio-meta">
-									<span class="category">Social Media Management</span>
-									<span class="year">2024</span>
-								</div>
-								<h3>Viral Social Media Campaign</h3>
-								<p>
-									Comprehensive social media management and content strategy
-									that generated 25M+ impressions, gained 250K+ followers, and
-									drove $1.5M in sales within 3 months.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+            <!-- Project 8 - Social Media -->
+            <div
+              class="portfolio-item"
+              data-category="marketing media"
+              data-animate="fade-up"
+              data-delay=".7s"
+            >
+              <div class="portfolio-image">
+                <img
+                  src="https://images.unsplash.com/photo-1611262588024-d12430b98920?auto=format&fit=crop&w=800&q=80"
+                  alt="Social Media Campaign"
+                />
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info">
+                    <h3>Viral Social Media Campaign</h3>
+                    <p>Fashion Brand Launch</p>
+                    <div class="portfolio-tags">
+                      <span>Content Strategy</span>
+                      <span>Influencer Marketing</span>
+                      <span>Community Building</span>
+                    </div>
+                  </div>
+                  <div class="portfolio-actions">
+                    <a
+                      href="#"
+                      class="portfolio-link"
+                      aria-label="View project"
+                    >
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-details">
+                <div class="portfolio-meta">
+                  <span class="category">Social Media Management</span>
+                  <span class="year">2024</span>
+                </div>
+                <h3>Viral Social Media Campaign</h3>
+                <p>
+                  Comprehensive social media management and content strategy
+                  that generated 25M+ impressions, gained 250K+ followers, and
+                  drove $1.5M in sales within 3 months.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-			<!-- Results Section -->
-			<section class="content-section">
-				<div class="container">
-					<div class="section-header" data-animate="fade-up">
-						<h2 class="section-title">Proven Results</h2>
-						<p class="section-subtitle">
-							Real outcomes from our AI-powered digital solutions
-						</p>
-					</div>
-					<div class="results-grid">
-						<div class="result-card" data-animate="fade-up">
-							<div class="result-metric">350%</div>
-							<div class="result-label">Average Revenue Increase</div>
-						</div>
-						<div class="result-card" data-animate="fade-up" data-delay=".1s">
-							<div class="result-metric">75%</div>
-							<div class="result-label">Reduction in Manual Tasks</div>
-						</div>
-						<div class="result-card" data-animate="fade-up" data-delay=".2s">
-							<div class="result-metric">400%</div>
-							<div class="result-label">Faster Response Times</div>
-						</div>
-						<div class="result-card" data-animate="fade-up" data-delay=".3s">
-							<div class="result-metric">25M+</div>
-							<div class="result-label">Social Media Impressions</div>
-						</div>
-					</div>
-				</div>
-			</section>
+      <!-- Results Section -->
+      <section class="content-section">
+        <div class="container">
+          <div class="section-header" data-animate="fade-up">
+            <h2 class="section-title">Proven Results</h2>
+            <p class="section-subtitle">
+              Real outcomes from our AI-powered digital solutions
+            </p>
+          </div>
+          <div class="results-grid">
+            <div class="result-card" data-animate="fade-up">
+              <div class="result-metric">350%</div>
+              <div class="result-label">Average Revenue Increase</div>
+            </div>
+            <div class="result-card" data-animate="fade-up" data-delay=".1s">
+              <div class="result-metric">75%</div>
+              <div class="result-label">Reduction in Manual Tasks</div>
+            </div>
+            <div class="result-card" data-animate="fade-up" data-delay=".2s">
+              <div class="result-metric">400%</div>
+              <div class="result-label">Faster Response Times</div>
+            </div>
+            <div class="result-card" data-animate="fade-up" data-delay=".3s">
+              <div class="result-metric">25M+</div>
+              <div class="result-label">Social Media Impressions</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-			<!-- CTA Section -->
-			<section class="cta-section">
-				<div class="container">
-					<div class="cta-content" data-animate="fade-up">
-						<h2>Ready to Create Something Amazing?</h2>
-						<p>
-							Let's discuss your project and create AI-powered solutions that
-							drive real business results.
-						</p>
-						<div class="cta-actions">
-							<a href="services.html" class="btn-primary"
-								>Explore Our Services</a
-							>
-							<a href="process.html" class="btn-secondary">Learn Our Process</a>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content" data-animate="fade-up">
+            <h2>Ready to Create Something Amazing?</h2>
+            <p>
+              Let's discuss your project and create AI-powered solutions that
+              drive real business results.
+            </p>
+            <div class="cta-actions">
+              <a href="services.html" class="btn-primary"
+                >Explore Our Services</a
+              >
+              <a href="process.html" class="btn-secondary">Learn Our Process</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-		<!-- Footer -->
-		<footer class="footer">
-			<div class="container">
-				<div class="footer-content">
-					<div class="footer-brand">
-						<div class="brand">
-							<img
-								src="img/no bg logos/logomark2nobg.png"
-								alt="Infinite Pixels Logo"
-								class="footer-logo-img" />
-						</div>
-						<p class="footer-tagline">
-							Crafting digital experiences that scale beyond imagination.
-						</p>
-						<div class="footer-social">
-							<a
-								href="https://instagram.com/infinitepixels"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="instagram-link"
-								aria-label="Follow us on Instagram">
-								<div class="instagram-icon">
-									<svg
-										viewBox="0 0 24 24"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg">
-										<rect
-											x="2"
-											y="2"
-											width="20"
-											height="20"
-											rx="5"
-											stroke="url(#instagram-gradient)"
-											stroke-width="2" />
-										<circle
-											cx="12"
-											cy="12"
-											r="4"
-											stroke="url(#instagram-gradient)"
-											stroke-width="2" />
-										<circle
-											cx="18"
-											cy="6"
-											r="1.5"
-											fill="url(#instagram-gradient)" />
-										<defs>
-											<linearGradient
-												id="instagram-gradient"
-												x1="0%"
-												y1="0%"
-												x2="100%"
-												y2="100%">
-												<stop
-													offset="0%"
-													style="stop-color: #f09433; stop-opacity: 1" />
-												<stop
-													offset="25%"
-													style="stop-color: #e6683c; stop-opacity: 1" />
-												<stop
-													offset="50%"
-													style="stop-color: #dc2743; stop-opacity: 1" />
-												<stop
-													offset="75%"
-													style="stop-color: #cc2366; stop-opacity: 1" />
-												<stop
-													offset="100%"
-													style="stop-color: #bc1888; stop-opacity: 1" />
-											</linearGradient>
-										</defs>
-									</svg>
-								</div>
-								<span class="instagram-text">@infinitepixels</span>
-							</a>
-						</div>
-					</div>
-					<div class="footer-links">
-						<div class="footer-column">
-							<h4>Services</h4>
-							<a href="services.html">Web Development</a>
-							<a href="services.html">UI/UX Design</a>
-							<a href="services.html">Brand Strategy</a>
-							<a href="services.html">Performance Optimization</a>
-						</div>
-						<div class="footer-column">
-							<h4>Company</h4>
-							<a href="about.html">About Us</a>
-							<a href="work.html">Our Work</a>
-							<a href="process.html">Process</a>
-							<a href="contact.html">Contact</a>
-						</div>
-						<div class="footer-column">
-							<h4>Resources</h4>
-							<a href="#">Blog</a>
-							<a href="#">Case Studies</a>
-							<a href="#">Insights</a>
-						</div>
-					</div>
-				</div>
-				<div class="footer-bottom">
-					<p>
-						&copy; <span id="copyrightYear"></span> Infinite Pixels. All rights
-						reserved.
-					</p>
-					<div class="footer-bottom-links">
-						<a href="/privacy">Privacy Policy</a>
-						<a href="/terms">Terms of Service</a>
-					</div>
-				</div>
-			</div>
-		</footer>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="brand">
+              <img
+                src="img/no bg logos/logomark2nobg.png"
+                alt="Infinite Pixels Logo"
+                class="footer-logo-img"
+              />
+            </div>
+            <p class="footer-tagline">
+              Crafting digital experiences that scale beyond imagination.
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://instagram.com/infinitepixels"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="instagram-link"
+                aria-label="Follow us on Instagram"
+              >
+                <div class="instagram-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="2"
+                      y="2"
+                      width="20"
+                      height="20"
+                      rx="5"
+                      stroke="url(#instagram-gradient)"
+                      stroke-width="2"
+                    />
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="4"
+                      stroke="url(#instagram-gradient)"
+                      stroke-width="2"
+                    />
+                    <circle
+                      cx="18"
+                      cy="6"
+                      r="1.5"
+                      fill="url(#instagram-gradient)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="instagram-gradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%"
+                      >
+                        <stop
+                          offset="0%"
+                          style="stop-color: #f09433; stop-opacity: 1"
+                        />
+                        <stop
+                          offset="25%"
+                          style="stop-color: #e6683c; stop-opacity: 1"
+                        />
+                        <stop
+                          offset="50%"
+                          style="stop-color: #dc2743; stop-opacity: 1"
+                        />
+                        <stop
+                          offset="75%"
+                          style="stop-color: #cc2366; stop-opacity: 1"
+                        />
+                        <stop
+                          offset="100%"
+                          style="stop-color: #bc1888; stop-opacity: 1"
+                        />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <span class="instagram-text">@infinitepixels</span>
+              </a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Services</h4>
+              <a href="services.html">Web Development</a>
+              <a href="services.html">UI/UX Design</a>
+              <a href="services.html">Brand Strategy</a>
+              <a href="services.html">Performance Optimization</a>
+            </div>
+            <div class="footer-column">
+              <h4>Company</h4>
+              <a href="about.html">About Us</a>
+              <a href="work.html">Our Work</a>
+              <a href="process.html">Process</a>
+              <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-column">
+              <h4>Resources</h4>
+              <a href="#">Blog</a>
+              <a href="#">Case Studies</a>
+              <a href="#">Insights</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="copyrightYear"></span> Infinite Pixels. All rights
+            reserved.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-		<script src="logic.js" defer></script>
-		<script src="js/Aurora.js"></script>
-	</body>
+    <script src="logic.js" defer></script>
+    <script src="js/Aurora.js"></script>
+  </body>
 </html>

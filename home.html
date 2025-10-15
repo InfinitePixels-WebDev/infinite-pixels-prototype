@@ -1,1098 +1,1161 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Infinite Pixels — Digital Experiences That Scale</title>
-		<link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico" />
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="img/favicon/favicon-32x32.png" />
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="img/favicon/favicon-16x16.png" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
-			rel="stylesheet" />
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<!-- Floating Navigation -->
-		<nav id="site-header" class="floating-nav">
-			<div class="nav-container">
-				<a href="home.html" class="brand" data-animate="slide-right">
-					<img
-						src="img/no bg logos/logomarknobg.png"
-						alt="Infinite Pixels Logo"
-						class="brand-logo-img" />
-					<span class="brand-divider"></span>
-					<span class="brand-tagline">Digital Solutions</span>
-				</a>
-				<div class="nav-menu" id="navMenu">
-					<a href="home.html" class="nav-link active">
-						<span class="link-text">Home</span>
-					</a>
-					<a href="about.html" class="nav-link">
-						<span class="link-text">About</span>
-					</a>
-					<a href="services.html" class="nav-link">
-						<span class="link-text">Services</span>
-					</a>
-					<a href="work.html" class="nav-link">
-						<span class="link-text">Work</span>
-					</a>
-					<a href="process.html" class="nav-link">
-						<span class="link-text">Process</span>
-					</a>
-				</div>
-				<div class="nav-actions">
-					<a href="#contact" class="nav-cta">
-						<span>Get Started</span>
-						<svg
-							width="16"
-							height="16"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2">
-							<line x1="5" y1="12" x2="19" y2="12" />
-							<polyline points="12 5 19 12 12 19" />
-						</svg>
-					</a>
-					<button
-						class="theme-toggle"
-						id="themeToggle"
-						type="button"
-						aria-label="Toggle theme">
-						<span id="themeToggleIcon" aria-hidden="true">
-							<svg
-								width="20"
-								height="20"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2">
-								<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-							</svg>
-						</span>
-					</button>
-					<button
-						class="menu-toggle"
-						id="menuToggle"
-						type="button"
-						aria-label="Toggle navigation"
-						aria-expanded="false"
-						aria-controls="navMenu">
-						<span class="menu-line"></span>
-						<span class="menu-line"></span>
-						<span class="menu-line"></span>
-					</button>
-				</div>
-			</div>
-		</nav>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Infinite Pixels — Digital Experiences That Scale</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Michroma:wght@400&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Floating Navigation -->
+    <nav id="site-header" class="floating-nav">
+      <div class="nav-container">
+        <a href="home.html" class="brand" data-animate="slide-right">
+          <img
+            src="img/no bg logos/logomarknobg.png"
+            alt="Infinite Pixels Logo"
+            class="brand-logo-img"
+          />
+          <span class="brand-divider"></span>
+          <span class="brand-tagline">Digital Solutions</span>
+        </a>
+        <div class="nav-menu" id="navMenu">
+          <a href="home.html" class="nav-link active">
+            <span class="link-text">Home</span>
+          </a>
+          <a href="about.html" class="nav-link">
+            <span class="link-text">About</span>
+          </a>
+          <a href="services.html" class="nav-link">
+            <span class="link-text">Services</span>
+          </a>
+          <a href="work.html" class="nav-link">
+            <span class="link-text">Work</span>
+          </a>
+          <a href="process.html" class="nav-link">
+            <span class="link-text">Process</span>
+          </a>
+        </div>
+        <div class="nav-actions">
+          <a href="#contact" class="nav-cta">
+            <span>Get Started</span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Toggle theme"
+          >
+            <span id="themeToggleIcon" aria-hidden="true">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+            </span>
+          </button>
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            aria-controls="navMenu"
+          >
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
 
-		<!-- Mobile Navigation Overlay -->
-		<div class="mobile-nav-overlay" aria-hidden="true">
-			<div class="mobile-nav-panel">
-				<div class="mobile-nav-handle" aria-hidden="true"></div>
-				<div class="mobile-nav-header">
-					<h3 class="mobile-nav-title">Explore</h3>
-				</div>
-				<div class="mobile-nav-featured">
-					<a class="mobile-feature-card services" href="services.html">
-						<div class="feat-icon">
-							<svg
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2">
-								<path
-									d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z" />
-								<path
-									d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z" />
-							</svg>
-						</div>
-						<div class="feat-title">Services</div>
-						<div class="feat-sub">Branding, web design, digital solutions</div>
-					</a>
-					<a class="mobile-feature-card work" href="work.html">
-						<div class="feat-icon">
-							<svg
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2">
-								<path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
-								<path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
-								<path d="M4 22h16" />
-								<path
-									d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
-								<path
-									d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
-								<path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
-							</svg>
-						</div>
-						<div class="feat-title">Work</div>
-						<div class="feat-sub">Results and case studies</div>
-					</a>
-				</div>
-				<nav class="mobile-nav-list" aria-label="Mobile">
-					<a class="mobile-nav-item" href="home.html">
-						<span class="item-icon">
-							<svg
-								width="20"
-								height="20"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2">
-								<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-								<polyline points="9 22 9 12 15 12 15 22" />
-							</svg>
-						</span>
-						<span class="item-label">Home</span>
-						<span class="item-arrow">›</span>
-					</a>
-					<a class="mobile-nav-item" href="about.html">
-						<span class="item-icon">
-							<svg
-								width="20"
-								height="20"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2">
-								<path
-									d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-							</svg>
-						</span>
-						<span class="item-label">About</span>
-						<span class="item-arrow">›</span>
-					</a>
-					<a class="mobile-nav-item" href="services.html">
-						<span class="item-icon">
-							<svg
-								width="20"
-								height="20"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2">
-								<rect x="3" y="3" width="7" height="7" />
-								<rect x="14" y="3" width="7" height="7" />
-								<rect x="14" y="14" width="7" height="7" />
-								<rect x="3" y="14" width="7" height="7" />
-							</svg>
-						</span>
-						<span class="item-label">Services</span>
-						<span class="item-arrow">›</span>
-					</a>
-					<a class="mobile-nav-item" href="work.html">
-						<span class="item-icon">
-							<svg
-								width="20"
-								height="20"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2">
-								<circle cx="12" cy="12" r="10" />
-								<path d="m9 12 2 2 4-4" />
-							</svg>
-						</span>
-						<span class="item-label">Work</span>
-						<span class="item-arrow">›</span>
-					</a>
-					<a class="mobile-nav-item" href="process.html">
-						<span class="item-icon">
-							<svg
-								width="20"
-								height="20"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2">
-								<path
-									d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2" />
-							</svg>
-						</span>
-						<span class="item-label">Process</span>
-						<span class="item-arrow">›</span>
-					</a>
-				</nav>
-			</div>
-		</div>
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" aria-hidden="true">
+      <div class="mobile-nav-panel">
+        <div class="mobile-nav-handle" aria-hidden="true"></div>
+        <div class="mobile-nav-header">
+          <h3 class="mobile-nav-title">Explore</h3>
+        </div>
+        <div class="mobile-nav-featured">
+          <a class="mobile-feature-card services" href="services.html">
+            <div class="feat-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"
+                />
+                <path
+                  d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"
+                />
+              </svg>
+            </div>
+            <div class="feat-title">Services</div>
+            <div class="feat-sub">Branding, web design, digital solutions</div>
+          </a>
+          <a class="mobile-feature-card work" href="work.html">
+            <div class="feat-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                <path d="M4 22h16" />
+                <path
+                  d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"
+                />
+                <path
+                  d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"
+                />
+                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+              </svg>
+            </div>
+            <div class="feat-title">Work</div>
+            <div class="feat-sub">Results and case studies</div>
+          </a>
+        </div>
+        <nav class="mobile-nav-list" aria-label="Mobile">
+          <a class="mobile-nav-item" href="home.html">
+            <span class="item-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </span>
+            <span class="item-label">Home</span>
+            <span class="item-arrow">›</span>
+          </a>
+          <a class="mobile-nav-item" href="about.html">
+            <span class="item-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+            </span>
+            <span class="item-label">About</span>
+            <span class="item-arrow">›</span>
+          </a>
+          <a class="mobile-nav-item" href="services.html">
+            <span class="item-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="3" y="3" width="7" height="7" />
+                <rect x="14" y="3" width="7" height="7" />
+                <rect x="14" y="14" width="7" height="7" />
+                <rect x="3" y="14" width="7" height="7" />
+              </svg>
+            </span>
+            <span class="item-label">Services</span>
+            <span class="item-arrow">›</span>
+          </a>
+          <a class="mobile-nav-item" href="work.html">
+            <span class="item-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            </span>
+            <span class="item-label">Work</span>
+            <span class="item-arrow">›</span>
+          </a>
+          <a class="mobile-nav-item" href="process.html">
+            <span class="item-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"
+                />
+              </svg>
+            </span>
+            <span class="item-label">Process</span>
+            <span class="item-arrow">›</span>
+          </a>
+        </nav>
+      </div>
+    </div>
 
-		<main class="main-content">
-			<!-- Hero Section - Modern Professional Design -->
-			<section class="hero-section" id="hero">
-				<div class="container">
-					<div class="hero-container">
-						<!-- Main Content -->
-						<div class="hero-content">
-							<div class="hero-label" data-animate="fade-up">
-								<span class="label-dot"></span>
-								<span class="label-text"
-									>Digital Innovation & Creative Excellence</span
-								>
-							</div>
+    <main class="main-content">
+      <!-- Hero Section - Modern Professional Design -->
+      <section class="hero-section" id="hero">
+        <div class="container">
+          <div class="hero-container">
+            <!-- Main Content -->
+            <div class="hero-content">
+              <div class="hero-label" data-animate="fade-up">
+                <span class="label-dot"></span>
+                <span class="label-text"
+                  >Digital Innovation & Creative Excellence</span
+                >
+              </div>
 
-							<h1 class="hero-title" data-animate="fade-up" data-delay=".1s">
-								Transform Your Business With
-								<span class="hero-gradient-text"
-									>Cutting-Edge Digital Solutions</span
-								>
-							</h1>
+              <h1 class="hero-title" data-animate="fade-up" data-delay=".1s">
+                Transform Your Business With
+                <span class="hero-gradient-text"
+                  >Cutting-Edge Digital Solutions</span
+                >
+              </h1>
 
-							<p class="hero-subtitle" data-animate="fade-up" data-delay=".2s">
-								From stunning websites and intelligent automation to compelling
-								design and strategic marketing—we bring your vision to life with
-								precision and creativity.
-							</p>
+              <p class="hero-subtitle" data-animate="fade-up" data-delay=".2s">
+                From stunning websites and intelligent automation to compelling
+                design and strategic marketing—we bring your vision to life with
+                precision and creativity.
+              </p>
 
-							<div class="hero-ctas" data-animate="fade-up" data-delay=".3s">
-								<a href="services.html" class="hero-btn hero-btn-primary">
-									<span>Explore Services</span>
-									<svg
-										width="18"
-										height="18"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="2">
-										<path d="M5 12h14M12 5l7 7-7 7" />
-									</svg>
-								</a>
-								<a href="work.html" class="hero-btn hero-btn-outline">
-									<span>View Our Work</span>
-								</a>
-							</div>
-						</div>
+              <div class="hero-ctas" data-animate="fade-up" data-delay=".3s">
+                <a href="services.html" class="hero-btn hero-btn-primary">
+                  <span>Explore Services</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="work.html" class="hero-btn hero-btn-outline">
+                  <span>View Our Work</span>
+                </a>
+              </div>
+            </div>
 
-						<!-- Visual Side -->
-						<div class="hero-visual" data-animate="fade-up" data-delay=".2s">
-							<div class="visual-grid">
-								<!-- Card 1 - Featured Service -->
-								<div class="visual-card card-featured">
-									<div class="card-badge">Featured</div>
-									<div class="card-icon-large">
-										<svg
-											width="32"
-											height="32"
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="1.5">
-											<path d="M12 2L2 7l10 5 10-5-10-5z" />
-											<path d="M2 17l10 5 10-5" />
-											<path d="M2 12l10 5 10-5" />
-										</svg>
-									</div>
-									<h3>AI Automation</h3>
-									<p>Intelligent solutions that work for you</p>
-									<div class="card-stat">
-										<span class="stat-label">Efficiency Boost</span>
-										<span class="stat-value">+85%</span>
-									</div>
-								</div>
+            <!-- Visual Side -->
+            <div class="hero-visual" data-animate="fade-up" data-delay=".2s">
+              <div class="visual-grid">
+                <!-- Card 1 - Featured Service -->
+                <div class="visual-card card-featured">
+                  <div class="card-badge">Featured</div>
+                  <div class="card-icon-large">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                      <path d="M2 17l10 5 10-5" />
+                      <path d="M2 12l10 5 10-5" />
+                    </svg>
+                  </div>
+                  <h3>AI Automation</h3>
+                  <p>Intelligent solutions that work for you</p>
+                  <div class="card-stat">
+                    <span class="stat-label">Efficiency Boost</span>
+                    <span class="stat-value">+85%</span>
+                  </div>
+                </div>
 
-								<!-- Card 2 - Services Grid -->
-								<div class="visual-card card-services">
-									<div class="service-tag">Web Dev</div>
-									<div class="service-tag">Design</div>
-									<div class="service-tag">Marketing</div>
-									<div class="service-tag">Media</div>
-								</div>
+                <!-- Card 2 - Services Grid -->
+                <div class="visual-card card-services">
+                  <div class="service-tag">Web Dev</div>
+                  <div class="service-tag">Design</div>
+                  <div class="service-tag">Marketing</div>
+                  <div class="service-tag">Media</div>
+                </div>
 
-								<!-- Card 3 - Stats -->
-								<div class="visual-card card-stats">
-									<div class="mini-stat">
-										<span class="mini-number">7</span>
-										<span class="mini-label">Services</span>
-									</div>
-									<div class="mini-stat">
-										<span class="mini-number">5+</span>
-										<span class="mini-label">Years</span>
-									</div>
-								</div>
+                <!-- Card 3 - Stats -->
+                <div class="visual-card card-stats">
+                  <div class="mini-stat">
+                    <span class="mini-number">7</span>
+                    <span class="mini-label">Services</span>
+                  </div>
+                  <div class="mini-stat">
+                    <span class="mini-number">5+</span>
+                    <span class="mini-label">Years</span>
+                  </div>
+                </div>
 
-								<!-- Card 4 - Live Indicator -->
-								<div class="visual-card card-live">
-									<div class="live-indicator">
-										<span class="pulse-dot"></span>
-										<span>Currently Available</span>
-									</div>
-									<p>Ready to start your project</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+                <!-- Card 4 - Live Indicator -->
+                <div class="visual-card card-live">
+                  <div class="live-indicator">
+                    <span class="pulse-dot"></span>
+                    <span>Currently Available</span>
+                  </div>
+                  <p>Ready to start your project</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-				<!-- Background Elements -->
-				<div class="hero-bg-wrapper">
-					<div class="hero-bg-blur hero-bg-blur-1"></div>
-					<div class="hero-bg-blur hero-bg-blur-2"></div>
-					<div class="hero-grid-pattern"></div>
-				</div>
-			</section>
+        <!-- Background Elements -->
+        <div class="hero-bg-wrapper">
+          <div class="hero-bg-blur hero-bg-blur-1"></div>
+          <div class="hero-bg-blur hero-bg-blur-2"></div>
+          <div class="hero-grid-pattern"></div>
+        </div>
+      </section>
 
-			<!-- About Section with Side-by-Side Layout -->
-			<section class="about-section" id="about">
-				<div class="container">
-					<div class="about-grid">
-						<div class="about-content" data-animate="fade-up">
-							<h2 class="section-title">
-								Building Tomorrow's Digital Landscape
-							</h2>
-							<p class="section-subtitle">
-								We're not just another digital agency. We're your strategic
-								partner in crafting exceptional digital experiences that drive
-								real business results.
-							</p>
-							<div class="value-props">
-								<div class="value-item">
-									<div class="value-icon">
-										<svg
-											width="32"
-											height="32"
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="2">
-											<path
-												d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-										</svg>
-									</div>
-									<div class="value-content">
-										<h4>Strategic Innovation</h4>
-										<p>
-											We combine creative vision with technical excellence to
-											deliver solutions that set you apart from the competition.
-										</p>
-									</div>
-								</div>
-								<div class="value-item">
-									<div class="value-icon">
-										<svg
-											width="32"
-											height="32"
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="2">
-											<polygon
-												points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-										</svg>
-									</div>
-									<div class="value-content">
-										<h4>Rapid Execution</h4>
-										<p>
-											Our streamlined process gets you from concept to launch
-											faster without compromising on quality.
-										</p>
-									</div>
-								</div>
-								<div class="value-item">
-									<div class="value-icon">📊</div>
-									<div class="value-content">
-										<h4>Data-Driven Results</h4>
-										<p>
-											Every decision is backed by data and focused on measurable
-											outcomes that matter to your business.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="about-visual" data-animate="fade-left" data-delay=".2s">
-							<div class="tech-stack-showcase">
-								<div class="tech-category">
-									<h4>Frontend</h4>
-									<div class="tech-items">
-										<span class="tech-item">React</span>
-										<span class="tech-item">Next.js</span>
-										<span class="tech-item">TypeScript</span>
-										<span class="tech-item">GSAP</span>
-									</div>
-								</div>
-								<div class="tech-category">
-									<h4>Backend</h4>
-									<div class="tech-items">
-										<span class="tech-item">Node.js</span>
-										<span class="tech-item">Firebase</span>
-										<span class="tech-item">PostgreSQL</span>
-										<span class="tech-item">Supabase</span>
-									</div>
-								</div>
-								<div class="tech-category">
-									<h4>Design</h4>
-									<div class="tech-items">
-										<span class="tech-item">Figma</span>
-										<span class="tech-item">Framer</span>
-										<span class="tech-item">After Effects</span>
-										<span class="tech-item">Principle</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+      <!-- About Section with Side-by-Side Layout -->
+      <section class="about-section" id="about">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-content" data-animate="fade-up">
+              <h2 class="section-title">
+                Building Tomorrow's Digital Landscape
+              </h2>
+              <p class="section-subtitle">
+                We're not just another digital agency. We're your strategic
+                partner in crafting exceptional digital experiences that drive
+                real business results.
+              </p>
+              <div class="value-props">
+                <div class="value-item">
+                  <div class="value-icon">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                      />
+                    </svg>
+                  </div>
+                  <div class="value-content">
+                    <h4>Strategic Innovation</h4>
+                    <p>
+                      We combine creative vision with technical excellence to
+                      deliver solutions that set you apart from the competition.
+                    </p>
+                  </div>
+                </div>
+                <div class="value-item">
+                  <div class="value-icon">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <polygon
+                        points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+                      />
+                    </svg>
+                  </div>
+                  <div class="value-content">
+                    <h4>Rapid Execution</h4>
+                    <p>
+                      Our streamlined process gets you from concept to launch
+                      faster without compromising on quality.
+                    </p>
+                  </div>
+                </div>
+                <div class="value-item">
+                  <div class="value-icon">📊</div>
+                  <div class="value-content">
+                    <h4>Data-Driven Results</h4>
+                    <p>
+                      Every decision is backed by data and focused on measurable
+                      outcomes that matter to your business.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="about-visual" data-animate="fade-left" data-delay=".2s">
+              <div class="tech-stack-showcase">
+                <div class="tech-category">
+                  <h4>Frontend</h4>
+                  <div class="tech-items">
+                    <span class="tech-item">React</span>
+                    <span class="tech-item">Next.js</span>
+                    <span class="tech-item">TypeScript</span>
+                    <span class="tech-item">GSAP</span>
+                  </div>
+                </div>
+                <div class="tech-category">
+                  <h4>Backend</h4>
+                  <div class="tech-items">
+                    <span class="tech-item">Node.js</span>
+                    <span class="tech-item">Firebase</span>
+                    <span class="tech-item">PostgreSQL</span>
+                    <span class="tech-item">Supabase</span>
+                  </div>
+                </div>
+                <div class="tech-category">
+                  <h4>Design</h4>
+                  <div class="tech-items">
+                    <span class="tech-item">Figma</span>
+                    <span class="tech-item">Framer</span>
+                    <span class="tech-item">After Effects</span>
+                    <span class="tech-item">Principle</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-			<!-- Services in Masonry Layout -->
-			<section class="services-section" id="services">
-				<div class="container">
-					<div class="section-header" data-animate="fade-up">
-						<h2 class="section-title">What We Do Best</h2>
-						<p class="section-subtitle">
-							Comprehensive digital solutions tailored to your unique challenges
-						</p>
-					</div>
-					<div class="services-masonry">
-						<div class="service-card large" data-animate="fade-up">
-							<div class="service-icon">
-								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-									<polyline points="16 18 22 12 16 6"></polyline>
-									<polyline points="8 6 2 12 8 18"></polyline>
-								</svg>
-							</div>
-							<h3>Full-Stack Development</h3>
-							<p>
-								End-to-end web applications built with modern technologies and
-								best practices. From API design to user interfaces, we handle
-								every layer of your digital product.
-							</p>
-							<ul class="service-features">
-								<li>Modern JavaScript frameworks</li>
-								<li>Scalable backend architecture</li>
-								<li>Cloud deployment & DevOps</li>
-								<li>Performance optimization</li>
-							</ul>
-						</div>
-						<div class="service-card" data-animate="fade-up" data-delay=".1s">
-							<div class="service-icon">
-								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-									<path
-										d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-								</svg>
-							</div>
-							<h3>UI/UX Design</h3>
-							<p>
-								User-centered design that converts visitors into customers
-								through intuitive interfaces and compelling experiences.
-							</p>
-						</div>
-						<div class="service-card" data-animate="fade-up" data-delay=".2s">
-							<div class="service-icon">
-								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-									<circle cx="12" cy="12" r="3"></circle>
-									<path
-										d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"></path>
-								</svg>
-							</div>
-							<h3>Brand Strategy</h3>
-							<p>
-								Strategic positioning and visual identity that sets you apart in
-								competitive markets.
-							</p>
-						</div>
-						<div class="service-card" data-animate="fade-up" data-delay=".3s">
-							<div class="service-icon">
-								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-									<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-								</svg>
-							</div>
-							<h3>Performance Optimization</h3>
-							<p>
-								Lightning-fast loading times and smooth interactions that keep
-								users engaged and search engines happy.
-							</p>
-						</div>
-						<div
-							class="service-card wide"
-							data-animate="fade-up"
-							data-delay=".4s">
-							<div class="service-icon">
-								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-									<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-								</svg>
-							</div>
-							<h3>Analytics & Growth</h3>
-							<p>
-								Data-driven insights and growth strategies that turn your
-								digital presence into a revenue-generating machine.
-							</p>
-							<div class="growth-metrics">
-								<div class="metric">
-									<span class="metric-value">3x</span>
-									<span class="metric-label">Avg. Traffic Boost</span>
-								</div>
-								<div class="metric">
-									<span class="metric-value">45%</span>
-									<span class="metric-label">Conversion Lift</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+      <!-- Services in Masonry Layout -->
+      <section class="services-section" id="services">
+        <div class="container">
+          <div class="section-header" data-animate="fade-up">
+            <h2 class="section-title">What We Do Best</h2>
+            <p class="section-subtitle">
+              Comprehensive digital solutions tailored to your unique challenges
+            </p>
+          </div>
+          <div class="services-masonry">
+            <div class="service-card large" data-animate="fade-up">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3>Full-Stack Development</h3>
+              <p>
+                End-to-end web applications built with modern technologies and
+                best practices. From API design to user interfaces, we handle
+                every layer of your digital product.
+              </p>
+              <ul class="service-features">
+                <li>Modern JavaScript frameworks</li>
+                <li>Scalable backend architecture</li>
+                <li>Cloud deployment & DevOps</li>
+                <li>Performance optimization</li>
+              </ul>
+            </div>
+            <div class="service-card" data-animate="fade-up" data-delay=".1s">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  ></path>
+                </svg>
+              </div>
+              <h3>UI/UX Design</h3>
+              <p>
+                User-centered design that converts visitors into customers
+                through intuitive interfaces and compelling experiences.
+              </p>
+            </div>
+            <div class="service-card" data-animate="fade-up" data-delay=".2s">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path
+                    d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"
+                  ></path>
+                </svg>
+              </div>
+              <h3>Brand Strategy</h3>
+              <p>
+                Strategic positioning and visual identity that sets you apart in
+                competitive markets.
+              </p>
+            </div>
+            <div class="service-card" data-animate="fade-up" data-delay=".3s">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                </svg>
+              </div>
+              <h3>Performance Optimization</h3>
+              <p>
+                Lightning-fast loading times and smooth interactions that keep
+                users engaged and search engines happy.
+              </p>
+            </div>
+            <div
+              class="service-card wide"
+              data-animate="fade-up"
+              data-delay=".4s"
+            >
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <h3>Analytics & Growth</h3>
+              <p>
+                Data-driven insights and growth strategies that turn your
+                digital presence into a revenue-generating machine.
+              </p>
+              <div class="growth-metrics">
+                <div class="metric">
+                  <span class="metric-value">3x</span>
+                  <span class="metric-label">Avg. Traffic Boost</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-value">45%</span>
+                  <span class="metric-label">Conversion Lift</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-			<!-- Featured Work Section -->
-			<section class="portfolio-section" id="work">
-				<div class="container">
-					<div class="section-header" data-animate="fade-up">
-						<span class="section-badge">Portfolio</span>
-						<h2 class="section-title">Featured Work</h2>
-						<p class="section-subtitle">
-							Transforming visions into award-winning digital experiences
-						</p>
-					</div>
+      <!-- Featured Work Section -->
+      <section class="portfolio-section" id="work">
+        <div class="container">
+          <div class="section-header" data-animate="fade-up">
+            <span class="section-badge">Portfolio</span>
+            <h2 class="section-title">Featured Work</h2>
+            <p class="section-subtitle">
+              Transforming visions into award-winning digital experiences
+            </p>
+          </div>
 
-					<div class="featured-work-grid">
-						<!-- Featured Project - Large -->
-						<div class="work-card featured" data-animate="fade-up">
-							<div class="work-image">
-								<img
-									src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
-									alt="E-commerce Platform" />
-								<div class="work-gradient"></div>
-							</div>
-							<div class="work-content">
-								<div class="work-meta">
-									<span class="work-category">E-commerce</span>
-									<span class="work-year">2024</span>
-								</div>
-								<h3 class="work-title">E-commerce Revolution</h3>
-								<p class="work-description">
-									Complete platform rebuild that increased conversions by 185%
-									and improved user experience across mobile and desktop.
-								</p>
-								<div class="work-stats">
-									<div class="stat-item">
-										<div class="stat-value">+185%</div>
-										<div class="stat-label">Conversions</div>
-									</div>
-									<div class="stat-item">
-										<div class="stat-value">$2.4M</div>
-										<div class="stat-label">Revenue Boost</div>
-									</div>
-									<div class="stat-item">
-										<div class="stat-value">42%</div>
-										<div class="stat-label">Faster Load</div>
-									</div>
-								</div>
-								<div class="work-tags">
-									<span>React</span>
-									<span>Node.js</span>
-									<span>Stripe</span>
-									<span>AWS</span>
-								</div>
-								<a href="work.html" class="work-link">
-									<span>View Case Study</span>
-									<svg
-										width="20"
-										height="20"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="2">
-										<line x1="5" y1="12" x2="19" y2="12" />
-										<polyline points="12 5 19 12 12 19" />
-									</svg>
-								</a>
-							</div>
-						</div>
+          <div class="featured-work-grid">
+            <!-- Featured Project - Large -->
+            <div class="work-card featured" data-animate="fade-up">
+              <div class="work-image">
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
+                  alt="E-commerce Platform"
+                />
+                <div class="work-gradient"></div>
+              </div>
+              <div class="work-content">
+                <div class="work-meta">
+                  <span class="work-category">E-commerce</span>
+                  <span class="work-year">2024</span>
+                </div>
+                <h3 class="work-title">E-commerce Revolution</h3>
+                <p class="work-description">
+                  Complete platform rebuild that increased conversions by 185%
+                  and improved user experience across mobile and desktop.
+                </p>
+                <div class="work-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">+185%</div>
+                    <div class="stat-label">Conversions</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$2.4M</div>
+                    <div class="stat-label">Revenue Boost</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">42%</div>
+                    <div class="stat-label">Faster Load</div>
+                  </div>
+                </div>
+                <div class="work-tags">
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>Stripe</span>
+                  <span>AWS</span>
+                </div>
+                <a href="work.html" class="work-link">
+                  <span>View Case Study</span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </a>
+              </div>
+            </div>
 
-						<!-- Regular Projects Grid -->
-						<div class="work-card" data-animate="fade-up" data-delay=".1s">
-							<div class="work-image">
-								<img
-									src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
-									alt="SaaS Dashboard" />
-								<div class="work-gradient"></div>
-								<div class="work-overlay">
-									<a href="work.html" class="overlay-link">
-										<svg
-											width="24"
-											height="24"
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="2">
-											<line x1="5" y1="12" x2="19" y2="12" />
-											<polyline points="12 5 19 12 12 19" />
-										</svg>
-									</a>
-								</div>
-							</div>
-							<div class="work-content">
-								<div class="work-meta">
-									<span class="work-category">SaaS</span>
-									<span class="work-year">2024</span>
-								</div>
-								<h3 class="work-title">Analytics Platform</h3>
-								<p class="work-description">
-									Real-time dashboard with advanced data visualization and
-									AI-powered insights.
-								</p>
-								<div class="work-tags">
-									<span>Vue.js</span>
-									<span>D3.js</span>
-									<span>Python</span>
-								</div>
-							</div>
-						</div>
+            <!-- Regular Projects Grid -->
+            <div class="work-card" data-animate="fade-up" data-delay=".1s">
+              <div class="work-image">
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+                  alt="SaaS Dashboard"
+                />
+                <div class="work-gradient"></div>
+                <div class="work-overlay">
+                  <a href="work.html" class="overlay-link">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="work-content">
+                <div class="work-meta">
+                  <span class="work-category">SaaS</span>
+                  <span class="work-year">2024</span>
+                </div>
+                <h3 class="work-title">Analytics Platform</h3>
+                <p class="work-description">
+                  Real-time dashboard with advanced data visualization and
+                  AI-powered insights.
+                </p>
+                <div class="work-tags">
+                  <span>Vue.js</span>
+                  <span>D3.js</span>
+                  <span>Python</span>
+                </div>
+              </div>
+            </div>
 
-						<div class="work-card" data-animate="fade-up" data-delay=".2s">
-							<div class="work-image">
-								<img
-									src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=800&q=80"
-									alt="Mobile App" />
-								<div class="work-gradient"></div>
-								<div class="work-overlay">
-									<a href="work.html" class="overlay-link">
-										<svg
-											width="24"
-											height="24"
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="2">
-											<line x1="5" y1="12" x2="19" y2="12" />
-											<polyline points="12 5 19 12 12 19" />
-										</svg>
-									</a>
-								</div>
-							</div>
-							<div class="work-content">
-								<div class="work-meta">
-									<span class="work-category">Mobile</span>
-									<span class="work-year">2023</span>
-								</div>
-								<h3 class="work-title">Fintech Mobile App</h3>
-								<p class="work-description">
-									Award-winning mobile experience for financial planning and
-									investment tracking.
-								</p>
-								<div class="work-tags">
-									<span>React Native</span>
-									<span>Firebase</span>
-									<span>AI/ML</span>
-								</div>
-							</div>
-						</div>
+            <div class="work-card" data-animate="fade-up" data-delay=".2s">
+              <div class="work-image">
+                <img
+                  src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=800&q=80"
+                  alt="Mobile App"
+                />
+                <div class="work-gradient"></div>
+                <div class="work-overlay">
+                  <a href="work.html" class="overlay-link">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="work-content">
+                <div class="work-meta">
+                  <span class="work-category">Mobile</span>
+                  <span class="work-year">2023</span>
+                </div>
+                <h3 class="work-title">Fintech Mobile App</h3>
+                <p class="work-description">
+                  Award-winning mobile experience for financial planning and
+                  investment tracking.
+                </p>
+                <div class="work-tags">
+                  <span>React Native</span>
+                  <span>Firebase</span>
+                  <span>AI/ML</span>
+                </div>
+              </div>
+            </div>
 
-						<div class="work-card" data-animate="fade-up" data-delay=".3s">
-							<div class="work-image">
-								<img
-									src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
-									alt="Corporate Website" />
-								<div class="work-gradient"></div>
-								<div class="work-overlay">
-									<a href="work.html" class="overlay-link">
-										<svg
-											width="24"
-											height="24"
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="2">
-											<line x1="5" y1="12" x2="19" y2="12" />
-											<polyline points="12 5 19 12 12 19" />
-										</svg>
-									</a>
-								</div>
-							</div>
-							<div class="work-content">
-								<div class="work-meta">
-									<span class="work-category">Branding</span>
-									<span class="work-year">2023</span>
-								</div>
-								<h3 class="work-title">Corporate Rebrand</h3>
-								<p class="work-description">
-									Complete digital transformation for Fortune 500 company with
-									global reach.
-								</p>
-								<div class="work-tags">
-									<span>Next.js</span>
-									<span>GSAP</span>
-									<span>CMS</span>
-								</div>
-							</div>
-						</div>
-					</div>
+            <div class="work-card" data-animate="fade-up" data-delay=".3s">
+              <div class="work-image">
+                <img
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+                  alt="Corporate Website"
+                />
+                <div class="work-gradient"></div>
+                <div class="work-overlay">
+                  <a href="work.html" class="overlay-link">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="work-content">
+                <div class="work-meta">
+                  <span class="work-category">Branding</span>
+                  <span class="work-year">2023</span>
+                </div>
+                <h3 class="work-title">Corporate Rebrand</h3>
+                <p class="work-description">
+                  Complete digital transformation for Fortune 500 company with
+                  global reach.
+                </p>
+                <div class="work-tags">
+                  <span>Next.js</span>
+                  <span>GSAP</span>
+                  <span>CMS</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-					<div class="section-cta" data-animate="fade-up" data-delay=".4s">
-						<a href="work.html" class="btn-secondary">
-							<span>View All Projects</span>
-							<svg
-								width="20"
-								height="20"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2">
-								<line x1="5" y1="12" x2="19" y2="12" />
-								<polyline points="12 5 19 12 12 19" />
-							</svg>
-						</a>
-					</div>
-				</div>
-			</section>
+          <div class="section-cta" data-animate="fade-up" data-delay=".4s">
+            <a href="work.html" class="btn-secondary">
+              <span>View All Projects</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
 
-			<!-- Process Timeline -->
-			<section class="process-section" id="process">
-				<div class="container">
-					<div class="section-header" data-animate="fade-up">
-						<h2 class="section-title">Our Proven Process</h2>
-						<p class="section-subtitle">
-							From idea to launch, we've got you covered
-						</p>
-					</div>
-					<div class="process-timeline">
-						<div class="timeline-item" data-animate="fade-up">
-							<div class="timeline-marker">
-								<span class="step-number">1</span>
-							</div>
-							<div class="timeline-content">
-								<h3>Discovery & Strategy</h3>
-								<p>
-									We dive deep into your business goals, target audience, and
-									competitive landscape to create a solid foundation for
-									success.
-								</p>
-								<ul>
-									<li>Stakeholder interviews</li>
-									<li>User research & personas</li>
-									<li>Technical architecture planning</li>
-									<li>Project roadmap & timeline</li>
-								</ul>
-							</div>
-						</div>
-						<div class="timeline-item" data-animate="fade-up" data-delay=".1s">
-							<div class="timeline-marker">
-								<span class="step-number">2</span>
-							</div>
-							<div class="timeline-content">
-								<h3>Design & Prototyping</h3>
-								<p>
-									We create stunning designs and interactive prototypes that
-									bring your vision to life before a single line of code is
-									written.
-								</p>
-								<ul>
-									<li>Wireframing & information architecture</li>
-									<li>Visual design & branding</li>
-									<li>Interactive prototypes</li>
-									<li>User testing & iteration</li>
-								</ul>
-							</div>
-						</div>
-						<div class="timeline-item" data-animate="fade-up" data-delay=".2s">
-							<div class="timeline-marker">
-								<span class="step-number">3</span>
-							</div>
-							<div class="timeline-content">
-								<h3>Development & Integration</h3>
-								<p>
-									Our expert developers build robust, scalable solutions using
-									the latest technologies and best practices.
-								</p>
-								<ul>
-									<li>Frontend & backend development</li>
-									<li>Third-party integrations</li>
-									<li>Performance optimization</li>
-									<li>Quality assurance testing</li>
-								</ul>
-							</div>
-						</div>
-						<div class="timeline-item" data-animate="fade-up" data-delay=".3s">
-							<div class="timeline-marker">
-								<span class="step-number">4</span>
-							</div>
-							<div class="timeline-content">
-								<h3>Launch & Optimization</h3>
-								<p>
-									We ensure a smooth launch and provide ongoing support to
-									maximize your success in the market.
-								</p>
-								<ul>
-									<li>Deployment & go-live</li>
-									<li>Performance monitoring</li>
-									<li>User behavior analysis</li>
-									<li>Continuous optimization</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+      <!-- Process Timeline -->
+      <section class="process-section" id="process">
+        <div class="container">
+          <div class="section-header" data-animate="fade-up">
+            <h2 class="section-title">Our Proven Process</h2>
+            <p class="section-subtitle">
+              From idea to launch, we've got you covered
+            </p>
+          </div>
+          <div class="process-timeline">
+            <div class="timeline-item" data-animate="fade-up">
+              <div class="timeline-marker">
+                <span class="step-number">1</span>
+              </div>
+              <div class="timeline-content">
+                <h3>Discovery & Strategy</h3>
+                <p>
+                  We dive deep into your business goals, target audience, and
+                  competitive landscape to create a solid foundation for
+                  success.
+                </p>
+                <ul>
+                  <li>Stakeholder interviews</li>
+                  <li>User research & personas</li>
+                  <li>Technical architecture planning</li>
+                  <li>Project roadmap & timeline</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item" data-animate="fade-up" data-delay=".1s">
+              <div class="timeline-marker">
+                <span class="step-number">2</span>
+              </div>
+              <div class="timeline-content">
+                <h3>Design & Prototyping</h3>
+                <p>
+                  We create stunning designs and interactive prototypes that
+                  bring your vision to life before a single line of code is
+                  written.
+                </p>
+                <ul>
+                  <li>Wireframing & information architecture</li>
+                  <li>Visual design & branding</li>
+                  <li>Interactive prototypes</li>
+                  <li>User testing & iteration</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item" data-animate="fade-up" data-delay=".2s">
+              <div class="timeline-marker">
+                <span class="step-number">3</span>
+              </div>
+              <div class="timeline-content">
+                <h3>Development & Integration</h3>
+                <p>
+                  Our expert developers build robust, scalable solutions using
+                  the latest technologies and best practices.
+                </p>
+                <ul>
+                  <li>Frontend & backend development</li>
+                  <li>Third-party integrations</li>
+                  <li>Performance optimization</li>
+                  <li>Quality assurance testing</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item" data-animate="fade-up" data-delay=".3s">
+              <div class="timeline-marker">
+                <span class="step-number">4</span>
+              </div>
+              <div class="timeline-content">
+                <h3>Launch & Optimization</h3>
+                <p>
+                  We ensure a smooth launch and provide ongoing support to
+                  maximize your success in the market.
+                </p>
+                <ul>
+                  <li>Deployment & go-live</li>
+                  <li>Performance monitoring</li>
+                  <li>User behavior analysis</li>
+                  <li>Continuous optimization</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-			<!-- Contact Section - CTA Cards Layout -->
-			<section class="contact-section" id="contact">
-				<div class="container">
-					<div class="section-header" data-animate="fade-up">
-						<h2 class="section-title">Let's Work Together</h2>
-						<p class="section-subtitle">
-							Choose the best way to connect with us
-						</p>
-					</div>
+      <!-- Contact Section - CTA Cards Layout -->
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <div class="section-header" data-animate="fade-up">
+            <h2 class="section-title">Let's Work Together</h2>
+            <p class="section-subtitle">
+              Choose the best way to connect with us
+            </p>
+          </div>
 
-					<div
-						class="contact-cards-grid"
-						data-animate="fade-up"
-						data-delay=".1s">
-						<!-- Email Card -->
-						<a
-							href="mailto:hello@infinitepixels.dev"
-							class="contact-card primary-card">
-							<div class="contact-card-icon">
-								<svg
-									width="32"
-									height="32"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2">
-									<path
-										d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-									<polyline points="22,6 12,13 2,6" />
-								</svg>
-							</div>
-							<h3 class="contact-card-title">Send us an Email</h3>
-							<p class="contact-card-desc">Get a response within 24 hours</p>
-							<span class="contact-card-value">hello@infinitepixels.dev</span>
-							<div class="contact-card-arrow">→</div>
-						</a>
+          <div
+            class="contact-cards-grid"
+            data-animate="fade-up"
+            data-delay=".1s"
+          >
+            <!-- Email Card -->
+            <a
+              href="mailto:hello@infinitepixels.dev"
+              class="contact-card primary-card"
+            >
+              <div class="contact-card-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <h3 class="contact-card-title">Send us an Email</h3>
+              <p class="contact-card-desc">Get a response within 24 hours</p>
+              <span class="contact-card-value">hello@infinitepixels.dev</span>
+              <div class="contact-card-arrow">→</div>
+            </a>
 
-						<!-- Phone Card -->
-						<a href="tel:+1234567890" class="contact-card">
-							<div class="contact-card-icon">
-								<svg
-									width="32"
-									height="32"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2">
-									<path
-										d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-								</svg>
-							</div>
-							<h3 class="contact-card-title">Give us a Call</h3>
-							<p class="contact-card-desc">Mon-Fri, 9AM-6PM EST</p>
-							<span class="contact-card-value">+1 (234) 567-890</span>
-							<div class="contact-card-arrow">→</div>
-						</a>
+            <!-- Phone Card -->
+            <a href="tel:+1234567890" class="contact-card">
+              <div class="contact-card-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+              </div>
+              <h3 class="contact-card-title">Give us a Call</h3>
+              <p class="contact-card-desc">Mon-Fri, 9AM-6PM EST</p>
+              <span class="contact-card-value">+1 (234) 567-890</span>
+              <div class="contact-card-arrow">→</div>
+            </a>
 
-						<!-- Online Availability Card -->
-						<a href="services.html" class="contact-card">
-							<div class="contact-card-icon">
-								<svg
-									width="32"
-									height="32"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2">
-									<circle cx="12" cy="12" r="10" />
-									<polyline points="12 6 12 12 16 14" />
-								</svg>
-							</div>
-							<h3 class="contact-card-title">We're Online</h3>
-							<p class="contact-card-desc">Remote-first, globally available</p>
-							<span class="contact-card-value">All Timezones Covered</span>
-							<div class="contact-card-badge">24/7 Online</div>
-						</a>
-					</div>
+            <!-- Online Availability Card -->
+            <a href="services.html" class="contact-card">
+              <div class="contact-card-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </div>
+              <h3 class="contact-card-title">We're Online</h3>
+              <p class="contact-card-desc">Remote-first, globally available</p>
+              <span class="contact-card-value">All Timezones Covered</span>
+              <div class="contact-card-badge">24/7 Online</div>
+            </a>
+          </div>
 
-					<!-- Quick Info Bar -->
-					<div class="contact-info-bar" data-animate="fade-up" data-delay=".2s">
-						<div class="info-bar-item">
-							<svg
-								width="20"
-								height="20"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2">
-								<circle cx="12" cy="12" r="10" />
-								<polyline points="12 6 12 12 16 14" />
-							</svg>
-							<span>Response within 24h</span>
-						</div>
-						<div class="info-bar-item">
-							<svg
-								width="20"
-								height="20"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2">
-								<path
-									d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-							</svg>
-							<span>Free consultation</span>
-						</div>
-						<div class="info-bar-item">
-							<svg
-								width="20"
-								height="20"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2">
-								<path d="M12 2L2 7l10 5 10-5-10-5z" />
-								<path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
-							</svg>
-							<span>Flexible engagement models</span>
-						</div>
-						<div class="info-bar-item">
-							<svg
-								width="20"
-								height="20"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2">
-								<polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-							</svg>
-							<span>Proven track record</span>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
+          <!-- Quick Info Bar -->
+          <div class="contact-info-bar" data-animate="fade-up" data-delay=".2s">
+            <div class="info-bar-item">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span>Response within 24h</span>
+            </div>
+            <div class="info-bar-item">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                />
+              </svg>
+              <span>Free consultation</span>
+            </div>
+            <div class="info-bar-item">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+              <span>Flexible engagement models</span>
+            </div>
+            <div class="info-bar-item">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+              <span>Proven track record</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-		<!-- Footer -->
-		<footer class="footer">
-			<div class="container">
-				<div class="footer-content">
-					<div class="footer-brand">
-						<div class="brand">
-							<img
-								src="img/no bg logos/logomark2nobg.png"
-								alt="Infinite Pixels Logo"
-								class="footer-logo-img" />
-						</div>
-						<p class="footer-tagline">
-							Crafting digital experiences that scale beyond imagination.
-						</p>
-						<div class="footer-social">
-							<a
-								href="https://instagram.com/infinitepixels"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="instagram-link"
-								aria-label="Follow us on Instagram">
-								<div class="instagram-icon">
-									<svg
-										viewBox="0 0 24 24"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg">
-										<rect
-											x="2"
-											y="2"
-											width="20"
-											height="20"
-											rx="5"
-											stroke="url(#instagram-gradient)"
-											stroke-width="2" />
-										<circle
-											cx="12"
-											cy="12"
-											r="4"
-											stroke="url(#instagram-gradient)"
-											stroke-width="2" />
-										<circle
-											cx="18"
-											cy="6"
-											r="1.5"
-											fill="url(#instagram-gradient)" />
-										<defs>
-											<linearGradient
-												id="instagram-gradient"
-												x1="0%"
-												y1="0%"
-												x2="100%"
-												y2="100%">
-												<stop
-													offset="0%"
-													style="stop-color: #f09433; stop-opacity: 1" />
-												<stop
-													offset="25%"
-													style="stop-color: #e6683c; stop-opacity: 1" />
-												<stop
-													offset="50%"
-													style="stop-color: #dc2743; stop-opacity: 1" />
-												<stop
-													offset="75%"
-													style="stop-color: #cc2366; stop-opacity: 1" />
-												<stop
-													offset="100%"
-													style="stop-color: #bc1888; stop-opacity: 1" />
-											</linearGradient>
-										</defs>
-									</svg>
-								</div>
-								<span class="instagram-text">@infinitepixels</span>
-							</a>
-						</div>
-					</div>
-					<div class="footer-links">
-						<div class="footer-column">
-							<h4>Services</h4>
-							<a href="services.html">Website Development</a>
-							<a href="services.html">System Integration</a>
-							<a href="services.html">Graphic Design</a>
-							<a href="services.html">Media Production</a>
-							<a href="services.html">Social Media Management</a>
-							<a href="services.html">Digital Marketing</a>
-							<a href="services.html">AI Automation</a>
-						</div>
-						<div class="footer-column">
-							<h4>Company</h4>
-							<a href="about.html">About Us</a>
-							<a href="work.html">Our Work</a>
-							<a href="process.html">Process</a>
-							<a href="services.html">Services</a>
-						</div>
-						<div class="footer-column">
-							<h4>Contact</h4>
-							<p style="color: var(--text-secondary); font-size: 0.9375rem">
-								Email: info@infinitepixels.com
-							</p>
-							<p style="color: var(--text-secondary); font-size: 0.9375rem">
-								Phone: +1 (555) 123-4567
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="footer-bottom">
-					<p>
-						&copy; <span id="copyrightYear"></span> Infinite Pixels. All rights
-						reserved.
-					</p>
-					<div class="footer-bottom-links">
-						<a href="/privacy">Privacy Policy</a>
-						<a href="/terms">Terms of Service</a>
-					</div>
-				</div>
-			</div>
-		</footer>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="brand">
+              <img
+                src="img/no bg logos/logomark2nobg.png"
+                alt="Infinite Pixels Logo"
+                class="footer-logo-img"
+              />
+            </div>
+            <p class="footer-tagline">
+              Crafting digital experiences that scale beyond imagination.
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://instagram.com/infinitepixels"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="instagram-link"
+                aria-label="Follow us on Instagram"
+              >
+                <div class="instagram-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="2"
+                      y="2"
+                      width="20"
+                      height="20"
+                      rx="5"
+                      stroke="url(#instagram-gradient)"
+                      stroke-width="2"
+                    />
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="4"
+                      stroke="url(#instagram-gradient)"
+                      stroke-width="2"
+                    />
+                    <circle
+                      cx="18"
+                      cy="6"
+                      r="1.5"
+                      fill="url(#instagram-gradient)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="instagram-gradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%"
+                      >
+                        <stop
+                          offset="0%"
+                          style="stop-color: #f09433; stop-opacity: 1"
+                        />
+                        <stop
+                          offset="25%"
+                          style="stop-color: #e6683c; stop-opacity: 1"
+                        />
+                        <stop
+                          offset="50%"
+                          style="stop-color: #dc2743; stop-opacity: 1"
+                        />
+                        <stop
+                          offset="75%"
+                          style="stop-color: #cc2366; stop-opacity: 1"
+                        />
+                        <stop
+                          offset="100%"
+                          style="stop-color: #bc1888; stop-opacity: 1"
+                        />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <span class="instagram-text">@infinitepixels</span>
+              </a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Services</h4>
+              <a href="services.html">Website Development</a>
+              <a href="services.html">System Integration</a>
+              <a href="services.html">Graphic Design</a>
+              <a href="services.html">Media Production</a>
+              <a href="services.html">Social Media Management</a>
+              <a href="services.html">Digital Marketing</a>
+              <a href="services.html">AI Automation</a>
+            </div>
+            <div class="footer-column">
+              <h4>Company</h4>
+              <a href="about.html">About Us</a>
+              <a href="work.html">Our Work</a>
+              <a href="process.html">Process</a>
+              <a href="services.html">Services</a>
+            </div>
+            <div class="footer-column">
+              <h4>Contact</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9375rem">
+                Email: info@infinitepixels.com
+              </p>
+              <p style="color: var(--text-secondary); font-size: 0.9375rem">
+                Phone: +1 (555) 123-4567
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="copyrightYear"></span> Infinite Pixels. All rights
+            reserved.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-		<script src="logic.js" defer></script>
-		<script src="js/Aurora.js"></script>
-	</body>
+    <script src="logic.js" defer></script>
+    <script src="js/Aurora.js"></script>
+  </body>
 </html>
