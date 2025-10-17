@@ -116,12 +116,38 @@
         <!-- Featured cards -->
         <div class="mobile-nav-featured">
           <a class="mobile-feature-card services" href="services.html">
-            <div class="feat-icon">🧠</div>
+            <div class="feat-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="3" y="3" width="7" height="7" />
+                <rect x="14" y="3" width="7" height="7" />
+                <rect x="14" y="14" width="7" height="7" />
+                <rect x="3" y="14" width="7" height="7" />
+              </svg>
+            </div>
             <div class="feat-title">Services</div>
             <div class="feat-sub">Branding, web design, digital solutions</div>
           </a>
           <a class="mobile-feature-card work" href="work.html">
-            <div class="feat-icon">🏆</div>
+            <div class="feat-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            </div>
             <div class="feat-title">Work</div>
             <div class="feat-sub">Results and case studies</div>
           </a>
@@ -130,27 +156,91 @@
         <!-- Vertical list -->
         <nav class="mobile-nav-list" aria-label="Mobile">
           <a class="mobile-nav-item" href="home.html">
-            <span class="item-icon">🏠</span>
+            <span class="item-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </span>
             <span class="item-label">Home</span>
             <span class="item-arrow">›</span>
           </a>
           <a class="mobile-nav-item" href="about.html">
-            <span class="item-icon">✨</span>
+            <span class="item-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+            </span>
             <span class="item-label">About</span>
             <span class="item-arrow">›</span>
           </a>
           <a class="mobile-nav-item" href="services.html">
-            <span class="item-icon">🧩</span>
+            <span class="item-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="3" y="3" width="7" height="7" />
+                <rect x="14" y="3" width="7" height="7" />
+                <rect x="14" y="14" width="7" height="7" />
+                <rect x="3" y="14" width="7" height="7" />
+              </svg>
+            </span>
             <span class="item-label">Services</span>
             <span class="item-arrow">›</span>
           </a>
           <a class="mobile-nav-item" href="work.html">
-            <span class="item-icon">🚀</span>
+            <span class="item-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            </span>
             <span class="item-label">Work</span>
             <span class="item-arrow">›</span>
           </a>
           <a class="mobile-nav-item" href="process.html">
-            <span class="item-icon">🔁</span>
+            <span class="item-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"
+                />
+              </svg>
+            </span>
             <span class="item-label">Process</span>
             <span class="item-arrow">›</span>
           </a>
@@ -229,6 +319,12 @@
                   conversation. You'll know by the end of the call if we can
                   help.
                 </p>
+                <!-- Mobile-only details toggle -->
+                <input type="checkbox" class="step-toggle" id="step1-toggle" />
+                <label class="step-toggle-label" for="step1-toggle">
+                  <span class="show-text">View details</span>
+                  <span class="hide-text">Hide details</span>
+                </label>
                 <div class="step-details">
                   <div class="step-activities">
                     <h4>What happens:</h4>
@@ -279,6 +375,12 @@
                   questions. Once you approve, we send a simple agreement to
                   protect both of us and schedule the project kickoff.
                 </p>
+                <!-- Mobile-only details toggle -->
+                <input type="checkbox" class="step-toggle" id="step2-toggle" />
+                <label class="step-toggle-label" for="step2-toggle">
+                  <span class="show-text">View details</span>
+                  <span class="hide-text">Hide details</span>
+                </label>
                 <div class="step-details">
                   <div class="step-activities">
                     <h4>What happens:</h4>
@@ -327,6 +429,12 @@
                   your feedback. You review and tell us what needs adjustment.
                   We keep refining until you're happy with the direction.
                 </p>
+                <!-- Mobile-only details toggle -->
+                <input type="checkbox" class="step-toggle" id="step3-toggle" />
+                <label class="step-toggle-label" for="step3-toggle">
+                  <span class="show-text">View details</span>
+                  <span class="hide-text">Hide details</span>
+                </label>
                 <div class="step-details">
                   <div class="step-activities">
                     <h4>What happens:</h4>
@@ -377,6 +485,12 @@
                   files delivered, etc.). You get all source files and access
                   you need.
                 </p>
+                <!-- Mobile-only details toggle -->
+                <input type="checkbox" class="step-toggle" id="step4-toggle" />
+                <label class="step-toggle-label" for="step4-toggle">
+                  <span class="show-text">View details</span>
+                  <span class="hide-text">Hide details</span>
+                </label>
                 <div class="step-details">
                   <div class="step-activities">
                     <h4>What happens:</h4>
@@ -527,21 +641,19 @@
               <h4>Services</h4>
               <a href="services.html">AI Automation</a>
               <a href="services.html">Web Development</a>
-              <a href="services.html">Digital Marketing</a>
+              <a href="services.html">Social Media Managment</a>
               <a href="services.html">Media Production</a>
+              <a href="services.html">Graphic Design</a>
+              <a href="services.html">System Integration</a>
             </div>
             <div class="footer-column">
-              <h4>Company</h4>
-              <a href="about.html">About Us</a>
-              <a href="work.html">Our Work</a>
-              <a href="process.html">Process</a>
+              <h4>Quick Links</h4>
+              <a href="home.html">Home</a>
+              <a href="about.html">About</a>
               <a href="services.html">Services</a>
-            </div>
-            <div class="footer-column">
-              <h4>Resources</h4>
-              <a href="#">Case Studies</a>
-              <a href="#">AI Insights</a>
-              <a href="#">Performance Reports</a>
+              <a href="work.html">Work</a>
+              <a href="process.html">Process</a>
+              <a href="home.html#contact">Contact</a>
             </div>
           </div>
         </div>
