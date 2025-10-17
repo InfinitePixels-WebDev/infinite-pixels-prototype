@@ -1,0 +1,58 @@
+.typewriter-container {
+  display: inline-block;
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.6;
+}
+
+.typewriter-text {
+  display: inline;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  opacity: 1;
+  animation: blink 1s infinite;
+}
+
+.typewriter-cursor--hidden {
+  display: none;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* FAQ specific styles */
+.faq-answer-content.typewriter-active {
+  min-height: 1.5em;
+}
+
+.faq-answer-content .typewriter-container {
+  width: 100%;
+  display: block;
+}
+
+.faq-answer-content .typewriter-text {
+  display: inline;
+}
+
+/* Hide content during transition to prevent flash */
+.faq-item:not(.active) .faq-answer-content {
+  opacity: 0;
+}
+
+.faq-item.active .faq-answer-content {
+  opacity: 1;
+  transition: opacity 0.1s ease;
+}
