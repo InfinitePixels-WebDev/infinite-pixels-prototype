@@ -278,7 +278,13 @@ class Aurora {
 		);
 
 		// Set canvas size with device pixel ratio for crisp rendering
-		const dpr = Math.min(window.devicePixelRatio || 1, 2); // Cap at 2x for performance
+		// Cap device pixel ratio to 1.5x on mobile for performance
+		let dpr = window.devicePixelRatio || 1;
+		if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+			dpr = Math.min(dpr, 1.5);
+		} else {
+			dpr = Math.min(dpr, 2);
+		}
 		this.canvas.width = width * dpr;
 		this.canvas.height = height * dpr;
 
@@ -296,6 +302,14 @@ class Aurora {
 	}
 
 	animate(timestamp) {
+		// Cap frame rate to 30fps
+		if (!this.lastFrameTime) this.lastFrameTime = 0;
+		if (!this.frameInterval) this.frameInterval = 1000 / 30;
+		if (timestamp - this.lastFrameTime < this.frameInterval) {
+			this.animationId = requestAnimationFrame(this.animate);
+			return;
+		}
+		this.lastFrameTime = timestamp;
 		this.time = timestamp * 0.001 * this.options.speed;
 
 		const gl = this.gl;

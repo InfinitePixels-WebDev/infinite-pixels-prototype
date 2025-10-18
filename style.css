@@ -1,3 +1,78 @@
+/* Accessibility & performance: reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+/* iPad Pro & iPad Air: Stack How We Started section vertically */
+@media (min-width: 820px) and (max-width: 1180px) {
+	.content-section .content-grid {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+		align-items: stretch;
+	}
+	.content-section .content-text,
+	.content-section .content-visual {
+		max-width: 100%;
+		padding: 0;
+		margin: 0 auto;
+	}
+}
+/* iPad Pro & iPad Air fix for About page */
+@media (min-width: 820px) and (max-width: 1180px) {
+	.about-hero .container {
+		max-width: 900px;
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+	.about-hero .hero-content {
+		max-width: 700px;
+		margin: 0 auto;
+		text-align: center;
+		padding: 0 24px;
+	}
+	.content-section .container {
+		max-width: 900px;
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+	.content-grid {
+		grid-template-columns: 1fr 1fr;
+		gap: 2.5rem;
+		align-items: start;
+	}
+	.content-text {
+		max-width: 95%;
+		font-size: 1.08rem;
+		line-height: 1.7;
+		padding-right: 1.5rem;
+	}
+}
+/* iPad Pro & iPad Air fix: ensure nav-menu is visible and responsive */
+@media (min-width: 820px) and (max-width: 1180px) {
+	.nav-menu {
+		display: flex !important;
+		flex-direction: row;
+		position: static;
+		background: none;
+		box-shadow: none;
+		width: auto;
+		height: auto;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		margin: 0 1rem;
+	}
+	.menu-toggle {
+		display: none !important;
+	}
+}
 /* Modern Infinite Pixels Design System */
 
 :root {
@@ -5215,7 +5290,7 @@ body:not(.dark) .footer {
 	}
 
 	/* Improve touch targets on mobile */
-	
+
 	button,
 	.nav-link {
 		min-height: 44px;
