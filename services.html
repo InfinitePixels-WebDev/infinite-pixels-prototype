@@ -1,1126 +1,1104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Services — Infinite Pixels</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="img/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="img/favicon/favicon-16x16.png"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Michroma:wght@400&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="js/typewriter.css" />
-  </head>
-  <body>
-    <!-- Floating Navigation -->
-    <nav id="site-header" class="floating-nav">
-      <div class="nav-container">
-        <a href="home.html" class="brand" data-animate="slide-right">
-          <img
-            src="img/no bg logos/logomarknobg.png"
-            alt="Infinite Pixels Logo"
-            class="brand-logo-img"
-          />
-          <span class="brand-divider"></span>
-          <span class="brand-tagline">Digital Solutions</span>
-        </a>
-        <div class="nav-menu" id="navMenu">
-          <a href="home.html" class="nav-link">
-            <span class="link-text">Home</span>
-          </a>
-          <a href="about.html" class="nav-link">
-            <span class="link-text">About</span>
-          </a>
-          <a href="services.html" class="nav-link active">
-            <span class="link-text">Services</span>
-          </a>
-          <a href="work.html" class="nav-link">
-            <span class="link-text">Work</span>
-          </a>
-          <a href="process.html" class="nav-link">
-            <span class="link-text">Process</span>
-          </a>
-        </div>
-        <div class="nav-actions">
-          <a href="home.html#contact" class="nav-cta">
-            <span>Get Started</span>
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
-          <button
-            class="theme-toggle"
-            id="themeToggle"
-            type="button"
-            aria-label="Toggle theme"
-          >
-            <span id="themeToggleIcon" aria-hidden="true">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-              </svg>
-            </span>
-          </button>
-          <button
-            class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="Toggle navigation"
-            aria-expanded="false"
-            aria-controls="navMenu"
-          >
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-          </button>
-        </div>
-      </div>
-    </nav>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Services — Infinite Pixels</title>
+		<link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="img/favicon/favicon-32x32.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="img/favicon/favicon-16x16.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Michroma:wght@400&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="js/typewriter.css" />
+		<!-- SEO Meta Tags -->
+		<meta
+			name="description"
+			content="Explore Infinite Pixels' services: web design, branding, automation, social media, and digital solutions for business growth. Fast, affordable, and modern." />
+		<meta
+			name="keywords"
+			content="services, web design, branding, automation, social media, digital solutions, Infinite Pixels, business growth" />
+		<meta name="author" content="Infinite Pixels" />
 
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay" aria-hidden="true">
-      <div class="mobile-nav-panel">
-        <div class="mobile-nav-handle" aria-hidden="true"></div>
-        <div class="mobile-nav-header">
-          <h3 class="mobile-nav-title">Explore</h3>
-        </div>
-        <div class="mobile-nav-featured">
-          <a class="mobile-feature-card services" href="services.html">
-            <div class="feat-icon">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"
-                />
-                <path
-                  d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"
-                />
-              </svg>
-            </div>
-            <div class="feat-title">Services</div>
-            <div class="feat-sub">Branding, web design, digital solutions</div>
-          </a>
-          <a class="mobile-feature-card work" href="work.html">
-            <div class="feat-icon">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
-                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
-                <path d="M4 22h16" />
-                <path
-                  d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"
-                />
-                <path
-                  d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"
-                />
-                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
-              </svg>
-            </div>
-            <div class="feat-title">Work</div>
-            <div class="feat-sub">Results and case studies</div>
-          </a>
-        </div>
-        <nav class="mobile-nav-list" aria-label="Mobile">
-          <a class="mobile-nav-item" href="home.html">
-            <span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <polyline points="9 22 9 12 15 12 15 22" />
-              </svg>
-            </span>
-            <span class="item-label">Home</span>
-            <span class="item-arrow">›</span>
-          </a>
-          <a class="mobile-nav-item" href="about.html">
-            <span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                />
-              </svg>
-            </span>
-            <span class="item-label">About</span>
-            <span class="item-arrow">›</span>
-          </a>
-          <a class="mobile-nav-item" href="services.html">
-            <span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <rect x="3" y="3" width="7" height="7" />
-                <rect x="14" y="3" width="7" height="7" />
-                <rect x="14" y="14" width="7" height="7" />
-                <rect x="3" y="14" width="7" height="7" />
-              </svg>
-            </span>
-            <span class="item-label">Services</span>
-            <span class="item-arrow">›</span>
-          </a>
-          <a class="mobile-nav-item" href="work.html">
-            <span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-            </span>
-            <span class="item-label">Work</span>
-            <span class="item-arrow">›</span>
-          </a>
-          <a class="mobile-nav-item" href="process.html"
-            ><span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"
-                />
-              </svg> </span
-            ><span class="item-label">Process</span
-            ><span class="item-arrow">›</span></a
-          >
-        </nav>
-      </div>
-    </div>
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:title" content="Services — Infinite Pixels" />
+		<meta
+			property="og:description"
+			content="Explore Infinite Pixels' services: web design, branding, automation, social media, and digital solutions for business growth. Fast, affordable, and modern." />
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:url"
+			content="https://infinitepixels.com/services.html" />
+		<meta property="og:image" content="img/no bg logos/logomarknobg.png" />
 
-    <main class="main-content">
-      <!-- Services Hero Section -->
-      <section class="page-hero services-hero" id="hero">
-        <div class="container">
-          <div class="hero-badge" data-animate="fade-up">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <circle cx="12" cy="12" r="3" />
-              <path
-                d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"
-              />
-            </svg>
-            <span>What We Do</span>
-          </div>
-          <div class="hero-content" data-animate="fade-up" data-delay=".1s">
-            <h1 class="page-title">Six Services to Grow Your Business</h1>
-            <p class="page-subtitle">
-              We offer web development, graphic design, media production, social
-              media management, system integration, and AI automation.
-              Everything you need to build a strong digital presence.
-            </p>
-          </div>
-          <div class="hero-features" data-animate="fade-up" data-delay=".2s">
-            <div class="feature-pill">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                <polyline points="22 4 12 14.01 9 11.01" />
-              </svg>
-              <span>Professional Work</span>
-            </div>
-            <div class="feature-pill">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-              </svg>
-              <span>Fair Pricing</span>
-            </div>
-            <div class="feature-pill">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg>
-              <span>On-Time Delivery</span>
-            </div>
-          </div>
-        </div>
-      </section>
+		<!-- Twitter Card Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Services — Infinite Pixels" />
+		<meta
+			name="twitter:description"
+			content="Explore Infinite Pixels' services: web design, branding, automation, social media, and digital solutions for business growth. Fast, affordable, and modern." />
+		<meta name="twitter:image" content="img/no bg logos/logomarknobg.png" />
 
-      <!-- Main Services Section -->
-      <section class="content-section">
-        <div class="container">
-          <div class="services-grid">
-            <div class="service-card" data-animate="fade-up" data-delay=".6s">
-              <div class="service-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  fill="currentColor"
-                  viewBox="0 0 32 32"
-                  id="robot"
-                >
-                  <path
-                    d="M13.4718 26H18.5282C19.3392 26 20 25.3265 20 24.5 20 23.6735 19.3392 23 18.5282 23H13.4718C12.6608 23 12 23.6735 12 24.5 12 25.3265 12.6608 26 13.4718 26ZM10.5 10C8.01472 10 6 12.0147 6 14.5 6 16.9853 8.01472 19 10.5 19H21.5C23.9853 19 26 16.9853 26 14.5 26 12.0147 23.9853 10 21.5 10H10.5ZM11.25 12C11.9404 12 12.5 12.5596 12.5 13.25V15.75C12.5 16.4404 11.9404 17 11.25 17 10.5596 17 10 16.4404 10 15.75V13.25C10 12.5596 10.5596 12 11.25 12ZM19.5 13.25C19.5 12.5596 20.0596 12 20.75 12 21.4404 12 22 12.5596 22 13.25V15.75C22 16.4404 21.4404 17 20.75 17 20.0596 17 19.5 16.4404 19.5 15.75V13.25Z"
-                  ></path>
-                  <path
-                    d="M4 4.91465C4.5826 4.70873 5 4.15311 5 3.5C5 2.67157 4.32843 2 3.5 2C2.67157 2 2 2.67157 2 3.5C2 4.15311 2.4174 4.70873 3 4.91465V12.2695C2.40334 12.6163 2 13.2625 2 13.9982V21.0018C2 21.7375 2.40334 22.3837 3 22.7305V24.05C3 27.8923 6.10771 31 9.95 31H22.05C25.8912 31 29 27.8934 29 24.06V22.6703C29.5966 22.3231 29.9999 21.6764 29.9999 20.9401V13.9301C29.9999 13.1937 29.5966 12.547 29 12.1998V12.03L28.9999 12.0004V5.01759C29.6107 4.80959 30.0499 4.2311 30.0499 3.55C30.0499 2.69396 29.356 2 28.5 2C27.6439 2 26.95 2.69396 26.95 3.55C26.95 4.23109 27.3892 4.80957 27.9999 5.01758V8.41361C26.7715 6.3687 24.5337 5 21.98 5H20.9146C20.9699 4.84361 21 4.67532 21 4.5C21 3.67157 20.3284 3 19.5 3H12.5C11.6716 3 11 3.67157 11 4.5C11 4.67532 11.0301 4.84361 11.0854 5H10.03C7.46993 5 5.22928 6.36875 4 8.4143V4.91465ZM5 12.03C5 9.25228 7.25228 7 10.03 7H21.98C24.7466 7 27 9.2512 27 12.03V24.06C27 26.7866 24.7888 29 22.05 29H9.95C7.21229 29 5 26.7877 5 24.05V12.03Z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="service-content">
-                <h3>AI Automation</h3>
-                <p>
-                  Our automation team implements intelligent AI solutions that
-                  handle tasks automatically and improve your business
-                  efficiency.
-                </p>
-                <ul class="service-features">
-                  <li>AI voice agents</li>
-                  <li>AI chatbots</li>
-                  <li>AI social media agents</li>
-                  <li>AI-driven automation workflows</li>
-                  <li>Integration with your systems</li>
-                </ul>
-                <div class="service-pricing">
-                  <span class="price">Based on your project requirements</span>
-                  <span class="duration"
-                    >Varies by scope - discussed during consultation</span
-                  >
-                </div>
-              </div>
-            </div>
+		<!-- Structured Data: Organization -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				"name": "Infinite Pixels",
+				"url": "https://infinitepixels.com/",
+				"logo": "img/no bg logos/logomarknobg.png",
+				"sameAs": [
+					"https://www.facebook.com/infinitepixels",
+					"https://www.instagram.com/infinitepixels",
+					"https://www.linkedin.com/company/infinitepixels"
+				]
+			}
+		</script>
+	</head>
+	<body>
+		<!-- Floating Navigation -->
+		<nav id="site-header" class="floating-nav">
+			<div class="nav-container">
+				<a href="home.html" class="brand" data-animate="slide-right">
+					<img
+						src="img/no bg logos/logomarknobg.png"
+						alt="Infinite Pixels Logo"
+						class="brand-logo-img" />
+					<span class="brand-divider"></span>
+					<span class="brand-tagline">Digital Solutions</span>
+				</a>
+				<div class="nav-menu" id="navMenu">
+					<a href="home.html" class="nav-link">
+						<span class="link-text">Home</span>
+					</a>
+					<a href="about.html" class="nav-link">
+						<span class="link-text">About</span>
+					</a>
+					<a href="services.html" class="nav-link active">
+						<span class="link-text">Services</span>
+					</a>
+					<a href="work.html" class="nav-link">
+						<span class="link-text">Work</span>
+					</a>
+					<a href="process.html" class="nav-link">
+						<span class="link-text">Process</span>
+					</a>
+				</div>
+				<div class="nav-actions">
+					<a href="home.html#contact" class="nav-cta">
+						<span>Get Started</span>
+						<svg
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2">
+							<line x1="5" y1="12" x2="19" y2="12" />
+							<polyline points="12 5 19 12 12 19" />
+						</svg>
+					</a>
+					<button
+						class="theme-toggle"
+						id="themeToggle"
+						type="button"
+						aria-label="Toggle theme">
+						<span id="themeToggleIcon" aria-hidden="true">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+							</svg>
+						</span>
+					</button>
+					<button
+						class="menu-toggle"
+						id="menuToggle"
+						type="button"
+						aria-label="Toggle navigation"
+						aria-expanded="false"
+						aria-controls="navMenu">
+						<span class="menu-line"></span>
+						<span class="menu-line"></span>
+						<span class="menu-line"></span>
+					</button>
+				</div>
+			</div>
+		</nav>
 
-            <div class="service-card" data-animate="fade-up" data-delay=".1s">
-              <div class="service-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xml:space="preserve"
-                  width="32"
-                  height="32"
-                  id="laptop"
-                  fill="currentColor"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    d="M496 384V96H16v288h175v16h-64v16h257v-16h-64v-16h176zM32 112h448v256H32V112z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="service-content">
-                <h3>Web Development</h3>
-                <p>
-                  Our development team builds professional websites that work on
-                  all devices and help you reach your business goals.
-                </p>
-                <ul class="service-features">
-                  <li>Landing pages</li>
-                  <li>Custom full website development</li>
-                  <li>Website redesigning and revamping</li>
-                  <li>Mobile-responsive design</li>
-                </ul>
-                <div class="service-pricing">
-                  <span class="price">Based on your project requirements</span>
-                  <span class="duration"
-                    >Varies by scope - discussed during consultation</span
-                  >
-                </div>
-              </div>
-            </div>
+		<!-- Mobile Navigation Overlay -->
+		<div class="mobile-nav-overlay" aria-hidden="true">
+			<div class="mobile-nav-panel">
+				<div class="mobile-nav-handle" aria-hidden="true"></div>
+				<div class="mobile-nav-header">
+					<h3 class="mobile-nav-title">Explore</h3>
+				</div>
+				<div class="mobile-nav-featured">
+					<a class="mobile-feature-card services" href="services.html">
+						<div class="feat-icon">
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path
+									d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z" />
+								<path
+									d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z" />
+							</svg>
+						</div>
+						<div class="feat-title">Services</div>
+						<div class="feat-sub">Branding, web design, digital solutions</div>
+					</a>
+					<a class="mobile-feature-card work" href="work.html">
+						<div class="feat-icon">
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+								<path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+								<path d="M4 22h16" />
+								<path
+									d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+								<path
+									d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+								<path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+							</svg>
+						</div>
+						<div class="feat-title">Work</div>
+						<div class="feat-sub">Results and case studies</div>
+					</a>
+				</div>
+				<nav class="mobile-nav-list" aria-label="Mobile">
+					<a class="mobile-nav-item" href="home.html">
+						<span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+								<polyline points="9 22 9 12 15 12 15 22" />
+							</svg>
+						</span>
+						<span class="item-label">Home</span>
+						<span class="item-arrow">›</span>
+					</a>
+					<a class="mobile-nav-item" href="about.html">
+						<span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path
+									d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+							</svg>
+						</span>
+						<span class="item-label">About</span>
+						<span class="item-arrow">›</span>
+					</a>
+					<a class="mobile-nav-item" href="services.html">
+						<span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<rect x="3" y="3" width="7" height="7" />
+								<rect x="14" y="3" width="7" height="7" />
+								<rect x="14" y="14" width="7" height="7" />
+								<rect x="3" y="14" width="7" height="7" />
+							</svg>
+						</span>
+						<span class="item-label">Services</span>
+						<span class="item-arrow">›</span>
+					</a>
+					<a class="mobile-nav-item" href="work.html">
+						<span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<circle cx="12" cy="12" r="10" />
+								<path d="m9 12 2 2 4-4" />
+							</svg>
+						</span>
+						<span class="item-label">Work</span>
+						<span class="item-arrow">›</span>
+					</a>
+					<a class="mobile-nav-item" href="process.html"
+						><span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path
+									d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2" />
+							</svg> </span
+						><span class="item-label">Process</span
+						><span class="item-arrow">›</span></a
+					>
+				</nav>
+			</div>
+		</div>
 
-            <div class="service-card" data-animate="fade-up" data-delay=".4s">
-              <div class="service-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 64 64"
-                  id="social-media-analysis"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M35,7.75H29.08v5.91H35Zm-3,4.64a1.69,1.69,0,1,1,1.69-1.69A1.69,1.69,0,0,1,32,12.39Z"
-                  ></path>
-                  <circle cx="32.04" cy="10.7" r=".31"></circle>
-                  <path
-                    d="M60.16,25.1a9.72,9.72,0,0,0-11.28-1.77,18.8,18.8,0,0,0-8.21-8.21,9.7,9.7,0,1,0-17.29,0,18.76,18.76,0,0,0-8.3,8.3,9.7,9.7,0,1,0,0,17.28,18.8,18.8,0,0,0,8.21,8.21,9.7,9.7,0,1,0,17.28,0,18.76,18.76,0,0,0,8.3-8.3A9.7,9.7,0,0,0,60.16,25.1ZM27.08,6.75a1,1,0,0,1,1-1H36a1,1,0,0,1,1,1v7.91a1,1,0,0,1-1,1H28.08a1,1,0,0,1-1-1ZM9.84,35h3.07a1,1,0,1,1,0,2H9.84a2.42,2.42,0,0,1-2.42-2.41v-6.5a1,1,0,0,1,2,0v2.65H13a1,1,0,1,1,0,2H9.43v1.85A.42.42,0,0,0,9.84,35Zm25.1,16.93a3.5,3.5,0,0,1-1.29-.12v3.66a2.79,2.79,0,1,1-2.79-2.79,2.75,2.75,0,0,1,.79.13V49.34a1,1,0,0,1,2-.12c.06.35.3.77,1.13.71a1,1,0,0,1,1.08.91A1,1,0,0,1,34.94,51.92Zm4.58-4.7a9.69,9.69,0,0,0-15.1,0,16.8,16.8,0,0,1-7.61-7.61,9.68,9.68,0,0,0,0-15.1,16.78,16.78,0,0,1,7.7-7.7,9.71,9.71,0,0,0,14.42.78,9.87,9.87,0,0,0,.68-.76,16.8,16.8,0,0,1,7.61,7.61,9.68,9.68,0,0,0,0,15.1A16.78,16.78,0,0,1,39.52,47.22ZM54.62,31a1,1,0,0,1,0,2H53v3a1,1,0,0,1-2,0V30.64A3.64,3.64,0,0,1,54.62,27a1,1,0,0,1,0,2A1.64,1.64,0,0,0,53,30.64V31Z"
-                  ></path>
-                  <circle cx="30.86" cy="55.46" r=".79"></circle>
-                  <path
-                    d="M25 40.14a10.7 10.7 0 0014 0zM24.41 38.14V34a1 1 0 012 0v4.16h2.4V31.81a1 1 0 012 0v6.33h2.39v-8.3a1 1 0 012 0v8.3h2.38V26.72a1 1 0 012 0V38.14h1.22a10.71 10.71 0 00-1.87-14.33l-13 7.5a1 1 0 01-1-1.73l12.21-7A10.74 10.74 0 0023.19 38.14z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="service-content">
-                <h3>Social Media Management</h3>
-                <p>
-                  Our social media team runs your accounts so you don't have to.
-                  Content creation, daily posting, and engagement—all handled
-                  for you.
-                </p>
-                <ul class="service-features">
-                  <li>Content planning and creation</li>
-                  <li>Daily or weekly posting schedule</li>
-                  <li>Captions and hashtags</li>
-                  <li>Basic community management</li>
-                  <li>Monthly performance reports</li>
-                </ul>
-                <div class="service-pricing">
-                  <span class="price"
-                    >Monthly packages - contact us for details</span
-                  >
-                  <span class="duration"
-                    >Ongoing service with flexible start dates</span
-                  >
-                </div>
-              </div>
-            </div>
+		<main class="main-content">
+			<!-- Services Hero Section -->
+			<section class="page-hero services-hero" id="hero">
+				<div class="container">
+					<div class="hero-badge" data-animate="fade-up">
+						<svg
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2">
+							<circle cx="12" cy="12" r="3" />
+							<path
+								d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24" />
+						</svg>
+						<span>What We Do</span>
+					</div>
+					<div class="hero-content" data-animate="fade-up" data-delay=".1s">
+						<h1 class="page-title">Six Services to Grow Your Business</h1>
+						<p class="page-subtitle">
+							We offer web development, graphic design, media production, social
+							media management, system integration, and AI automation.
+							Everything you need to build a strong digital presence.
+						</p>
+					</div>
+					<div class="hero-features" data-animate="fade-up" data-delay=".2s">
+						<div class="feature-pill">
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+								<polyline points="22 4 12 14.01 9 11.01" />
+							</svg>
+							<span>Professional Work</span>
+						</div>
+						<div class="feature-pill">
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+							</svg>
+							<span>Fair Pricing</span>
+						</div>
+						<div class="feature-pill">
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+							</svg>
+							<span>On-Time Delivery</span>
+						</div>
+					</div>
+				</div>
+			</section>
 
-            <div class="service-card" data-animate="fade-up" data-delay=".3s">
-              <div class="service-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  id="movie-clapperboard"
-                  viewBox="0 0 32 32"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M29.93,8.96c-.52-3.52-3.34-6.35-6.85-6.88-.48-.07-.88-.07-2.05-.07h-9.96c-1.18,0-1.57,0-2.05.07-3.51.54-6.33,3.37-6.85,6.92,0,0,0,0,0,0h0l-.04.96s-.11,2.59-.11,4.84v2.4c0,2.27,0,3.92.11,5.25.12,1.4.34,2.35.76,3.18.77,1.51,1.98,2.72,3.5,3.5.82.42,1.77.65,3.18.76,1.34.11,2.98.11,5.25.11h2.4c2.27,0,3.92,0,5.25-.11,1.4-.12,2.35-.34,3.18-.76,1.51-.77,2.72-1.98,3.5-3.5.42-.82.65-1.77.76-3.18.11-1.34.11-2.98.11-5.25v-6.2s0,0,0,0v-1.01c-.02-.46-.03-.73-.08-1.03ZM27.91,9h-8.72l4.08-4.84c2.33.56,4.18,2.46,4.64,4.84ZM11.24,9l4.27-5h5.28l-4.22,5h-5.34ZM9.31,4.05c.32-.05.63-.05,1.75-.05h1.82l-4.27,5h-4.43c.48-2.54,2.56-4.56,5.13-4.95ZM28,17.2c0,2.23,0,3.84-.1,5.09-.09,1.13-.26,1.85-.55,2.43-.58,1.14-1.49,2.04-2.62,2.62-.58.29-1.31.46-2.43.55-1.26.1-2.87.1-5.09.1h-2.4c-2.23,0-3.84,0-5.09-.1-1.13-.09-1.85-.26-2.43-.55-1.14-.58-2.04-1.49-2.62-2.62-.29-.58-.46-1.31-.55-2.43-.1-1.26-.1-2.87-.1-5.09v-2.4c0-1.37.04-2.86.07-3.8h23.93v6.2Z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="service-content">
-                <h3>Media Production</h3>
-                <p>
-                  Our media team produces high-quality video content for your
-                  business with a complete content strategy and professional
-                  editing.
-                </p>
-                <ul class="service-features">
-                  <li>50 content ideas to choose from</li>
-                  <li>Script optimization</li>
-                  <li>Professional filming</li>
-                  <li>Premium editing</li>
-                  <li>Content posting</li>
-                  <li>Analytics reports</li>
-                </ul>
-                <div class="service-pricing">
-                  <span class="price">Based on your project requirements</span>
-                  <span class="duration"
-                    >Varies by scope - discussed during consultation</span
-                  >
-                </div>
-              </div>
-            </div>
+			<!-- Main Services Section -->
+			<section class="content-section">
+				<div class="container">
+					<div class="services-grid">
+						<div class="service-card" data-animate="fade-up" data-delay=".6s">
+							<div class="service-icon">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="32"
+									height="32"
+									fill="currentColor"
+									viewBox="0 0 32 32"
+									id="robot">
+									<path
+										d="M13.4718 26H18.5282C19.3392 26 20 25.3265 20 24.5 20 23.6735 19.3392 23 18.5282 23H13.4718C12.6608 23 12 23.6735 12 24.5 12 25.3265 12.6608 26 13.4718 26ZM10.5 10C8.01472 10 6 12.0147 6 14.5 6 16.9853 8.01472 19 10.5 19H21.5C23.9853 19 26 16.9853 26 14.5 26 12.0147 23.9853 10 21.5 10H10.5ZM11.25 12C11.9404 12 12.5 12.5596 12.5 13.25V15.75C12.5 16.4404 11.9404 17 11.25 17 10.5596 17 10 16.4404 10 15.75V13.25C10 12.5596 10.5596 12 11.25 12ZM19.5 13.25C19.5 12.5596 20.0596 12 20.75 12 21.4404 12 22 12.5596 22 13.25V15.75C22 16.4404 21.4404 17 20.75 17 20.0596 17 19.5 16.4404 19.5 15.75V13.25Z"></path>
+									<path
+										d="M4 4.91465C4.5826 4.70873 5 4.15311 5 3.5C5 2.67157 4.32843 2 3.5 2C2.67157 2 2 2.67157 2 3.5C2 4.15311 2.4174 4.70873 3 4.91465V12.2695C2.40334 12.6163 2 13.2625 2 13.9982V21.0018C2 21.7375 2.40334 22.3837 3 22.7305V24.05C3 27.8923 6.10771 31 9.95 31H22.05C25.8912 31 29 27.8934 29 24.06V22.6703C29.5966 22.3231 29.9999 21.6764 29.9999 20.9401V13.9301C29.9999 13.1937 29.5966 12.547 29 12.1998V12.03L28.9999 12.0004V5.01759C29.6107 4.80959 30.0499 4.2311 30.0499 3.55C30.0499 2.69396 29.356 2 28.5 2C27.6439 2 26.95 2.69396 26.95 3.55C26.95 4.23109 27.3892 4.80957 27.9999 5.01758V8.41361C26.7715 6.3687 24.5337 5 21.98 5H20.9146C20.9699 4.84361 21 4.67532 21 4.5C21 3.67157 20.3284 3 19.5 3H12.5C11.6716 3 11 3.67157 11 4.5C11 4.67532 11.0301 4.84361 11.0854 5H10.03C7.46993 5 5.22928 6.36875 4 8.4143V4.91465ZM5 12.03C5 9.25228 7.25228 7 10.03 7H21.98C24.7466 7 27 9.2512 27 12.03V24.06C27 26.7866 24.7888 29 22.05 29H9.95C7.21229 29 5 26.7877 5 24.05V12.03Z"></path>
+								</svg>
+							</div>
+							<div class="service-content">
+								<h3>AI Automation</h3>
+								<p>
+									Our automation team implements intelligent AI solutions that
+									handle tasks automatically and improve your business
+									efficiency.
+								</p>
+								<ul class="service-features">
+									<li>AI voice agents</li>
+									<li>AI chatbots</li>
+									<li>AI social media agents</li>
+									<li>AI-driven automation workflows</li>
+									<li>Integration with your systems</li>
+								</ul>
+								<div class="service-pricing">
+									<span class="price">Based on your project requirements</span>
+									<span class="duration"
+										>Varies by scope - discussed during consultation</span
+									>
+								</div>
+							</div>
+						</div>
 
-            <div class="service-card" data-animate="fade-up" data-delay=".5s">
-              <div class="service-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 100 100"
-                  id="puzzle-pieces"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M34.96,67.16l-9.29-9.29c-.76,1.37-1.86,2.56-3.21,3.48-3.27,2.22-7.69,2.25-11,.06-2.56-1.69-4.2-4.39-4.5-7.39-.3-3.01,.75-5.95,2.88-8.08,.67-.67,1.41-1.23,2.22-1.68l-4.62-4.62c-2.58-2.58-2.58-6.76,0-9.34l8.08-8.08,.66,2.54c.3,1.16,.93,2.24,1.81,3.13,1.49,1.49,3.56,2.23,5.66,2.02,2.13-.21,3.98-1.34,5.19-3.17h0c1.52-2.3,1.51-5.38-.04-7.66-.99-1.46-2.42-2.49-4.03-2.9l-2.54-.66L30.29,7.43c1.25-1.25,2.91-1.93,4.67-1.93s3.42,.69,4.67,1.93l4.62,4.62c.76-1.37,1.85-2.56,3.2-3.48,3.27-2.23,7.69-2.25,11-.06,2.56,1.69,4.2,4.39,4.5,7.39,.3,3.01-.75,5.95-2.88,8.09-.67,.67-1.41,1.23-2.22,1.68l9.29,9.29-12.75,12.75-.66-2.54c-.42-1.61-1.45-3.04-2.9-4.03-2.28-1.55-5.35-1.56-7.66-.04-1.83,1.21-2.96,3.05-3.17,5.19-.21,2.11,.52,4.17,2.02,5.66,.88,.88,1.96,1.51,3.13,1.81l2.54,.66-12.75,12.75Zm-10.62-14.87l10.62,10.62,7.17-7.17c-.8-.45-1.55-1.01-2.22-1.68-2.13-2.13-3.18-5.08-2.88-8.08,.3-3,1.94-5.7,4.5-7.39,3.31-2.19,7.73-2.16,11,.06,1.35,.92,2.45,2.11,3.21,3.48l7.17-7.17-10.62-10.62,2.54-.66c1.16-.3,2.25-.93,3.13-1.81,1.49-1.49,2.23-3.56,2.02-5.66-.22-2.13-1.34-3.98-3.17-5.19-2.3-1.52-5.38-1.51-7.66,.04-1.46,.99-2.49,2.42-2.9,4.03l-.66,2.54-8.08-8.08c-1.36-1.36-3.74-1.36-5.1,0l-4.62,4.62c1.37,.76,2.56,1.86,3.48,3.21,2.22,3.27,2.25,7.69,.06,11h0c-1.69,2.56-4.39,4.2-7.39,4.5-3.01,.3-5.95-.75-8.08-2.88-.67-.67-1.23-1.41-1.68-2.22l-4.62,4.62c-1.41,1.41-1.41,3.69,0,5.1l8.08,8.08-2.54,.66c-1.16,.3-2.25,.93-3.13,1.81-1.49,1.49-2.23,3.56-2.02,5.66,.21,2.13,1.34,3.98,3.17,5.19,2.3,1.52,5.38,1.51,7.66-.04,1.46-.99,2.49-2.42,2.9-4.03l.66-2.54Z"
-                  ></path>
-                  <path
-                    d="M65.04,94.5c-1.76,0-3.42-.69-4.67-1.93l-8.08-8.08,2.54-.66c1.61-.42,3.04-1.45,4.03-2.9,1.55-2.28,1.56-5.36,.04-7.66-1.21-1.83-3.05-2.96-5.19-3.17-2.11-.21-4.17,.52-5.66,2.02-.88,.88-1.51,1.97-1.81,3.13l-.66,2.54-12.75-12.75,9.29-9.29c-1.37-.76-2.56-1.86-3.48-3.21-2.22-3.27-2.25-7.69-.06-11,1.69-2.56,4.39-4.2,7.39-4.5,3.01-.31,5.95,.75,8.09,2.88,.67,.67,1.23,1.41,1.68,2.22l9.29-9.29,12.75,12.75-2.54,.66c-1.16,.3-2.25,.93-3.13,1.81-1.49,1.49-2.23,3.56-2.02,5.66,.21,2.13,1.34,3.98,3.17,5.19h0c2.3,1.52,5.38,1.51,7.66-.04,1.46-.99,2.49-2.42,2.9-4.03l.66-2.54,8.08,8.08c2.58,2.58,2.58,6.76,0,9.34l-4.62,4.62c1.37,.76,2.56,1.85,3.48,3.2,2.22,3.27,2.25,7.69,.06,11-1.69,2.56-4.39,4.2-7.39,4.5-3,.3-5.95-.75-8.09-2.88-.67-.67-1.23-1.41-1.68-2.22l-4.62,4.62c-1.25,1.25-2.91,1.93-4.67,1.93Zm-7.17-8.68l4.62,4.62c1.36,1.36,3.74,1.36,5.1,0l8.08-8.08,.66,2.54c.3,1.16,.93,2.24,1.81,3.13,1.49,1.49,3.56,2.23,5.66,2.02,2.13-.22,3.98-1.34,5.19-3.17,1.52-2.3,1.51-5.38-.04-7.66-.99-1.46-2.42-2.49-4.03-2.9l-2.54-.66,8.08-8.08c1.41-1.41,1.41-3.69,0-5.1l-4.62-4.62c-.76,1.37-1.86,2.56-3.21,3.48-3.27,2.22-7.69,2.25-11,.06-2.56-1.69-4.2-4.39-4.5-7.39-.3-3.01,.75-5.95,2.88-8.08,.67-.67,1.41-1.23,2.22-1.68l-7.17-7.17-10.62,10.63-.66-2.54c-.3-1.16-.93-2.24-1.81-3.13-1.49-1.49-3.56-2.23-5.66-2.02-2.13,.22-3.98,1.34-5.19,3.17-1.52,2.3-1.51,5.38,.04,7.66,.99,1.46,2.42,2.49,4.03,2.9l2.54,.66-10.62,10.62,7.17,7.17c.45-.8,1.01-1.55,1.68-2.22,2.13-2.13,5.08-3.18,8.08-2.88,3,.3,5.7,1.94,7.39,4.5,2.19,3.31,2.16,7.73-.06,11-.92,1.35-2.11,2.44-3.48,3.21Z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="service-content">
-                <h3>System Integration</h3>
-                <p>
-                  Our integration specialists connect your business tools so
-                  they work together. Automate data flow between your website,
-                  CRM, email, and other platforms to save time.
-                </p>
-                <ul class="service-features">
-                  <li>Assessment of your current tools</li>
-                  <li>Integration setup and testing</li>
-                  <li>Basic automation workflows</li>
-                  <li>Documentation and training</li>
-                  <li>Initial support period</li>
-                </ul>
-                <div class="service-pricing">
-                  <span class="price">Based on your project requirements</span>
-                  <span class="duration"
-                    >Varies by complexity - discussed during consultation</span
-                  >
-                </div>
-              </div>
-            </div>
+						<div class="service-card" data-animate="fade-up" data-delay=".1s">
+							<div class="service-icon">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									xml:space="preserve"
+									width="32"
+									height="32"
+									id="laptop"
+									fill="currentColor"
+									viewBox="0 0 512 512">
+									<path
+										d="M496 384V96H16v288h175v16h-64v16h257v-16h-64v-16h176zM32 112h448v256H32V112z"></path>
+								</svg>
+							</div>
+							<div class="service-content">
+								<h3>Web Development</h3>
+								<p>
+									Our development team builds professional websites that work on
+									all devices and help you reach your business goals.
+								</p>
+								<ul class="service-features">
+									<li>Landing pages</li>
+									<li>Custom full website development</li>
+									<li>Website redesigning and revamping</li>
+									<li>Mobile-responsive design</li>
+								</ul>
+								<div class="service-pricing">
+									<span class="price">Based on your project requirements</span>
+									<span class="duration"
+										>Varies by scope - discussed during consultation</span
+									>
+								</div>
+							</div>
+						</div>
 
-            <div class="service-card" data-animate="fade-up" data-delay=".2s">
-              <div class="service-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 33.81 33.81"
-                  id="pallet"
-                  fill="currentColor"
-                >
-                  <g>
-                    <g>
-                      <path
-                        d="M16.91,2.73c7.81,0,14.18,5.51,14.18,12.3a6.69,6.69,0,0,1-6.67,6.66H21.08A5.53,5.53,0,0,0,17,30.93.09.09,0,0,1,17,31a.09.09,0,0,1,0,.07.08.08,0,0,1-.06,0,14.18,14.18,0,0,1,0-28.36m0-2.73a16.91,16.91,0,1,0,0,33.81A2.82,2.82,0,0,0,19,29.1a2.8,2.8,0,0,1,2.09-4.68h3.34A9.4,9.4,0,0,0,33.81,15c0-8.3-7.57-15-16.9-15Z"
-                      ></path>
-                      <path
-                        d="M7.62 19.43a2.82 2.82 0 112.82-2.82h0a2.82 2.82 0 01-2.81 2.82zM12.15 10.93A2.82 2.82 0 1115 8.11h0a2.81 2.81 0 01-2.81 2.82zM21.6 11a2.82 2.82 0 112.82-2.82h0A2.81 2.81 0 0121.61 11zM25.5 18.82A2.82 2.82 0 1128.31 16h0a2.81 2.81 0 01-2.8 2.82z"
-                      ></path>
-                    </g>
-                  </g>
-                </svg>
-              </div>
-              <div class="service-content">
-                <h3>Graphic Design</h3>
-                <p>
-                  Our design team creates professional visuals for your brand,
-                  social media, and marketing materials that make your business
-                  look polished and credible.
-                </p>
-                <ul class="service-features">
-                  <li>Logo design or redesign</li>
-                  <li>Social media graphics</li>
-                  <li>Marketing materials (flyers, banners, etc.)</li>
-                  <li>Brand color palette</li>
-                  <li>File formats for print and digital</li>
-                </ul>
-                <div class="service-pricing">
-                  <span class="price">Based on your project requirements</span>
-                  <span class="duration"
-                    >Varies by scope - discussed during consultation</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+						<div class="service-card" data-animate="fade-up" data-delay=".4s">
+							<div class="service-icon">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="32"
+									height="32"
+									viewBox="0 0 64 64"
+									id="social-media-analysis"
+									fill="currentColor">
+									<path
+										d="M35,7.75H29.08v5.91H35Zm-3,4.64a1.69,1.69,0,1,1,1.69-1.69A1.69,1.69,0,0,1,32,12.39Z"></path>
+									<circle cx="32.04" cy="10.7" r=".31"></circle>
+									<path
+										d="M60.16,25.1a9.72,9.72,0,0,0-11.28-1.77,18.8,18.8,0,0,0-8.21-8.21,9.7,9.7,0,1,0-17.29,0,18.76,18.76,0,0,0-8.3,8.3,9.7,9.7,0,1,0,0,17.28,18.8,18.8,0,0,0,8.21,8.21,9.7,9.7,0,1,0,17.28,0,18.76,18.76,0,0,0,8.3-8.3A9.7,9.7,0,0,0,60.16,25.1ZM27.08,6.75a1,1,0,0,1,1-1H36a1,1,0,0,1,1,1v7.91a1,1,0,0,1-1,1H28.08a1,1,0,0,1-1-1ZM9.84,35h3.07a1,1,0,1,1,0,2H9.84a2.42,2.42,0,0,1-2.42-2.41v-6.5a1,1,0,0,1,2,0v2.65H13a1,1,0,1,1,0,2H9.43v1.85A.42.42,0,0,0,9.84,35Zm25.1,16.93a3.5,3.5,0,0,1-1.29-.12v3.66a2.79,2.79,0,1,1-2.79-2.79,2.75,2.75,0,0,1,.79.13V49.34a1,1,0,0,1,2-.12c.06.35.3.77,1.13.71a1,1,0,0,1,1.08.91A1,1,0,0,1,34.94,51.92Zm4.58-4.7a9.69,9.69,0,0,0-15.1,0,16.8,16.8,0,0,1-7.61-7.61,9.68,9.68,0,0,0,0-15.1,16.78,16.78,0,0,1,7.7-7.7,9.71,9.71,0,0,0,14.42.78,9.87,9.87,0,0,0,.68-.76,16.8,16.8,0,0,1,7.61,7.61,9.68,9.68,0,0,0,0,15.1A16.78,16.78,0,0,1,39.52,47.22ZM54.62,31a1,1,0,0,1,0,2H53v3a1,1,0,0,1-2,0V30.64A3.64,3.64,0,0,1,54.62,27a1,1,0,0,1,0,2A1.64,1.64,0,0,0,53,30.64V31Z"></path>
+									<circle cx="30.86" cy="55.46" r=".79"></circle>
+									<path
+										d="M25 40.14a10.7 10.7 0 0014 0zM24.41 38.14V34a1 1 0 012 0v4.16h2.4V31.81a1 1 0 012 0v6.33h2.39v-8.3a1 1 0 012 0v8.3h2.38V26.72a1 1 0 012 0V38.14h1.22a10.71 10.71 0 00-1.87-14.33l-13 7.5a1 1 0 01-1-1.73l12.21-7A10.74 10.74 0 0023.19 38.14z"></path>
+								</svg>
+							</div>
+							<div class="service-content">
+								<h3>Social Media Management</h3>
+								<p>
+									Our social media team runs your accounts so you don't have to.
+									Content creation, daily posting, and engagement—all handled
+									for you.
+								</p>
+								<ul class="service-features">
+									<li>Content planning and creation</li>
+									<li>Daily or weekly posting schedule</li>
+									<li>Captions and hashtags</li>
+									<li>Basic community management</li>
+									<li>Monthly performance reports</li>
+								</ul>
+								<div class="service-pricing">
+									<span class="price"
+										>Monthly packages - contact us for details</span
+									>
+									<span class="duration"
+										>Ongoing service with flexible start dates</span
+									>
+								</div>
+							</div>
+						</div>
 
-      <!-- Process Overview Section -->
-      <section class="content-section">
-        <div class="container">
-          <div class="section-header" data-animate="fade-up">
-            <h2 class="section-title">How We Work</h2>
-            <p class="section-subtitle">Our process from start to finish</p>
-          </div>
-          <div class="process-steps">
-            <div class="process-step" data-animate="fade-up">
-              <div class="step-number">01</div>
-              <div class="step-content">
-                <h3>Discovery Call</h3>
-                <p>
-                  We talk about your project, goals, and timeline. No
-                  pressure—just an honest conversation about what you need and
-                  how we can help.
-                </p>
-              </div>
-            </div>
-            <div class="process-step" data-animate="fade-up" data-delay=".1s">
-              <div class="step-number">02</div>
-              <div class="step-content">
-                <h3>Proposal & Agreement</h3>
-                <p>
-                  We send you a clear proposal with scope, timeline, and pricing
-                  based on your specific requirements. Once you approve, we
-                  assign the right team and start working.
-                </p>
-              </div>
-            </div>
-            <div class="process-step" data-animate="fade-up" data-delay=".2s">
-              <div class="step-number">03</div>
-              <div class="step-content">
-                <h3>Design & Development</h3>
-                <p>
-                  Our specialized team works on your project and shares updates
-                  along the way. You review and give feedback at key milestones.
-                </p>
-              </div>
-            </div>
-            <div class="process-step" data-animate="fade-up" data-delay=".3s">
-              <div class="step-number">04</div>
-              <div class="step-content">
-                <h3>Review & Revisions</h3>
-                <p>
-                  You review the final work and request any needed changes. We
-                  make adjustments based on the agreed revision policy.
-                </p>
-              </div>
-            </div>
-            <div class="process-step" data-animate="fade-up" data-delay=".4s">
-              <div class="step-number">05</div>
-              <div class="step-content">
-                <h3>Launch & Handoff</h3>
-                <p>
-                  We launch your project, hand over all files, and provide basic
-                  training. You also get initial support to make sure everything
-                  works smoothly.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+						<div class="service-card" data-animate="fade-up" data-delay=".3s">
+							<div class="service-icon">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="32"
+									height="32"
+									id="movie-clapperboard"
+									viewBox="0 0 32 32"
+									fill="currentColor">
+									<path
+										d="M29.93,8.96c-.52-3.52-3.34-6.35-6.85-6.88-.48-.07-.88-.07-2.05-.07h-9.96c-1.18,0-1.57,0-2.05.07-3.51.54-6.33,3.37-6.85,6.92,0,0,0,0,0,0h0l-.04.96s-.11,2.59-.11,4.84v2.4c0,2.27,0,3.92.11,5.25.12,1.4.34,2.35.76,3.18.77,1.51,1.98,2.72,3.5,3.5.82.42,1.77.65,3.18.76,1.34.11,2.98.11,5.25.11h2.4c2.27,0,3.92,0,5.25-.11,1.4-.12,2.35-.34,3.18-.76,1.51-.77,2.72-1.98,3.5-3.5.42-.82.65-1.77.76-3.18.11-1.34.11-2.98.11-5.25v-6.2s0,0,0,0v-1.01c-.02-.46-.03-.73-.08-1.03ZM27.91,9h-8.72l4.08-4.84c2.33.56,4.18,2.46,4.64,4.84ZM11.24,9l4.27-5h5.28l-4.22,5h-5.34ZM9.31,4.05c.32-.05.63-.05,1.75-.05h1.82l-4.27,5h-4.43c.48-2.54,2.56-4.56,5.13-4.95ZM28,17.2c0,2.23,0,3.84-.1,5.09-.09,1.13-.26,1.85-.55,2.43-.58,1.14-1.49,2.04-2.62,2.62-.58.29-1.31.46-2.43.55-1.26.1-2.87.1-5.09.1h-2.4c-2.23,0-3.84,0-5.09-.1-1.13-.09-1.85-.26-2.43-.55-1.14-.58-2.04-1.49-2.62-2.62-.29-.58-.46-1.31-.55-2.43-.1-1.26-.1-2.87-.1-5.09v-2.4c0-1.37.04-2.86.07-3.8h23.93v6.2Z"></path>
+								</svg>
+							</div>
+							<div class="service-content">
+								<h3>Media Production</h3>
+								<p>
+									Our media team produces high-quality video content for your
+									business with a complete content strategy and professional
+									editing.
+								</p>
+								<ul class="service-features">
+									<li>50 content ideas to choose from</li>
+									<li>Script optimization</li>
+									<li>Professional filming</li>
+									<li>Premium editing</li>
+									<li>Content posting</li>
+									<li>Analytics reports</li>
+								</ul>
+								<div class="service-pricing">
+									<span class="price">Based on your project requirements</span>
+									<span class="duration"
+										>Varies by scope - discussed during consultation</span
+									>
+								</div>
+							</div>
+						</div>
 
-      <!-- Why Choose Us Section -->
-      <section class="content-section">
-        <div class="container">
-          <div class="section-header" data-animate="fade-up">
-            <h2 class="section-title">Why Work With Us</h2>
-            <p class="section-subtitle">What makes Infinite Pixels different</p>
-          </div>
-          <div class="values-grid">
-            <div class="value-card" data-animate="fade-up">
-              <div class="value-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 32 32"
-                  id="target"
-                  fill="currentColor"
-                >
-                  <defs>
-                    <linearGradient
-                      id="a"
-                      x1="8.223"
-                      x2="20.224"
-                      y1="26.195"
-                      y2="5.409"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop offset="0" stop-color="currentColor"></stop>
-                      <stop offset="1" stop-color="currentColor"></stop>
-                    </linearGradient>
-                  </defs>
-                  <path
-                    fill="currentColor"
-                    d="M26.478,9.493c-4.44-4.44-11.518-4.658-16.228-.671l-.872-.872v-3.829c0-.265-.105-.52-.293-.707L6.964,1.293c-.227-.228-.553-.331-.867-.28-.317,.052-.59,.252-.734,.54l-1.265,2.53-2.53,1.265c-.288,.144-.488,.417-.54,.734-.051,.317,.053,.64,.28,.867l2.122,2.121c.188,.188,.442,.293,.707,.293h3.829l.87,.87c-1.836,2.164-2.843,4.875-2.843,7.744,0,3.205,1.249,6.219,3.515,8.485,2.339,2.339,5.413,3.509,8.485,3.509s6.146-1.17,8.485-3.509c4.679-4.678,4.679-12.292,0-16.97ZM7.379,7.364h-2.829l-.847-.847,1.587-.793c.193-.097,.351-.254,.447-.447l.793-1.588,.848,.847v2.829ZM25.064,25.049c-3.899,3.898-10.243,3.898-14.143,0-1.889-1.889-2.929-4.4-2.929-7.071,0-2.335,.795-4.548,2.257-6.33l1.428,1.428c-1.089,1.397-1.685,3.102-1.685,4.901,0,2.137,.832,4.146,2.343,5.657,1.56,1.56,3.608,2.339,5.657,2.339s4.097-.78,5.657-2.339c1.511-1.511,2.343-3.52,2.343-5.657s-.832-4.146-2.343-5.657c-1.511-1.511-3.52-2.343-5.657-2.343-1.799,0-3.504,.596-4.901,1.685l-1.427-1.427c1.834-1.501,4.081-2.253,6.328-2.253,2.561,0,5.122,.975,7.071,2.924,3.898,3.899,3.898,10.243,0,14.142ZM14.563,15.962c-.897,1.529-.705,3.527,.606,4.839,.778,.778,1.801,1.167,2.823,1.167s2.045-.389,2.823-1.167c1.557-1.557,1.557-4.09,0-5.646-1.311-1.311-3.309-1.504-4.839-.606l-1.457-1.457c1.008-.72,2.209-1.113,3.473-1.113,1.603,0,3.109,.624,4.243,1.757s1.757,2.64,1.757,4.243-.624,3.109-1.757,4.243c-2.34,2.339-6.146,2.339-8.485,0-1.133-1.133-1.757-2.64-1.757-4.243,0-1.264,.393-2.465,1.113-3.473l1.457,1.457Zm2.237,2.237c.195,.195,.451,.293,.707,.293s.512-.098,.707-.293c.391-.391,.391-1.023,0-1.414l-.726-.726c.662-.173,1.395-.008,1.914,.509,.777,.777,.777,2.041,0,2.818-.777,.776-2.041,.776-2.818,0-.518-.518-.683-1.251-.51-1.914l.726,.726Z"
-                  ></path>
-                </svg>
-              </div>
-              <h3>Specialized Teams</h3>
-              <p>
-                We have dedicated teams for each service area. You get
-                specialists working on your project, not generalists trying to
-                do everything.
-              </p>
-            </div>
-            <div class="value-card" data-animate="fade-up" data-delay=".1s">
-              <div class="value-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  id="lightning"
-                >
-                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                </svg>
-              </div>
-              <h3>Fast Communication</h3>
-              <p>
-                No waiting days for replies. We respond quickly and keep you
-                updated throughout your project.
-              </p>
-            </div>
-            <div class="value-card" data-animate="fade-up" data-delay=".2s">
-              <div class="value-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="48"
-                  height="48"
-                  viewBox="0 0 48 48"
-                  id="money"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M23.6 21.8c-4.54-1.18-6-2.39-6-4.29 0-2.18 2.01-3.71 5.4-3.71 3.56 0 4.88 1.7 5 4.2h4.42c-.13-3.45-2.24-6.59-6.42-7.62V6h-6v4.32c-3.88.85-7 3.35-7 7.22 0 4.62 3.83 6.92 9.4 8.26 5.01 1.2 6 2.95 6 4.83 0 1.37-.97 3.57-5.4 3.57-4.12 0-5.75-1.85-5.96-4.2h-4.41c.25 4.38 3.52 6.83 7.37 7.66V42h6v-4.3c3.89-.75 7-3 7-7.11 0-5.66-4.86-7.6-9.4-8.79z"
-                  ></path>
-                  <path fill="none" d="M0 0h48v48H0z"></path>
-                </svg>
-              </div>
-              <h3>Fair Startup Pricing</h3>
-              <p>
-                We're building our reputation, so our prices are competitive.
-                You get professional quality without inflated agency rates.
-              </p>
-            </div>
-            <div class="value-card" data-animate="fade-up" data-delay=".3s">
-              <div class="value-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  style="isolation: isolate"
-                  viewBox="0 0 64 64"
-                  id="chain"
-                  fill="currentColor"
-                >
-                  <defs>
-                    <clipPath id="a">
-                      <rect width="64" height="64"></rect>
-                    </clipPath>
-                  </defs>
-                  <g clip-path="url(#a)">
-                    <path
-                      d=" M 31.155 47.335 L 31.815 46.549 C 32.542 45.683 33.835 45.57 34.701 46.297 L 36.273 47.616 C 37.139 48.343 37.252 49.636 36.526 50.502 L 35.866 51.288 L 29.937 58.344 C 29.937 58.344 29.937 58.344 29.937 58.344 C 27.991 60.658 25.113 62 22.092 62 C 19.686 62 17.351 61.15 15.507 59.604 L 7.663 53.019 C 7.663 53.019 7.663 53.019 7.663 53.019 C 5.349 51.073 4.007 48.196 4.007 45.164 C 4.007 42.758 4.857 40.433 6.414 38.59 L 18.262 24.478 C 18.262 24.468 18.262 24.468 18.262 24.468 C 20.208 22.154 23.086 20.822 26.107 20.822 C 28.513 20.822 30.848 21.672 32.691 23.219 L 36.572 26.475 L 37.351 27.132 C 38.216 27.86 38.328 29.155 37.601 30.021 L 36.291 31.583 C 35.565 32.449 34.272 32.562 33.406 31.836 L 32.62 31.176 L 28.738 27.919 C 28.738 27.919 28.738 27.919 28.738 27.919 C 28.001 27.305 27.069 26.967 26.107 26.967 C 24.898 26.967 23.751 27.499 22.973 28.421 L 11.114 42.543 C 11.114 42.543 11.114 42.543 11.114 42.543 C 10.5 43.28 10.152 44.212 10.152 45.175 C 10.152 46.383 10.694 47.53 11.616 48.308 L 19.46 54.893 C 19.46 54.893 19.46 54.893 19.46 54.893 C 20.198 55.518 21.13 55.856 22.092 55.856 C 23.301 55.856 24.448 55.323 25.226 54.391 L 31.155 47.335 Z "
-                    ></path>
-                    <path
-                      d=" M 32.846 16.665 L 32.186 17.451 C 31.46 18.317 30.167 18.43 29.301 17.703 L 27.728 16.384 C 26.862 15.657 26.749 14.364 27.476 13.498 L 28.136 12.712 L 34.065 5.656 C 34.065 5.656 34.065 5.656 34.065 5.656 C 36.011 3.342 38.888 2 41.909 2 C 44.316 2 46.651 2.85 48.494 4.396 L 56.338 10.981 C 56.338 10.981 56.338 10.981 56.338 10.981 C 58.653 12.927 59.994 15.804 59.994 18.836 C 59.994 21.242 59.144 23.567 57.588 25.41 L 45.739 39.522 C 45.739 39.532 45.739 39.532 45.739 39.532 C 43.793 41.846 40.916 43.178 37.895 43.178 C 35.488 43.178 33.153 42.328 31.31 40.781 L 27.429 37.525 L 26.65 36.868 C 25.786 36.14 25.674 34.845 26.4 33.979 L 27.71 32.417 C 28.437 31.551 29.729 31.438 30.595 32.164 L 31.382 32.824 L 35.263 36.081 C 35.263 36.081 35.263 36.081 35.263 36.081 C 36 36.695 36.932 37.033 37.895 37.033 C 39.103 37.033 40.25 36.501 41.029 35.579 L 52.887 21.457 C 52.887 21.457 52.887 21.457 52.887 21.457 C 53.502 20.72 53.85 19.788 53.85 18.825 C 53.85 17.617 53.307 16.47 52.385 15.692 L 44.541 9.107 C 44.541 9.107 44.541 9.107 44.541 9.107 C 43.804 8.482 42.872 8.144 41.909 8.144 C 40.701 8.144 39.554 8.677 38.776 9.609 L 32.846 16.665 Z "
-                    ></path>
-                  </g>
-                </svg>
-              </div>
-              <h3>Complete Solutions</h3>
-              <p>
-                Six services under one roof. No need to juggle multiple
-                agencies—we handle everything for you.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+						<div class="service-card" data-animate="fade-up" data-delay=".5s">
+							<div class="service-icon">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="32"
+									height="32"
+									viewBox="0 0 100 100"
+									id="puzzle-pieces"
+									fill="currentColor">
+									<path
+										d="M34.96,67.16l-9.29-9.29c-.76,1.37-1.86,2.56-3.21,3.48-3.27,2.22-7.69,2.25-11,.06-2.56-1.69-4.2-4.39-4.5-7.39-.3-3.01,.75-5.95,2.88-8.08,.67-.67,1.41-1.23,2.22-1.68l-4.62-4.62c-2.58-2.58-2.58-6.76,0-9.34l8.08-8.08,.66,2.54c.3,1.16,.93,2.24,1.81,3.13,1.49,1.49,3.56,2.23,5.66,2.02,2.13-.21,3.98-1.34,5.19-3.17h0c1.52-2.3,1.51-5.38-.04-7.66-.99-1.46-2.42-2.49-4.03-2.9l-2.54-.66L30.29,7.43c1.25-1.25,2.91-1.93,4.67-1.93s3.42,.69,4.67,1.93l4.62,4.62c.76-1.37,1.85-2.56,3.2-3.48,3.27-2.23,7.69-2.25,11-.06,2.56,1.69,4.2,4.39,4.5,7.39,.3,3.01-.75,5.95-2.88,8.09-.67,.67-1.41,1.23-2.22,1.68l9.29,9.29-12.75,12.75-.66-2.54c-.42-1.61-1.45-3.04-2.9-4.03-2.28-1.55-5.35-1.56-7.66-.04-1.83,1.21-2.96,3.05-3.17,5.19-.21,2.11,.52,4.17,2.02,5.66,.88,.88,1.96,1.51,3.13,1.81l2.54,.66-12.75,12.75Zm-10.62-14.87l10.62,10.62,7.17-7.17c-.8-.45-1.55-1.01-2.22-1.68-2.13-2.13-3.18-5.08-2.88-8.08,.3-3,1.94-5.7,4.5-7.39,3.31-2.19,7.73-2.16,11,.06,1.35,.92,2.45,2.11,3.21,3.48l7.17-7.17-10.62-10.62,2.54-.66c1.16-.3,2.25-.93,3.13-1.81,1.49-1.49,2.23-3.56,2.02-5.66-.22-2.13-1.34-3.98-3.17-5.19-2.3-1.52-5.38-1.51-7.66,.04-1.46,.99-2.49,2.42-2.9,4.03l-.66,2.54-8.08-8.08c-1.36-1.36-3.74-1.36-5.1,0l-4.62,4.62c1.37,.76,2.56,1.86,3.48,3.21,2.22,3.27,2.25,7.69,.06,11h0c-1.69,2.56-4.39,4.2-7.39,4.5-3.01,.3-5.95-.75-8.08-2.88-.67-.67-1.23-1.41-1.68-2.22l-4.62,4.62c-1.41,1.41-1.41,3.69,0,5.1l8.08,8.08-2.54,.66c-1.16,.3-2.25,.93-3.13,1.81-1.49,1.49-2.23,3.56-2.02,5.66,.21,2.13,1.34,3.98,3.17,5.19,2.3,1.52,5.38,1.51,7.66-.04,1.46-.99,2.49-2.42,2.9-4.03l.66-2.54Z"></path>
+									<path
+										d="M65.04,94.5c-1.76,0-3.42-.69-4.67-1.93l-8.08-8.08,2.54-.66c1.61-.42,3.04-1.45,4.03-2.9,1.55-2.28,1.56-5.36,.04-7.66-1.21-1.83-3.05-2.96-5.19-3.17-2.11-.21-4.17,.52-5.66,2.02-.88,.88-1.51,1.97-1.81,3.13l-.66,2.54-12.75-12.75,9.29-9.29c-1.37-.76-2.56-1.86-3.48-3.21-2.22-3.27-2.25-7.69-.06-11,1.69-2.56,4.39-4.2,7.39-4.5,3.01-.31,5.95,.75,8.09,2.88,.67,.67,1.23,1.41,1.68,2.22l9.29-9.29,12.75,12.75-2.54,.66c-1.16,.3-2.25,.93-3.13,1.81-1.49,1.49-2.23,3.56-2.02,5.66,.21,2.13,1.34,3.98,3.17,5.19h0c2.3,1.52,5.38,1.51,7.66-.04,1.46-.99,2.49-2.42,2.9-4.03l.66-2.54,8.08,8.08c2.58,2.58,2.58,6.76,0,9.34l-4.62,4.62c1.37,.76,2.56,1.85,3.48,3.2,2.22,3.27,2.25,7.69,.06,11-1.69,2.56-4.39,4.2-7.39,4.5-3,.3-5.95-.75-8.09-2.88-.67-.67-1.23-1.41-1.68-2.22l-4.62,4.62c-1.25,1.25-2.91,1.93-4.67,1.93Zm-7.17-8.68l4.62,4.62c1.36,1.36,3.74,1.36,5.1,0l8.08-8.08,.66,2.54c.3,1.16,.93,2.24,1.81,3.13,1.49,1.49,3.56,2.23,5.66,2.02,2.13-.22,3.98-1.34,5.19-3.17,1.52-2.3,1.51-5.38-.04-7.66-.99-1.46-2.42-2.49-4.03-2.9l-2.54-.66,8.08-8.08c1.41-1.41,1.41-3.69,0-5.1l-4.62-4.62c-.76,1.37-1.86,2.56-3.21,3.48-3.27,2.22-7.69,2.25-11,.06-2.56-1.69-4.2-4.39-4.5-7.39-.3-3.01,.75-5.95,2.88-8.08,.67-.67,1.41-1.23,2.22-1.68l-7.17-7.17-10.62,10.63-.66-2.54c-.3-1.16-.93-2.24-1.81-3.13-1.49-1.49-3.56-2.23-5.66-2.02-2.13,.22-3.98,1.34-5.19,3.17-1.52,2.3-1.51,5.38,.04,7.66,.99,1.46,2.42,2.49,4.03,2.9l2.54,.66-10.62,10.62,7.17,7.17c.45-.8,1.01-1.55,1.68-2.22,2.13-2.13,5.08-3.18,8.08-2.88,3,.3,5.7,1.94,7.39,4.5,2.19,3.31,2.16,7.73-.06,11-.92,1.35-2.11,2.44-3.48,3.21Z"></path>
+								</svg>
+							</div>
+							<div class="service-content">
+								<h3>System Integration</h3>
+								<p>
+									Our integration specialists connect your business tools so
+									they work together. Automate data flow between your website,
+									CRM, email, and other platforms to save time.
+								</p>
+								<ul class="service-features">
+									<li>Assessment of your current tools</li>
+									<li>Integration setup and testing</li>
+									<li>Basic automation workflows</li>
+									<li>Documentation and training</li>
+									<li>Initial support period</li>
+								</ul>
+								<div class="service-pricing">
+									<span class="price">Based on your project requirements</span>
+									<span class="duration"
+										>Varies by complexity - discussed during consultation</span
+									>
+								</div>
+							</div>
+						</div>
 
-      <!-- FAQ Section -->
-      <section class="faq-section">
-        <div class="container">
-          <div class="section-header" data-animate="fade-up">
-            <span class="section-label"> Common Questions </span>
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <p class="section-description">
-              Everything you need to know about our services and how we work
-              with clients.
-            </p>
-          </div>
+						<div class="service-card" data-animate="fade-up" data-delay=".2s">
+							<div class="service-icon">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="32"
+									height="32"
+									viewBox="0 0 33.81 33.81"
+									id="pallet"
+									fill="currentColor">
+									<g>
+										<g>
+											<path
+												d="M16.91,2.73c7.81,0,14.18,5.51,14.18,12.3a6.69,6.69,0,0,1-6.67,6.66H21.08A5.53,5.53,0,0,0,17,30.93.09.09,0,0,1,17,31a.09.09,0,0,1,0,.07.08.08,0,0,1-.06,0,14.18,14.18,0,0,1,0-28.36m0-2.73a16.91,16.91,0,1,0,0,33.81A2.82,2.82,0,0,0,19,29.1a2.8,2.8,0,0,1,2.09-4.68h3.34A9.4,9.4,0,0,0,33.81,15c0-8.3-7.57-15-16.9-15Z"></path>
+											<path
+												d="M7.62 19.43a2.82 2.82 0 112.82-2.82h0a2.82 2.82 0 01-2.81 2.82zM12.15 10.93A2.82 2.82 0 1115 8.11h0a2.81 2.81 0 01-2.81 2.82zM21.6 11a2.82 2.82 0 112.82-2.82h0A2.81 2.81 0 0121.61 11zM25.5 18.82A2.82 2.82 0 1128.31 16h0a2.81 2.81 0 01-2.8 2.82z"></path>
+										</g>
+									</g>
+								</svg>
+							</div>
+							<div class="service-content">
+								<h3>Graphic Design</h3>
+								<p>
+									Our design team creates professional visuals for your brand,
+									social media, and marketing materials that make your business
+									look polished and credible.
+								</p>
+								<ul class="service-features">
+									<li>Logo design or redesign</li>
+									<li>Social media graphics</li>
+									<li>Marketing materials (flyers, banners, etc.)</li>
+									<li>Brand color palette</li>
+									<li>File formats for print and digital</li>
+								</ul>
+								<div class="service-pricing">
+									<span class="price">Based on your project requirements</span>
+									<span class="duration"
+										>Varies by scope - discussed during consultation</span
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-          <div class="faq-container">
-            <div class="faq-item" data-animate="fade-up">
-              <button class="faq-question" aria-expanded="false">
-                <span class="faq-question-text"
-                  >How long does a typical project take?</span
-                >
-                <span class="faq-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <line x1="12" y1="5" x2="12" y2="19" />
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                  </svg>
-                </span>
-              </button>
-              <div class="faq-answer">
-                <div class="faq-answer-content">
-                  <p>
-                    Timeline depends on your project's scope and complexity.
-                    We'll discuss your specific timeline during our initial
-                    consultation and include it in the proposal.
-                  </p>
-                </div>
-              </div>
-            </div>
+			<!-- Process Overview Section -->
+			<section class="content-section">
+				<div class="container">
+					<div class="section-header" data-animate="fade-up">
+						<h2 class="section-title">How We Work</h2>
+						<p class="section-subtitle">Our process from start to finish</p>
+					</div>
+					<div class="process-steps">
+						<div class="process-step" data-animate="fade-up">
+							<div class="step-number">01</div>
+							<div class="step-content">
+								<h3>Discovery Call</h3>
+								<p>
+									We talk about your project, goals, and timeline. No
+									pressure—just an honest conversation about what you need and
+									how we can help.
+								</p>
+							</div>
+						</div>
+						<div class="process-step" data-animate="fade-up" data-delay=".1s">
+							<div class="step-number">02</div>
+							<div class="step-content">
+								<h3>Proposal & Agreement</h3>
+								<p>
+									We send you a clear proposal with scope, timeline, and pricing
+									based on your specific requirements. Once you approve, we
+									assign the right team and start working.
+								</p>
+							</div>
+						</div>
+						<div class="process-step" data-animate="fade-up" data-delay=".2s">
+							<div class="step-number">03</div>
+							<div class="step-content">
+								<h3>Design & Development</h3>
+								<p>
+									Our specialized team works on your project and shares updates
+									along the way. You review and give feedback at key milestones.
+								</p>
+							</div>
+						</div>
+						<div class="process-step" data-animate="fade-up" data-delay=".3s">
+							<div class="step-number">04</div>
+							<div class="step-content">
+								<h3>Review & Revisions</h3>
+								<p>
+									You review the final work and request any needed changes. We
+									make adjustments based on the agreed revision policy.
+								</p>
+							</div>
+						</div>
+						<div class="process-step" data-animate="fade-up" data-delay=".4s">
+							<div class="step-number">05</div>
+							<div class="step-content">
+								<h3>Launch & Handoff</h3>
+								<p>
+									We launch your project, hand over all files, and provide basic
+									training. You also get initial support to make sure everything
+									works smoothly.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-            <div class="faq-item" data-animate="fade-up">
-              <button class="faq-question" aria-expanded="false">
-                <span class="faq-question-text"
-                  >How do you price your services?</span
-                >
-                <span class="faq-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <line x1="12" y1="5" x2="12" y2="19" />
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                  </svg>
-                </span>
-              </button>
-              <div class="faq-answer">
-                <div class="faq-answer-content">
-                  <p>
-                    Pricing is based on your specific project requirements.
-                    After understanding your needs, we'll send you a detailed
-                    quote that breaks down costs clearly. No hidden fees.
-                  </p>
-                </div>
-              </div>
-            </div>
+			<!-- Why Choose Us Section -->
+			<section class="content-section">
+				<div class="container">
+					<div class="section-header" data-animate="fade-up">
+						<h2 class="section-title">Why Work With Us</h2>
+						<p class="section-subtitle">What makes Infinite Pixels different</p>
+					</div>
+					<div class="values-grid">
+						<div class="value-card" data-animate="fade-up">
+							<div class="value-icon">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="32"
+									height="32"
+									viewBox="0 0 32 32"
+									id="target"
+									fill="currentColor">
+									<defs>
+										<linearGradient
+											id="a"
+											x1="8.223"
+											x2="20.224"
+											y1="26.195"
+											y2="5.409"
+											gradientUnits="userSpaceOnUse">
+											<stop offset="0" stop-color="currentColor"></stop>
+											<stop offset="1" stop-color="currentColor"></stop>
+										</linearGradient>
+									</defs>
+									<path
+										fill="currentColor"
+										d="M26.478,9.493c-4.44-4.44-11.518-4.658-16.228-.671l-.872-.872v-3.829c0-.265-.105-.52-.293-.707L6.964,1.293c-.227-.228-.553-.331-.867-.28-.317,.052-.59,.252-.734,.54l-1.265,2.53-2.53,1.265c-.288,.144-.488,.417-.54,.734-.051,.317,.053,.64,.28,.867l2.122,2.121c.188,.188,.442,.293,.707,.293h3.829l.87,.87c-1.836,2.164-2.843,4.875-2.843,7.744,0,3.205,1.249,6.219,3.515,8.485,2.339,2.339,5.413,3.509,8.485,3.509s6.146-1.17,8.485-3.509c4.679-4.678,4.679-12.292,0-16.97ZM7.379,7.364h-2.829l-.847-.847,1.587-.793c.193-.097,.351-.254,.447-.447l.793-1.588,.848,.847v2.829ZM25.064,25.049c-3.899,3.898-10.243,3.898-14.143,0-1.889-1.889-2.929-4.4-2.929-7.071,0-2.335,.795-4.548,2.257-6.33l1.428,1.428c-1.089,1.397-1.685,3.102-1.685,4.901,0,2.137,.832,4.146,2.343,5.657,1.56,1.56,3.608,2.339,5.657,2.339s4.097-.78,5.657-2.339c1.511-1.511,2.343-3.52,2.343-5.657s-.832-4.146-2.343-5.657c-1.511-1.511-3.52-2.343-5.657-2.343-1.799,0-3.504,.596-4.901,1.685l-1.427-1.427c1.834-1.501,4.081-2.253,6.328-2.253,2.561,0,5.122,.975,7.071,2.924,3.898,3.899,3.898,10.243,0,14.142ZM14.563,15.962c-.897,1.529-.705,3.527,.606,4.839,.778,.778,1.801,1.167,2.823,1.167s2.045-.389,2.823-1.167c1.557-1.557,1.557-4.09,0-5.646-1.311-1.311-3.309-1.504-4.839-.606l-1.457-1.457c1.008-.72,2.209-1.113,3.473-1.113,1.603,0,3.109,.624,4.243,1.757s1.757,2.64,1.757,4.243-.624,3.109-1.757,4.243c-2.34,2.339-6.146,2.339-8.485,0-1.133-1.133-1.757-2.64-1.757-4.243,0-1.264,.393-2.465,1.113-3.473l1.457,1.457Zm2.237,2.237c.195,.195,.451,.293,.707,.293s.512-.098,.707-.293c.391-.391,.391-1.023,0-1.414l-.726-.726c.662-.173,1.395-.008,1.914,.509,.777,.777,.777,2.041,0,2.818-.777,.776-2.041,.776-2.818,0-.518-.518-.683-1.251-.51-1.914l.726,.726Z"></path>
+								</svg>
+							</div>
+							<h3>Specialized Teams</h3>
+							<p>
+								We have dedicated teams for each service area. You get
+								specialists working on your project, not generalists trying to
+								do everything.
+							</p>
+						</div>
+						<div class="value-card" data-animate="fade-up" data-delay=".1s">
+							<div class="value-icon">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="32"
+									height="32"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									id="lightning">
+									<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+								</svg>
+							</div>
+							<h3>Fast Communication</h3>
+							<p>
+								No waiting days for replies. We respond quickly and keep you
+								updated throughout your project.
+							</p>
+						</div>
+						<div class="value-card" data-animate="fade-up" data-delay=".2s">
+							<div class="value-icon">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="48"
+									height="48"
+									viewBox="0 0 48 48"
+									id="money"
+									fill="currentColor">
+									<path
+										d="M23.6 21.8c-4.54-1.18-6-2.39-6-4.29 0-2.18 2.01-3.71 5.4-3.71 3.56 0 4.88 1.7 5 4.2h4.42c-.13-3.45-2.24-6.59-6.42-7.62V6h-6v4.32c-3.88.85-7 3.35-7 7.22 0 4.62 3.83 6.92 9.4 8.26 5.01 1.2 6 2.95 6 4.83 0 1.37-.97 3.57-5.4 3.57-4.12 0-5.75-1.85-5.96-4.2h-4.41c.25 4.38 3.52 6.83 7.37 7.66V42h6v-4.3c3.89-.75 7-3 7-7.11 0-5.66-4.86-7.6-9.4-8.79z"></path>
+									<path fill="none" d="M0 0h48v48H0z"></path>
+								</svg>
+							</div>
+							<h3>Fair Startup Pricing</h3>
+							<p>
+								We're building our reputation, so our prices are competitive.
+								You get professional quality without inflated agency rates.
+							</p>
+						</div>
+						<div class="value-card" data-animate="fade-up" data-delay=".3s">
+							<div class="value-icon">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="32"
+									height="32"
+									style="isolation: isolate"
+									viewBox="0 0 64 64"
+									id="chain"
+									fill="currentColor">
+									<defs>
+										<clipPath id="a">
+											<rect width="64" height="64"></rect>
+										</clipPath>
+									</defs>
+									<g clip-path="url(#a)">
+										<path
+											d=" M 31.155 47.335 L 31.815 46.549 C 32.542 45.683 33.835 45.57 34.701 46.297 L 36.273 47.616 C 37.139 48.343 37.252 49.636 36.526 50.502 L 35.866 51.288 L 29.937 58.344 C 29.937 58.344 29.937 58.344 29.937 58.344 C 27.991 60.658 25.113 62 22.092 62 C 19.686 62 17.351 61.15 15.507 59.604 L 7.663 53.019 C 7.663 53.019 7.663 53.019 7.663 53.019 C 5.349 51.073 4.007 48.196 4.007 45.164 C 4.007 42.758 4.857 40.433 6.414 38.59 L 18.262 24.478 C 18.262 24.468 18.262 24.468 18.262 24.468 C 20.208 22.154 23.086 20.822 26.107 20.822 C 28.513 20.822 30.848 21.672 32.691 23.219 L 36.572 26.475 L 37.351 27.132 C 38.216 27.86 38.328 29.155 37.601 30.021 L 36.291 31.583 C 35.565 32.449 34.272 32.562 33.406 31.836 L 32.62 31.176 L 28.738 27.919 C 28.738 27.919 28.738 27.919 28.738 27.919 C 28.001 27.305 27.069 26.967 26.107 26.967 C 24.898 26.967 23.751 27.499 22.973 28.421 L 11.114 42.543 C 11.114 42.543 11.114 42.543 11.114 42.543 C 10.5 43.28 10.152 44.212 10.152 45.175 C 10.152 46.383 10.694 47.53 11.616 48.308 L 19.46 54.893 C 19.46 54.893 19.46 54.893 19.46 54.893 C 20.198 55.518 21.13 55.856 22.092 55.856 C 23.301 55.856 24.448 55.323 25.226 54.391 L 31.155 47.335 Z "></path>
+										<path
+											d=" M 32.846 16.665 L 32.186 17.451 C 31.46 18.317 30.167 18.43 29.301 17.703 L 27.728 16.384 C 26.862 15.657 26.749 14.364 27.476 13.498 L 28.136 12.712 L 34.065 5.656 C 34.065 5.656 34.065 5.656 34.065 5.656 C 36.011 3.342 38.888 2 41.909 2 C 44.316 2 46.651 2.85 48.494 4.396 L 56.338 10.981 C 56.338 10.981 56.338 10.981 56.338 10.981 C 58.653 12.927 59.994 15.804 59.994 18.836 C 59.994 21.242 59.144 23.567 57.588 25.41 L 45.739 39.522 C 45.739 39.532 45.739 39.532 45.739 39.532 C 43.793 41.846 40.916 43.178 37.895 43.178 C 35.488 43.178 33.153 42.328 31.31 40.781 L 27.429 37.525 L 26.65 36.868 C 25.786 36.14 25.674 34.845 26.4 33.979 L 27.71 32.417 C 28.437 31.551 29.729 31.438 30.595 32.164 L 31.382 32.824 L 35.263 36.081 C 35.263 36.081 35.263 36.081 35.263 36.081 C 36 36.695 36.932 37.033 37.895 37.033 C 39.103 37.033 40.25 36.501 41.029 35.579 L 52.887 21.457 C 52.887 21.457 52.887 21.457 52.887 21.457 C 53.502 20.72 53.85 19.788 53.85 18.825 C 53.85 17.617 53.307 16.47 52.385 15.692 L 44.541 9.107 C 44.541 9.107 44.541 9.107 44.541 9.107 C 43.804 8.482 42.872 8.144 41.909 8.144 C 40.701 8.144 39.554 8.677 38.776 9.609 L 32.846 16.665 Z "></path>
+									</g>
+								</svg>
+							</div>
+							<h3>Complete Solutions</h3>
+							<p>
+								Six services under one roof. No need to juggle multiple
+								agencies—we handle everything for you.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-            <div class="faq-item" data-animate="fade-up">
-              <button class="faq-question" aria-expanded="false">
-                <span class="faq-question-text"
-                  >Do you offer support after the project is done?</span
-                >
-                <span class="faq-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <line x1="12" y1="5" x2="12" y2="19" />
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                  </svg>
-                </span>
-              </button>
-              <div class="faq-answer">
-                <div class="faq-answer-content">
-                  <p>
-                    Yes. We provide initial support after launch to make sure
-                    everything works properly. For ongoing support or updates,
-                    we can discuss additional options.
-                  </p>
-                </div>
-              </div>
-            </div>
+			<!-- FAQ Section -->
+			<section class="faq-section">
+				<div class="container">
+					<div class="section-header" data-animate="fade-up">
+						<span class="section-label"> Common Questions </span>
+						<h2 class="section-title">Frequently Asked Questions</h2>
+						<p class="section-description">
+							Everything you need to know about our services and how we work
+							with clients.
+						</p>
+					</div>
 
-            <div class="faq-item" data-animate="fade-up">
-              <button class="faq-question" aria-expanded="false">
-                <span class="faq-question-text"
-                  >What makes you different from other agencies?</span
-                >
-                <span class="faq-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <line x1="12" y1="5" x2="12" y2="19" />
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                  </svg>
-                </span>
-              </button>
-              <div class="faq-answer">
-                <div class="faq-answer-content">
-                  <p>
-                    We're a new agency with specialized teams for each service.
-                    You get expert work in each area, direct communication,
-                    faster responses, and fair pricing.
-                  </p>
-                </div>
-              </div>
-            </div>
+					<div class="faq-container">
+						<div class="faq-item" data-animate="fade-up">
+							<button class="faq-question" aria-expanded="false">
+								<span class="faq-question-text"
+									>How long does a typical project take?</span
+								>
+								<span class="faq-icon">
+									<svg
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2">
+										<line x1="12" y1="5" x2="12" y2="19" />
+										<line x1="5" y1="12" x2="19" y2="12" />
+									</svg>
+								</span>
+							</button>
+							<div class="faq-answer">
+								<div class="faq-answer-content">
+									<p>
+										Timeline depends on your project's scope and complexity.
+										We'll discuss your specific timeline during our initial
+										consultation and include it in the proposal.
+									</p>
+								</div>
+							</div>
+						</div>
 
-            <div class="faq-item" data-animate="fade-up">
-              <button class="faq-question" aria-expanded="false">
-                <span class="faq-question-text">How do revisions work?</span>
-                <span class="faq-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <line x1="12" y1="5" x2="12" y2="19" />
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                  </svg>
-                </span>
-              </button>
-              <div class="faq-answer">
-                <div class="faq-answer-content">
-                  <p>
-                    Revision terms are included in every project proposal based
-                    on the service and scope. We'll make sure expectations are
-                    clear before we start.
-                  </p>
-                </div>
-              </div>
-            </div>
+						<div class="faq-item" data-animate="fade-up">
+							<button class="faq-question" aria-expanded="false">
+								<span class="faq-question-text"
+									>How do you price your services?</span
+								>
+								<span class="faq-icon">
+									<svg
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2">
+										<line x1="12" y1="5" x2="12" y2="19" />
+										<line x1="5" y1="12" x2="19" y2="12" />
+									</svg>
+								</span>
+							</button>
+							<div class="faq-answer">
+								<div class="faq-answer-content">
+									<p>
+										Pricing is based on your specific project requirements.
+										After understanding your needs, we'll send you a detailed
+										quote that breaks down costs clearly. No hidden fees.
+									</p>
+								</div>
+							</div>
+						</div>
 
-            <div class="faq-item" data-animate="fade-up">
-              <button class="faq-question" aria-expanded="false">
-                <span class="faq-question-text"
-                  >Can you work with our existing brand?</span
-                >
-                <span class="faq-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <line x1="12" y1="5" x2="12" y2="19" />
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                  </svg>
-                </span>
-              </button>
-              <div class="faq-answer">
-                <div class="faq-answer-content">
-                  <p>
-                    Absolutely. If you have brand guidelines, logos, or colors,
-                    we'll work within them. If you don't have any branding yet,
-                    we can help create it.
-                  </p>
-                </div>
-              </div>
-            </div>
+						<div class="faq-item" data-animate="fade-up">
+							<button class="faq-question" aria-expanded="false">
+								<span class="faq-question-text"
+									>Do you offer support after the project is done?</span
+								>
+								<span class="faq-icon">
+									<svg
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2">
+										<line x1="12" y1="5" x2="12" y2="19" />
+										<line x1="5" y1="12" x2="19" y2="12" />
+									</svg>
+								</span>
+							</button>
+							<div class="faq-answer">
+								<div class="faq-answer-content">
+									<p>
+										Yes. We provide initial support after launch to make sure
+										everything works properly. For ongoing support or updates,
+										we can discuss additional options.
+									</p>
+								</div>
+							</div>
+						</div>
 
-            <div class="faq-item" data-animate="fade-up">
-              <button class="faq-question" aria-expanded="false">
-                <span class="faq-question-text"
-                  >Can I get an estimate before committing?</span
-                >
-                <span class="faq-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <line x1="12" y1="5" x2="12" y2="19" />
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                  </svg>
-                </span>
-              </button>
-              <div class="faq-answer">
-                <div class="faq-answer-content">
-                  <p>
-                    Yes. Contact us with your project details and we'll send you
-                    a quote. No obligation—just clear pricing so you can make an
-                    informed decision.
-                  </p>
-                </div>
-              </div>
-            </div>
+						<div class="faq-item" data-animate="fade-up">
+							<button class="faq-question" aria-expanded="false">
+								<span class="faq-question-text"
+									>What makes you different from other agencies?</span
+								>
+								<span class="faq-icon">
+									<svg
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2">
+										<line x1="12" y1="5" x2="12" y2="19" />
+										<line x1="5" y1="12" x2="19" y2="12" />
+									</svg>
+								</span>
+							</button>
+							<div class="faq-answer">
+								<div class="faq-answer-content">
+									<p>
+										We're a new agency with specialized teams for each service.
+										You get expert work in each area, direct communication,
+										faster responses, and fair pricing.
+									</p>
+								</div>
+							</div>
+						</div>
 
-            <div class="faq-item" data-animate="fade-up">
-              <button class="faq-question" aria-expanded="false">
-                <span class="faq-question-text"
-                  >Do you work with small businesses and startups?</span
-                >
-                <span class="faq-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <line x1="12" y1="5" x2="12" y2="19" />
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                  </svg>
-                </span>
-              </button>
-              <div class="faq-answer">
-                <div class="faq-answer-content">
-                  <p>
-                    Yes! We understand budget constraints and create solutions
-                    that fit your needs and can grow with your business.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+						<div class="faq-item" data-animate="fade-up">
+							<button class="faq-question" aria-expanded="false">
+								<span class="faq-question-text">How do revisions work?</span>
+								<span class="faq-icon">
+									<svg
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2">
+										<line x1="12" y1="5" x2="12" y2="19" />
+										<line x1="5" y1="12" x2="19" y2="12" />
+									</svg>
+								</span>
+							</button>
+							<div class="faq-answer">
+								<div class="faq-answer-content">
+									<p>
+										Revision terms are included in every project proposal based
+										on the service and scope. We'll make sure expectations are
+										clear before we start.
+									</p>
+								</div>
+							</div>
+						</div>
 
-          <div class="faq-cta" data-animate="fade-up">
-            <div class="faq-cta-content">
-              <h3>Still have questions?</h3>
-              <p>Get in touch and we'll answer everything you want to know.</p>
-              <a href="home.html#contact" class="btn-primary">
-                <span>Contact Us</span>
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+						<div class="faq-item" data-animate="fade-up">
+							<button class="faq-question" aria-expanded="false">
+								<span class="faq-question-text"
+									>Can you work with our existing brand?</span
+								>
+								<span class="faq-icon">
+									<svg
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2">
+										<line x1="12" y1="5" x2="12" y2="19" />
+										<line x1="5" y1="12" x2="19" y2="12" />
+									</svg>
+								</span>
+							</button>
+							<div class="faq-answer">
+								<div class="faq-answer-content">
+									<p>
+										Absolutely. If you have brand guidelines, logos, or colors,
+										we'll work within them. If you don't have any branding yet,
+										we can help create it.
+									</p>
+								</div>
+							</div>
+						</div>
 
-      <!-- CTA Section -->
-      <section class="cta-section">
-        <div class="container">
-          <div class="cta-content" data-animate="fade-up">
-            <h2>Ready to Start Your Project?</h2>
-            <p>
-              Tell us what you need and we'll connect you with the right team.
-            </p>
-            <div class="cta-actions">
-              <a href="home.html#contact" class="btn-primary">Get In Touch</a>
-              <a href="work.html" class="btn-secondary">View Our Work</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+						<div class="faq-item" data-animate="fade-up">
+							<button class="faq-question" aria-expanded="false">
+								<span class="faq-question-text"
+									>Can I get an estimate before committing?</span
+								>
+								<span class="faq-icon">
+									<svg
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2">
+										<line x1="12" y1="5" x2="12" y2="19" />
+										<line x1="5" y1="12" x2="19" y2="12" />
+									</svg>
+								</span>
+							</button>
+							<div class="faq-answer">
+								<div class="faq-answer-content">
+									<p>
+										Yes. Contact us with your project details and we'll send you
+										a quote. No obligation—just clear pricing so you can make an
+										informed decision.
+									</p>
+								</div>
+							</div>
+						</div>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <div class="brand">
-              <img
-                src="img/no bg logos/logomark2nobg.png"
-                alt="Infinite Pixels Logo"
-                class="footer-logo-img"
-              />
-            </div>
-            <p class="footer-tagline">
-              Crafting digital experiences that scale beyond imagination.
-            </p>
-            <div class="footer-social">
-              <a
-                href="https://www.instagram.com/infinitepixelsagency/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="instagram-link"
-                aria-label="Follow us on Instagram"
-              >
-                <div class="instagram-icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-                    />
-                  </svg>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="footer-links">
-            <div class="footer-column">
-              <h4>Services</h4>
-              <a href="services.html">AI Automation</a>
-              <a href="services.html">Web Development</a>
-              <a href="services.html">Social Media Managment</a>
-              <a href="services.html">Media Production</a>
-              <a href="services.html">Graphic Design</a>
-              <a href="services.html">System Integration</a>
-            </div>
-            <div class="footer-column">
-              <h4>Quick Links</h4>
-              <a href="home.html">Home</a>
-              <a href="about.html">About</a>
-              <a href="services.html">Services</a>
-              <a href="work.html">Work</a>
-              <a href="process.html">Process</a>
-              <a href="home.html#contact">Contact</a>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>
-            &copy; <span id="copyrightYear"></span> Infinite Pixels. All rights
-            reserved.
-          </p>
-          <div class="footer-bottom-links">
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/terms">Terms of Service</a>
-          </div>
-        </div>
-      </div>
-    </footer>
+						<div class="faq-item" data-animate="fade-up">
+							<button class="faq-question" aria-expanded="false">
+								<span class="faq-question-text"
+									>Do you work with small businesses and startups?</span
+								>
+								<span class="faq-icon">
+									<svg
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2">
+										<line x1="12" y1="5" x2="12" y2="19" />
+										<line x1="5" y1="12" x2="19" y2="12" />
+									</svg>
+								</span>
+							</button>
+							<div class="faq-answer">
+								<div class="faq-answer-content">
+									<p>
+										Yes! We understand budget constraints and create solutions
+										that fit your needs and can grow with your business.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
 
-    <script src="logic.js" defer></script>
-    <script src="js/Aurora.js"></script>
-    <script src="js/faq-typewriter.js"></script>
-  </body>
+					<div class="faq-cta" data-animate="fade-up">
+						<div class="faq-cta-content">
+							<h3>Still have questions?</h3>
+							<p>Get in touch and we'll answer everything you want to know.</p>
+							<a href="home.html#contact" class="btn-primary">
+								<span>Contact Us</span>
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2">
+									<line x1="5" y1="12" x2="19" y2="12" />
+									<polyline points="12 5 19 12 12 19" />
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- CTA Section -->
+			<section class="cta-section">
+				<div class="container">
+					<div class="cta-content" data-animate="fade-up">
+						<h2>Ready to Start Your Project?</h2>
+						<p>
+							Tell us what you need and we'll connect you with the right team.
+						</p>
+						<div class="cta-actions">
+							<a href="home.html#contact" class="btn-primary">Get In Touch</a>
+							<a href="work.html" class="btn-secondary">View Our Work</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-brand">
+						<div class="brand">
+							<img
+								src="img/no bg logos/logomark2nobg.png"
+								alt="Infinite Pixels Logo"
+								class="footer-logo-img" />
+						</div>
+						<p class="footer-tagline">
+							Crafting digital experiences that scale beyond imagination.
+						</p>
+						<div class="footer-social">
+							<a
+								href="https://www.instagram.com/infinitepixelsagency/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="instagram-link"
+								aria-label="Follow us on Instagram">
+								<div class="instagram-icon">
+									<svg
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="currentColor"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+									</svg>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="footer-links">
+						<div class="footer-column">
+							<h4>Services</h4>
+							<a href="services.html">AI Automation</a>
+							<a href="services.html">Web Development</a>
+							<a href="services.html">Social Media Managment</a>
+							<a href="services.html">Media Production</a>
+							<a href="services.html">Graphic Design</a>
+							<a href="services.html">System Integration</a>
+						</div>
+						<div class="footer-column">
+							<h4>Quick Links</h4>
+							<a href="home.html">Home</a>
+							<a href="about.html">About</a>
+							<a href="services.html">Services</a>
+							<a href="work.html">Work</a>
+							<a href="process.html">Process</a>
+							<a href="home.html#contact">Contact</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p>
+						&copy; <span id="copyrightYear"></span> Infinite Pixels. All rights
+						reserved.
+					</p>
+					<div class="footer-bottom-links">
+						<a href="/privacy">Privacy Policy</a>
+						<a href="/terms">Terms of Service</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="logic.js" defer></script>
+		<script src="js/Aurora.js"></script>
+		<script src="js/faq-typewriter.js"></script>
+	</body>
 </html>

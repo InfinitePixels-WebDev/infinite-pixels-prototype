@@ -1,676 +1,689 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Our Process — Infinite Pixels</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="img/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="img/favicon/favicon-16x16.png"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Michroma:wght@400&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Floating Navigation -->
-    <nav id="site-header" class="floating-nav">
-      <div class="nav-container">
-        <a href="home.html" class="brand" data-animate="slide-right">
-          <img
-            src="img/no bg logos/logomarknobg.png"
-            alt="Infinite Pixels Logo"
-            class="brand-logo-img"
-          />
-          <span class="brand-divider"></span>
-          <span class="brand-tagline">Digital Solutions</span>
-        </a>
-        <div class="nav-menu" id="navMenu">
-          <a href="home.html" class="nav-link">
-            <span class="link-text">Home</span>
-          </a>
-          <a href="about.html" class="nav-link">
-            <span class="link-text">About</span>
-          </a>
-          <a href="services.html" class="nav-link">
-            <span class="link-text">Services</span>
-          </a>
-          <a href="work.html" class="nav-link">
-            <span class="link-text">Work</span>
-          </a>
-          <a href="process.html" class="nav-link active">
-            <span class="link-text">Process</span>
-          </a>
-        </div>
-        <div class="nav-actions">
-          <a href="home.html#contact" class="nav-cta">
-            <span>Get Started</span>
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
-          <button
-            class="theme-toggle"
-            id="themeToggle"
-            type="button"
-            aria-label="Toggle theme"
-          >
-            <span id="themeToggleIcon" aria-hidden="true">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-              </svg>
-            </span>
-          </button>
-          <button
-            class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="Toggle navigation"
-            aria-expanded="false"
-            aria-controls="navMenu"
-          >
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-          </button>
-        </div>
-      </div>
-    </nav>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Our Process — Infinite Pixels</title>
+		<link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="img/favicon/favicon-32x32.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="img/favicon/favicon-16x16.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Michroma:wght@400&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
+		<!-- SEO Meta Tags -->
+		<meta
+			name="description"
+			content="Discover Infinite Pixels' process for delivering modern web design, branding, automation, and digital solutions. See how we work from start to finish." />
+		<meta
+			name="keywords"
+			content="process, workflow, Infinite Pixels, digital agency, web design, branding, automation, project delivery" />
+		<meta name="author" content="Infinite Pixels" />
 
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay" aria-hidden="true">
-      <div class="mobile-nav-panel">
-        <div class="mobile-nav-handle" aria-hidden="true"></div>
-        <div class="mobile-nav-header">
-          <h3 class="mobile-nav-title">Explore</h3>
-        </div>
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:title" content="Our Process — Infinite Pixels" />
+		<meta
+			property="og:description"
+			content="Discover Infinite Pixels' process for delivering modern web design, branding, automation, and digital solutions. See how we work from start to finish." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://infinitepixels.com/process.html" />
+		<meta property="og:image" content="img/no bg logos/logomarknobg.png" />
 
-        <!-- Featured cards -->
-        <div class="mobile-nav-featured">
-          <a class="mobile-feature-card services" href="services.html">
-            <div class="feat-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <rect x="3" y="3" width="7" height="7" />
-                <rect x="14" y="3" width="7" height="7" />
-                <rect x="14" y="14" width="7" height="7" />
-                <rect x="3" y="14" width="7" height="7" />
-              </svg>
-            </div>
-            <div class="feat-title">Services</div>
-            <div class="feat-sub">Branding, web design, digital solutions</div>
-          </a>
-          <a class="mobile-feature-card work" href="work.html">
-            <div class="feat-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-            </div>
-            <div class="feat-title">Work</div>
-            <div class="feat-sub">Results and case studies</div>
-          </a>
-        </div>
+		<!-- Twitter Card Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Our Process — Infinite Pixels" />
+		<meta
+			name="twitter:description"
+			content="Discover Infinite Pixels' process for delivering modern web design, branding, automation, and digital solutions. See how we work from start to finish." />
+		<meta name="twitter:image" content="img/no bg logos/logomarknobg.png" />
 
-        <!-- Vertical list -->
-        <nav class="mobile-nav-list" aria-label="Mobile">
-          <a class="mobile-nav-item" href="home.html">
-            <span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <polyline points="9 22 9 12 15 12 15 22" />
-              </svg>
-            </span>
-            <span class="item-label">Home</span>
-            <span class="item-arrow">›</span>
-          </a>
-          <a class="mobile-nav-item" href="about.html">
-            <span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                />
-              </svg>
-            </span>
-            <span class="item-label">About</span>
-            <span class="item-arrow">›</span>
-          </a>
-          <a class="mobile-nav-item" href="services.html">
-            <span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <rect x="3" y="3" width="7" height="7" />
-                <rect x="14" y="3" width="7" height="7" />
-                <rect x="14" y="14" width="7" height="7" />
-                <rect x="3" y="14" width="7" height="7" />
-              </svg>
-            </span>
-            <span class="item-label">Services</span>
-            <span class="item-arrow">›</span>
-          </a>
-          <a class="mobile-nav-item" href="work.html">
-            <span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-            </span>
-            <span class="item-label">Work</span>
-            <span class="item-arrow">›</span>
-          </a>
-          <a class="mobile-nav-item" href="process.html">
-            <span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"
-                />
-              </svg>
-            </span>
-            <span class="item-label">Process</span>
-            <span class="item-arrow">›</span>
-          </a>
-        </nav>
-      </div>
-    </div>
+		<!-- Structured Data: Organization -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				"name": "Infinite Pixels",
+				"url": "https://infinitepixels.com/",
+				"logo": "img/no bg logos/logomarknobg.png",
+				"sameAs": [
+					"https://www.facebook.com/infinitepixels",
+					"https://www.instagram.com/infinitepixels",
+					"https://www.linkedin.com/company/infinitepixels"
+				]
+			}
+		</script>
+	</head>
+	<body>
+		<!-- Floating Navigation -->
+		<nav id="site-header" class="floating-nav">
+			<div class="nav-container">
+				<a href="home.html" class="brand" data-animate="slide-right">
+					<img
+						src="img/no bg logos/logomarknobg.png"
+						alt="Infinite Pixels Logo"
+						class="brand-logo-img" />
+					<span class="brand-divider"></span>
+					<span class="brand-tagline">Digital Solutions</span>
+				</a>
+				<div class="nav-menu" id="navMenu">
+					<a href="home.html" class="nav-link">
+						<span class="link-text">Home</span>
+					</a>
+					<a href="about.html" class="nav-link">
+						<span class="link-text">About</span>
+					</a>
+					<a href="services.html" class="nav-link">
+						<span class="link-text">Services</span>
+					</a>
+					<a href="work.html" class="nav-link">
+						<span class="link-text">Work</span>
+					</a>
+					<a href="process.html" class="nav-link active">
+						<span class="link-text">Process</span>
+					</a>
+				</div>
+				<div class="nav-actions">
+					<a href="home.html#contact" class="nav-cta">
+						<span>Get Started</span>
+						<svg
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2">
+							<line x1="5" y1="12" x2="19" y2="12" />
+							<polyline points="12 5 19 12 12 19" />
+						</svg>
+					</a>
+					<button
+						class="theme-toggle"
+						id="themeToggle"
+						type="button"
+						aria-label="Toggle theme">
+						<span id="themeToggleIcon" aria-hidden="true">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+							</svg>
+						</span>
+					</button>
+					<button
+						class="menu-toggle"
+						id="menuToggle"
+						type="button"
+						aria-label="Toggle navigation"
+						aria-expanded="false"
+						aria-controls="navMenu">
+						<span class="menu-line"></span>
+						<span class="menu-line"></span>
+						<span class="menu-line"></span>
+					</button>
+				</div>
+			</div>
+		</nav>
 
-    <main class="main-content">
-      <!-- Process Hero Section -->
-      <section class="page-hero process-hero" id="hero">
-        <div class="container">
-          <div class="hero-badge" data-animate="fade-up">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <line x1="12" y1="2" x2="12" y2="6" />
-              <line x1="12" y1="18" x2="12" y2="22" />
-              <line x1="4.93" y1="4.93" x2="7.76" y2="7.76" />
-              <line x1="16.24" y1="16.24" x2="19.07" y2="19.07" />
-              <line x1="2" y1="12" x2="6" y2="12" />
-              <line x1="18" y1="12" x2="22" y2="12" />
-              <line x1="4.93" y1="19.07" x2="7.76" y2="16.24" />
-              <line x1="16.24" y1="7.76" x2="19.07" y2="4.93" />
-            </svg>
-            <span>How We Work</span>
-          </div>
-          <div class="hero-content" data-animate="fade-up" data-delay=".1s">
-            <h1 class="page-title">Here's Exactly How We'll Work Together</h1>
-            <p class="page-subtitle">
-              No corporate BS. Just a clear breakdown of what happens from first
-              contact to final launch—and what you can expect at every step.
-            </p>
-          </div>
-        </div>
-      </section>
+		<!-- Mobile Navigation Overlay -->
+		<div class="mobile-nav-overlay" aria-hidden="true">
+			<div class="mobile-nav-panel">
+				<div class="mobile-nav-handle" aria-hidden="true"></div>
+				<div class="mobile-nav-header">
+					<h3 class="mobile-nav-title">Explore</h3>
+				</div>
 
-      <!-- Introduction Section -->
-      <section class="content-section">
-        <div class="container">
-          <div class="content-grid">
-            <div class="content-text" data-animate="fade-up">
-              <h2 class="section-title">
-                One Point of Contact, Zero Confusion
-              </h2>
-              <p>
-                Whether we're building your website, designing graphics,
-                managing social media, or setting up automations—you work
-                directly with us throughout the entire process. No teams, no
-                handoffs, just straightforward communication from start to
-                finish.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+				<!-- Featured cards -->
+				<div class="mobile-nav-featured">
+					<a class="mobile-feature-card services" href="services.html">
+						<div class="feat-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<rect x="3" y="3" width="7" height="7" />
+								<rect x="14" y="3" width="7" height="7" />
+								<rect x="14" y="14" width="7" height="7" />
+								<rect x="3" y="14" width="7" height="7" />
+							</svg>
+						</div>
+						<div class="feat-title">Services</div>
+						<div class="feat-sub">Branding, web design, digital solutions</div>
+					</a>
+					<a class="mobile-feature-card work" href="work.html">
+						<div class="feat-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<circle cx="12" cy="12" r="10" />
+								<path d="m9 12 2 2 4-4" />
+							</svg>
+						</div>
+						<div class="feat-title">Work</div>
+						<div class="feat-sub">Results and case studies</div>
+					</a>
+				</div>
 
-      <!-- Detailed Process Steps -->
-      <section class="content-section">
-        <div class="container">
-          <div class="process-timeline">
-            <!-- Step 1 -->
-            <div class="process-step detailed" data-animate="fade-up">
-              <div class="step-number">01</div>
-              <div class="step-content">
-                <h3>Discovery Call</h3>
-                <p class="step-description">
-                  You reach out via email, WhatsApp, or our contact form. We
-                  respond quickly (usually same day) and schedule a call. We
-                  discuss your project needs, goals, budget, and timeline. We
-                  figure out if we're the right fit—no pressure, just honest
-                  conversation. You'll know by the end of the call if we can
-                  help.
-                </p>
-                <!-- Mobile-only details toggle -->
-                <input type="checkbox" class="step-toggle" id="step1-toggle" />
-                <label class="step-toggle-label" for="step1-toggle">
-                  <span class="show-text">View details</span>
-                  <span class="hide-text">Hide details</span>
-                </label>
-                <div class="step-details">
-                  <div class="step-activities">
-                    <h4>What happens:</h4>
-                    <ul>
-                      <li>
-                        You reach out via email, WhatsApp, or our contact form
-                      </li>
-                      <li>
-                        We respond quickly (usually same day) and schedule a
-                        call
-                      </li>
-                      <li>
-                        We discuss your project needs, goals, budget, and
-                        timeline
-                      </li>
-                      <li>
-                        We figure out if we're the right fit—no pressure, just
-                        honest conversation
-                      </li>
-                      <li>You'll know by the end of the call if we can help</li>
-                    </ul>
-                  </div>
-                  <div class="step-deliverables">
-                    <h4>Deliverables:</h4>
-                    <ul>
-                      <li>Clear understanding of your project</li>
-                      <li>Honest assessment of what we can deliver</li>
-                      <li>Rough timeline and budget range</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+				<!-- Vertical list -->
+				<nav class="mobile-nav-list" aria-label="Mobile">
+					<a class="mobile-nav-item" href="home.html">
+						<span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+								<polyline points="9 22 9 12 15 12 15 22" />
+							</svg>
+						</span>
+						<span class="item-label">Home</span>
+						<span class="item-arrow">›</span>
+					</a>
+					<a class="mobile-nav-item" href="about.html">
+						<span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path
+									d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+							</svg>
+						</span>
+						<span class="item-label">About</span>
+						<span class="item-arrow">›</span>
+					</a>
+					<a class="mobile-nav-item" href="services.html">
+						<span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<rect x="3" y="3" width="7" height="7" />
+								<rect x="14" y="3" width="7" height="7" />
+								<rect x="14" y="14" width="7" height="7" />
+								<rect x="3" y="14" width="7" height="7" />
+							</svg>
+						</span>
+						<span class="item-label">Services</span>
+						<span class="item-arrow">›</span>
+					</a>
+					<a class="mobile-nav-item" href="work.html">
+						<span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<circle cx="12" cy="12" r="10" />
+								<path d="m9 12 2 2 4-4" />
+							</svg>
+						</span>
+						<span class="item-label">Work</span>
+						<span class="item-arrow">›</span>
+					</a>
+					<a class="mobile-nav-item" href="process.html">
+						<span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path
+									d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2" />
+							</svg>
+						</span>
+						<span class="item-label">Process</span>
+						<span class="item-arrow">›</span>
+					</a>
+				</nav>
+			</div>
+		</div>
 
-            <!-- Step 2 -->
-            <div
-              class="process-step detailed"
-              data-animate="fade-up"
-              data-delay=".1s"
-            >
-              <div class="step-number">02</div>
-              <div class="step-content">
-                <h3>Proposal & Agreement</h3>
-                <p class="step-description">
-                  We send you a detailed proposal with scope, deliverables,
-                  timeline, and exact pricing. Everything is transparent—no
-                  hidden costs or vague terms. You review it and ask any
-                  questions. Once you approve, we send a simple agreement to
-                  protect both of us and schedule the project kickoff.
-                </p>
-                <!-- Mobile-only details toggle -->
-                <input type="checkbox" class="step-toggle" id="step2-toggle" />
-                <label class="step-toggle-label" for="step2-toggle">
-                  <span class="show-text">View details</span>
-                  <span class="hide-text">Hide details</span>
-                </label>
-                <div class="step-details">
-                  <div class="step-activities">
-                    <h4>What happens:</h4>
-                    <ul>
-                      <li>
-                        We send you a detailed proposal with scope,
-                        deliverables, timeline, and exact pricing
-                      </li>
-                      <li>
-                        Everything is transparent—no hidden costs or vague terms
-                      </li>
-                      <li>You review it and ask any questions</li>
-                      <li>
-                        Once you approve, we send a simple agreement to protect
-                        both of us
-                      </li>
-                      <li>We schedule the project kickoff</li>
-                    </ul>
-                  </div>
-                  <div class="step-deliverables">
-                    <h4>Deliverables:</h4>
-                    <ul>
-                      <li>Detailed project proposal</li>
-                      <li>Clear pricing breakdown</li>
-                      <li>Simple service agreement</li>
-                      <li>Project kickoff date</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+		<main class="main-content">
+			<!-- Process Hero Section -->
+			<section class="page-hero process-hero" id="hero">
+				<div class="container">
+					<div class="hero-badge" data-animate="fade-up">
+						<svg
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2">
+							<line x1="12" y1="2" x2="12" y2="6" />
+							<line x1="12" y1="18" x2="12" y2="22" />
+							<line x1="4.93" y1="4.93" x2="7.76" y2="7.76" />
+							<line x1="16.24" y1="16.24" x2="19.07" y2="19.07" />
+							<line x1="2" y1="12" x2="6" y2="12" />
+							<line x1="18" y1="12" x2="22" y2="12" />
+							<line x1="4.93" y1="19.07" x2="7.76" y2="16.24" />
+							<line x1="16.24" y1="7.76" x2="19.07" y2="4.93" />
+						</svg>
+						<span>How We Work</span>
+					</div>
+					<div class="hero-content" data-animate="fade-up" data-delay=".1s">
+						<h1 class="page-title">Here's Exactly How We'll Work Together</h1>
+						<p class="page-subtitle">
+							No corporate BS. Just a clear breakdown of what happens from first
+							contact to final launch—and what you can expect at every step.
+						</p>
+					</div>
+				</div>
+			</section>
 
-            <!-- Step 3 -->
-            <div
-              class="process-step detailed"
-              data-animate="fade-up"
-              data-delay=".2s"
-            >
-              <div class="step-number">03</div>
-              <div class="step-content">
-                <h3>Design & Development</h3>
-                <p class="step-description">
-                  We start working on your project using the approach discussed.
-                  You get regular updates via WhatsApp or email (we don't
-                  disappear). We share work-in-progress at key milestones for
-                  your feedback. You review and tell us what needs adjustment.
-                  We keep refining until you're happy with the direction.
-                </p>
-                <!-- Mobile-only details toggle -->
-                <input type="checkbox" class="step-toggle" id="step3-toggle" />
-                <label class="step-toggle-label" for="step3-toggle">
-                  <span class="show-text">View details</span>
-                  <span class="hide-text">Hide details</span>
-                </label>
-                <div class="step-details">
-                  <div class="step-activities">
-                    <h4>What happens:</h4>
-                    <ul>
-                      <li>
-                        We start working on your project using the approach
-                        discussed
-                      </li>
-                      <li>
-                        You get regular updates via WhatsApp or email (we don't
-                        disappear)
-                      </li>
-                      <li>
-                        We share work-in-progress at key milestones for your
-                        feedback
-                      </li>
-                      <li>You review and tell us what needs adjustment</li>
-                      <li>
-                        We keep refining until you're happy with the direction
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="step-deliverables">
-                    <h4>Deliverables:</h4>
-                    <ul>
-                      <li>Regular progress updates</li>
-                      <li>Work-in-progress previews</li>
-                      <li>Opportunity to provide feedback at milestones</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+			<!-- Introduction Section -->
+			<section class="content-section">
+				<div class="container">
+					<div class="content-grid">
+						<div class="content-text" data-animate="fade-up">
+							<h2 class="section-title">
+								One Point of Contact, Zero Confusion
+							</h2>
+							<p>
+								Whether we're building your website, designing graphics,
+								managing social media, or setting up automations—you work
+								directly with us throughout the entire process. No teams, no
+								handoffs, just straightforward communication from start to
+								finish.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-            <!-- Step 4 -->
-            <div
-              class="process-step detailed"
-              data-animate="fade-up"
-              data-delay=".3s"
-            >
-              <div class="step-number">04</div>
-              <div class="step-content">
-                <h3>Launch & Handoff</h3>
-                <p class="step-description">
-                  We present the final work for your approval. You request any
-                  final changes based on the agreed revision policy. We make the
-                  final adjustments. We launch your project (website goes live,
-                  files delivered, etc.). You get all source files and access
-                  you need.
-                </p>
-                <!-- Mobile-only details toggle -->
-                <input type="checkbox" class="step-toggle" id="step4-toggle" />
-                <label class="step-toggle-label" for="step4-toggle">
-                  <span class="show-text">View details</span>
-                  <span class="hide-text">Hide details</span>
-                </label>
-                <div class="step-details">
-                  <div class="step-activities">
-                    <h4>What happens:</h4>
-                    <ul>
-                      <li>We present the final work for your approval</li>
-                      <li>
-                        You request any final changes based on the agreed
-                        revision policy
-                      </li>
-                      <li>We make the final adjustments</li>
-                      <li>
-                        We launch your project (website goes live, files
-                        delivered, etc.)
-                      </li>
-                      <li>You get all source files and access you need</li>
-                    </ul>
-                  </div>
-                  <div class="step-deliverables">
-                    <h4>Deliverables:</h4>
-                    <ul>
-                      <li>Completed project launched</li>
-                      <li>All source files and assets</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+			<!-- Detailed Process Steps -->
+			<section class="content-section">
+				<div class="container">
+					<div class="process-timeline">
+						<!-- Step 1 -->
+						<div class="process-step detailed" data-animate="fade-up">
+							<div class="step-number">01</div>
+							<div class="step-content">
+								<h3>Discovery Call</h3>
+								<p class="step-description">
+									You reach out via email, WhatsApp, or our contact form. We
+									respond quickly (usually same day) and schedule a call. We
+									discuss your project needs, goals, budget, and timeline. We
+									figure out if we're the right fit—no pressure, just honest
+									conversation. You'll know by the end of the call if we can
+									help.
+								</p>
+								<!-- Mobile-only details toggle -->
+								<input type="checkbox" class="step-toggle" id="step1-toggle" />
+								<label class="step-toggle-label" for="step1-toggle">
+									<span class="show-text">View details</span>
+									<span class="hide-text">Hide details</span>
+								</label>
+								<div class="step-details">
+									<div class="step-activities">
+										<h4>What happens:</h4>
+										<ul>
+											<li>
+												You reach out via email, WhatsApp, or our contact form
+											</li>
+											<li>
+												We respond quickly (usually same day) and schedule a
+												call
+											</li>
+											<li>
+												We discuss your project needs, goals, budget, and
+												timeline
+											</li>
+											<li>
+												We figure out if we're the right fit—no pressure, just
+												honest conversation
+											</li>
+											<li>You'll know by the end of the call if we can help</li>
+										</ul>
+									</div>
+									<div class="step-deliverables">
+										<h4>Deliverables:</h4>
+										<ul>
+											<li>Clear understanding of your project</li>
+											<li>Honest assessment of what we can deliver</li>
+											<li>Rough timeline and budget range</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
 
-      <!-- Quality Guarantees -->
-      <section class="content-section">
-        <div class="container">
-          <div class="section-header" data-animate="fade-up">
-            <h2 class="section-title">What We Stand Behind</h2>
-            <p class="section-subtitle">
-              Commitments we make to every single client
-            </p>
-          </div>
-          <div class="communication-grid">
-            <div class="communication-card" data-animate="fade-up">
-              <h3>On-Time Delivery Guarantee</h3>
-              <p>
-                We meet the deadline in your agreement. If we're late without
-                valid reason, you get a discount or refund—no excuses.
-              </p>
-            </div>
-            <div
-              class="communication-card"
-              data-animate="fade-up"
-              data-delay=".1s"
-            >
-              <h3>Quality Satisfaction Guarantee</h3>
-              <p>
-                If the final work doesn't meet the quality standards we
-                promised, we'll revise it until it does—or refund your money. We
-                stand behind our work.
-              </p>
-            </div>
-            <div
-              class="communication-card"
-              data-animate="fade-up"
-              data-delay=".2s"
-            >
-              <h3>Clear Communication Guarantee</h3>
-              <p>
-                You'll never be left wondering what's happening. We respond
-                within 24 hours and provide regular updates without you having
-                to chase us.
-              </p>
-            </div>
-            <div
-              class="communication-card"
-              data-animate="fade-up"
-              data-delay=".3s"
-            >
-              <h3>Complete Ownership Guarantee</h3>
-              <p>
-                Every file, every asset, every line of code—it's all yours at
-                the end. No licenses, no restrictions, no fine print. You paid
-                for it, you own it.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+						<!-- Step 2 -->
+						<div
+							class="process-step detailed"
+							data-animate="fade-up"
+							data-delay=".1s">
+							<div class="step-number">02</div>
+							<div class="step-content">
+								<h3>Proposal & Agreement</h3>
+								<p class="step-description">
+									We send you a detailed proposal with scope, deliverables,
+									timeline, and exact pricing. Everything is transparent—no
+									hidden costs or vague terms. You review it and ask any
+									questions. Once you approve, we send a simple agreement to
+									protect both of us and schedule the project kickoff.
+								</p>
+								<!-- Mobile-only details toggle -->
+								<input type="checkbox" class="step-toggle" id="step2-toggle" />
+								<label class="step-toggle-label" for="step2-toggle">
+									<span class="show-text">View details</span>
+									<span class="hide-text">Hide details</span>
+								</label>
+								<div class="step-details">
+									<div class="step-activities">
+										<h4>What happens:</h4>
+										<ul>
+											<li>
+												We send you a detailed proposal with scope,
+												deliverables, timeline, and exact pricing
+											</li>
+											<li>
+												Everything is transparent—no hidden costs or vague terms
+											</li>
+											<li>You review it and ask any questions</li>
+											<li>
+												Once you approve, we send a simple agreement to protect
+												both of us
+											</li>
+											<li>We schedule the project kickoff</li>
+										</ul>
+									</div>
+									<div class="step-deliverables">
+										<h4>Deliverables:</h4>
+										<ul>
+											<li>Detailed project proposal</li>
+											<li>Clear pricing breakdown</li>
+											<li>Simple service agreement</li>
+											<li>Project kickoff date</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
 
-      <!-- CTA Section -->
-      <section class="cta-section">
-        <div class="container">
-          <div class="cta-content" data-animate="fade-up">
-            <h2>Ready to Get Started?</h2>
-            <p>
-              Let's talk about your project. No pressure, no sales pitch—just an
-              honest conversation about what you need and how we can help.
-            </p>
-            <div class="cta-actions">
-              <a href="services.html" class="btn-primary">Start a Project</a>
-              <a href="work.html" class="btn-secondary">View Our Work</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+						<!-- Step 3 -->
+						<div
+							class="process-step detailed"
+							data-animate="fade-up"
+							data-delay=".2s">
+							<div class="step-number">03</div>
+							<div class="step-content">
+								<h3>Design & Development</h3>
+								<p class="step-description">
+									We start working on your project using the approach discussed.
+									You get regular updates via WhatsApp or email (we don't
+									disappear). We share work-in-progress at key milestones for
+									your feedback. You review and tell us what needs adjustment.
+									We keep refining until you're happy with the direction.
+								</p>
+								<!-- Mobile-only details toggle -->
+								<input type="checkbox" class="step-toggle" id="step3-toggle" />
+								<label class="step-toggle-label" for="step3-toggle">
+									<span class="show-text">View details</span>
+									<span class="hide-text">Hide details</span>
+								</label>
+								<div class="step-details">
+									<div class="step-activities">
+										<h4>What happens:</h4>
+										<ul>
+											<li>
+												We start working on your project using the approach
+												discussed
+											</li>
+											<li>
+												You get regular updates via WhatsApp or email (we don't
+												disappear)
+											</li>
+											<li>
+												We share work-in-progress at key milestones for your
+												feedback
+											</li>
+											<li>You review and tell us what needs adjustment</li>
+											<li>
+												We keep refining until you're happy with the direction
+											</li>
+										</ul>
+									</div>
+									<div class="step-deliverables">
+										<h4>Deliverables:</h4>
+										<ul>
+											<li>Regular progress updates</li>
+											<li>Work-in-progress previews</li>
+											<li>Opportunity to provide feedback at milestones</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <div class="brand">
-              <img
-                src="img/no bg logos/logomark2nobg.png"
-                alt="Infinite Pixels Logo"
-                class="footer-logo-img"
-              />
-            </div>
-            <p class="footer-tagline">
-              Crafting digital experiences that scale beyond imagination.
-            </p>
-            <div class="footer-social">
-              <a
-                href="https://www.instagram.com/infinitepixelsagency/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="instagram-link"
-                aria-label="Follow us on Instagram"
-              >
-                <div class="instagram-icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-                    />
-                  </svg>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="footer-links">
-            <div class="footer-column">
-              <h4>Services</h4>
-              <a href="services.html">AI Automation</a>
-              <a href="services.html">Web Development</a>
-              <a href="services.html">Social Media Managment</a>
-              <a href="services.html">Media Production</a>
-              <a href="services.html">Graphic Design</a>
-              <a href="services.html">System Integration</a>
-            </div>
-            <div class="footer-column">
-              <h4>Quick Links</h4>
-              <a href="home.html">Home</a>
-              <a href="about.html">About</a>
-              <a href="services.html">Services</a>
-              <a href="work.html">Work</a>
-              <a href="process.html">Process</a>
-              <a href="home.html#contact">Contact</a>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>
-            &copy; <span id="copyrightYear"></span> Infinite Pixels. All rights
-            reserved.
-          </p>
-          <div class="footer-bottom-links">
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/terms">Terms of Service</a>
-          </div>
-        </div>
-      </div>
-    </footer>
+						<!-- Step 4 -->
+						<div
+							class="process-step detailed"
+							data-animate="fade-up"
+							data-delay=".3s">
+							<div class="step-number">04</div>
+							<div class="step-content">
+								<h3>Launch & Handoff</h3>
+								<p class="step-description">
+									We present the final work for your approval. You request any
+									final changes based on the agreed revision policy. We make the
+									final adjustments. We launch your project (website goes live,
+									files delivered, etc.). You get all source files and access
+									you need.
+								</p>
+								<!-- Mobile-only details toggle -->
+								<input type="checkbox" class="step-toggle" id="step4-toggle" />
+								<label class="step-toggle-label" for="step4-toggle">
+									<span class="show-text">View details</span>
+									<span class="hide-text">Hide details</span>
+								</label>
+								<div class="step-details">
+									<div class="step-activities">
+										<h4>What happens:</h4>
+										<ul>
+											<li>We present the final work for your approval</li>
+											<li>
+												You request any final changes based on the agreed
+												revision policy
+											</li>
+											<li>We make the final adjustments</li>
+											<li>
+												We launch your project (website goes live, files
+												delivered, etc.)
+											</li>
+											<li>You get all source files and access you need</li>
+										</ul>
+									</div>
+									<div class="step-deliverables">
+										<h4>Deliverables:</h4>
+										<ul>
+											<li>Completed project launched</li>
+											<li>All source files and assets</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-    <script src="logic.js" defer></script>
-    <script src="js/Aurora.js"></script>
-  </body>
+			<!-- Quality Guarantees -->
+			<section class="content-section">
+				<div class="container">
+					<div class="section-header" data-animate="fade-up">
+						<h2 class="section-title">What We Stand Behind</h2>
+						<p class="section-subtitle">
+							Commitments we make to every single client
+						</p>
+					</div>
+					<div class="communication-grid">
+						<div class="communication-card" data-animate="fade-up">
+							<h3>On-Time Delivery Guarantee</h3>
+							<p>
+								We meet the deadline in your agreement. If we're late without
+								valid reason, you get a discount or refund—no excuses.
+							</p>
+						</div>
+						<div
+							class="communication-card"
+							data-animate="fade-up"
+							data-delay=".1s">
+							<h3>Quality Satisfaction Guarantee</h3>
+							<p>
+								If the final work doesn't meet the quality standards we
+								promised, we'll revise it until it does—or refund your money. We
+								stand behind our work.
+							</p>
+						</div>
+						<div
+							class="communication-card"
+							data-animate="fade-up"
+							data-delay=".2s">
+							<h3>Clear Communication Guarantee</h3>
+							<p>
+								You'll never be left wondering what's happening. We respond
+								within 24 hours and provide regular updates without you having
+								to chase us.
+							</p>
+						</div>
+						<div
+							class="communication-card"
+							data-animate="fade-up"
+							data-delay=".3s">
+							<h3>Complete Ownership Guarantee</h3>
+							<p>
+								Every file, every asset, every line of code—it's all yours at
+								the end. No licenses, no restrictions, no fine print. You paid
+								for it, you own it.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- CTA Section -->
+			<section class="cta-section">
+				<div class="container">
+					<div class="cta-content" data-animate="fade-up">
+						<h2>Ready to Get Started?</h2>
+						<p>
+							Let's talk about your project. No pressure, no sales pitch—just an
+							honest conversation about what you need and how we can help.
+						</p>
+						<div class="cta-actions">
+							<a href="services.html" class="btn-primary">Start a Project</a>
+							<a href="work.html" class="btn-secondary">View Our Work</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-brand">
+						<div class="brand">
+							<img
+								src="img/no bg logos/logomark2nobg.png"
+								alt="Infinite Pixels Logo"
+								class="footer-logo-img" />
+						</div>
+						<p class="footer-tagline">
+							Crafting digital experiences that scale beyond imagination.
+						</p>
+						<div class="footer-social">
+							<a
+								href="https://www.instagram.com/infinitepixelsagency/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="instagram-link"
+								aria-label="Follow us on Instagram">
+								<div class="instagram-icon">
+									<svg
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="currentColor"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+									</svg>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="footer-links">
+						<div class="footer-column">
+							<h4>Services</h4>
+							<a href="services.html">AI Automation</a>
+							<a href="services.html">Web Development</a>
+							<a href="services.html">Social Media Managment</a>
+							<a href="services.html">Media Production</a>
+							<a href="services.html">Graphic Design</a>
+							<a href="services.html">System Integration</a>
+						</div>
+						<div class="footer-column">
+							<h4>Quick Links</h4>
+							<a href="home.html">Home</a>
+							<a href="about.html">About</a>
+							<a href="services.html">Services</a>
+							<a href="work.html">Work</a>
+							<a href="process.html">Process</a>
+							<a href="home.html#contact">Contact</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p>
+						&copy; <span id="copyrightYear"></span> Infinite Pixels. All rights
+						reserved.
+					</p>
+					<div class="footer-bottom-links">
+						<a href="/privacy">Privacy Policy</a>
+						<a href="/terms">Terms of Service</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="logic.js" defer></script>
+		<script src="js/Aurora.js"></script>
+	</body>
 </html>

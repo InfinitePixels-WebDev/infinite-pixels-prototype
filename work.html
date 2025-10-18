@@ -1,747 +1,744 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Our Work — Infinite Pixels</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="img/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="img/favicon/favicon-16x16.png"
-    />
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Our Work — Infinite Pixels</title>
+		<link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="img/favicon/favicon-32x32.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="img/favicon/favicon-16x16.png" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Michroma:wght@400&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Floating Navigation -->
-    <nav id="site-header" class="floating-nav">
-      <div class="nav-container">
-        <a href="home.html" class="brand" data-animate="slide-right">
-          <img
-            src="img/no bg logos/logomarknobg.png"
-            alt="Infinite Pixels Logo"
-            class="brand-logo-img"
-          />
-          <span class="brand-divider"></span>
-          <span class="brand-tagline">Digital Solutions</span>
-        </a>
-        <div class="nav-menu" id="navMenu">
-          <a href="home.html" class="nav-link">
-            <span class="link-text">Home</span>
-          </a>
-          <a href="about.html" class="nav-link">
-            <span class="link-text">About</span>
-          </a>
-          <a href="services.html" class="nav-link">
-            <span class="link-text">Services</span>
-          </a>
-          <a href="work.html" class="nav-link active">
-            <span class="link-text">Work</span>
-          </a>
-          <a href="process.html" class="nav-link">
-            <span class="link-text">Process</span>
-          </a>
-        </div>
-        <div class="nav-actions">
-          <a href="home.html#contact" class="nav-cta">
-            <span>Get Started</span>
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
-          <button
-            class="theme-toggle"
-            id="themeToggle"
-            type="button"
-            aria-label="Toggle theme"
-          >
-            <span id="themeToggleIcon" aria-hidden="true">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-              </svg>
-            </span>
-          </button>
-          <button
-            class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="Toggle navigation"
-            aria-expanded="false"
-            aria-controls="navMenu"
-          >
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-          </button>
-        </div>
-      </div>
-    </nav>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Michroma:wght@400&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
+		<!-- SEO Meta Tags -->
+		<meta
+			name="description"
+			content="See Infinite Pixels' portfolio of web design, branding, automation, and digital solutions. Real results for real clients. Explore our work and case studies." />
+		<meta
+			name="keywords"
+			content="portfolio, work, case studies, Infinite Pixels, web design, branding, automation, digital solutions, results" />
+		<meta name="author" content="Infinite Pixels" />
 
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay" aria-hidden="true">
-      <div class="mobile-nav-panel">
-        <div class="mobile-nav-handle" aria-hidden="true"></div>
-        <div class="mobile-nav-header">
-          <h3 class="mobile-nav-title">Explore</h3>
-        </div>
-        <div class="mobile-nav-featured">
-          <a class="mobile-feature-card services" href="services.html">
-            <div class="feat-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <rect x="3" y="3" width="7" height="7" />
-                <rect x="14" y="3" width="7" height="7" />
-                <rect x="14" y="14" width="7" height="7" />
-                <rect x="3" y="14" width="7" height="7" />
-              </svg>
-            </div>
-            <div class="feat-title">Services</div>
-            <div class="feat-sub">Branding, web design, digital solutions</div>
-          </a>
-          <a class="mobile-feature-card work" href="work.html">
-            <div class="feat-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-            </div>
-            <div class="feat-title">Work</div>
-            <div class="feat-sub">Results and case studies</div>
-          </a>
-        </div>
-        <nav class="mobile-nav-list" aria-label="Mobile">
-          <a class="mobile-nav-item" href="home.html"
-            ><span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <polyline points="9 22 9 12 15 12 15 22" />
-              </svg> </span
-            ><span class="item-label">Home</span
-            ><span class="item-arrow">›</span></a
-          >
-          <a class="mobile-nav-item" href="about.html"
-            ><span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                />
-              </svg> </span
-            ><span class="item-label">About</span
-            ><span class="item-arrow">›</span></a
-          >
-          <a class="mobile-nav-item" href="services.html"
-            ><span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <rect x="3" y="3" width="7" height="7" />
-                <rect x="14" y="3" width="7" height="7" />
-                <rect x="14" y="14" width="7" height="7" />
-                <rect x="3" y="14" width="7" height="7" />
-              </svg> </span
-            ><span class="item-label">Services</span
-            ><span class="item-arrow">›</span></a
-          >
-          <a class="mobile-nav-item" href="work.html"
-            ><span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="m9 12 2 2 4-4" />
-              </svg> </span
-            ><span class="item-label">Work</span
-            ><span class="item-arrow">›</span></a
-          >
-          <a class="mobile-nav-item" href="process.html"
-            ><span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"
-                />
-              </svg> </span
-            ><span class="item-label">Process</span
-            ><span class="item-arrow">›</span></a
-          >
-        </nav>
-      </div>
-    </div>
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:title" content="Our Work — Infinite Pixels" />
+		<meta
+			property="og:description"
+			content="See Infinite Pixels' portfolio of web design, branding, automation, and digital solutions. Real results for real clients. Explore our work and case studies." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://infinitepixels.com/work.html" />
+		<meta property="og:image" content="img/no bg logos/logomarknobg.png" />
 
-    <main class="main-content">
-      <!-- Work Hero Section -->
-      <section class="page-hero work-hero" id="hero">
-        <div class="container">
-          <div class="hero-badge" data-animate="fade-up">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
-              />
-              <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-              <line x1="12" y1="22.08" x2="12" y2="12" />
-            </svg>
-            <span>Our Portfolio</span>
-          </div>
-          <div class="hero-content" data-animate="fade-up" data-delay=".1s">
-            <h1 class="page-title">Real Projects We've Delivered</h1>
-            <p class="page-subtitle">
-              Check out the websites we've built for real clients, plus demo
-              projects that showcase our capabilities across different
-              industries and styles.
-            </p>
-          </div>
-          <div class="hero-categories" data-animate="fade-up" data-delay=".2s">
-            <p>Web Development • Graphic Design • Media Production</p>
-          </div>
-        </div>
-      </section>
+		<!-- Twitter Card Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Our Work — Infinite Pixels" />
+		<meta
+			name="twitter:description"
+			content="See Infinite Pixels' portfolio of web design, branding, automation, and digital solutions. Real results for real clients. Explore our work and case studies." />
+		<meta name="twitter:image" content="img/no bg logos/logomarknobg.png" />
 
-      <!-- Client Projects Section -->
+		<!-- Structured Data: Organization -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				"name": "Infinite Pixels",
+				"url": "https://infinitepixels.com/",
+				"logo": "img/no bg logos/logomarknobg.png",
+				"sameAs": [
+					"https://www.facebook.com/infinitepixels",
+					"https://www.instagram.com/infinitepixels",
+					"https://www.linkedin.com/company/infinitepixels"
+				]
+			}
+		</script>
+	</head>
+	<body>
+		<!-- Floating Navigation -->
+		<nav id="site-header" class="floating-nav">
+			<div class="nav-container">
+				<a href="home.html" class="brand" data-animate="slide-right">
+					<img
+						src="img/no bg logos/logomarknobg.png"
+						alt="Infinite Pixels Logo"
+						class="brand-logo-img" />
+					<span class="brand-divider"></span>
+					<span class="brand-tagline">Digital Solutions</span>
+				</a>
+				<div class="nav-menu" id="navMenu">
+					<a href="home.html" class="nav-link">
+						<span class="link-text">Home</span>
+					</a>
+					<a href="about.html" class="nav-link">
+						<span class="link-text">About</span>
+					</a>
+					<a href="services.html" class="nav-link">
+						<span class="link-text">Services</span>
+					</a>
+					<a href="work.html" class="nav-link active">
+						<span class="link-text">Work</span>
+					</a>
+					<a href="process.html" class="nav-link">
+						<span class="link-text">Process</span>
+					</a>
+				</div>
+				<div class="nav-actions">
+					<a href="home.html#contact" class="nav-cta">
+						<span>Get Started</span>
+						<svg
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2">
+							<line x1="5" y1="12" x2="19" y2="12" />
+							<polyline points="12 5 19 12 12 19" />
+						</svg>
+					</a>
+					<button
+						class="theme-toggle"
+						id="themeToggle"
+						type="button"
+						aria-label="Toggle theme">
+						<span id="themeToggleIcon" aria-hidden="true">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+							</svg>
+						</span>
+					</button>
+					<button
+						class="menu-toggle"
+						id="menuToggle"
+						type="button"
+						aria-label="Toggle navigation"
+						aria-expanded="false"
+						aria-controls="navMenu">
+						<span class="menu-line"></span>
+						<span class="menu-line"></span>
+						<span class="menu-line"></span>
+					</button>
+				</div>
+			</div>
+		</nav>
 
-      <section class="content-section">
-        <div class="container">
-          <div class="section-header" data-animate="fade-up">
-            <h2 class="section-title">Client Projects</h2>
-          </div>
-          <div class="portfolio-grid">
-            <!-- Project 1 - Dr. Naglaa Clinic -->
-            <div
-              class="portfolio-item"
-              data-category="medical website"
-              data-animate="fade-up"
-            >
-              <div class="portfolio-image">
-                <img
-                  src="img/projects/image-1760566359881.png"
-                  alt="Dr. Naglaa Clinic Website"
-                />
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info">
-                    <h3>Dr. Naglaa Clinic</h3>
-                    <p>Professional Medical Website</p>
-                    <div class="portfolio-tags">
-                      <span>Medical</span>
-                      <span>Professional</span>
-                      <span>WhatsApp Integration</span>
-                    </div>
-                  </div>
-                  <div class="portfolio-actions">
-                    <a
-                      href="https://drnaglaaclinic.netlify.app/"
-                      target="_blank"
-                      class="portfolio-link"
-                      aria-label="Visit website"
-                    >
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <div class="portfolio-meta">
-                  <span class="category">MEDICAL WEBSITE</span>
-                  <span class="year">2025</span>
-                </div>
-                <h3>Dr. Naglaa Clinic</h3>
-                <p>
-                  Professional website for a plastic surgery clinic featuring
-                  elegant design, service showcases, patient testimonials, and
-                  WhatsApp integration for easy contact.
-                </p>
-                <a
-                  href="https://drnaglaaclinic.netlify.app/"
-                  target="_blank"
-                  class="btn-secondary"
-                  >Visit Website</a
-                >
-              </div>
-            </div>
+		<!-- Mobile Navigation Overlay -->
+		<div class="mobile-nav-overlay" aria-hidden="true">
+			<div class="mobile-nav-panel">
+				<div class="mobile-nav-handle" aria-hidden="true"></div>
+				<div class="mobile-nav-header">
+					<h3 class="mobile-nav-title">Explore</h3>
+				</div>
+				<div class="mobile-nav-featured">
+					<a class="mobile-feature-card services" href="services.html">
+						<div class="feat-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<rect x="3" y="3" width="7" height="7" />
+								<rect x="14" y="3" width="7" height="7" />
+								<rect x="14" y="14" width="7" height="7" />
+								<rect x="3" y="14" width="7" height="7" />
+							</svg>
+						</div>
+						<div class="feat-title">Services</div>
+						<div class="feat-sub">Branding, web design, digital solutions</div>
+					</a>
+					<a class="mobile-feature-card work" href="work.html">
+						<div class="feat-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<circle cx="12" cy="12" r="10" />
+								<path d="m9 12 2 2 4-4" />
+							</svg>
+						</div>
+						<div class="feat-title">Work</div>
+						<div class="feat-sub">Results and case studies</div>
+					</a>
+				</div>
+				<nav class="mobile-nav-list" aria-label="Mobile">
+					<a class="mobile-nav-item" href="home.html"
+						><span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+								<polyline points="9 22 9 12 15 12 15 22" />
+							</svg> </span
+						><span class="item-label">Home</span
+						><span class="item-arrow">›</span></a
+					>
+					<a class="mobile-nav-item" href="about.html"
+						><span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path
+									d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+							</svg> </span
+						><span class="item-label">About</span
+						><span class="item-arrow">›</span></a
+					>
+					<a class="mobile-nav-item" href="services.html"
+						><span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<rect x="3" y="3" width="7" height="7" />
+								<rect x="14" y="3" width="7" height="7" />
+								<rect x="14" y="14" width="7" height="7" />
+								<rect x="3" y="14" width="7" height="7" />
+							</svg> </span
+						><span class="item-label">Services</span
+						><span class="item-arrow">›</span></a
+					>
+					<a class="mobile-nav-item" href="work.html"
+						><span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<circle cx="12" cy="12" r="10" />
+								<path d="m9 12 2 2 4-4" />
+							</svg> </span
+						><span class="item-label">Work</span
+						><span class="item-arrow">›</span></a
+					>
+					<a class="mobile-nav-item" href="process.html"
+						><span class="item-icon">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2">
+								<path
+									d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2" />
+							</svg> </span
+						><span class="item-label">Process</span
+						><span class="item-arrow">›</span></a
+					>
+				</nav>
+			</div>
+		</div>
 
-            <!-- Project 2 - Ahmed Fadl -->
-            <div
-              class="portfolio-item"
-              data-category="education platform"
-              data-animate="fade-up"
-              data-delay=".1s"
-            >
-              <div class="portfolio-image">
-                <img
-                  src="img/projects/image-1760566337057.png"
-                  alt="Teacher Ahmed Fadl Website"
-                />
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info">
-                    <h3>Teacher Ahmed Fadl</h3>
-                    <p>Educational Platform</p>
-                    <div class="portfolio-tags">
-                      <span>Education</span>
-                      <span>Student Login</span>
-                      <span>Course Management</span>
-                    </div>
-                  </div>
-                  <div class="portfolio-actions">
-                    <a
-                      href="https://ahmedfadl.com/"
-                      target="_blank"
-                      class="portfolio-link"
-                      aria-label="Visit website"
-                    >
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <div class="portfolio-meta">
-                  <span class="category">EDUCATION PLATFORM</span>
-                  <span class="year">2025</span>
-                </div>
-                <h3>Teacher Ahmed Fadl</h3>
-                <p>
-                  Educational platform for a philosophy and social sciences
-                  teacher. Features course listings, student login system, and
-                  showcase of teaching experience spanning 15+ years.
-                </p>
-                <a
-                  href="https://ahmedfadl.com/"
-                  target="_blank"
-                  class="btn-secondary"
-                  >Visit Website</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+		<main class="main-content">
+			<!-- Work Hero Section -->
+			<section class="page-hero work-hero" id="hero">
+				<div class="container">
+					<div class="hero-badge" data-animate="fade-up">
+						<svg
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2">
+							<path
+								d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+							<polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+							<line x1="12" y1="22.08" x2="12" y2="12" />
+						</svg>
+						<span>Our Portfolio</span>
+					</div>
+					<div class="hero-content" data-animate="fade-up" data-delay=".1s">
+						<h1 class="page-title">Real Projects We've Delivered</h1>
+						<p class="page-subtitle">
+							Check out the websites we've built for real clients, plus demo
+							projects that showcase our capabilities across different
+							industries and styles.
+						</p>
+					</div>
+					<div class="hero-categories" data-animate="fade-up" data-delay=".2s">
+						<p>Web Development • Graphic Design • Media Production</p>
+					</div>
+				</div>
+			</section>
 
-      <!-- Demo Projects Section -->
-      <section class="content-section">
-        <div class="container">
-          <div class="section-header" data-animate="fade-up">
-            <h2 class="section-title">Demo Projects</h2>
-            <p class="section-subtitle">
-              Explore our demo work to see the range of styles and solutions we
-              can create for different industries.
-            </p>
-          </div>
-          <div class="portfolio-grid">
-            <!-- Demo Project 1 - Eclat -->
-            <div
-              class="portfolio-item"
-              data-category="demo"
-              data-animate="fade-up"
-            >
-              <div class="portfolio-image">
-                <img src="img/projects/eclat.png" alt="Eclat Restaurant Demo" />
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info">
-                    <h3>Eclat Restaurant</h3>
-                    <p>Fine Dining Experience</p>
-                    <div class="portfolio-tags">
-                      <span>Restaurant</span>
-                      <span>Fine Dining</span>
-                      <span>Culinary</span>
-                    </div>
-                  </div>
-                  <div class="portfolio-actions">
-                    <a href="#" class="portfolio-link" aria-label="View demo">
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <div class="portfolio-meta">
-                  <span class="category">DEMO</span>
-                  <span class="year">2025</span>
-                </div>
-                <h3>Eclat Restaurant</h3>
-                <p>
-                  Elegant fine dining restaurant demo featuring sophisticated
-                  menu presentations, reservation systems, and premium culinary
-                  experiences.
-                </p>
-                <a href="#" class="btn-secondary">View Demo</a>
-              </div>
-            </div>
+			<!-- Client Projects Section -->
 
-            <!-- Demo Project 2 - Velaro -->
-            <div
-              class="portfolio-item velaro"
-              data-category="demo"
-              data-animate="fade-up"
-              data-delay=".1s"
-            >
-              <div class="portfolio-image">
-                <img
-                  src="img/projects/velaro.png"
-                  alt="Velaro Marketing Agency Demo"
-                />
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info">
-                    <h3>Velaro</h3>
-                    <p>Social Media Marketing Agency</p>
-                    <div class="portfolio-tags">
-                      <span>Marketing</span>
-                      <span>Social Media</span>
-                      <span>Agency</span>
-                    </div>
-                  </div>
-                  <div class="portfolio-actions">
-                    <a href="#" class="portfolio-link" aria-label="View demo">
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <div class="portfolio-meta">
-                  <span class="category">DEMO</span>
-                  <span class="year">2025</span>
-                </div>
-                <h3>Velaro</h3>
-                <p>
-                  Social media marketing agency demo showcasing campaign
-                  strategies, content creation services, and digital marketing
-                  solutions.
-                </p>
-                <a href="#" class="btn-secondary">View Demo</a>
-              </div>
-            </div>
+			<section class="content-section">
+				<div class="container">
+					<div class="section-header" data-animate="fade-up">
+						<h2 class="section-title">Client Projects</h2>
+					</div>
+					<div class="portfolio-grid">
+						<!-- Project 1 - Dr. Naglaa Clinic -->
+						<div
+							class="portfolio-item"
+							data-category="medical website"
+							data-animate="fade-up">
+							<div class="portfolio-image">
+								<img
+									src="img/projects/image-1760566359881.png"
+									alt="Dr. Naglaa Clinic Website" />
+								<div class="portfolio-overlay">
+									<div class="portfolio-info">
+										<h3>Dr. Naglaa Clinic</h3>
+										<p>Professional Medical Website</p>
+										<div class="portfolio-tags">
+											<span>Medical</span>
+											<span>Professional</span>
+											<span>WhatsApp Integration</span>
+										</div>
+									</div>
+									<div class="portfolio-actions">
+										<a
+											href="https://drnaglaaclinic.netlify.app/"
+											target="_blank"
+											class="portfolio-link"
+											aria-label="Visit website">
+											<svg viewBox="0 0 24 24" fill="currentColor">
+												<path
+													d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="portfolio-details">
+								<div class="portfolio-meta">
+									<span class="category">MEDICAL WEBSITE</span>
+									<span class="year">2025</span>
+								</div>
+								<h3>Dr. Naglaa Clinic</h3>
+								<p>
+									Professional website for a plastic surgery clinic featuring
+									elegant design, service showcases, patient testimonials, and
+									WhatsApp integration for easy contact.
+								</p>
+								<a
+									href="https://drnaglaaclinic.netlify.app/"
+									target="_blank"
+									class="btn-secondary"
+									>Visit Website</a
+								>
+							</div>
+						</div>
 
-            <!-- Demo Project 3 - Xhale -->
-            <div
-              class="portfolio-item"
-              data-category="demo"
-              data-animate="fade-up"
-              data-delay=".2s"
-            >
-              <div class="portfolio-image">
-                <img src="img/projects/xhale.png" alt="Xhale Gym Demo" />
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info">
-                    <h3>Xhale</h3>
-                    <p>Modern Fitness Center</p>
-                    <div class="portfolio-tags">
-                      <span>Fitness</span>
-                      <span>Gym</span>
-                      <span>Health</span>
-                    </div>
-                  </div>
-                  <div class="portfolio-actions">
-                    <a href="#" class="portfolio-link" aria-label="View demo">
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <div class="portfolio-meta">
-                  <span class="category">DEMO</span>
-                  <span class="year">2025</span>
-                </div>
-                <h3>Xhale</h3>
-                <p>
-                  Modern fitness center demo featuring membership plans, class
-                  schedules, trainer profiles, and fitness program showcases.
-                </p>
-                <a href="#" class="btn-secondary">View Demo</a>
-              </div>
-            </div>
+						<!-- Project 2 - Ahmed Fadl -->
+						<div
+							class="portfolio-item"
+							data-category="education platform"
+							data-animate="fade-up"
+							data-delay=".1s">
+							<div class="portfolio-image">
+								<img
+									src="img/projects/image-1760566337057.png"
+									alt="Teacher Ahmed Fadl Website" />
+								<div class="portfolio-overlay">
+									<div class="portfolio-info">
+										<h3>Teacher Ahmed Fadl</h3>
+										<p>Educational Platform</p>
+										<div class="portfolio-tags">
+											<span>Education</span>
+											<span>Student Login</span>
+											<span>Course Management</span>
+										</div>
+									</div>
+									<div class="portfolio-actions">
+										<a
+											href="https://ahmedfadl.com/"
+											target="_blank"
+											class="portfolio-link"
+											aria-label="Visit website">
+											<svg viewBox="0 0 24 24" fill="currentColor">
+												<path
+													d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="portfolio-details">
+								<div class="portfolio-meta">
+									<span class="category">EDUCATION PLATFORM</span>
+									<span class="year">2025</span>
+								</div>
+								<h3>Teacher Ahmed Fadl</h3>
+								<p>
+									Educational platform for a philosophy and social sciences
+									teacher. Features course listings, student login system, and
+									showcase of teaching experience spanning 15+ years.
+								</p>
+								<a
+									href="https://ahmedfadl.com/"
+									target="_blank"
+									class="btn-secondary"
+									>Visit Website</a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-            <!-- Demo Project 4 - Maison -->
-            <div
-              class="portfolio-item"
-              data-category="demo"
-              data-animate="fade-up"
-              data-delay=".3s"
-            >
-              <div class="portfolio-image">
-                <img
-                  src="img/projects/image-1760641381973.png"
-                  alt="Maison Restaurant Demo"
-                />
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info">
-                    <h3>Maison</h3>
-                    <p>Fine Dining Restaurant</p>
-                    <div class="portfolio-tags">
-                      <span>Restaurant</span>
-                      <span>Fine Dining</span>
-                      <span>Gourmet</span>
-                    </div>
-                  </div>
-                  <div class="portfolio-actions">
-                    <a href="#" class="portfolio-link" aria-label="View demo">
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <div class="portfolio-meta">
-                  <span class="category">DEMO</span>
-                  <span class="year">2025</span>
-                </div>
-                <h3>Maison</h3>
-                <p>
-                  Premium fine dining restaurant demo featuring exquisite menu
-                  displays, chef specialties, and elegant reservation
-                  experience.
-                </p>
-                <a href="#" class="btn-secondary">View Demo</a>
-              </div>
-            </div>
+			<!-- Demo Projects Section -->
+			<section class="content-section">
+				<div class="container">
+					<div class="section-header" data-animate="fade-up">
+						<h2 class="section-title">Demo Projects</h2>
+						<p class="section-subtitle">
+							Explore our demo work to see the range of styles and solutions we
+							can create for different industries.
+						</p>
+					</div>
+					<div class="portfolio-grid">
+						<!-- Demo Project 1 - Eclat -->
+						<div
+							class="portfolio-item"
+							data-category="demo"
+							data-animate="fade-up">
+							<div class="portfolio-image">
+								<img src="img/projects/eclat.png" alt="Eclat Restaurant Demo" />
+								<div class="portfolio-overlay">
+									<div class="portfolio-info">
+										<h3>Eclat Restaurant</h3>
+										<p>Fine Dining Experience</p>
+										<div class="portfolio-tags">
+											<span>Restaurant</span>
+											<span>Fine Dining</span>
+											<span>Culinary</span>
+										</div>
+									</div>
+									<div class="portfolio-actions">
+										<a href="#" class="portfolio-link" aria-label="View demo">
+											<svg viewBox="0 0 24 24" fill="currentColor">
+												<path
+													d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="portfolio-details">
+								<div class="portfolio-meta">
+									<span class="category">DEMO</span>
+									<span class="year">2025</span>
+								</div>
+								<h3>Eclat Restaurant</h3>
+								<p>
+									Elegant fine dining restaurant demo featuring sophisticated
+									menu presentations, reservation systems, and premium culinary
+									experiences.
+								</p>
+								<a href="#" class="btn-secondary">View Demo</a>
+							</div>
+						</div>
 
-            <!-- Demo Project 5 - Bella Beauty -->
-            <div
-              class="portfolio-item"
-              data-category="demo"
-              data-animate="fade-up"
-              data-delay=".4s"
-            >
-              <div class="portfolio-image">
-                <img
-                  src="img/projects/image-1760641462778.png"
-                  alt="Bella Beauty Clinic Demo"
-                />
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info">
-                    <h3>Bella Beauty</h3>
-                    <p>Beauty & Aesthetics Clinic</p>
-                    <div class="portfolio-tags">
-                      <span>Beauty</span>
-                      <span>Aesthetics</span>
-                      <span>Clinic</span>
-                    </div>
-                  </div>
-                  <div class="portfolio-actions">
-                    <a href="#" class="portfolio-link" aria-label="View demo">
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <div class="portfolio-meta">
-                  <span class="category">DEMO</span>
-                  <span class="year">2025</span>
-                </div>
-                <h3>Bella Beauty</h3>
-                <p>
-                  Professional beauty clinic demo showcasing aesthetic
-                  treatments, skincare services, and appointment booking
-                  systems.
-                </p>
-                <a href="#" class="btn-secondary">View Demo</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+						<!-- Demo Project 2 - Velaro -->
+						<div
+							class="portfolio-item velaro"
+							data-category="demo"
+							data-animate="fade-up"
+							data-delay=".1s">
+							<div class="portfolio-image">
+								<img
+									src="img/projects/velaro.png"
+									alt="Velaro Marketing Agency Demo" />
+								<div class="portfolio-overlay">
+									<div class="portfolio-info">
+										<h3>Velaro</h3>
+										<p>Social Media Marketing Agency</p>
+										<div class="portfolio-tags">
+											<span>Marketing</span>
+											<span>Social Media</span>
+											<span>Agency</span>
+										</div>
+									</div>
+									<div class="portfolio-actions">
+										<a href="#" class="portfolio-link" aria-label="View demo">
+											<svg viewBox="0 0 24 24" fill="currentColor">
+												<path
+													d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="portfolio-details">
+								<div class="portfolio-meta">
+									<span class="category">DEMO</span>
+									<span class="year">2025</span>
+								</div>
+								<h3>Velaro</h3>
+								<p>
+									Social media marketing agency demo showcasing campaign
+									strategies, content creation services, and digital marketing
+									solutions.
+								</p>
+								<a href="#" class="btn-secondary">View Demo</a>
+							</div>
+						</div>
 
-      <!-- CTA Section -->
-      <section class="cta-section">
-        <div class="container">
-          <div class="cta-content" data-animate="fade-up">
-            <h2>Want to Be Our Next Success Story?</h2>
-            <p>
-              Ready to get your business online with a professional website?
-              Let's discuss your project and create a digital solution that
-              works for you.
-            </p>
-            <div class="cta-actions">
-              <a href="services.html" class="btn-primary">Start Your Project</a>
-              <a href="process.html" class="btn-secondary">Learn Our Process</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+						<!-- Demo Project 3 - Xhale -->
+						<div
+							class="portfolio-item"
+							data-category="demo"
+							data-animate="fade-up"
+							data-delay=".2s">
+							<div class="portfolio-image">
+								<img src="img/projects/xhale.png" alt="Xhale Gym Demo" />
+								<div class="portfolio-overlay">
+									<div class="portfolio-info">
+										<h3>Xhale</h3>
+										<p>Modern Fitness Center</p>
+										<div class="portfolio-tags">
+											<span>Fitness</span>
+											<span>Gym</span>
+											<span>Health</span>
+										</div>
+									</div>
+									<div class="portfolio-actions">
+										<a href="#" class="portfolio-link" aria-label="View demo">
+											<svg viewBox="0 0 24 24" fill="currentColor">
+												<path
+													d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="portfolio-details">
+								<div class="portfolio-meta">
+									<span class="category">DEMO</span>
+									<span class="year">2025</span>
+								</div>
+								<h3>Xhale</h3>
+								<p>
+									Modern fitness center demo featuring membership plans, class
+									schedules, trainer profiles, and fitness program showcases.
+								</p>
+								<a href="#" class="btn-secondary">View Demo</a>
+							</div>
+						</div>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <div class="brand">
-              <img
-                src="img/no bg logos/logomark2nobg.png"
-                alt="Infinite Pixels Logo"
-                class="footer-logo-img"
-              />
-            </div>
-            <p class="footer-tagline">
-              Crafting digital experiences that scale beyond imagination.
-            </p>
-            <div class="footer-social">
-              <a
-                href="https://www.instagram.com/infinitepixelsagency/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="instagram-link"
-                aria-label="Follow us on Instagram"
-              >
-                <div class="instagram-icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-                    />
-                  </svg>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="footer-links">
-            <div class="footer-column">
-              <h4>Services</h4>
-              <a href="services.html">AI Automation</a>
-              <a href="services.html">Web Development</a>
-              <a href="services.html">Social Media Managment</a>
-              <a href="services.html">Media Production</a>
-              <a href="services.html">Graphic Design</a>
-              <a href="services.html">System Integration</a>
-            </div>
+						<!-- Demo Project 4 - Maison -->
+						<div
+							class="portfolio-item"
+							data-category="demo"
+							data-animate="fade-up"
+							data-delay=".3s">
+							<div class="portfolio-image">
+								<img
+									src="img/projects/image-1760641381973.png"
+									alt="Maison Restaurant Demo" />
+								<div class="portfolio-overlay">
+									<div class="portfolio-info">
+										<h3>Maison</h3>
+										<p>Fine Dining Restaurant</p>
+										<div class="portfolio-tags">
+											<span>Restaurant</span>
+											<span>Fine Dining</span>
+											<span>Gourmet</span>
+										</div>
+									</div>
+									<div class="portfolio-actions">
+										<a href="#" class="portfolio-link" aria-label="View demo">
+											<svg viewBox="0 0 24 24" fill="currentColor">
+												<path
+													d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="portfolio-details">
+								<div class="portfolio-meta">
+									<span class="category">DEMO</span>
+									<span class="year">2025</span>
+								</div>
+								<h3>Maison</h3>
+								<p>
+									Premium fine dining restaurant demo featuring exquisite menu
+									displays, chef specialties, and elegant reservation
+									experience.
+								</p>
+								<a href="#" class="btn-secondary">View Demo</a>
+							</div>
+						</div>
 
-            <div class="footer-column">
-              <h4>Quick Links</h4>
-              <a href="home.html">Home</a>
-              <a href="about.html">About</a>
-              <a href="services.html">Services</a>
-              <a href="work.html">Work</a>
-              <a href="process.html">Process</a>
-              <a href="home.html#contact">Contact</a>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>
-            &copy; <span id="copyrightYear"></span> Infinite Pixels. All rights
-            reserved.
-          </p>
-          <div class="footer-bottom-links">
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/terms">Terms of Service</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <script src="logic.js" defer></script>
-    <script src="js/Aurora.js"></script>
-    <script src="logic.js" defer></script>
-    <script src="js/Aurora.js"></script>
-  </body>
+						<!-- Demo Project 5 - Bella Beauty -->
+						<div
+							class="portfolio-item"
+							data-category="demo"
+							data-animate="fade-up"
+							data-delay=".4s">
+							<div class="portfolio-image">
+								<img
+									src="img/projects/image-1760641462778.png"
+									alt="Bella Beauty Clinic Demo" />
+								<div class="portfolio-overlay">
+									<div class="portfolio-info">
+										<h3>Bella Beauty</h3>
+										<p>Beauty & Aesthetics Clinic</p>
+										<div class="portfolio-tags">
+											<span>Beauty</span>
+											<span>Aesthetics</span>
+											<span>Clinic</span>
+										</div>
+									</div>
+									<div class="portfolio-actions">
+										<a href="#" class="portfolio-link" aria-label="View demo">
+											<svg viewBox="0 0 24 24" fill="currentColor">
+												<path
+													d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="portfolio-details">
+								<div class="portfolio-meta">
+									<span class="category">DEMO</span>
+									<span class="year">2025</span>
+								</div>
+								<h3>Bella Beauty</h3>
+								<p>
+									Professional beauty clinic demo showcasing aesthetic
+									treatments, skincare services, and appointment booking
+									systems.
+								</p>
+								<a href="#" class="btn-secondary">View Demo</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- CTA Section -->
+			<section class="cta-section">
+				<div class="container">
+					<div class="cta-content" data-animate="fade-up">
+						<h2>Want to Be Our Next Success Story?</h2>
+						<p>
+							Ready to get your business online with a professional website?
+							Let's discuss your project and create a digital solution that
+							works for you.
+						</p>
+						<div class="cta-actions">
+							<a href="services.html" class="btn-primary">Start Your Project</a>
+							<a href="process.html" class="btn-secondary">Learn Our Process</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-brand">
+						<div class="brand">
+							<img
+								src="img/no bg logos/logomark2nobg.png"
+								alt="Infinite Pixels Logo"
+								class="footer-logo-img" />
+						</div>
+						<p class="footer-tagline">
+							Crafting digital experiences that scale beyond imagination.
+						</p>
+						<div class="footer-social">
+							<a
+								href="https://www.instagram.com/infinitepixelsagency/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="instagram-link"
+								aria-label="Follow us on Instagram">
+								<div class="instagram-icon">
+									<svg
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="currentColor"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+									</svg>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="footer-links">
+						<div class="footer-column">
+							<h4>Services</h4>
+							<a href="services.html">AI Automation</a>
+							<a href="services.html">Web Development</a>
+							<a href="services.html">Social Media Managment</a>
+							<a href="services.html">Media Production</a>
+							<a href="services.html">Graphic Design</a>
+							<a href="services.html">System Integration</a>
+						</div>
+
+						<div class="footer-column">
+							<h4>Quick Links</h4>
+							<a href="home.html">Home</a>
+							<a href="about.html">About</a>
+							<a href="services.html">Services</a>
+							<a href="work.html">Work</a>
+							<a href="process.html">Process</a>
+							<a href="home.html#contact">Contact</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p>
+						&copy; <span id="copyrightYear"></span> Infinite Pixels. All rights
+						reserved.
+					</p>
+					<div class="footer-bottom-links">
+						<a href="/privacy">Privacy Policy</a>
+						<a href="/terms">Terms of Service</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="logic.js" defer></script>
+		<script src="js/Aurora.js"></script>
+		<script src="logic.js" defer></script>
+		<script src="js/Aurora.js"></script>
+	</body>
 </html>
