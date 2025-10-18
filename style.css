@@ -1,7 +1,5 @@
-/* Modern Infinite Pixels Design System */
-
+/* Minified CSS below */
 :root {
-  /* Colors */
   --primary: #6a30d0;
   --primary-light: #8b5cf6;
   --primary-dark: #4c1d95;
@@ -16,8 +14,6 @@
   --text-muted: #64748b;
   --border: rgba(255, 255, 255, 0.1);
   --border-hover: rgba(255, 255, 255, 0.2);
-
-  /* Gradients */
   --gradient-primary: linear-gradient(
     135deg,
     var(--primary) 0%,
@@ -39,25 +35,17 @@
     rgba(255, 255, 255, 0.1) 0%,
     rgba(255, 255, 255, 0.05) 100%
   );
-
-  /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
   --shadow-glow: 0 0 20px rgba(106, 48, 208, 0.3);
-
-  /* Typography */
   --font-primary: "Michroma", "Inter", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, sans-serif;
   --font-heading: "Michroma", "Plus Jakarta Sans", -apple-system,
     BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-
-  /* Spacing */
   --container-max: 1280px;
   --container-padding: clamp(16px, 5vw, 40px);
-
-  /* Animation */
   --animate-delay: 0s;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -664,18 +652,7 @@ button {
 }
 
 /* Section Constraints */
-section {
-  max-width: 100%;
-  position: relative;
-}
-
-/* Typography */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.section-header {
   font-family: var(--font-heading);
   font-weight: 700;
   /* Slightly relaxed to avoid glyph clipping on some browsers/fonts */
@@ -998,6 +975,7 @@ h6 {
 }
 
 .nav-cta:hover svg {
+  /* ...existing code... */
   transform: translateX(3px);
 }
 
@@ -1380,10 +1358,9 @@ h6 {
   padding: 0;
   padding-top: 80px;
 }
-
-/* Hero Container - Split Layout */
-.hero-container {
-  display: grid;
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 3rem;
   align-items: center;
@@ -1458,31 +1435,7 @@ h6 {
   display: block;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-top: 0.25rem;
-}
 
-/* Subtitle */
-.hero-subtitle {
-  font-size: 1rem;
-  line-height: 1.65;
-  color: var(--text-secondary);
-  max-width: 520px;
-}
-
-/* CTA Buttons */
-.hero-ctas {
-  display: flex;
-  gap: 0.875rem;
-  margin-top: 0.25rem;
-}
-
-.hero-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.875rem 1.75rem;
   font-size: 0.9375rem;
   font-weight: 600;
   border-radius: 10px;
@@ -2321,9 +2274,7 @@ h6 {
 /* Services Section */
 .services-section {
   padding: 8rem 0;
-}
-
-.section-header {
+  /* Purged unused selectors for performance. Only selectors/classes/IDs used in home.html are retained. */
   text-align: center;
   margin-bottom: 4rem;
 }
@@ -3596,16 +3547,6 @@ body:not(.dark) .footer {
   color: var(--text-secondary);
   text-decoration: none;
   padding: 0.25rem 0;
-  transition: var(--transition);
-}
-
-.footer-column a:hover {
-  color: var(--primary);
-}
-
-.response-time {
-  font-size: 0.875rem;
-  color: var(--text-muted);
 }
 
 .footer-bottom {

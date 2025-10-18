@@ -20,10 +20,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preconnect"
+      href="https://www.googletagmanager.com"
+      crossorigin
+    />
+    <link
+      rel="preconnect"
+      href="https://www.google-analytics.com"
+      crossorigin
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Michroma:wght@400&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" href="style.css" as="style" />
     <link rel="stylesheet" href="style.css" />
+    <!--
+      PERFORMANCE SUGGESTION:
+      Enable gzip or Brotli compression on your web server for all HTML, CSS, JS, and image files.
+      This will significantly reduce file sizes and improve load times.
+      See your hosting provider's documentation for enabling compression.
+    -->
   </head>
   <body>
     <!-- Floating Navigation -->
@@ -31,9 +48,15 @@
       <div class="nav-container">
         <a href="home.html" class="brand" data-animate="slide-right">
           <img
-            src="img/no bg logos/logomarknobg.png"
+            src="img/no bg logos/logomarknobg.webp"
+            width="120"
+            height="120"
+            loading="lazy"
             alt="Infinite Pixels Logo"
             class="brand-logo-img"
+            loading="lazy"
+            width="80"
+            height="44"
           />
           <span class="brand-divider"></span>
           <span class="brand-tagline">Digital Solutions</span>
@@ -738,6 +761,9 @@
                 <img
                   src="img/projects/image-1760566359881.png"
                   alt="Dr. Naglaa Clinic Website"
+                  loading="lazy"
+                  width="400"
+                  height="300"
                 />
                 <div class="work-gradient"></div>
                 <div class="work-overlay">
@@ -785,6 +811,9 @@
                 <img
                   src="img/projects/image-1760566337057.png"
                   alt="Teacher Ahmed Fadl Platform"
+                  loading="lazy"
+                  width="400"
+                  height="300"
                 />
                 <div class="work-gradient"></div>
                 <div class="work-overlay">
@@ -1030,9 +1059,15 @@
           <div class="footer-brand">
             <div class="brand">
               <img
-                src="img/no bg logos/logomark2nobg.png"
+                src="img/no bg logos/logomark2nobg.webp"
+                width="120"
+                height="120"
+                loading="lazy"
                 alt="Infinite Pixels Logo"
                 class="footer-logo-img"
+                loading="lazy"
+                width="80"
+                height="44"
               />
             </div>
             <p class="footer-tagline">
@@ -1089,14 +1124,14 @@
             reserved.
           </p>
           <div class="footer-bottom-links">
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/terms">Terms of Service</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
           </div>
         </div>
       </div>
     </footer>
 
     <script src="logic.js" defer></script>
-    <script src="js/Aurora.js"></script>
+    <script src="js/Aurora.js" defer></script>
   </body>
 </html>
