@@ -59,19 +59,21 @@
       </script>
   </head>
   <body>
+  <!-- Skip Navigation for Accessibility -->
+  <a href="#main-content" class="skip-nav" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:100;" onfocus="this.style.left='0';this.style.width='auto';this.style.height='auto';">Skip to main content</a>
     <!-- Floating Navigation -->
     <nav id="site-header" class="floating-nav">
-      <div class="nav-container">
+  <div class="nav-container" role="navigation" aria-label="Main Navigation">
         <a href="home.html" class="brand" data-animate="slide-right">
           <picture>
             <source srcset="img/no bg logos/logomarknobg.webp" type="image/webp">
-            <img src="img/no bg logos/logomarknobg.png" alt="Infinite Pixels Logo" class="brand-logo-img" width="48" height="48" loading="lazy" />
+            <img src="img/no bg logos/logomarknobg.png" alt="Infinite Pixels Logo - Home" class="brand-logo-img" width="48" height="48" loading="lazy" />
           </picture>
           <span class="brand-divider"></span>
           <span class="brand-tagline">Digital Solutions</span>
         </a>
         <div class="nav-menu" id="navMenu">
-          <a href="home.html" class="nav-link active">
+          <a href="home.html" class="nav-link active" aria-current="page">
             <span class="link-text">Home</span>
           </a>
           <a href="about.html" class="nav-link">
@@ -88,7 +90,7 @@
           </a>
         </div>
         <div class="nav-actions">
-          <a href="#contact" class="nav-cta">
+          <a href="#contact" class="nav-cta" role="button">
             <span>Get Started</span>
             <svg
               width="16"
@@ -107,6 +109,8 @@
             id="themeToggle"
             type="button"
             aria-label="Toggle theme"
+            role="switch"
+            aria-checked="false"
           >
             <span id="themeToggleIcon" aria-hidden="true">
               <svg
@@ -128,6 +132,7 @@
             aria-label="Toggle navigation"
             aria-expanded="false"
             aria-controls="navMenu"
+            role="button"
           >
             <span class="menu-line"></span>
             <span class="menu-line"></span>
@@ -287,8 +292,9 @@
     </div>
 
     <main class="main-content">
-      <!-- Hero Section - Modern Professional Design -->
-      <section class="hero-section" id="hero">
+  <!-- Hero Section - Modern Professional Design -->
+  <main id="main-content">
+  <section class="hero-section" id="hero">
         <div class="container">
           <div class="hero-container">
             <!-- Main Content -->

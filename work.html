@@ -65,19 +65,21 @@
 		</script>
 	</head>
 	<body>
+		<!-- Skip Navigation for Accessibility -->
+		<a href="#main-content" class="skip-nav" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:100;" onfocus="this.style.left='0';this.style.width='auto';this.style.height='auto';">Skip to main content</a>
 		<!-- Floating Navigation -->
 		<nav id="site-header" class="floating-nav">
-			<div class="nav-container">
+			<div class="nav-container" role="navigation" aria-label="Main Navigation">
 				<a href="home.html" class="brand" data-animate="slide-right">
 					<img
 						src="img/no bg logos/logomarknobg.png"
-						alt="Infinite Pixels Logo"
+						alt="Infinite Pixels Logo - Home"
 						class="brand-logo-img" />
 					<span class="brand-divider"></span>
 					<span class="brand-tagline">Digital Solutions</span>
 				</a>
 				<div class="nav-menu" id="navMenu">
-					<a href="home.html" class="nav-link">
+					<a href="home.html" class="nav-link" aria-current="page">
 						<span class="link-text">Home</span>
 					</a>
 					<a href="about.html" class="nav-link">
@@ -94,7 +96,7 @@
 					</a>
 				</div>
 				<div class="nav-actions">
-					<a href="home.html#contact" class="nav-cta">
+					<a href="home.html#contact" class="nav-cta" role="button">
 						<span>Get Started</span>
 						<svg
 							width="16"
@@ -111,7 +113,9 @@
 						class="theme-toggle"
 						id="themeToggle"
 						type="button"
-						aria-label="Toggle theme">
+						aria-label="Toggle theme"
+						role="switch"
+						aria-checked="false">
 						<span id="themeToggleIcon" aria-hidden="true">
 							<svg
 								width="20"
@@ -130,7 +134,8 @@
 						type="button"
 						aria-label="Toggle navigation"
 						aria-expanded="false"
-						aria-controls="navMenu">
+						aria-controls="navMenu"
+						role="button">
 						<span class="menu-line"></span>
 						<span class="menu-line"></span>
 						<span class="menu-line"></span>
@@ -266,6 +271,7 @@
 
 		<main class="main-content">
 			<!-- Work Hero Section -->
+			<main id="main-content">
 			<section class="page-hero work-hero" id="hero">
 				<div class="container">
 					<div class="hero-badge" data-animate="fade-up">
