@@ -61,14 +61,14 @@
   <body>
   <!-- Static image fallback for mobile, video for desktop -->
   <picture id="bg-static-image" class="bg-image">
-    <source srcset="img/bg-light.webp" type="image/webp" media="(prefers-color-scheme: light)">
-    <source srcset="img/bg-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
-    <img src="img/bg-light.jpg" alt="Background" style="width:100vw;height:100vh;object-fit:cover;position:fixed;top:0;left:0;z-index:-2;" />
+    <source srcset="vid/bg-light.webp" type="image/webp" media="(prefers-color-scheme: light)">
+    <source srcset="vid/bg-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+    <img src="vid/bg-light.jpg" alt="Background" style="width:100vw;height:100vh;object-fit:cover;position:fixed;top:0;left:0;z-index:-2;" />
   </picture>
-  <video id="bg-video-light" class="bg-video" autoplay loop muted playsinline poster="img/bg-light.jpg" preload="none" style="display:none;">
+  <video id="bg-video-light" class="bg-video" autoplay loop muted playsinline poster="vid/bg-light.jpg" preload="none" style="display:none;">
     <source src="vid/light mode bg - Made with Clipchamp.mp4" type="video/mp4">
   </video>
-  <video id="bg-video-dark" class="bg-video" autoplay loop muted playsinline poster="img/bg-dark.jpg" preload="none" style="display:none;">
+  <video id="bg-video-dark" class="bg-video" autoplay loop muted playsinline poster="vid/bg-dark.jpg" preload="none" style="display:none;">
     <source src="vid/dark mode bg - Made with Clipchamp.mp4" type="video/mp4">
   </video>
   <!-- Skip Navigation for Accessibility -->
