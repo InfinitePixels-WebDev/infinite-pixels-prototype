@@ -59,11 +59,16 @@
       </script>
   </head>
   <body>
-  <!-- Video Backgrounds for Light/Dark Mode -->
-  <video id="bg-video-light" class="bg-video" autoplay loop muted playsinline poster="" preload="auto">
+  <!-- Static image fallback for mobile, video for desktop -->
+  <picture id="bg-static-image" class="bg-image">
+    <source srcset="img/bg-light.webp" type="image/webp" media="(prefers-color-scheme: light)">
+    <source srcset="img/bg-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+    <img src="img/bg-light.jpg" alt="Background" style="width:100vw;height:100vh;object-fit:cover;position:fixed;top:0;left:0;z-index:-2;" />
+  </picture>
+  <video id="bg-video-light" class="bg-video" autoplay loop muted playsinline poster="img/bg-light.jpg" preload="none" style="display:none;">
     <source src="vid/light mode bg - Made with Clipchamp.mp4" type="video/mp4">
   </video>
-  <video id="bg-video-dark" class="bg-video" autoplay loop muted playsinline poster="" preload="auto">
+  <video id="bg-video-dark" class="bg-video" autoplay loop muted playsinline poster="img/bg-dark.jpg" preload="none" style="display:none;">
     <source src="vid/dark mode bg - Made with Clipchamp.mp4" type="video/mp4">
   </video>
   <!-- Skip Navigation for Accessibility -->
@@ -1148,6 +1153,26 @@
     </footer>
 
     <script src="logic.js" defer></script>
+    <script>
+      // Lazy-load video backgrounds only on desktop
+      function enableBgVideoIfDesktop() {
+        var isDesktop = window.matchMedia('(min-width: 768px)').matches;
+        var lightVid = document.getElementById('bg-video-light');
+        var darkVid = document.getElementById('bg-video-dark');
+        var staticImg = document.getElementById('bg-static-image');
+        if (isDesktop) {
+          if (lightVid) { lightVid.style.display = ''; lightVid.preload = 'auto'; }
+          if (darkVid) { darkVid.style.display = ''; darkVid.preload = 'auto'; }
+          if (staticImg) staticImg.style.display = 'none';
+        } else {
+          if (lightVid) { lightVid.style.display = 'none'; lightVid.preload = 'none'; }
+          if (darkVid) { darkVid.style.display = 'none'; darkVid.preload = 'none'; }
+          if (staticImg) staticImg.style.display = '';
+        }
+      }
+      window.addEventListener('DOMContentLoaded', enableBgVideoIfDesktop);
+      window.addEventListener('resize', enableBgVideoIfDesktop);
+    </script>
     <!-- <script src="js/Aurora.js"></script> -->
 
   </body>
