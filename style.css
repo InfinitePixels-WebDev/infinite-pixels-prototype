@@ -11,6 +11,18 @@
 	transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 	opacity: 0;
 }
+
+/* Strong override: center the home hero label using high-specificity + !important
+   placed at the end to beat other iPad rules if needed. */
+@media (min-width: 820px) and (max-width: 1180px) {
+	section#hero .hero-container .hero-content .hero-label {
+		margin: 0 auto !important;
+		align-self: center !important;
+		justify-content: center !important;
+		text-align: center !important;
+		display: inline-flex !important;
+	}
+}
 /* Accessibility & performance: reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
 	*,
@@ -35,6 +47,199 @@
 		max-width: 100%;
 		padding: 0;
 		margin: 0 auto;
+	}
+}
+
+/* Home hero label centering for iPad sizes */
+@media (min-width: 820px) and (max-width: 1180px) {
+	#hero .hero-label {
+		display: inline-flex; /* keep badge layout */
+		margin-left: auto;
+		margin-right: auto;
+		align-self: center;
+		justify-content: center;
+	}
+}
+
+/* Home-specific: force every element in the home hero to center exactly
+   (targets .hero-container children so that items like hero-label, title,
+   subtitle, ctas, and the visual grid are all centered). More specific
+   selector to override other page-specific rules. */
+@media (min-width: 820px) and (max-width: 1180px) {
+	#hero .hero-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	/* Ensure each logical hero block centers its content */
+	#hero .hero-container > .hero-content,
+	#hero .hero-container > .hero-visual {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	/* Make sure individual inline elements inside hero-content center */
+	#hero .hero-content > * {
+		margin-left: 0;
+		margin-right: 0;
+		align-self: center;
+	}
+
+	/* Ensure visual-grid items stack and center neatly */
+	#hero .hero-visual .visual-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+		justify-items: center;
+		align-items: start;
+	}
+
+	/* Simplify visuals so they don't exceed container width */
+	#hero .hero-visual .visual-card {
+		width: 100%;
+		max-width: 340px;
+		margin: 0 auto;
+	}
+}
+/* Ensure hero content is centered on iPad and similar devices */
+@media (min-width: 820px) and (max-width: 1180px) {
+	.hero-section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 3.5rem 0; /* provide vertical space */
+	}
+
+	.hero-section .container {
+		width: 100%;
+		max-width: 900px;
+		padding-left: 24px;
+		padding-right: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.hero-container {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.hero-visual {
+		margin: 0 auto;
+		max-width: 520px;
+	}
+
+	.hero-content {
+		max-width: 720px;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+/* Authoritative centering for home and page-hero sections on iPad sizes.
+   This block aims to eliminate subtle offsets caused by padding/margins
+   or nested grid/flex rules. Uses explicit centering on direct children. */
+@media (min-width: 820px) and (max-width: 1180px) {
+	/* Force the hero wrapper to be a centered flex column */
+	section#hero,
+	section#hero .container,
+	.page-hero,
+	.page-hero .container {
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: center !important;
+		justify-content: center !important;
+		text-align: center !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		width: 100% !important;
+		max-width: 980px !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	/* Ensure the main two-column hero layout collapses and centers */
+	section#hero .hero-container,
+	.page-hero .hero-container {
+		display: flex !important;
+		flex-direction: column !important;
+		gap: 1.25rem !important;
+		align-items: center !important;
+		justify-content: center !important;
+		width: 100% !important;
+	}
+
+	/* Center every child element inside hero-content */
+	section#hero .hero-content > *,
+	.page-hero .hero-content > * {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		align-self: center !important;
+		text-align: center !important;
+	}
+
+	/* Center CTA groups and ensure they are horizontally centered */
+	section#hero .hero-ctas,
+	.page-hero .hero-ctas {
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		flex-wrap: wrap !important;
+		gap: 1rem !important;
+		margin: 0 auto !important;
+	}
+
+	/* Visuals: keep centered and constrained */
+	section#hero .hero-visual,
+	.page-hero .hero-visual {
+		margin: 0 auto !important;
+		width: 100% !important;
+		max-width: 560px !important;
+	}
+}
+
+/* Center page hero sections (about, services, process, work) on iPad sizes */
+@media (min-width: 820px) and (max-width: 1180px) {
+	.page-hero,
+	.page-hero .container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+
+	.page-hero {
+		padding: 3.5rem 0;
+		text-align: center;
+	}
+
+	.page-hero .hero-content {
+		max-width: 820px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.page-hero .hero-visual,
+	.page-hero .hero-features,
+	.page-hero .hero-categories {
+		margin: 0 auto;
+		max-width: 560px;
 	}
 }
 /* iPad Pro & iPad Air fix for About page */
@@ -937,7 +1142,7 @@ h4 {
    =================================== */
 
 .hero-section {
-	min-height: 100vh;
+	min-height: 85vh;
 	max-height: 100vh;
 	display: flex;
 	align-items: center;
@@ -945,7 +1150,6 @@ h4 {
 	position: relative;
 	overflow: hidden;
 	padding: 0;
-	padding-top: 80px;
 }
 
 /* Hero Container - Split Layout */
@@ -964,7 +1168,7 @@ h4 {
 .hero-content {
 	display: flex;
 	flex-direction: column;
-	gap: 1.25rem;
+	gap: 1rem;
 	max-height: 80vh;
 	justify-content: center;
 }
@@ -2835,6 +3039,8 @@ body:not(.dark) .footer {
 
 	.nav-container {
 		justify-content: center;
+		/* vertically center items (logo, nav actions) on mobile */
+		align-items: center;
 	}
 
 	.nav-menu {
@@ -2845,10 +3051,49 @@ body:not(.dark) .footer {
 	.nav-actions {
 		position: absolute;
 		right: 0;
+		/* stretch to the full height of the header and center children vertically */
+		top: 0;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding-right: 8px;
 	}
 
+	/* ensure the hamburger is vertically centered and fills the action area */
 	.menu-toggle {
-		display: flex;
+		height: 100%;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 8px;
+	}
+
+	/* normalize height/alignment of action controls so they share the same baseline
+	   NOTE: do NOT force display for .nav-cta here — its visibility is controlled
+	   by separate media queries (e.g., hidden at <=1024px). */
+	.nav-actions > .theme-toggle,
+	.nav-actions > .menu-toggle {
+		height: 100%;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		/* Hide CTA on small phones to keep header compact */
+		.nav-actions > .nav-cta {
+			display: none !important;
+		}
+		background: transparent; /* keep existing styles but ensure consistent box sizing */
+		border-radius: 8px;
+	}
+
+	/* Keep sizing/alignment for the CTA when it's visible, but don't force display */
+	.nav-actions > .nav-cta {
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		padding: 0 8px;
+		background: transparent;
+		border-radius: 8px;
 	}
 
 	/* Legacy dropdown kept as fallback, but we'll use .mobile-nav-overlay instead */
@@ -5223,3 +5468,62 @@ body:not(.dark) .footer {
 }
 
 /* Home › Recent Projects (specific cards): fill the frame and keep subject in view */
+
+/*
+  iPad-range centering override
+  Ensures hero sections (.hero-section and .page-hero) are centered both
+  vertically and horizontally for iPad / iPad Air / iPad Pro sizes.
+  This block is intentionally placed near the end of the stylesheet to
+  avoid being overridden by earlier rules.
+*/
+@media (min-width: 820px) and (max-width: 1180px) {
+	/* Make the hero containers center their children */
+	.hero-section,
+	.page-hero {
+		display: flex;
+		flex-direction: column;
+		align-items: center; /* horizontal centering */
+		justify-content: center; /* vertical centering */
+		text-align: center;
+		padding-top: 0; /* neutralize large top paddings from other rules */
+		padding-bottom: 0;
+		min-height: 60vh; /* ensure there's vertical space to center within */
+	}
+
+	/* Ensure internal containers don't push content off-center */
+	.hero-section .container,
+	.page-hero .container,
+	.hero-section .hero-content,
+	.page-hero .hero-content {
+		width: 100%;
+		max-width: 980px;
+		margin: 0 auto;
+	}
+
+	/* Center CTA buttons and supporting hero items */
+	.hero-section .hero-ctas,
+	.page-hero .hero-ctas {
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	/* Make sure hero visuals (images/video) are centered and don't float */
+	.hero-section .hero-visual,
+	.page-hero .hero-visual {
+		margin: 1.5rem auto 0;
+		max-width: 100%;
+		width: auto;
+	}
+	/* Absolute-center fallback: place the hero container in the center
+	   of the viewport to avoid small left offsets introduced by
+	   padding or nested containers. This applies only at iPad sizes. */
+	section#hero .container,
+	.page-hero .container {
+		position: relative !important;
+		left: 50% !important;
+		transform: translateX(-50%) !important;
+		max-width: 980px !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}

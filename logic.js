@@ -255,6 +255,21 @@ if (prefersReducedMotion.matches) {
 	animatedElements.forEach((el) => el.classList.add("is-visible"));
 }
 
+// Make hero-area animations visible immediately on load (CTAs, title, subtitle)
+// so the two hero buttons fade in with the rest of the hero content without needing to scroll.
+document.addEventListener("DOMContentLoaded", function () {
+	try {
+		if (prefersReducedMotion.matches) return; // respect user setting
+		const heroAnimated = document.querySelectorAll(
+			".hero-section [data-animate]"
+		);
+		heroAnimated.forEach((el) => el.classList.add("is-visible"));
+	} catch (e) {
+		// silent fail — non-critical
+		console.error("Hero immediate animation init failed", e);
+	}
+});
+
 // Handle reduced motion preference changes
 prefersReducedMotion.addEventListener("change", (event) => {
 	if (event.matches) {
