@@ -1,3 +1,37 @@
+// Video background switching for light/dark mode
+function isDarkMode() {
+	return (
+		document.body.classList.contains("dark") ||
+		document.body.classList.contains("dark-mode") ||
+		document.body.getAttribute("data-theme") === "dark" ||
+		document.documentElement.classList.contains("dark")
+	);
+}
+function updateBgVideos() {
+	const light = document.getElementById("bg-video-light");
+	const dark = document.getElementById("bg-video-dark");
+	if (!light || !dark) return;
+	if (isDarkMode()) {
+		light.style.opacity = 0;
+		dark.style.opacity = 1;
+	} else {
+		light.style.opacity = 1;
+		dark.style.opacity = 0;
+	}
+}
+window.addEventListener("DOMContentLoaded", updateBgVideos);
+const observer = new MutationObserver(updateBgVideos);
+observer.observe(document.body, {
+	attributes: true,
+	attributeFilter: ["class", "data-theme"],
+});
+observer.observe(document.documentElement, {
+	attributes: true,
+	attributeFilter: ["class"],
+});
+document
+	.getElementById("themeToggle")
+	?.addEventListener("click", () => setTimeout(updateBgVideos, 100));
 // Modern Infinite Pixels JavaScript
 
 // DOM Elements

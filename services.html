@@ -67,10 +67,10 @@
 		</script>
 	</head>
 	<body>
-	<video id="bg-video-light" class="bg-video" autoplay loop muted playsinline poster="">
+	<video id="bg-video-light" class="bg-video" autoplay loop muted playsinline poster="" preload="auto">
 		<source src="vid/light mode bg - Made with Clipchamp.mp4" type="video/mp4">
 	</video>
-	<video id="bg-video-dark" class="bg-video" autoplay loop muted playsinline poster="">
+	<video id="bg-video-dark" class="bg-video" autoplay loop muted playsinline poster="" preload="auto">
 		<source src="vid/dark mode bg - Made with Clipchamp.mp4" type="video/mp4">
 	</video>
 		<!-- Skip Navigation for Accessibility -->
@@ -1114,29 +1114,4 @@
 		<!-- <script src="js/Aurora.js"></script> -->
 		<script src="js/faq-typewriter.js"></script>
 	</body>
-	<script>
-		function isDarkMode() {
-			return document.body.classList.contains('dark') ||
-				document.body.classList.contains('dark-mode') ||
-				document.body.getAttribute('data-theme') === 'dark' ||
-				document.documentElement.classList.contains('dark');
-		}
-		function updateBgVideos() {
-			const light = document.getElementById('bg-video-light');
-			const dark = document.getElementById('bg-video-dark');
-			if (!light || !dark) return;
-			if (isDarkMode()) {
-				light.style.opacity = 0;
-				dark.style.opacity = 1;
-			} else {
-				light.style.opacity = 1;
-				dark.style.opacity = 0;
-			}
-		}
-		updateBgVideos();
-		const observer = new MutationObserver(updateBgVideos);
-		observer.observe(document.body, { attributes: true, attributeFilter: ['class', 'data-theme'] });
-		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-		document.getElementById('themeToggle')?.addEventListener('click', () => setTimeout(updateBgVideos, 100));
-	</script>
 </html>
