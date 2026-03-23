@@ -228,7 +228,10 @@
 	box-shadow: 0 12px 36px rgba(82, 39, 255, 0.22);
 	transform: scale(1.03);
 	border-color: rgba(255, 255, 255, 0.08);
-	transition: background 0.22s ease, transform 0.18s ease, box-shadow 0.22s ease;
+	transition:
+		background 0.22s ease,
+		transform 0.18s ease,
+		box-shadow 0.22s ease;
 	pointer-events: auto;
 	z-index: 60;
 }
@@ -260,7 +263,10 @@
 	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 	transform: none;
 	border: 1px solid rgba(255, 255, 255, 0.2);
-	transition: background 0.22s ease, transform 0.18s ease, box-shadow 0.22s ease;
+	transition:
+		background 0.22s ease,
+		transform 0.18s ease,
+		box-shadow 0.22s ease;
 }
 
 .sm-toggle:focus-visible {
@@ -349,7 +355,7 @@
 /* When the menu is open, make sure the panel sits above the header glass background
    but still below the interactive toggles (which use a higher z-index). */
 .staggered-menu-wrapper[data-open] .staggered-menu-panel {
-    z-index: 50;
+	z-index: 50;
 }
 
 /* keep the nav actions and toggles visually above the opened menu panel */
@@ -370,7 +376,11 @@
 /* when the site is in dark mode, force prelayer colors to a darker palette */
 .dark-mode .sm-prelayer,
 .dark .sm-prelayer {
-	background: linear-gradient(180deg, rgba(28,28,32,0.96), rgba(12,12,12,0.98)) !important;
+	background: linear-gradient(
+		180deg,
+		rgba(28, 28, 32, 0.96),
+		rgba(12, 12, 12, 0.98)
+	) !important;
 }
 
 /* slightly tint the prelayers with the accent color for subtle depth */
@@ -379,7 +389,7 @@
 	content: "";
 	position: absolute;
 	inset: 0;
-	background: linear-gradient(120deg, rgba(82,39,255,0.06), transparent 40%);
+	background: linear-gradient(120deg, rgba(82, 39, 255, 0.06), transparent 40%);
 	pointer-events: none;
 }
 
