@@ -6,6 +6,28 @@
 	pointer-events: none;
 }
 
+/* Strong mobile override: place logo on the left (full size) and avoid overlap with actions */
+@media (max-width: 640px) {
+	.staggered-menu-header .sm-logo {
+		left: 1rem !important;
+		transform: translate(0, -50%) scale(1) !important;
+		max-width: calc(100% - var(--sm-actions-space, 120px) - 2rem);
+		z-index: 80;
+	}
+
+	/* ensure scrolled state still moves left but keeps clear spacing */
+	.staggered-menu-header.scrolled .sm-logo {
+		left: 0.6rem !important;
+		transform: translate(0, -50%) scale(0.78) !important;
+		z-index: 40;
+	}
+
+	/* keep logo image readable size */
+	.staggered-menu-header .sm-logo-img {
+		height: 40px;
+	}
+}
+
 .staggered-menu-wrapper.fixed-wrapper {
 	position: fixed;
 	top: 0;
@@ -24,6 +46,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	/* reserve room at the right for action buttons to avoid overlap with centered logo */
+	--sm-actions-space: 160px;
 	padding: 2em;
 	background: transparent;
 	pointer-events: none;
@@ -82,7 +106,8 @@
 		top 0.35s ease,
 		background 0.35s ease;
 	animation: none;
-	z-index: 30;
+	z-index: 80; /* keep logo above actions before scroll */
+	max-width: calc(100% - var(--sm-actions-space) - 2rem);
 }
 
 .staggered-menu-header.scrolled .sm-logo {
@@ -91,6 +116,7 @@
 	left: 1rem;
 	top: 50%;
 	transform: translate(0, -50%) scale(0.85);
+	z-index: 40; /* allow action buttons to sit above when scrolled */
 }
 
 .staggered-menu-header.scrolled.dark-mode .sm-logo,
@@ -146,6 +172,15 @@
 	align-items: center;
 	gap: 0.5rem;
 	margin-left: auto;
+}
+
+/* ensure the actions area defines its own width so header reserve space works */
+.sm-nav-actions {
+	--sm-actions-width: 140px;
+	min-width: var(--sm-actions-width);
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
 }
 
 /* ensure nav actions and toggles sit above the menu panel (z > 50) */
@@ -576,6 +611,28 @@
 		right: 0;
 	}
 
+	/* Distribute menu items vertically so the menu panel doesn't feel empty */
+	.sm-panel-inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: calc(100vh - 6rem);
+	}
+
+	.sm-panel-list {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		flex: none;
+		padding-top: 0.5rem;
+	}
+
+	/* keep socials pinned to the bottom with some breathing room */
+	.sm-socials {
+		margin-top: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
+
 	.staggered-menu-wrapper[data-open] .sm-logo-img {
 		filter: invert(100%);
 	}
@@ -600,6 +657,47 @@
 	.dark-mode .staggered-menu-wrapper[data-open] .sm-logo-img,
 	.dark .staggered-menu-wrapper[data-open] .sm-logo-img {
 		filter: none;
+
+		/* Mobile tweaks: reduce header padding and tighten spacing between logo and actions */
+		.staggered-menu-header {
+			padding: 1rem 0.9rem;
+		}
+
+		/* Slightly smaller centered logo on phones so it doesn't collide with actions */
+		.staggered-menu-header .sm-logo {
+			transform: translate(-50%, -50%) scale(1.05);
+		}
+
+		.sm-logo-img {
+			height: 40px;
+		}
+
+		.staggered-menu-header.scrolled .sm-logo-img {
+			height: 32px;
+		}
+
+		/* Tighten action spacing and reduce button sizes on small screens */
+		.sm-nav-actions {
+			gap: 0.35rem;
+			margin-left: auto;
+			padding-right: 0.25rem;
+		}
+
+		.sm-theme-toggle {
+			width: 36px;
+			height: 36px;
+		}
+
+		.sm-toggle {
+			padding: 10px 12px;
+			font-size: 13px;
+		}
+
+		/* When scrolled on mobile, move logo slightly more left to avoid overlap */
+		.staggered-menu-header.scrolled .sm-logo {
+			left: 0.75rem;
+			transform: translate(0, -50%) scale(0.8);
+		}
 	}
 
 	.sm-panel-item {
@@ -612,5 +710,21 @@
 
 	.staggered-menu-panel {
 		padding: 5em 1.5em 1.5em 1.5em;
+	}
+}
+
+/* Fix numbering overlap on small screens */
+@media (max-width: 640px) {
+	.sm-panel-list[data-numbering] .sm-panel-item::after {
+		right: 1rem;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 14px;
+		line-height: 1;
+		opacity: 1; /* ensure visible but not overlapping */
+	}
+
+	.sm-panel-item {
+		padding-right: 3.6rem; /* reserve space for the number */
 	}
 }
