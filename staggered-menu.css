@@ -1,0 +1,606 @@
+.staggered-menu-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 40;
+	pointer-events: none;
+}
+
+.staggered-menu-wrapper.fixed-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 40;
+	overflow: hidden;
+}
+
+.staggered-menu-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2em;
+	background: transparent;
+	pointer-events: none;
+	z-index: 20;
+	transition: background 0.4s ease;
+}
+
+.staggered-menu-header > * {
+	pointer-events: auto;
+}
+
+.sm-logo {
+	display: flex;
+	align-items: center;
+	user-select: none;
+	transition: all 0.3s ease;
+	position: relative;
+	padding: 0.5rem;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(1.5);
+	z-index: 30;
+	animation: logoEntrance 2.5s ease-out forwards;
+}
+
+@keyframes logoEntrance {
+	0% {
+		transform: translate(-50%, -50%) scale(1.5);
+		opacity: 0;
+	}
+	30% {
+		transform: translate(-50%, -50%) scale(1.8);
+		opacity: 1;
+	}
+	60% {
+		transform: translate(-50%, -50%) scale(1.2);
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+		position: static;
+		top: auto;
+		left: auto;
+	}
+}
+
+.staggered-menu-header .sm-logo {
+	/* center the logo within the header by default */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(1.35);
+	transition:
+		transform 0.35s ease,
+		left 0.35s ease,
+		top 0.35s ease,
+		background 0.35s ease;
+	animation: none;
+	z-index: 30;
+}
+
+.staggered-menu-header.scrolled .sm-logo {
+	/* slide the logo to the left corner and shrink slightly when scrolled */
+	position: absolute;
+	left: 1rem;
+	top: 50%;
+	transform: translate(0, -50%) scale(0.85);
+}
+
+.staggered-menu-header.scrolled.dark-mode .sm-logo,
+.staggered-menu-header.scrolled.dark .sm-logo {
+	background: rgba(25, 25, 25, 0.6);
+}
+
+/* glassmorphic rounded header when scrolled */
+.staggered-menu-header.scrolled {
+	left: 1rem;
+	right: 1rem;
+	width: calc(100% - 2rem);
+	top: 0.6rem;
+	padding: 0.8rem 1.25rem;
+	background: rgba(255, 255, 255, 0.06);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border-radius: 50px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+	transition:
+		background 0.35s ease,
+		box-shadow 0.35s ease,
+		left 0.35s ease,
+		width 0.35s ease,
+		top 0.35s ease,
+		padding 0.35s ease;
+	pointer-events: auto;
+}
+
+.dark-mode .staggered-menu-header.scrolled,
+.dark .staggered-menu-header.scrolled {
+	background: rgba(18, 18, 18, 0.5);
+	border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.sm-logo-img {
+	display: block;
+	height: 48px;
+	width: auto;
+	object-fit: contain;
+	transition:
+		height 0.35s ease,
+		width 0.35s ease,
+		transform 0.35s ease;
+}
+
+.staggered-menu-header.scrolled .sm-logo-img {
+	height: 36px;
+}
+
+.sm-nav-actions {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-left: auto;
+}
+
+/* ensure nav actions and toggles sit above the menu panel (z > 50) */
+.sm-nav-actions,
+.sm-toggle,
+.sm-theme-toggle {
+	position: relative;
+	z-index: 60;
+}
+
+.sm-theme-toggle {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	cursor: pointer;
+	color: #e9e9ef;
+	transition: all 0.2s ease;
+}
+
+.sm-theme-toggle:hover {
+	background: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+	transform: scale(1.05);
+}
+
+.sm-theme-toggle:focus-visible {
+	outline: 2px solid #ffffffaa;
+	outline-offset: 2px;
+}
+
+.dark-mode .sm-theme-toggle,
+.dark .sm-theme-toggle {
+	background: rgba(25, 25, 25, 0.6);
+}
+
+.dark-mode .sm-theme-toggle:hover,
+.dark .sm-theme-toggle:hover {
+	background: rgba(35, 35, 35, 0.8);
+}
+
+.sm-toggle {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.3rem;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border: none;
+	border-radius: 12px;
+	cursor: pointer;
+	color: #e9e9ef;
+	font-weight: 500;
+	line-height: 1;
+	overflow: visible;
+	font-size: 14px;
+	font-family: "Inter", sans-serif;
+	padding: 12px 16px;
+	transition: all 0.2s ease;
+}
+
+.sm-toggle:hover {
+	background: rgba(255, 255, 255, 0.2);
+	transform: scale(1.05);
+}
+
+/* When the staggered menu is open, make the menu and theme toggles strongly contrasted and visible */
+.staggered-menu-wrapper[data-open] .sm-toggle,
+.staggered-menu-wrapper[data-open] .sm-theme-toggle {
+	background: var(--sm-accent, #5227ff);
+	color: #fff;
+	box-shadow: 0 12px 36px rgba(82, 39, 255, 0.22);
+	transform: scale(1.03);
+	border-color: rgba(255, 255, 255, 0.08);
+	transition: background 0.22s ease, transform 0.18s ease, box-shadow 0.22s ease;
+	pointer-events: auto;
+	z-index: 60;
+}
+
+.staggered-menu-wrapper[data-open] .sm-toggle:hover,
+.staggered-menu-wrapper[data-open] .sm-theme-toggle:hover {
+	transform: scale(1.08);
+	box-shadow: 0 18px 48px rgba(82, 39, 255, 0.28);
+}
+
+/* Dark mode variant while open */
+.dark-mode .staggered-menu-wrapper[data-open] .sm-toggle,
+.dark-mode .staggered-menu-wrapper[data-open] .sm-theme-toggle,
+.dark .staggered-menu-wrapper[data-open] .sm-toggle,
+.dark .staggered-menu-wrapper[data-open] .sm-theme-toggle {
+	background: var(--sm-accent, #5227ff);
+	color: #fff;
+	border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* ensure default (non-open) state is neutral: prevents accidental accenting */
+.staggered-menu-wrapper:not([data-open]) .sm-toggle,
+.staggered-menu-wrapper:not([data-open]) .sm-theme-toggle {
+	/* restore original glassmorphic look when menu is closed */
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	color: #e9e9ef;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	transform: none;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	transition: background 0.22s ease, transform 0.18s ease, box-shadow 0.22s ease;
+}
+
+.sm-toggle:focus-visible {
+	outline: 2px solid #ffffffaa;
+	outline-offset: 2px;
+	border-radius: 4px;
+}
+
+.dark-mode .sm-toggle,
+.dark .sm-toggle {
+	background: rgba(25, 25, 25, 0.6);
+	color: #f0f0f0;
+}
+
+.dark-mode .sm-toggle:hover,
+.dark .sm-toggle:hover {
+	background: rgba(35, 35, 35, 0.8);
+}
+
+.sm-toggle-textWrap {
+	position: relative;
+	display: inline-block;
+	height: 1em;
+	overflow: hidden;
+	white-space: nowrap;
+	width: var(--sm-toggle-width, auto);
+	min-width: var(--sm-toggle-width, auto);
+}
+
+.sm-toggle-textInner {
+	display: flex;
+	flex-direction: column;
+	line-height: 1;
+}
+
+.sm-toggle-line {
+	display: block;
+	height: 1em;
+	line-height: 1;
+}
+
+.sm-icon {
+	position: relative;
+	width: 14px;
+	height: 14px;
+	flex: 0 0 14px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	will-change: transform;
+}
+
+.sm-icon-line {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 100%;
+	height: 2px;
+	background: currentColor;
+	border-radius: 2px;
+	transform: translate(-50%, -50%);
+	will-change: transform;
+}
+
+.sm-icon-line-v {
+	transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.staggered-menu-panel {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: clamp(260px, 38vw, 420px);
+	height: 100%;
+	background: white;
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	display: flex;
+	flex-direction: column;
+	padding: 6em 2em 2em 2em;
+	overflow-y: auto;
+	z-index: 10;
+	pointer-events: auto;
+}
+
+/* When the menu is open, make sure the panel sits above the header glass background
+   but still below the interactive toggles (which use a higher z-index). */
+.staggered-menu-wrapper[data-open] .staggered-menu-panel {
+    z-index: 50;
+}
+
+/* keep the nav actions and toggles visually above the opened menu panel */
+.staggered-menu-wrapper[data-open] .sm-nav-actions,
+.staggered-menu-wrapper[data-open] .sm-toggle,
+.staggered-menu-wrapper[data-open] .sm-theme-toggle {
+	position: relative;
+	z-index: 9999;
+}
+
+.dark-mode .staggered-menu-panel,
+.dark .staggered-menu-panel {
+	background: rgba(12, 12, 12, 0.98);
+	color: #f5f5f5;
+	border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* when the site is in dark mode, force prelayer colors to a darker palette */
+.dark-mode .sm-prelayer,
+.dark .sm-prelayer {
+	background: linear-gradient(180deg, rgba(28,28,32,0.96), rgba(12,12,12,0.98)) !important;
+}
+
+/* slightly tint the prelayers with the accent color for subtle depth */
+.dark-mode .sm-prelayer::after,
+.dark .sm-prelayer::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(120deg, rgba(82,39,255,0.06), transparent 40%);
+	pointer-events: none;
+}
+
+[data-position="left"] .staggered-menu-panel {
+	right: auto;
+	left: 0;
+}
+
+.sm-prelayers {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: clamp(260px, 38vw, 420px);
+	pointer-events: none;
+	z-index: 5;
+}
+
+[data-position="left"] .sm-prelayers {
+	right: auto;
+	left: 0;
+}
+
+.sm-prelayer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	transform: translateX(0);
+}
+
+.sm-panel-inner {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.sm-socials {
+	margin-top: auto;
+	padding-top: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.sm-socials-title {
+	margin: 0;
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--sm-accent, #5227ff);
+}
+
+.sm-socials-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.sm-socials-list .sm-socials-link {
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+
+.sm-socials-list:hover .sm-socials-link {
+	opacity: 0.35;
+}
+
+.sm-socials-list:hover .sm-socials-link:hover {
+	opacity: 1;
+}
+
+.sm-socials-link:focus-visible {
+	outline: 2px solid var(--sm-accent, #5227ff);
+	outline-offset: 3px;
+}
+
+.sm-socials-list:focus-within .sm-socials-link {
+	opacity: 0.35;
+}
+
+.sm-socials-list:focus-within .sm-socials-link:focus-visible {
+	opacity: 1;
+}
+
+.sm-socials-link {
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: inherit;
+	text-decoration: none;
+	position: relative;
+	padding: 2px 0;
+	display: inline-block;
+}
+
+.dark-mode .sm-socials-link,
+.dark .sm-socials-link {
+	color: #e0e0e0;
+}
+
+.dark-mode .sm-socials-link:hover,
+.dark .sm-socials-link:hover {
+	color: var(--sm-accent, #5227ff);
+}
+
+.sm-socials-link:hover {
+	color: var(--sm-accent, #5227ff);
+}
+
+.sm-panel-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.sm-panel-item {
+	position: relative;
+	color: #000;
+	font-weight: 600;
+	font-size: 2.8rem;
+	cursor: pointer;
+	line-height: 1;
+	letter-spacing: -2px;
+	text-transform: uppercase;
+	transition: color 0.25s;
+	display: inline-block;
+	text-decoration: none;
+	padding-right: 2.2em;
+}
+
+.dark-mode .sm-panel-item,
+.dark .sm-panel-item {
+	color: #f0f0f0;
+}
+
+.sm-panel-item:hover {
+	color: var(--sm-accent, #5227ff);
+}
+
+.sm-panel-itemLabel {
+	display: inline-block;
+	will-change: transform;
+	transform-origin: 50% 100%;
+}
+
+.sm-panel-list[data-numbering] {
+	counter-reset: smItem;
+}
+
+.sm-panel-list[data-numbering] .sm-panel-item::after {
+	counter-increment: smItem;
+	content: counter(smItem, decimal-leading-zero);
+	position: absolute;
+	top: 0.1em;
+	right: 3.5em;
+	font-size: 18px;
+	font-weight: 400;
+	color: var(--sm-accent, #5227ff);
+	letter-spacing: 0;
+	pointer-events: none;
+	user-select: none;
+	opacity: var(--sm-num-opacity, 0);
+}
+
+.sm-panel-itemWrap {
+	position: relative;
+	overflow: hidden;
+	line-height: 1;
+}
+
+@media (max-width: 1024px) {
+	.staggered-menu-panel {
+		width: 100%;
+		left: 0;
+		right: 0;
+	}
+
+	.staggered-menu-wrapper[data-open] .sm-logo-img {
+		filter: invert(100%);
+	}
+
+	.dark-mode .staggered-menu-wrapper[data-open] .sm-logo-img,
+	.dark .staggered-menu-wrapper[data-open] .sm-logo-img {
+		filter: none;
+	}
+}
+
+@media (max-width: 640px) {
+	.staggered-menu-panel {
+		width: 100%;
+		left: 0;
+		right: 0;
+	}
+
+	.staggered-menu-wrapper[data-open] .sm-logo-img {
+		filter: invert(100%);
+	}
+
+	.dark-mode .staggered-menu-wrapper[data-open] .sm-logo-img,
+	.dark .staggered-menu-wrapper[data-open] .sm-logo-img {
+		filter: none;
+	}
+
+	.sm-panel-item {
+		font-size: 2.5rem;
+	}
+
+	.staggered-menu-header {
+		padding: 1.5em;
+	}
+
+	.staggered-menu-panel {
+		padding: 5em 1.5em 1.5em 1.5em;
+	}
+}

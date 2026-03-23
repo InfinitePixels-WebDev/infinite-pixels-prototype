@@ -33,6 +33,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="staggered-menu.css" />
       <!-- SEO Meta Tags -->
       <meta name="description" content="Infinite Pixels is a startup digital agency delivering modern web design, branding, automation, and digital solutions for real business growth. Fast, affordable, and focused on results." />
       <meta name="keywords" content="digital agency, web design, branding, automation, social media, Infinite Pixels, startup, business growth, affordable, fast delivery" />
@@ -76,235 +77,6 @@
   </video>
   <!-- Skip Navigation for Accessibility -->
   <a href="#main-content" class="skip-nav" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:100;" onfocus="this.style.left='0';this.style.width='auto';this.style.height='auto';">Skip to main content</a>
-    <!-- Floating Navigation -->
-    <nav id="site-header" class="floating-nav">
-  <div class="nav-container" role="navigation" aria-label="Main Navigation">
-        <a href="home.html" class="brand" data-animate="slide-right">
-          <picture>
-            <source srcset="img/no bg logos/logomarknobg.webp" type="image/webp">
-            <img src="img/no bg logos/logomarknobg.png" alt="Infinite Pixels Logo - Home" class="brand-logo-img" width="48" height="48" fetchpriority="high" />
-          </picture>
-          <span class="brand-divider"></span>
-          <span class="brand-tagline">Digital Solutions</span>
-        </a>
-        <div class="nav-menu" id="navMenu">
-          <a href="home.html" class="nav-link active" aria-current="page">
-            <span class="link-text">Home</span>
-          </a>
-          <a href="about.html" class="nav-link">
-            <span class="link-text">About</span>
-          </a>
-          <a href="services.html" class="nav-link">
-            <span class="link-text">Services</span>
-          </a>
-          <a href="work.html" class="nav-link">
-            <span class="link-text">Work</span>
-          </a>
-          <a href="process.html" class="nav-link">
-            <span class="link-text">Process</span>
-          </a>
-        </div>
-        <div class="nav-actions">
-          <a href="#contact" class="nav-cta" role="button">
-            <span>Get Started</span>
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
-          <button
-            class="theme-toggle"
-            id="themeToggle"
-            type="button"
-            aria-label="Toggle theme"
-            role="switch"
-            aria-checked="false"
-          >
-            <span id="themeToggleIcon" aria-hidden="true">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-              </svg>
-            </span>
-          </button>
-          <button
-            class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="Toggle navigation"
-            aria-expanded="false"
-            aria-controls="navMenu"
-            role="button"
-          >
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-          </button>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay" aria-hidden="true">
-      <div class="mobile-nav-panel">
-        <div class="mobile-nav-handle" aria-hidden="true"></div>
-        <div class="mobile-nav-header">
-          <h3 class="mobile-nav-title">Explore</h3>
-        </div>
-        <div class="mobile-nav-featured">
-          <a class="mobile-feature-card services" href="services.html">
-            <div class="feat-icon">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"
-                />
-                <path
-                  d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"
-                />
-              </svg>
-            </div>
-            <div class="feat-title">Services</div>
-            <div class="feat-sub">Branding, web design, digital solutions</div>
-          </a>
-          <a class="mobile-feature-card work" href="work.html">
-            <div class="feat-icon">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
-                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
-                <path d="M4 22h16" />
-                <path
-                  d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"
-                />
-                <path
-                  d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"
-                />
-                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
-              </svg>
-            </div>
-            <div class="feat-title">Work</div>
-            <div class="feat-sub">Results and case studies</div>
-          </a>
-        </div>
-        <nav class="mobile-nav-list" aria-label="Mobile">
-          <a class="mobile-nav-item" href="home.html">
-            <span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <polyline points="9 22 9 12 15 12 15 22" />
-              </svg>
-            </span>
-            <span class="item-label">Home</span>
-            <span class="item-arrow">›</span>
-          </a>
-          <a class="mobile-nav-item" href="about.html">
-            <span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                />
-              </svg>
-            </span>
-            <span class="item-label">About</span>
-            <span class="item-arrow">›</span>
-          </a>
-          <a class="mobile-nav-item" href="services.html">
-            <span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <rect x="3" y="3" width="7" height="7" />
-                <rect x="14" y="3" width="7" height="7" />
-                <rect x="14" y="14" width="7" height="7" />
-                <rect x="3" y="14" width="7" height="7" />
-              </svg>
-            </span>
-            <span class="item-label">Services</span>
-            <span class="item-arrow">›</span>
-          </a>
-          <a class="mobile-nav-item" href="work.html">
-            <span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-            </span>
-            <span class="item-label">Work</span>
-            <span class="item-arrow">›</span>
-          </a>
-          <a class="mobile-nav-item" href="process.html">
-            <span class="item-icon">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"
-                />
-              </svg>
-            </span>
-            <span class="item-label">Process</span>
-            <span class="item-arrow">›</span>
-          </a>
-        </nav>
-      </div>
-    </div>
 
     <main class="main-content">
   <!-- Hero Section - Modern Professional Design -->
@@ -1201,6 +973,39 @@ So we built something different. Keep scrolling.
       </div>
     </footer>
 
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <!-- Staggered Menu Component -->
+    <script src="staggered-menu.js" defer></script>
+    <!-- Menu Initialization Script -->
+    <script defer>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialize the staggered menu
+        const menu = new StaggeredMenu({
+          position: 'right',
+          colors: ['#B19EEF', '#5227FF'],
+          items: [
+            { label: 'Home', ariaLabel: 'Go to home page', link: 'home.html' },
+            { label: 'About', ariaLabel: 'Learn about us', link: 'about.html' },
+            { label: 'Services', ariaLabel: 'View our services', link: 'services.html' },
+            { label: 'Work', ariaLabel: 'View our work', link: 'work.html' },
+            { label: 'Process', ariaLabel: 'Learn about our process', link: 'process.html' }
+          ],
+          socialItems: [
+            { label: 'Instagram', link: 'https://www.instagram.com/infinitepixels.tech/' }
+          ],
+          displaySocials: true,
+          displayItemNumbering: true,
+          logoUrl: 'img/no bg logos/logomark2nobg.webp',
+          menuButtonColor: '#fff',
+          openMenuButtonColor: '#fff',
+          accentColor: '#5227FF',
+          changeMenuColorOnOpen: true,
+          onMenuOpen: () => console.log('Menu opened'),
+          onMenuClose: () => console.log('Menu closed')
+        });
+      });
+    </script>
     <script src="logic.js" defer></script>
     <script>
       // Ensure background videos are enabled on all devices

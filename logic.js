@@ -39,16 +39,13 @@ const body = document.body;
 const header = document.getElementById("site-header");
 const toggleButton = document.getElementById("themeToggle");
 const toggleIcon = document.getElementById("themeToggleIcon");
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
-const mobileOverlay = document.querySelector(".mobile-nav-overlay");
 
 // Constants
 const THEME_KEY = "ip-theme";
 const storedTheme = localStorage.getItem(THEME_KEY);
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 const prefersReducedMotion = window.matchMedia(
-	"(prefers-reduced-motion: reduce)"
+	"(prefers-reduced-motion: reduce)",
 );
 
 // Theme Management
@@ -75,7 +72,7 @@ const setTheme = (isDark) => {
 	if (toggleButton) {
 		toggleButton.setAttribute(
 			"aria-label",
-			isDark ? "Switch to light mode" : "Switch to dark mode"
+			isDark ? "Switch to light mode" : "Switch to dark mode",
 		);
 	}
 	localStorage.setItem(THEME_KEY, isDark ? "dark" : "light");
@@ -102,106 +99,6 @@ if (toggleButton) {
 	toggleButton.addEventListener("click", () => {
 		const nextIsDark = !body.classList.contains("dark");
 		setTheme(nextIsDark);
-	});
-}
-
-// Mobile Navigation
-const setNavState = (isOpen) => {
-	if (!menuToggle) return;
-
-	menuToggle.classList.toggle("is-active", isOpen);
-	menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-	body.classList.toggle("nav-open", isOpen);
-
-	// Desktop menu fallback (kept, but hidden on mobile via CSS)
-	if (navMenu) {
-		navMenu.classList.toggle("is-open", isOpen);
-		navMenu.setAttribute("aria-hidden", isOpen ? "false" : "true");
-	}
-
-	// New mobile overlay
-	if (mobileOverlay) {
-		mobileOverlay.classList.toggle("is-open", isOpen);
-		mobileOverlay.setAttribute("aria-hidden", isOpen ? "false" : "true");
-	}
-};
-
-if (menuToggle) {
-	// Initialize nav state
-	setNavState(false);
-
-	// Toggle navigation
-	const isCurrentlyOpen = () =>
-		mobileOverlay?.classList.contains("is-open") ||
-		navMenu?.classList.contains("is-open");
-
-	const toggleNav = () => {
-		const isOpen = !isCurrentlyOpen();
-		setNavState(isOpen);
-
-		if (isOpen) {
-			const firstLink = navMenu.querySelector("a");
-			if (firstLink) {
-				firstLink.focus();
-			}
-		}
-	};
-
-	// Close navigation
-	const closeNav = ({ focusToggle = false } = {}) => {
-		if (!navMenu.classList.contains("is-open")) return;
-		setNavState(false);
-		if (focusToggle && menuToggle) {
-			menuToggle.focus();
-		}
-	};
-
-	// Event listeners
-	menuToggle.addEventListener("click", toggleNav);
-
-	// Close nav on link click
-	if (navMenu) {
-		navMenu.querySelectorAll("a").forEach((link) => {
-			link.addEventListener("click", () => closeNav());
-		});
-	}
-	if (mobileOverlay) {
-		mobileOverlay.querySelectorAll("a").forEach((link) => {
-			link.addEventListener("click", () => closeNav());
-		});
-	}
-
-	// Close nav on escape key
-	document.addEventListener("keydown", (event) => {
-		if (event.key === "Escape") {
-			closeNav({ focusToggle: true });
-		}
-	});
-
-	// Close nav on window resize (desktop)
-	window.addEventListener("resize", () => {
-		if (window.innerWidth > 768) {
-			setNavState(false);
-		}
-	});
-
-	// Close nav on outside click
-	document.addEventListener("click", (event) => {
-		const target = event.target;
-		const open = isCurrentlyOpen();
-		if (!open) return;
-
-		const clickedOutsideMenu = navMenu && !navMenu.contains(target);
-		const clickedOutsideOverlay =
-			mobileOverlay && !mobileOverlay.contains(target);
-		const clickedToggle = target === menuToggle || menuToggle.contains(target);
-
-		if (
-			(mobileOverlay && clickedOutsideOverlay && !clickedToggle) ||
-			(navMenu && clickedOutsideMenu && !clickedToggle)
-		) {
-			closeNav();
-		}
 	});
 }
 
@@ -246,7 +143,7 @@ if (prefersReducedMotion.matches) {
 		{
 			threshold: 0.1,
 			rootMargin: "0px 0px -50px 0px",
-		}
+		},
 	);
 
 	animatedElements.forEach((el) => observer.observe(el));
@@ -261,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	try {
 		if (prefersReducedMotion.matches) return; // respect user setting
 		const heroAnimated = document.querySelectorAll(
-			".hero-section [data-animate]"
+			".hero-section [data-animate]",
 		);
 		heroAnimated.forEach((el) => el.classList.add("is-visible"));
 	} catch (e) {
@@ -405,6 +302,18 @@ faqItems.forEach((item) => {
 			// Toggle current item
 			item.classList.toggle("active");
 		});
+	}
+});
+
+// Scroll effect for navbar background transparency
+window.addEventListener("scroll", () => {
+	const floatingNav = document.getElementById("site-header");
+	if (!floatingNav) return;
+
+	if (window.scrollY > 50) {
+		floatingNav.classList.add("scrolled");
+	} else {
+		floatingNav.classList.remove("scrolled");
 	}
 });
 
