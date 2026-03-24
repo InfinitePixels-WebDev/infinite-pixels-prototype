@@ -611,7 +611,30 @@
 		<script src="staggered-menu.js"></script>
 		<script>
 			document.addEventListener('DOMContentLoaded', function() {
-				const menu = new StaggeredMenu();
+				// Initialize the staggered menu with items and options (same as home)
+				const menu = new StaggeredMenu({
+					position: 'right',
+					colors: ['#B19EEF', '#5227FF'],
+					items: [
+						{ label: 'Home', ariaLabel: 'Go to home page', link: 'home.html' },
+						{ label: 'About', ariaLabel: 'Learn about us', link: 'about.html' },
+						{ label: 'Services', ariaLabel: 'View our services', link: 'services.html' },
+						{ label: 'Work', ariaLabel: 'View our work', link: 'work.html' },
+						{ label: 'Process', ariaLabel: 'Learn about our process', link: 'process.html' }
+					],
+					socialItems: [
+						{ label: 'Instagram', link: 'https://www.instagram.com/infinitepixels.tech/' }
+					],
+					displaySocials: true,
+					displayItemNumbering: true,
+					logoUrl: 'img/no bg logos/logomark2nobg.webp',
+					menuButtonColor: '#fff',
+					openMenuButtonColor: '#fff',
+					accentColor: '#5227FF',
+					changeMenuColorOnOpen: true,
+					onMenuOpen: () => console.log('Menu opened'),
+					onMenuClose: () => console.log('Menu closed')
+				});
 			});
 		</script>
 	</body>

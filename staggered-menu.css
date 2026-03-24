@@ -113,7 +113,7 @@
 .staggered-menu-header.scrolled .sm-logo {
 	/* slide the logo to the left corner and shrink slightly when scrolled */
 	position: absolute;
-	left: 1rem;
+	left: 0.01rem;
 	top: 50%;
 	transform: translate(0, -50%) scale(0.85);
 	z-index: 40; /* allow action buttons to sit above when scrolled */
@@ -130,7 +130,7 @@
 	right: 1rem;
 	width: calc(100% - 2rem);
 	top: 0.6rem;
-	padding: 0.8rem 1.25rem;
+	padding: 1.2rem 1.25rem;
 	background: rgba(255, 255, 255, 0.06);
 	backdrop-filter: blur(12px);
 	-webkit-backdrop-filter: blur(12px);
@@ -154,7 +154,7 @@
 
 .sm-logo-img {
 	display: block;
-	height: 48px;
+	height: 68px;
 	width: auto;
 	object-fit: contain;
 	transition:
@@ -164,7 +164,7 @@
 }
 
 .staggered-menu-header.scrolled .sm-logo-img {
-	height: 36px;
+	height: 76px;
 }
 
 .sm-nav-actions {
