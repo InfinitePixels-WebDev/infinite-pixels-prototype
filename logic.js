@@ -52,7 +52,7 @@ const prefersReducedMotion = window.matchMedia(
 const setTheme = (isDark) => {
 	body.classList.toggle("dark", isDark);
 	// Keep visual widgets in sync: update hidden checkbox (if present)
-	const themeCheckbox = document.querySelector('.themeToggleInput');
+	const themeCheckbox = document.querySelector(".themeToggleInput");
 	if (themeCheckbox) themeCheckbox.checked = !!isDark;
 
 	if (toggleIcon) {

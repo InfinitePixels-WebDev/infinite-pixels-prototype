@@ -311,7 +311,7 @@ class StaggeredMenu {
 		}
 
 		// keep the CSS-based checkbox in sync if present
-		const themeCheckbox = document.querySelector('.themeToggleInput');
+		const themeCheckbox = document.querySelector(".themeToggleInput");
 		if (themeCheckbox) themeCheckbox.checked = !!isDark;
 		localStorage.setItem("ip-theme", isDark ? "dark" : "light");
 	}
