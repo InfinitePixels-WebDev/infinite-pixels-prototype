@@ -51,8 +51,12 @@ const prefersReducedMotion = window.matchMedia(
 // Theme Management
 const setTheme = (isDark) => {
 	body.classList.toggle("dark", isDark);
+	// Keep visual widgets in sync: update hidden checkbox (if present)
+	const themeCheckbox = document.querySelector('.themeToggleInput');
+	if (themeCheckbox) themeCheckbox.checked = !!isDark;
+
 	if (toggleIcon) {
-		// Update SVG icon for theme toggle
+		// For backward compatibility we still set the simple SVG (hidden span)
 		toggleIcon.innerHTML = isDark
 			? `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 				<circle cx="12" cy="12" r="5"/>

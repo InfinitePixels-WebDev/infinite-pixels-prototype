@@ -219,6 +219,74 @@
 	outline-offset: 2px;
 }
 
+/* Sun/Moon toggle (pure CSS animated) - adapted from user-provided styles */
+.st-sunMoonThemeToggleBtn {
+	color: #bbb;
+	width: 3em;
+	height: 3em;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	cursor: pointer;
+}
+
+.st-sunMoonThemeToggleBtn .themeToggleInput {
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.st-sunMoonThemeToggleBtn svg {
+	width: 1.4em;
+	height: 1.4em;
+	transition: transform 0.4s ease;
+	transform: rotate(40deg);
+}
+
+.st-sunMoonThemeToggleBtn svg .sunMoon {
+	transform-origin: center center;
+	transition: inherit;
+	transform: scale(1);
+}
+
+.st-sunMoonThemeToggleBtn svg .sunRay {
+	transform-origin: center center;
+	transform: scale(0);
+}
+
+.st-sunMoonThemeToggleBtn svg mask > circle {
+	transition: transform 0.64s cubic-bezier(0.41, 0.64, 0.32, 1.575);
+	transform: translate(0px, 0px);
+}
+
+.st-sunMoonThemeToggleBtn svg .sunRay2 { animation-delay: 0.05s !important; }
+.st-sunMoonThemeToggleBtn svg .sunRay3 { animation-delay: 0.1s !important; }
+.st-sunMoonThemeToggleBtn svg .sunRay4 { animation-delay: 0.17s !important; }
+.st-sunMoonThemeToggleBtn svg .sunRay5 { animation-delay: 0.25s !important; }
+.st-sunMoonThemeToggleBtn svg .sunRay6 { animation-delay: 0.29s !important; }
+
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg {
+	transform: rotate(90deg);
+}
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg mask > circle {
+	transform: translate(16px, -3px);
+}
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg .sunMoon {
+	transform: scale(0.55);
+}
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg .sunRay {
+	animation: showRay1832 0.4s ease 0s 1 forwards;
+}
+
+@keyframes showRay1832 {
+	0% { transform: scale(0); }
+	100% { transform: scale(1); }
+}
+
 .dark-mode .sm-theme-toggle,
 .dark .sm-theme-toggle {
 	background: rgba(25, 25, 25, 0.6);

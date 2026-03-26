@@ -126,25 +126,42 @@ class StaggeredMenu {
           />
         </div>
         <div class="sm-nav-actions">
-          <button
-            class="sm-theme-toggle"
-            id="themeToggle"
-            type="button"
-            aria-label="Toggle theme"
-            role="switch"
-            aria-checked="false">
-            <span id="themeToggleIcon" aria-hidden="true">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-              </svg>
-            </span>
-          </button>
+					<button
+						class="sm-theme-toggle st-sunMoonThemeToggleBtn themeToggle"
+						id="themeToggle"
+						type="button"
+						aria-label="Toggle theme"
+						role="switch"
+						aria-checked="false">
+						<input type="checkbox" id="themeToggleInput" class="themeToggleInput" style="position:absolute;left:-9999px;opacity:0;pointer-events:none;" />
+						<svg
+							width="18"
+							height="18"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+							stroke="none">
+							<mask id="moon-mask-theme">
+								<rect x="0" y="0" width="20" height="20" fill="white"></rect>
+								<circle cx="11" cy="3" r="8" fill="black"></circle>
+							</mask>
+							<circle
+								class="sunMoon"
+								cx="10"
+								cy="10"
+								r="8"
+								mask="url(#moon-mask-theme)"
+							></circle>
+							<g>
+								<circle class="sunRay sunRay1" cx="18" cy="10" r="1.5"></circle>
+								<circle class="sunRay sunRay2" cx="14" cy="16.928" r="1.5"></circle>
+								<circle class="sunRay sunRay3" cx="6" cy="16.928" r="1.5"></circle>
+								<circle class="sunRay sunRay4" cx="2" cy="10" r="1.5"></circle>
+								<circle class="sunRay sunRay5" cx="6" cy="3.1718" r="1.5"></circle>
+								<circle class="sunRay sunRay6" cx="14" cy="3.1718" r="1.5"></circle>
+							</g>
+						</svg>
+						<span id="themeToggleIcon" aria-hidden="true" style="display:none"></span>
+					</button>
           <button
             class="sm-toggle"
             aria-label="Open menu"
@@ -292,6 +309,10 @@ class StaggeredMenu {
 				isDark ? "Switch to light mode" : "Switch to dark mode",
 			);
 		}
+
+		// keep the CSS-based checkbox in sync if present
+		const themeCheckbox = document.querySelector('.themeToggleInput');
+		if (themeCheckbox) themeCheckbox.checked = !!isDark;
 		localStorage.setItem("ip-theme", isDark ? "dark" : "light");
 	}
 
