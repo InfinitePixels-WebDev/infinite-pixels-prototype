@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+<!-- S2T-INJECT -->
+<link rel="stylesheet" href="../styles/scroll-to-top.css">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RW06SE9VHR"></script>
 <script>
@@ -98,10 +100,10 @@
                 <span class="hero-gradient-text">Drive Real Results</span>
               </h1>
 
-              <p class="hero-subtitle" data-animate="fade-up" data-delay=".2s">
+              <!-- <p class="hero-subtitle" data-animate="fade-up" data-delay=".2s">
 Most teams juggle five different agencies for one digital outcome. We thought that made no sense.
 So we built something different. Keep scrolling.
-              </p>
+              </p> -->
 
               <div class="hero-ctas" data-animate="fade-up" data-delay=".1s">
                 <a href="services.html" class="hero-btn hero-btn-primary">
@@ -123,67 +125,6 @@ So we built something different. Keep scrolling.
               </div>
             </div>
 
-            <!-- Visual Side -->
-            <div class="hero-visual" data-animate="fade-up" data-delay=".1s">
-              <div class="visual-grid">
-                <!-- Card 1 - Featured Service -->
-                <div class="visual-card card-featured">
-                  <div class="card-badge">FEATURED</div>
-                  <div class="card-icon-large">
-                    <svg
-                      width="32"
-                      height="32"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                    >
-                      <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                      <path d="M2 17l10 5 10-5" />
-                      <path d="M2 12l10 5 10-5" />
-                    </svg>
-                  </div>
-                  <h3>Your Digital Partner</h3>
-                  <p>
-                    Digital solutions that solve real problems and drive real
-                    growth for your business
-                  </p>
-                </div>
-
-                <!-- Card 2 - Services Grid -->
-                <div class="visual-card card-services">
-                  <div class="service-tag">Web Dev</div>
-                  <div class="service-tag">Design</div>
-                  <div class="service-tag">Social Media</div>
-                  <div class="service-tag">Automation</div>
-                </div>
-
-                <!-- Card 3 - Stats -->
-                <div class="visual-card card-stats">
-                  <div class="mini-stat">
-                    <span class="mini-number">6</span>
-                    <span class="mini-label">SERVICES</span>
-                  </div>
-                  <div class="mini-stat">
-                    <span class="mini-number">100%</span>
-                    <span class="mini-label">ON TIME</span>
-                  </div>
-                  <!-- <div class="mini-stat">
-                    <span class="mini-number">2</span>
-                    <span class="mini-label">CLIENTS</span>
-                  </div> -->
-                </div>
-
-                <!-- Card 4 - Live Indicator -->
-                <div class="visual-card card-live">
-                  <div class="live-indicator">
-                    <span class="pulse-dot"></span>
-                    <span>Currently Available</span>
-                  </div>
-                  <p>Ready to start your project</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -1018,5 +959,32 @@ So we built something different. Keep scrolling.
     </script>
     <script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js"></script>
 <script src="https://files.bpcontent.cloud/2026/01/08/23/20260108234742-JZFPX7DB.js" defer></script>
-  </body>
+  
+    <!-- Scroll-to-Top Button Component -->
+    <button class="scroll-to-top" id="scrollToTopBtn" aria-label="Scroll to top">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background circle (optional light background) -->
+            <circle cx="30" cy="30" r="28" fill="none" stroke="#f0f0f0" stroke-width="1" />
+            
+            <!-- Progress ring -->
+            <circle
+                class="progress-ring"
+                cx="30"
+                cy="30"
+                r="26"
+            />
+            
+            <!-- Up arrow -->
+            <g class="arrow">
+                <!-- Arrow shaft -->
+                <line x1="30" y1="18" x2="30" y2="40" stroke-width="2" />
+                
+                <!-- Arrow head -->
+                <polyline points="22,26 30,18 38,26" fill="none" stroke-width="2" />
+            </g>
+        </svg>
+    </button>
+
+<script src="../scripts/scroll-to-top.js" defer></script>
+</body>
 </html>

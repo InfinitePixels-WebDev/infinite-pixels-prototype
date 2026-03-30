@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+<!-- S2T-INJECT -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RW06SE9VHR"></script>
 <script>
@@ -32,6 +33,7 @@
 			rel="stylesheet" />
 		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="staggered-menu.css" />
+		<link rel="stylesheet" href="../styles/scroll-to-top.css">
 		<!-- SEO Meta Tags -->
 		<meta
 			name="description"
@@ -597,10 +599,7 @@
 						&copy; <span id="copyrightYear"></span> Infinite Pixels. All rights
 						reserved.
 					</p>
-					<div class="footer-bottom-links">
-						<a href="/privacy">Privacy Policy</a>
-						<a href="/terms">Terms of Service</a>
-					</div>
+
 				</div>
 			</div>
 		</footer>
@@ -637,5 +636,19 @@
 				});
 			});
 		</script>
-	</body>
+
+		<!-- Scroll to Top Button -->
+		<button id="scrollToTopBtn" class="scroll-to-top">
+			<svg class="progress-ring-svg" width="56" height="56" viewBox="0 0 56 56">
+				<circle class="progress-ring" cx="28" cy="28" r="24" />
+			</svg>
+			<svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+				<polyline points="18 15 12 9 6 15"></polyline>
+			</svg>
+		</button>
+
+		<script src="../scripts/scroll-to-top.js" defer></script>
+	
+</body>
 </html>
+

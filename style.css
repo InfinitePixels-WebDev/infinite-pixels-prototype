@@ -835,7 +835,7 @@ h4 {
    =================================== */
 
 .hero-section {
-	min-height: 85vh;
+	min-height: 105vh;
 	max-height: 100vh;
 	display: flex;
 	align-items: center;
