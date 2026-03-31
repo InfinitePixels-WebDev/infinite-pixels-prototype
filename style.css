@@ -1819,7 +1819,7 @@ h4 {
 
 .featured-work-grid {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	gap: 2rem;
 	margin-top: 4rem;
 }
@@ -2538,79 +2538,6 @@ body:not(.dark) .footer {
 	font-size: 14px;
 }
 
-/* Original Footer Social Styling (for backwards compatibility) */
-.footer-social a {
-	width: 40px;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: var(--surface);
-	border: 1px solid var(--border);
-	border-radius: 10px;
-	color: var(--text-secondary);
-	transition: var(--transition);
-}
-
-.footer-social a:hover {
-	background: var(--gradient-primary);
-	color: white;
-	border-color: transparent;
-}
-
-.footer-social svg {
-	width: 20px;
-	height: 20px;
-}
-
-.footer-links {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 2rem;
-}
-
-.footer-column h4 {
-	font-size: 1rem;
-	margin-bottom: 1rem;
-	color: var(--text);
-}
-
-.footer-column a {
-	display: block;
-	color: var(--text-secondary);
-	text-decoration: none;
-	padding: 0.25rem 0;
-	transition: var(--transition);
-}
-
-.footer-column a:hover {
-	color: var(--primary);
-}
-
-.footer-bottom {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding-top: 2rem;
-	border-top: 1px solid var(--border);
-}
-
-.footer-bottom-links {
-	display: flex;
-	gap: 2rem;
-}
-
-.footer-bottom-links a {
-	color: var(--text-secondary);
-	text-decoration: none;
-	font-size: 0.875rem;
-	transition: var(--transition);
-}
-
-.footer-bottom-links a:hover {
-	color: var(--primary);
-}
-
 /* Animations */
 [data-animate] {
 	opacity: 0;
@@ -2971,12 +2898,6 @@ body:not(.dark) .footer {
 
 	.stat-label {
 		font-size: 0.75rem;
-	}
-
-	.footer-bottom {
-		flex-direction: column;
-		gap: 1rem;
-		text-align: center;
 	}
 }
 
@@ -5226,5 +5147,431 @@ body:not(.dark) .footer {
 		max-width: 980px !important;
 		padding-left: 0 !important;
 		padding-right: 0 !important;
+	}
+}
+/* ===== Footer Base ===== */
+
+.ip-footer {
+	position: relative;
+	padding: 80px 40px;
+	-webkit-border-top-left-radius: 60px;
+	-webkit-border-top-right-radius: 60px;
+	-moz-border-radius-topleft: 60px;
+	-moz-border-radius-topright: 60px;
+	border-top-left-radius: 60px;
+	border-top-right-radius: 60px;
+	overflow: hidden;
+	font-family: system-ui, sans-serif;
+	color: #e6e6ea;
+}
+
+/* Instagram button (placed in footer bottom bar) */
+.ip-instagram-btn {
+	background: transparent;
+	position: relative;
+	padding: 6px 14px;
+	display: inline-flex;
+	align-items: center;
+	font-size: 15px;
+	font-weight: 700;
+	text-decoration: none;
+	cursor: pointer;
+	border: 1px solid var(--fp-border, rgba(255, 255, 255, 0.08));
+	border-radius: 25px;
+	outline: none;
+	overflow: hidden;
+	color: var(--fp-text);
+	transition:
+		background 0.18s ease,
+		color 0.18s ease,
+		transform 0.12s ease;
+	z-index: 2;
+}
+
+.ip-instagram-btn svg {
+	width: 18px;
+	height: 18px;
+	margin-right: 8px;
+	flex: 0 0 auto;
+	color: currentColor;
+}
+.ip-instagram-btn span {
+	margin-left: 4px;
+}
+
+.ip-instagram-btn::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	content: "";
+	border-radius: 50%;
+	display: block;
+	width: 20em;
+	height: 20em;
+	left: -5em;
+	transition:
+		box-shadow 0.45s ease-out,
+		background 0.25s;
+	z-index: -1;
+	background: transparent;
+}
+
+.ip-instagram-btn:hover {
+	color: var(--fp-button-on, #000);
+}
+.ip-instagram-btn:hover::before {
+	box-shadow: inset 0 0 0 10em var(--fp-button-hover, rgba(255, 255, 255, 0.9));
+}
+
+/* allow footer content wrapper to span full width so bottom bar can use full columns */
+.ip-footer .footer-content {
+	max-width: 100%;
+	margin: 0;
+	padding: 0 28px;
+	position: relative;
+	z-index: 10;
+}
+
+/* constrain the top-brand grid instead so the brand block stays centered */
+.footer-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 40px;
+	margin: 0 auto 40px;
+	max-width: 1200px;
+}
+
+.brand {
+	font-size: 28px;
+	font-weight: 800;
+	color: #8149fb;
+}
+.footer-contact-link {
+	background-color: #ffffff;
+	border: 1px solid #c7c7c7;
+	border-radius: 20px;
+	box-shadow: 0 2px 4px rgba(131, 73, 229, 0.3);
+	color: #5b21b6;
+	padding: 1px 4px 1px;
+	margin: 2px;
+}
+.footer-contact-link:hover {
+	background-color: #5b21b6;
+	border: 1px solid #ffffff;
+
+	color: #ffffff;
+}
+h4 {
+	margin-bottom: 16px;
+	font-size: 18px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+li {
+	margin-bottom: 10px;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+	transition: 0.3s;
+}
+a:hover {
+	color: #8b5cf6;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid rgba(255, 255, 255, 0.06);
+	margin: 18px 0 12px;
+}
+
+/* Footer theme variables (dark/light aware) */
+.ip-footer {
+	/* inverted: use light palette when the site is in dark mode */
+	--fp-bg: #ffffff;
+	--fp-surface: rgba(16, 16, 20, 0.03);
+	--fp-text: #111114;
+	--fp-muted: rgba(17, 17, 20, 0.6);
+	--fp-accent: #5b21b6;
+	--fp-border: rgba(17, 17, 20, 0.06);
+	--fp-button-hover: rgba(0, 0, 0, 0.08);
+	--fp-button-on: #fff;
+	background: linear-gradient(180deg, #ffffff 0%, #fbfbff 100%);
+	color: var(--fp-text);
+	padding: 72px 28px 172px;
+}
+
+@media (prefers-color-scheme: light) {
+	/* inverted: use dark palette when the site is in light mode */
+	.ip-footer {
+		--fp-bg: #070709;
+		--fp-surface: rgba(255, 255, 255, 0.03);
+		--fp-text: #e6e6ea;
+		--fp-muted: rgba(230, 230, 234, 0.72);
+		--fp-accent: #8b5cf6;
+		--fp-border: rgba(255, 255, 255, 0.08);
+		--fp-button-hover: rgba(255, 255, 255, 0.9);
+		--fp-button-on: #000;
+		background: linear-gradient(180deg, #060607 0%, #0b0b0d 100%);
+	}
+	.footer-quicklinks a:hover {
+		background: rgba(255, 255, 255, 0.04);
+		color: var(--fp-text);
+	}
+}
+
+/* Manual theme toggle control: prefer body.dark class set by JS over media queries */
+body:not(.dark) .ip-footer {
+	/* when theme toggle sets dark, footer should use the light palette */
+	--fp-bg: #ffffff;
+	--fp-surface: rgba(16, 16, 20, 0.03);
+	--fp-text: #111114;
+	--fp-muted: rgba(17, 17, 20, 0.6);
+	--fp-accent: #5b21b6;
+	--fp-border: rgba(17, 17, 20, 0.06);
+	--fp-button-hover: rgba(0, 0, 0, 0.08);
+	--fp-button-on: #fff;
+	background: linear-gradient(180deg, #ffffff 0%, #fbfbff 100%);
+}
+
+body.dark .ip-footer {
+	/* when not dark, use the dark palette so footer contrasts */
+	--fp-bg: #070709;
+	--fp-surface: rgba(255, 255, 255, 0.03);
+	--fp-text: #e6e6ea;
+	--fp-muted: rgba(230, 230, 234, 0.72);
+	--fp-accent: #8b5cf6;
+	--fp-border: rgba(255, 255, 255, 0.08);
+	--fp-button-hover: rgba(255, 255, 255, 0.9);
+	--fp-button-on: #000;
+	background: linear-gradient(180deg, #060607 0%, #0b0b0d 100%);
+}
+
+.brand {
+	color: var(--fp-accent);
+}
+
+/* Use a 3-column grid so each area gets equal width: left / center / right */
+.footer-bottom-bar {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+	width: 100%;
+	gap: 12px 24px;
+	padding: 0 28px;
+}
+
+/* Force children to behave as 3 columns and avoid collapsing/stacking */
+.footer-bottom-bar > * {
+	min-width: 0;
+}
+.footer-bottom-bar > .footer-quicklinks,
+.footer-bottom-bar > .footer-copy,
+.footer-bottom-bar > .footer-instagram-wrap {
+	width: auto;
+}
+
+/* Ensure quicklinks keep a single line and can scroll if needed */
+.footer-quicklinks {
+	overflow-x: auto;
+}
+.footer-quicklinks a {
+	white-space: nowrap;
+}
+
+/* Quick links: occupy full left column, no wrap */
+.footer-quicklinks {
+	display: flex;
+	gap: 14px;
+	flex-wrap: nowrap;
+	align-items: center;
+	margin: 0;
+	justify-content: flex-start;
+	justify-self: start; /* hard left */
+	width: 100%;
+	min-width: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
+	padding-bottom: 6px;
+}
+
+.footer-quicklinks a {
+	color: var(--fp-text);
+	opacity: 0.92;
+	text-decoration: none;
+	padding: 6px 10px;
+	border-radius: 8px;
+	transition:
+		background 0.15s ease,
+		color 0.15s ease,
+		opacity 0.15s;
+	font-weight: 600;
+	display: inline-block;
+}
+
+.footer-quicklinks a:hover {
+	background: transparent;
+	color: var(--fp-accent);
+	opacity: 1;
+}
+
+/* Copyright occupies the center column */
+.footer-copy {
+	justify-self: center;
+	text-align: center;
+	font-size: 15px;
+	color: var(--fp-muted);
+	width: 100%;
+}
+
+/* Instagram occupies the right column */
+.footer-instagram-wrap {
+	justify-self: end;
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.ip-instagram-btn {
+	background: transparent;
+	border: 1px solid var(--fp-border);
+	color: var(--fp-text);
+	padding: 8px 14px;
+	border-radius: 999px;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	font-weight: 700;
+	transition:
+		background 0.18s ease,
+		color 0.18s ease,
+		transform 0.12s ease;
+}
+
+.ip-instagram-btn:hover {
+	background: var(--fp-accent);
+	color: var(--fp-button-on);
+	transform: translateY(-1px);
+}
+
+/* Responsive: stack on narrow phones (<=767px) as full-width rows */
+@media (max-width: 767px) {
+	.ip-footer {
+		padding: 40px 14px 140px 14px;
+	}
+	.footer-bottom-bar {
+		grid-template-columns: 1fr;
+		row-gap: 12px;
+		padding: 0 14px;
+	}
+	.footer-quicklinks {
+		justify-self: center;
+		overflow-x: auto;
+	}
+	.footer-copy {
+		justify-self: center;
+		text-align: center;
+	}
+	.footer-instagram-wrap {
+		justify-self: center;
+	}
+}
+
+/* On small/mobile screens pin the neon to the viewport bottom and scale it down */
+@media (max-width: 767px) {
+	.neon-container {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 50px;
+		pointer-events: none;
+		z-index: 5;
+	}
+	.neon-svg {
+		height: 100%;
+	}
+	.neon-text {
+		font-size: 50px;
+		letter-spacing: 3px;
+	}
+}
+
+/* Tablets / iPads: keep three equal columns and increase spacing slightly */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.ip-footer {
+		padding: 56px 22px 156px 22px;
+	}
+	.footer-bottom-bar {
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 18px 32px;
+		padding: 0 22px;
+	}
+	.footer-quicklinks {
+		justify-self: start;
+	}
+	.footer-copy {
+		justify-self: center;
+	}
+	.footer-instagram-wrap {
+		justify-self: end;
+	}
+}
+
+/* iPad Mini specific: slightly larger bottom padding and no-wrap copyright */
+@media (min-width: 760px) and (max-width: 820px) {
+	.ip-footer {
+		padding: 56px 22px 110px;
+	}
+	.footer-copy {
+		font-size: 13px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.footer-quicklinks {
+		gap: 12px;
+	}
+	.ip-instagram-btn {
+		padding: 6px 12px;
+	}
+}
+
+/* ===== Neon Glow Section ===== */
+
+.neon-container {
+	position: absolute;
+	bottom: -80px;
+	left: 0;
+	width: 100%;
+	height: 300px;
+	pointer-events: none;
+}
+.neon-svg {
+	width: 100%;
+	height: 100%;
+}
+
+.neon-text {
+	font-size: 117px;
+	font-weight: 900;
+	fill: transparent;
+	stroke: #3800a0;
+	stroke-width: 2;
+	letter-spacing: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.neon-text {
+		font-size: 115px;
+		height: 10px;
 	}
 }
