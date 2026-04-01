@@ -30,10 +30,10 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Michroma:wght@400&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+<link
+  href="https://fonts.googleapis.com/css2?family=Michroma&family=Inter:wght@400;600;700&display=swap"
+  rel="stylesheet"
+/>
     <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'" />
     <link rel="preload" href="staggered-menu.css" as="style" onload="this.rel='stylesheet'" />
       <!-- SEO Meta Tags -->
@@ -71,12 +71,12 @@
   <body>
 
   <!-- Background video (enabled on all devices) -->
-  <video id="bg-video-light" class="bg-video" autoplay loop muted playsinline preload="auto">
-    <source src="vid/light mode bg - Made with Clipchamp.mp4" type="video/mp4">
-  </video>
-  <video id="bg-video-dark" class="bg-video" autoplay loop muted playsinline preload="auto">
-    <source src="vid/dark mode bg - Made with Clipchamp.mp4" type="video/mp4">
-  </video>
+	<video id="bg-video-light" class="bg-video" autoplay loop muted playsinline preload="none">
+		<source src="vid/light-mode.mp4" type="video/mp4">
+	</video>
+	<video id="bg-video-dark" class="bg-video" autoplay loop muted playsinline preload="none">
+		<source src="vid/dark-mode.mp4" type="video/mp4">
+	</video>
   <!-- Skip Navigation for Accessibility -->
 
     <main class="main-content">
@@ -694,7 +694,8 @@ So we built something different. Keep scrolling.
             <div class="work-card" data-animate="fade-up" data-delay=".2s">
               <div class="work-image natural-fit">
                 <picture>
-                    <img src="img/projects/wolfpack.png" alt="Wolf Pack MMA Gym Website" width="600" height="400" loading="lazy" />
+                    <source srcset="img/projects/wolfpack.webp" type="image/webp">
+                    <img src="img/projects/wolfpack.png" alt="Wolf Pack MMA Gym Website"loading="lazy" />
                 </picture>
                 <div class="work-gradient"></div>
                 <div class="work-overlay">

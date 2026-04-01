@@ -579,8 +579,11 @@ console.log("🚀 Infinite Pixels initialized successfully!");
 window.addEventListener("load", function () {
 	setTimeout(function () {
 		const script = document.createElement("script");
+
 		script.src = "https://cdn.botpress.cloud/webchat/v3.5/inject.js";
+
 		script.async = true;
+
 		document.body.appendChild(script);
-	}, 3000); // load after 3 seconds
+	}, 3000);
 });
