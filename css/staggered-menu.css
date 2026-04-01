@@ -1,0 +1,68 @@
+/* Strong mobile override: place logo on the left (full size) and avoid overlap with actions */
+@media (max-width: 640px) {
+
+	/* ensure scrolled state still moves left but keeps clear spacing */
+
+	/* keep logo image readable size */
+}
+
+@keyframes logoEntrance {
+	0% {
+		transform: translate(-50%, -50%) scale(1.5);
+		opacity: 0;
+	}
+	30% {
+		transform: translate(-50%, -50%) scale(1.8);
+		opacity: 1;
+	}
+	60% {
+		transform: translate(-50%, -50%) scale(1.2);
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+		position: static;
+		top: auto;
+		left: auto;
+	}
+}
+
+/* glassmorphic rounded header when scrolled */
+
+/* ensure the actions area defines its own width so header reserve space works */
+
+/* ensure nav actions and toggles sit above the menu panel (z > 50) */
+
+/* Sun/Moon toggle (pure CSS animated) - adapted from user-provided styles */
+
+@keyframes showRay1832 {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+/* When the staggered menu is open, make the menu and theme toggles strongly contrasted and visible */
+
+/* Dark mode variant while open */
+
+/* ensure default (non-open) state is neutral: prevents accidental accenting */
+
+/* When the menu is open, make sure the panel sits above the header glass background
+   but still below the interactive toggles (which use a higher z-index). */
+
+/* keep the nav actions and toggles visually above the opened menu panel */
+
+/* when the site is in dark mode, force prelayer colors to a darker palette */
+
+/* slightly tint the prelayers with the accent color for subtle depth */
+
+@media (max-width: 1024px) {
+
+	/* Distribute menu items vertically so the menu panel doesn't feel empty */
+
+	/* keep socials pinned to the bottom with some breathing room */
+}
+
+/* Fix numbering overlap on small screens */
