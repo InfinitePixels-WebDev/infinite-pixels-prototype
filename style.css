@@ -1,3 +1,6 @@
+* {
+	-webkit-tap-highlight-color: transparent;
+}
 /* Video background for light/dark mode */
 .bg-video {
 	position: fixed;
