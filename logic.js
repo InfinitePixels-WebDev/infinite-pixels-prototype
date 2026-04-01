@@ -576,3 +576,11 @@ console.log("🚀 Infinite Pixels initialized successfully!");
 	var el2 = document.getElementById("copyrightYear");
 	if (el2) el2.textContent = y;
 })();
+window.addEventListener("load", function () {
+	setTimeout(function () {
+		const script = document.createElement("script");
+		script.src = "https://cdn.botpress.cloud/webchat/v3.5/inject.js";
+		script.async = true;
+		document.body.appendChild(script);
+	}, 3000); // load after 3 seconds
+});
